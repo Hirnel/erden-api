@@ -1,0 +1,261 @@
+{
+    "idSubclase": "mago_elementarista",
+    "nombre": "Mago Elementarista",
+    "esBasica": false,
+    "descripcion": "Un maestro de los elementos, capaz de controlar las fuerzas de la naturaleza para atacar y defenderse. Sus habilidades le permiten manipular la energía elemental con precisión y devastación.",
+    "imagen": "/images/subclases/mago_elementarista.jpg",
+    "diagrama": "/diagrama/diagrama_elementarista.jpg",
+    "habilidades": [
+        {
+            "nombre": "Control Elemental",
+            "nivel": 1,
+            "descripcion": "Eliges un elemento que será afín a ti. Tus ataques con ese elemento tienen ventaja y su daño nunca puede ser inferior a la mitad del dado. Lanzas una fuerza de la naturaleza que inflinje 1D8/nivel de Mago de energia y 1D6/nivel de mago de daño elemental.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Oleada", "Segunda Piel", "Alarma" ],
+            "efectos": {
+                "Elementos": {
+                    "Nivel 1": ["Fuego", "Aire", "Agua", "Tierra"],
+                    "Nivel 6": ["Sangre"],
+                    "Nivel 10": ["Vacío"],
+                    "Nivel 15": ["Alma"]
+                },
+                "Inmunidades": {
+                    "Primer Elemento": "Inmune",
+                    "Segundo Elemento": "Daño reducido a la mitad",
+                    "Tercer Elemento": "Tu vida no baja de 10pg"
+                },
+                "Daño": "1D8/nivel energía + 1D6/nivel elemental"
+            }
+        },
+        {
+            "nombre": "Oleada", 
+            "nivel": 3,
+            "descripcion": "Seleccionas hasta a 4 enemigos y lanzas una oleada de 4 proyectiles mágicos que impactan de manera aleatoria en los enemigos fijados. Cada proyectil hace 2D8/3 niveles de mago causa mágico + 1D6/nivel de mago y es daño elemental.",
+            "activa": true,
+            "Requisitos": [ "Control Elemental" ],
+            "Desbloquea": [ "Resonancia", "Mejora Elemental" ],
+            "efectos": {
+                "Proyectiles": 4,
+                "Daño Mágico": "2D8/3 niveles",
+                "Daño Elemental": "1D6/nivel"
+            }
+        },
+        {
+            "nombre": "Segunda Piel", 
+            "nivel": 3,
+            "descripcion": "Obtienes un escudo elemental que tiene de PG 10 veces tu nivel de Elementarista.",
+            "activa": true,
+            "Requisitos": [ "Control Elemental" ],
+            "Desbloquea": [ "Mejora Elemental" ],
+            "efectos": {
+                "Escudo": "10 veces nivel de Elementarista"
+            }
+        },
+        {
+            "nombre": "Alarma",
+            "nivel": 3,
+            "descripcion": "Lanzas un conjuro o Talento y decides en que turno y en que dirección se lanza. Puedes retrasarlo tantos turnos cómo nivel de personaje poseas.",
+            "activa": false,
+            "Requisitos": [ "Control Elemental" ],
+            "Desbloquea": [ "Mejora Elemental", "Siniestra Invocación" ],
+            "efectos": {
+                "Retraso Turnos": "Nivel de personaje"
+            }
+        },
+        {
+            "nombre": "Resonancia", 
+            "nivel": 5,
+            "descripcion": "Exite un 20% de posibilidades de que al lanzar el Talento Oleada se vuelva a lanzar automáticamente sin gastar usos.",
+            "activa": false,
+            "Requisitos": [ "Oleada" ],
+            "Desbloquea": [ "Oleada Mejorada", "Salto" ],
+            "efectos": {
+                "Probabilidad": "20%"
+            }
+        },
+        {
+            "nombre": "Mejora Elemental", 
+            "nivel": 5,
+            "descripcion": "Tus conjuros y talentos de daño aumentan un dado su tamaño.",
+            "activa": false,
+            "Requisitos": [ "Oleada", "Segunda Piel", "Alarma" ],
+            "Desbloquea": [ "Oleada Mejorada", "Salto", "Descubridor" ],
+            "efectos": {
+                "Mejora Daño": "Aumenta el tamaño de un dado"
+            }
+        },
+        {
+            "nombre": "Siniestra Invocación",
+            "nivel": 5,
+            "descripcion": "Te hieres 1pg e invocas una mano de sangre que ataca a tus enemigos causando 2D8. Puedes hacerte tantos puntos de daño como nivel de personaje. Si invocas 3 o más manos puedes inmovilizar al enemigo con una tirada de Fue enfrentada CD 16. Por cada 3 manos que invoques añades 3 puntos a la CD para inmovilizar.",
+            "activa": true,
+            "Requisitos": [ "Alarma" ],
+            "Desbloquea": [ "Salto", "Descubridor" ],
+            "efectos": {
+                "Daño Manos": "2D8 por mano",
+                "Inmovilización": {
+                    "Manos Necesarias": 3,
+                    "CD": "16 + 3 por cada 3 manos"
+                }
+            }
+        },
+        {
+            "nombre": "Oleada Mejorada", 
+            "nivel": 7,
+            "descripcion": "Añades proyectiles adicionales a Oleada según tu Bonf de Carisma y Constitución.",
+            "activa": false,
+            "Requisitos": [ "Resonancia", "Mejora Elemental" ],
+            "Desbloquea": [ "Hiper Foco", "Irradiar" ],
+            "efectos": {
+                "Proyectiles Adicionales": "Bonf Car + Con"
+            }
+        },
+        {
+            "nombre": "Salto", 
+            "nivel": 7,
+            "descripcion": "Eres capaz de teletransportarte a un lugar donde alcance tu vista. 1D4 turnos para volver a usarlo.",
+            "activa": true,
+            "Requisitos": [ "Resonancia", "Mejora Elemental", "Siniestra Invocación" ],
+            "Desbloquea": [ "Hiper Foco", "Irradiar", "Estigma" ],
+            "efectos": {
+                "Teletransporte": "Dentro de la línea de visión",
+                "Reutilización": "1D4 turnos"
+            }
+        },
+        {
+            "nombre": "Descubridor",
+            "nivel": 7,
+            "descripcion": "Reconoces la fuerza del relámpago y puedes lanzarlos.",
+            "activa": true,
+            "Requisitos": [ "Siniestra Invocación"],
+            "Desbloquea": [ "Irradiar", "Estigma" ],
+            "efectos": {
+                "Daño": {
+                    "Nivel 7": "4D8",
+                    "Nivel 9": "5D8",
+                    "Nivel 12": "6D8",
+                    "Nivel 15": "7D8",
+                    "Nivel 17": "10D8"
+                }
+            }
+        },
+        {
+            "nombre": "Hiper Foco", 
+            "nivel": 9,
+            "descripcion": "Puedes usar Oleada en un solo enemigo, aunque haya más objetivos.",
+            "activa": true,
+            "Requisitos": [ "Oleada Mejorada" ],
+            "Desbloquea": [ "Control Vital", "Dominio" ],
+            "efectos": {
+                "Objetivo": "1 enemigo"
+            }
+        },
+        {
+            "nombre": "Irradiar", 
+            "nivel": 9,
+            "descripcion": "Los ataques elementales causan daño de área en un radio de 15 pies.",
+            "activa": false,
+            "Requisitos": [ "Oleada Mejorada", "Salto", "Descubridor" ],
+            "Desbloquea": [ "Control Vital", "Dominio", "Vida Abstracta" ],
+            "efectos": {
+                "Área": "15 pies",
+                "Daño Área": "1D8/nivel"
+            }
+        },
+        {
+            "nombre": "Estigma",
+            "nivel": 9,
+            "descripcion": "Marcas el cuerpo de toda persona que haya sufrido daño con tus Conjuros o Talentos elementales y provoca que sea muy dificil que no reciban los ataques. Si esta escondido el Conjuro o Talento hará un quiebro y golpeará al enemigo. Si se encuentra detrás de una puerta o pared que no se pueda flanquear el conjuro romperá la pared o puerta e inflingirá la mitad del daño.",
+            "activa": false,
+            "Requisitos": [ "Descubridor" ],
+            "Desbloquea": [ "Dominio", "Vida Abstracta" ],
+            "efectos": {
+                "Habilidad": "Persecución y penetración de barreras"
+            }
+        },
+        {
+            "nombre": "Control Vital", 
+            "nivel": 12,
+            "descripcion": "Puedes elegir hacer el daño medio con tus conjuros de tipo Sangre y sanarte 1D4 por cada dado lanzado.",
+            "activa": false,
+            "Requisitos": [ "Hiper Foco", "Irradiar" ],
+            "Desbloquea": [ "Nova de Hielo", "Soberanía" ],
+            "efectos": {
+                "Curación": "1D4 por dado"
+            }
+        },
+        {
+            "nombre": "Dominio", 
+            "nivel": 12,
+            "descripcion": "Puedes lanzar conjuros mientras realizas tu movimiento. Ahora recuperas el doble de puntos de Talentos y Pg en los dencansos cortos.",
+            "activa": false,
+            "Requisitos": [ "Hiper Foco", "Irradiar", "Estigma" ],
+            "Desbloquea": [ "Nova de Hielo", "Soberanía", "Daño al Alma" ],
+            "efectos": {
+                "Movimiento": true,
+                "Recuperación Doble": true
+            }
+        },
+        {
+            "nombre": "Vida Abstracta",
+            "nivel": 12,
+            "descripcion": "Las curaciones restauran también tu escudo elemental.",
+            "activa": false,
+            "Requisitos": [ "Irradiar", "Estigma"],
+            "Desbloquea": [ "Soberanía", "Daño al Alma" ],
+            "efectos": {
+                "Curación Extra": "A escudo elemental"
+            }
+        },
+        {
+            "nombre": "Nova de Hielo", 
+            "nivel": 15,
+            "descripcion": "Lanzas una bola que congela a los enemigos que no superen una CD 17 de Fortaleza. El enemigo queda congelado de manera mágica y sólo un fuego mágico o divino puede derretir el hielo. La Bola avanza 10 pies/2 niveles de Elementarista y tiene un radio de 20 pies.",
+            "activa": true,
+            "Requisitos": [ "Control Vital", "Dominio" ],
+            "Desbloquea": [ "Eco de los Elementos" ],
+            "efectos": {
+                "Área": "20 pies",
+                "Condición": "Congelado"
+            }
+        },
+        {
+            "nombre": "Soberanía", 
+            "nivel": 15,
+            "descripcion": "Inviertes la gravedad de la habitación o si estás en campo abierto inviertes la gravedad en un área de 5pies por 5pies/nivel de Elementarista. Los objetivos tardan 10 turnos en acostumbrarse. Se reduce 1 turno por cada bonificador de Des que tengan los afectados.",
+            "activa": true,
+            "Requisitos": [ "Control Vital", "Dominio", "Vida Abstracta" ],
+            "Desbloquea": [ "Eco de los Elementos" ],
+            "efectos": {
+                "Área": "5 pies por nivel",
+                "Adaptación": "10 turnos menos Bonf Des"
+            }
+        },
+        {
+            "nombre": "Daño al Alma",
+            "nivel": 15,
+            "descripcion": "Lanzas una sacudida al alma del enemigo y le causa daño cerebral. CD Int 16 o sufre 2D6/nivel de Elementarista. Si ocurre doble crítico la CD es 18, si falla la tirada sufre un derrame.",
+            "activa": true,
+            "Requisitos": [ "Dominio", "Vida Abstracta" ],
+            "Desbloquea": [ "Eco de los Elementos" ],
+            "efectos": {
+                "Daño": "2D6/nivel",
+                "CD Resistencia": "16 (18 en doble crítico)"
+            }
+        },
+        {
+            "nombre": "Eco de los Elementos",
+            "nivel": 17,
+            "descripcion": "Gastas todos tus puntos para usar Talentos de golpe para lanzar una lanza de energía que atraviesa todo lo que encuentra a su paso, la lanza llega 120 pies y es de 10 pies de ancho: hace 2D8/nivel de Elementarista + 2D8/punto invertido CD 22 Reflejos para mitad, si sacas 35 de reflejos anulas todo el daño, no cuenta un crítico natural.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Explosión de Vacío", "Caminar por el Vacío", "Escudo del Vacío" ],
+            "efectos": {
+                "Área": "120 pies por 10 pies de ancho",
+                "Daño": "2D8/nivel + 2D8/punto invertido",
+                "CD": "22 Reflejos"
+            }
+        }
+    ]
+}

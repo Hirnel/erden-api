@@ -1,0 +1,260 @@
+{
+    "idSubclase":"demonologo",
+    "nombre": "Demonólogo",
+    "esBasica": false,
+    "descripcion": "Un maestro de invocaciones oscuras, el Demonólogo se especializa en convocar entidades demoníacas y utilizar su poder en combate. Controla a sus invocaciones para devastar enemigos y obtener información de los planos oscuros.",
+    "imagen": "/images/subclases/demonologo.jpg",
+    "diagrama": "/diagrama/diagrama_demonologo.jpg",
+    "reglasGenerales": {
+        "invocacionesMaximas": "Puedes tener invocados a la vez un máximo de la mitad de tu nivel de brujo + 1 invocación por Bonificador de Constitución."
+    },
+    "habilidades": [
+        {
+            "nombre": "Contendiente de la Desgracia",
+            "nivel": 1,
+            "imagen": "/images/subclases/contendiente_de_la_desgracia.jpg",
+            "descripcion": "Invoca a un Contendiente de la Desgracia que obedece tus órdenes. Su vida es 1,5 veces la tuya, hace 1D8 +2 de daño, su ataque siempre es igual a tu nivel y su armadura es 17. Elige un elemento, el Contendiente será inmune a él para siempre. A nivel 10, su vida se duplica, inflige 2D8 + 4 + 2D6 de daño de fuego, su ataque es tu nivel +3 y su CA aumenta a 23. Puedes invocar hasta 3 Contendientes de la desgracia.",
+            "activa": true,
+            "Requisitos": [],
+            "Desbloquea": [ "Descarga Perversa", "Pequeña Sombra Obediente", "Pequeña Gárgola Pétrea", "Entrenamiento Vil" ],
+            "efectos": {
+                "Vida": "1.5x tu vida (2x a nivel 10)",
+                "Daño": "1D8 +2 (2D8 + 4 + 2D6 a nivel 10)",
+                "Ataque": "Tu nivel (+3 a nivel 10)",
+                "Armadura": "CA 17 (23 a nivel 10)",
+                "Inmunidad": "Un elemento a elección"
+            }
+        },
+        {
+            "nombre": "Descarga Perversa",
+            "nivel": 3,
+            "descripcion": "Puedes lanzar conjuros desde tus invocaciones.",
+            "activa": true,
+            "Requisitos": ["Contendiente de la desgracia"],
+            "Desbloquea": [ "Orbe Vital" ],
+            "efectos": {
+                "Capacidad": "Lanzar conjuros desde invocaciones"
+            }
+        },
+        {
+            "nombre": "Pequeña Sombra Obediente",
+            "nivel": 3,
+            "imagen": "/images/subclases/pequeña_sombra_obediente.jpg",
+            "descripcion": "Una sombra del tamaño de tu mano está a tus órdenes. Puede separarse hasta 200 metros/nivel, empuñar objetos materiales y hablar tus idiomas. Tiene 18 de inteligencia, 5 PG y es traviesa.",
+            "activa": false,
+            "Requisitos": ["Contendiente de la desgracia"],
+            "Desbloquea": [ "Guardián del Saber" ],
+            "efectos": {
+                "Inteligencia": 18,
+                "Vida": 5,
+                "Alcance": "200 metros/nivel"
+            }
+        },
+        {
+            "nombre": "Pequeña Gárgola Pétrea",
+            "nivel": 3,
+            "imagen": "/images/subclases/gargola_petrea_pequeña.jpg",
+            "descripcion": "Una gárgola de piedra sigue tus órdenes y puede alejarse hasta 200 metros/nivel. Puede volar torpemente y lanzar el conjuro 'De la carne a la piedra'. Tiene 8 de inteligencia y 5 PG.",
+            "activa": false,
+            "Requisitos": ["Contendiente de la desgracia"],
+            "Desbloquea": [  "Devorador de Lagos" ],
+            "efectos": {
+                "Inteligencia": 8,
+                "Vida": 5,
+                "Alcance": "200 metros/nivel",
+                "Habilidad": "Conjuro 'De la carne a la piedra'"
+            }
+        },
+        {
+            "nombre": "Entrenamiento Vil",
+            "nivel": 3,
+            "descripcion": "Obtienes +1 punto de Constitución en los niveles 5, 7, 9, 12, 15 y 17. Cuando matas a un enemigo, recuperas tantos PG como el doble de tu bonificador de Carisma.",
+            "activa": false,
+            "Requisitos": ["Contendiente de la desgracia"],
+            "Desbloquea": [ "Explosión a Traición" ],
+            "efectos": {
+                "Atributo": "+1 Constitución (niveles 5, 7, 9, 12, 15, 17)",
+                "Recuperación": "2x bonificador de Carisma en PG al matar"
+            }
+        },
+        {
+            "nombre": "Guardián del Saber",
+            "nivel": 5,
+            "imagen": "/images/subclases/guardian_del_saber.jpg",
+            "descripcion": "Invocas un demonio invisible que te proporciona información útil. El tiempo y el espacio se detienen mientras interactúas con él.",
+            "activa": true,
+            "Requisitos": ["Pequeña sombra obediente"],
+            "Desbloquea": [ "Cazador de los Impíos" ],
+            "efectos": {
+                "Habilidad": "Acceso a información mágica"
+            }
+        },
+        {
+            "nombre": "Devorador de Lagos",
+            "nivel": 5,
+            "imagen": "/images/subclases/devorador_de_lagos.jpg",
+            "descripcion": "Invoca un depredador natural que devora a las presas que selecciones. Su ataque es 3x tu nivel, inflige 10 de daño (aumenta en 10 cada 5 niveles) y tiene CA 19.",
+            "activa": true,
+            "Requisitos": ["Pequeña gárgola pétrea"],
+            "Desbloquea": [ "Percherón Infalible" ],
+            "efectos": {
+                "Ataque": "3x tu nivel",
+                "Daño": "10 (aumenta en 10 cada 5 niveles)",
+                "Vida": "PG totales + 20 por nivel de brujo",
+                "CA": 19
+            }
+        },
+        {
+            "nombre": "Orbe Vital",
+            "nivel": 7,
+            "descripcion": "Generas un Orbe con la muerte de una criatura y almacenas ahí sus últimas energias vitales",
+            "activa": false,
+            "Requisitos": ["Descarga Perversa"],
+            "Desbloquea": [ "Exhalación Corrosiva" ],
+            "efectos": {
+                "Nivel 1-5": "2D4 + 2",
+                "Nivel 5-10": "4D4 + 4",
+                "Nivel 10-15": "8D4 + 8",
+                "Nivel 15-20": "10D4 + 20"
+            }
+        },
+        {
+            "nombre": "Cazador de los Impíos",
+            "nivel": 7,
+            "imagen": "/images/subclases/cazador_de_los_impios.jpg",
+            "descripcion": "Invocas a un cazador incorpóreo y etéreo que persigue a una presa que le designes, necesita algo de su propiedad, su cabello, una imagen muy certera suya (lo puede confundir con otra persona si no) o cualquier cosa que el lanzador decida. El cazador nunca cesará su caza hasta que lo encuentre, una vez lo haga marcará a la presa con una impronta mágica que hará que el brujo siempre sepa donde está. El cazador no tiene vida y no puede ser asesinado. El cazador no hace ningun tipo de daño ni molesta a nadie. Una vez que encuentra a su presa, desaparece sin posibilidad de usar 'Si tu viajas yo viajo'. Durante todo el viaje que no se sabe cuanto puede durar, puedes usar la visión de la invocación.",
+            "activa": true,
+            "Requisitos": [ "Guardián del Saber"],
+            "Desbloquea": [ "Torturador del Mal" ],
+            "efectos": {
+                "Habilidad": "Marca al objetivo con impronta mágica",
+                "Caracteristicas": "Es incorpóreo, etéreo e inmortal"
+            }
+        },
+        {
+            "nombre": "Percherón Infalible",
+            "nivel": 7,
+            "imagen": "/images/subclases/caballo_demonio.jpg",
+            "descripcion": "Invocas un caballo de guerra que es capaz de viajar por el cielo como si fuera por la tierra.",
+            "activa": true,
+            "Requisitos": [ "Devorador de Lagos" ],
+            "Desbloquea": [ "Torturador del Mal" ],
+            "efectos": {
+                "Habilidad": "Viajar por el cielo como por la tierra"
+            }
+        },
+        {
+            "nombre": "Explosión a Traición",
+            "nivel": 7,
+            "descripcion": "Explotas a una de tus invocaciones, infligiendo 8D8 de daño en un área de 20'.",
+            "activa": true,
+            "Requisitos": [ "Entrenamiento Vil" ],
+            "Desbloquea": [ "Si tu Viajas yo Viajo" ],
+            "efectos": {
+                "Daño": "8D8",
+                "Area": "20 pies"
+            }
+        },
+        {
+            "nombre": "Torturador del Mal",
+            "nivel": 9,
+            "imagen": "/images/subclases/torturador_del_mal.jpg",
+            "descripcion": "Invocas a un demonio que es infalible en el arte de la tortura y de obtener información.",
+            "activa": true,
+            "Requisitos": ["Cazador de los Impíos", "Percherón Infalible" ],
+            "Desbloquea": [ "Gusano de Sangre" ],
+            "efectos": {
+                "Habilidad": "Obtener información mediante tortura"
+            }
+        },
+        {
+            "nombre": "Exhalación Corrosiva",
+            "nivel": 12,
+            "descripcion": "Lanzas hasta a 60' una miasma que impregna el ambiente y hace 3D6 de veneno que luego durante 1d4 turnos hace 1d8.",
+            "activa": true,
+            "Requisitos": ["Orbe Vital" ],
+            "Desbloquea": [ "Tres Mejor que Uno", "Armadura con Púas" ],
+            "efectos": {
+                "Daño Inicial": "3D6",
+                "Daño Continuo": "1D8 durante 1D4 turnos",
+                "Alcance": "60 pies"
+            }
+        },
+        {
+            "nombre": "Gusano de Sangre",
+            "nivel": 12,
+            "imagen": "/images/subclases/gusano_de_sangre.jpg",
+            "descripcion": "Necesitas estar en contacto con el enemigo, depositas una larva en una herida abierta y necesita 1D8 días para madurar. Una vez maduro, puedes infligir tanto dolor como quieras al oponente, incluso matarlo instantáneamente. No funciona con entidades mágicas ni divinas.",
+            "activa": true,
+            "Requisitos": [ "Torturador del Mal" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Maduración": "1D8 días",
+                "Acción": "Infligir dolor o muerte instantánea",
+                "Restricciones": [
+                    "No funciona con entidades mágicas",
+                    "No funciona con entidades divinas"
+                ]
+            }
+        },
+        {
+            "nombre": "Si tu Viajas yo Viajo",
+            "nivel": 12,
+            "descripcion": "Intercambias posiciones con una de tus invocaciones demoníacas de forma instantánea, sin importar la distancia entre ambas. Este intercambio no consume acción adicional ni genera ataques de oportunidad.",
+            "activa": true,
+            "Requisitos": [ "Explosión a Traición" ],
+            "Desbloquea": [ "Tres Mejor que Uno", "Echar el Ojo" ],
+            "efectos": {
+                "Intercambio": "Posiciones con una invocación demoníaca",
+                "Distancia": "Sin límite",
+                "Acción": "No consume acción adicional",
+                "Seguridad": "No genera ataques de oportunidad"
+            }
+        },
+        {
+            "nombre": "Tres Mejor que Uno",
+            "nivel": 15,
+            "descripcion": "Usando solo un 'Contendiente de la desgracia', ahora invocas a tres de ellos.",
+            "activa": false,
+            "Requisitos": [ "Exhalación Corrosiva" , "Si tu Viajas yo Viajo" ],
+            "Desbloquea": [ "Armadura con Púas", "Echar el Ojo"],
+            "efectos": {
+                "Habilidad": "Invocar tres Contendientes de la desgracia"
+            }
+        },
+        {
+            "nombre": "Armadura con Púas",
+            "nivel": 17,
+            "descripcion": "Una armadura de pinchos hecha con huesos que tiene un sólo uso. El mismo daño que hayas recibido con un ataque lo hace de vuelta al enemigo.",
+            "activa": false,
+            "Requisitos": [ "Exhalación Corrosiva" , "Tres Mejor que Uno" ],
+            "Desbloquea": [ "Maldad sin Fin" ],
+            "efectos": {
+                "Habilidad": "Reflejar el daño recibido en un ataque"
+            }
+        },
+        {
+            "nombre": "Echar el Ojo",
+            "nivel": 17,
+            "descripcion": "Cuando usas este Talento sobre una criatura objetivo, los demonios que estén bajo tus órdenes repiten los unos de su daño.",
+            "activa": false,
+            "Requisitos": ["Tres Mejor que Uno" , "Si tu Viajas yo Viajo" ],
+            "Desbloquea": [ "Maldad sin Fin" ],
+            "efectos": {
+                "Habilidad": "Repetir los unos de daño de tus demonios"
+            }
+        },
+        {
+            "nombre": "Maldad sin Fin",
+            "nivel": 19,
+            "descripcion": "Invocar 'Contendiente de la desgracia' no consume puntos activos. Puedes invocar hasta 5 Contendientes.",
+            "activa": false,
+            "Requisitos": [ "Armadura con Púas" ,  "Echar el Ojo" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Invocación": "Máximo 5 Contendientes de la desgracia",
+                "Sin Costo": true
+            }
+        }
+    ]
+}

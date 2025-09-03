@@ -1,0 +1,218 @@
+{
+    "idSubclase": "acechador_insufrible",
+    "nombre": "Acechador Insufrible",
+    "esBasica": false,
+    "descripcion": "Un maestro en el combate a distancia que utiliza habilidades precisas y letales para abrumar a sus enemigos con un flujo constante de ataques desde lejos.",
+    "imagen": "/images/subclases/acechador_insufrible.jpg",
+    "diagrama": "/diagrama/diagrama_acechador_insufrible.jpg",
+    "habilidades": [
+        {
+            "nombre": "Carcaj Lleno",
+            "nivel": 1,
+            "descripcion": "Mientras tengas un carcaj lleno, el daño de tu arma a distancia aumenta en 1 dado su tamaño y no puedes realizar menos de la mitad del dado en daño. A nivel 12 despiertas Carcaj eterno, que mágicamente se rellena cuando se vacía.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Disparo Múltiple", "Trucos de Acechador", "Disparo Lacerante" ],
+            "efectos": {
+                "Daño Extra": "+1 tamaño del dado",
+                "Mínimo Daño": "Mitad del dado",
+                "Carcaj Eterno": "A nivel 12 se rellena automáticamente"
+            }
+        },
+        {
+            "nombre": "Disparo Múltiple", 
+            "nivel": 3,
+            "descripcion": "Colocas 3 flechas en el arco y disparas de manera simultánea a los enemigos.",
+            "activa": true,
+            "Requisitos": [ "Carcaj Lleno" ],
+            "Desbloquea": [ "Pie y Cara" ],
+            "efectos": {
+                "Flechas": "3 flechas disparadas simultáneamente"
+            }
+        },
+        {
+            "nombre": "Trucos de Acechador", 
+            "nivel": 3,
+            "descripcion": "Cuando recojas una flecha, tiras un D20. Si sacas 5 o menos, está rota; si no, puedes reutilizarla.",
+            "activa": false,
+            "Requisitos": [ "Carcaj Lleno" ],
+            "Desbloquea": [ "Pie y Cara", "Manos Ágiles", "Disparo Lejano" ],
+            "efectos": {
+                "Reciclaje Flechas": "Reutilización de flechas según D20"
+            }
+        },
+        {
+            "nombre": "Disparo Lacerante",
+            "nivel": 3,
+            "descripcion": "La flecha atraviesa al enemigo y continúa su recorrido 5 pies/Bonf de Fue. Los objetivos siguientes sufren daño automáticamente, salvo defensas activas.",
+            "activa": true,
+            "Requisitos": [ "Carcaj Lleno" ],
+            "Desbloquea": [  "Disparo Lejano" ],
+            "efectos": {
+                "Recorrido": "5 pies/Bonf Fue",
+                "Daño": "Automático a objetivos posteriores"
+            }
+        },
+        {
+            "nombre": "Pie y Cara", 
+            "nivel": 5,
+            "descripcion": "Disparas 4 flechas a 2 enemigos, apuntando al pie y la cara. Si ambas flechas golpean, el enemigo queda inmovilizado y recibe daño.",
+            "activa": true,
+            "Requisitos": [ "Disparo Múltiple", "Trucos de Acechador" ],
+            "Desbloquea": [ "Fijar la Mirada" ],
+            "efectos": {
+                "Daño Cara": "3D8/niveles de guerrero",
+                "Inmovilización": "1D2 turnos"
+            }
+        },
+        {
+            "nombre": "Manos Ágiles", 
+            "nivel": 5,
+            "descripcion": "Obtienes un ataque extra.",
+            "activa": false,
+            "Requisitos": [ "Trucos de Acechador" ],
+            "Desbloquea": [  "Fijar la Mirada" ],
+            "efectos": {
+                "Ataque Extra": "+1 ataque"
+            }
+        },
+        {
+            "nombre": "Disparo Lejano",
+            "nivel": 5,
+            "descripcion": "Si te concentras un turno, obtienes 10 pies/nivel de guerrero a tu alcance. Este ataque cuenta como desprevenido y realiza daño extra.",
+            "activa": true,
+            "Requisitos": [ "Trucos de Acechador", "Disparo Lacerante" ],
+            "Desbloquea": [ "Fijar la Mirada" ],
+            "efectos": {
+                "Alcance": "+10 pies/nivel",
+                "Daño": "1D8/nivel de guerrero",
+                "Desprevenido": "Sí"
+            }
+        },
+        {
+            "nombre": "Fijar la Mirada",
+            "nivel": 7,
+            "descripcion": "Cuando dispares a un único objetivo, tienes un 20% de posibilidades de obtener un crítico adicional.",
+            "activa": false,
+            "Requisitos": [ "Pie y Cara", "Manos Ágiles", "Disparo Lejano" ],
+            "Desbloquea": [ "Avasallar", "Flechas Pesadas", "Disparo Preciso" ],
+            "efectos": {
+                "Crítico Extra": "20% probabilidad"
+            }
+        },
+        {
+            "nombre": "Avasallar", 
+            "nivel": 9,
+            "descripcion": "Disparas tantas flechas como tu nivel de guerrero. Cada flecha tiene +4 al Ataque y realiza 4D6 de daño.",
+            "activa": true,
+            "Requisitos": [ "Fijar la Mirada" ],
+            "Desbloquea": [ "Salva de Flechas" ],
+            "efectos": {
+                "Flechas": "Nivel de guerrero",
+                "Ataque": "+4",
+                "Daño": "4D6 por flecha"
+            }
+        },
+        {
+            "nombre": "Flechas Pesadas", 
+            "nivel": 9,
+            "descripcion": "Tus flechas son normales pero dan la sensación de ser extremadamente pesadas. Ahora todas tus flechas hacen 2D8.",
+            "activa": false,
+            "Requisitos": [ "Fijar la Mirada" ],
+            "Desbloquea": [ "Salva de Flechas", "Correr y Disparar", "Fijar el Blanco"],
+            "efectos": {
+              "Daño": "2D8 por flecha"
+            }
+        },
+        {
+            "nombre": "Disparo Preciso",
+            "nivel": 9,
+            "descripcion": "Tus ataques a distancia a un único objetivo obtienen un focus que te proporciona +1 al ataque y daño por cada turno que lo focalizas. Máximo: tu nivel de guerrero.",
+            "activa": false,
+            "Requisitos": [ "Fijar la Mirada" ],
+            "Desbloquea": [ "Fijar el Blanco" ],
+            "efectos": {
+              "focus": {
+                "Bono Ataque": "+1 por turno focalizado",
+                "Bono Daño": "+1 por turno focalizado",
+                "Máximo": "Nivel del guerrero"
+              }
+            }
+        },          
+        {
+            "nombre": "Salva de Flechas", 
+            "nivel": 12,
+            "descripcion": "Vacías las 20 flechas de tu carcaj en un área de 20 pies. Las flechas causan miedo y cada una inflige daño.",
+            "activa": true,
+            "Requisitos": [ "Avasallar", "Flechas Pesadas" ],
+            "Desbloquea": [ "Muerte Coordinada" ],
+            "efectos": {
+                "Área": "20 pies",
+                "Daño": "3D8 por flecha",
+                "Miedo": "Sí"
+            }
+        },
+        {
+            "nombre": "Correr y Disparar", 
+            "nivel": 12,
+            "descripcion": "Puedes correr más, 10 pies + modificador de Bof + modificador de Fue + modificador de Des. A su vez también puedes hacer ataques normales mientras corres. Obtienes otro ataque extra más.",
+            "activa": false,
+            "Requisitos": [ "Avasallar", "Flechas Pesadas" , "Disparo Preciso"],
+            "Desbloquea": [ "Muerte Coordinada", "Granja de Presas" ],
+            "efectos": {
+              "Movimiento Extra": "10 pies + modificador de Bof + modificador de Fue + modificador de Des",
+              "Ataques": "Puede realizar ataques normales mientras corre",
+              "Ataque Extra": "Obtiene un ataque extra adicional"
+            }
+        },
+        {
+            "nombre": "Fijar el Blanco",
+            "nivel": 12,
+            "descripcion": "Por cada ataque consecutivo a un mismo objetivo haces +4 de daño fijos cada turno. Máximo 5 turnos.",
+            "activa": false,
+            "Requisitos": [ "Flechas pesadas", "Disparo Preciso" ],
+            "Desbloquea": [ "Granja de Presas" ],
+            "efectos": {
+              "Bonus Daño": "+4 de daño fijo por ataque consecutivo",
+              "Duración": "Máximo 5 turnos"
+            }
+        },
+        {
+            "nombre": "Muerte Coordinada",
+            "nivel": 15,
+            "descripcion": "Si matas a dos o más enemigos en un mismo turno, reinicias tu turno, no puedes usar Talentos.",
+            "activa": false,
+            "Requisitos": [ "Salva de flechas", "Correr y Disparar" ],
+            "Desbloquea": [  "Acechador Insufrible" ],
+            "efectos": {
+              "Condición": "Matar al menos 2 enemigos en un turno",
+              "Reinicio Turno": "El turno se reinicia",
+              "Restricción": "No puedes usar talentos"
+            }
+        },
+        {
+            "nombre": "Granja de Presas",
+            "nivel": 15,
+            "descripcion": "Cuando mates a un enemigo, reinicias tu turno, no puedes usar Talentos.",
+            "activa": false,
+            "Requisitos": [ "Correr y Disparar", "Fijar el Blanco" ],
+            "Desbloquea": [  "Acechador Insufrible" ],
+            "efectos": {
+              "Condición": "Matar a un enemigo",
+              "Reinicio Turno": "El turno se reinicia",
+              "Restricción": "No puedes usar talentos"
+            }
+        },
+        {
+            "nombre": "Acechador Insufrible",
+            "nivel": 17,
+            "descripcion": "Después de usar un Talento, los siguientes ataques normales realizan daño adicional.",
+            "activa": false,
+            "Requisitos": [ "Muerte Coordinada", "Granja de Presas" ],
+            "Desbloquea": [   ],
+            "efectos": {
+                "Daño Extra": "2D8 por ataque"
+            }
+        }
+    ]
+}

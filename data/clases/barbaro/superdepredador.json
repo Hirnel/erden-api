@@ -1,0 +1,229 @@
+{
+  "idSubclase": "superdepredador",
+  "nombre": "Superdepredador",
+  "esBasica": false,
+  "descripcion": "Maestros de la cacería y el dominio sobre la naturaleza, los Superdepredadores son el pináculo de la cadena alimenticia.",
+  "imagen": "/images/subclases/Superdepredador.jpg",
+  "diagrama": "/diagrama/diagrama_superdepredador.jpg",
+  "habilidades": [
+    {
+      "nombre": "Cazador",
+      "nivel": 1,
+      "descripcion": "Puedes rastrear cualquier ser que hayas visto y tocado, sabes olfatear el aire. Obtienes +4 a iniciativa. Puedes ver en la penumbra 60 pies.",
+      "activa": false,
+      "Requisitos": [],
+      "Desbloquea": [ "Sintonía con la Cacería", "Instinto Animal", "Brazo Poderoso"],
+      "efectos": {
+        "Iniciativa": "+4",
+        "Visión en penumbra": "60 pies"
+      }
+    },
+    {
+      "nombre": "Sintonía con la Cacería",
+      "nivel": 3,
+      "descripcion": "Si no portas armadura de ningún tipo obtienes +2 de CA por cada 2 niveles.",
+      "activa": false,
+      "Requisitos": ["Cazador"],
+      "Desbloquea": [ "Gracia Salvaje" ],
+      "efectos": {
+        "CA adicional": "+2 por cada 2 niveles"
+      }
+    },
+    {
+      "nombre": "Instinto Animal",
+      "nivel": 3,
+      "descripcion": "No puedes tener más de 2 puntos de cansancio. Tus descansos cortos se consideran largos.",
+      "activa": false,
+      "Requisitos": ["Cazador"],
+      "Desbloquea": [ "Cuerpo de la Naturaleza" ],
+      "efectos": {
+        "Cansancio máximo": "2 puntos",
+        "Recuperación de vida": "Siempre el máximo en descansos"
+      }
+    },
+    {
+      "nombre": "Brazo Poderoso",
+      "nivel": 3,
+      "descripcion": "Cualquier objeto que lances se considera un arma que hace 1D8 de daño.",
+      "activa": false,
+      "Requisitos": ["Cazador"],
+      "Desbloquea": [ "Ataque Predatorio" ],
+      "efectos": {
+        "Daño": "1D8 con objetos arrojados"
+      }
+    },
+    {
+      "nombre": "Gracia Salvaje",
+      "nivel": 5,
+      "descripcion": "Embistes a un enemigo y lo desplazas 15 pies en línea recta. Causa 4D8 de daño + Fuerza.",
+      "activa": false,
+      "Requisitos": ["Sintonía con la Cacería"],
+      "Desbloquea": [ "Carga Salvaje" ],
+      "efectos": {
+        "Desplazamiento enemigo": "15 pies",
+        "Daño": "4D8 + Fuerza"
+      }
+    },
+    {
+      "nombre": "Cuerpo de la Naturaleza",
+      "nivel": 5,
+      "descripcion": "Cuando te hacen daño, seleccionas un dado que no sea el máximo y lo eliminas.",
+      "activa": false,
+      "Requisitos": ["Instinto Animal"],
+      "Desbloquea": [ "Carga Salvaje", "Poder de la Naturaleza" ],
+      "efectos": {
+        "Reducción de daño": "Eliminar dado que no sea máximo"
+      }
+    },
+    {
+      "nombre": "Ataque Predatorio",
+      "nivel": 5,
+      "descripcion": "Golpeas a un objetivo infligiendo 5D8 + 1D8 por bonificación de Fuerza. Ventaja si lo rastreaste.",
+      "activa": false,
+      "Requisitos": ["Brazo Poderoso"],
+      "Desbloquea": [ "Poder de la Naturaleza" ],
+      "efectos": {
+        "Daño": "5D8 + 1D8 por bonificación de Fuerza",
+        "Ventaja": "Si fue rastreado"
+      }
+    },
+    {
+      "nombre": "Carga Salvaje",
+      "nivel": 7,
+      "descripcion": "Cargas contra un enemigo a 35 pies, causando 5D8 + Fuerza. Doble daño si sufrió Gracia salvaje.",
+      "activa": false,
+      "Requisitos": ["Gracia Salvaje", "Cuerpo de la Naturaleza"],
+      "Desbloquea": [ "Ataque con Conocimiento", "Superdepredador" ],
+      "efectos": {
+        "Alcance": "35 pies",
+        "Daño": "5D8 + Fuerza (doble si sufrió Gracia salvaje)"
+      }
+    },
+    {
+      "nombre": "Poder de la Naturaleza",
+      "nivel": 7,
+      "descripcion": "Imbuyes tu arma con daño elemental. Añades 1D6 por nivel de Superdepredador.",
+      "activa": false,
+      "Requisitos": ["Cuerpo de la naturaleza", "Ataque Predatorio"],
+      "Desbloquea": [ "Superdepredador", "Uno con la Naturaleza" ],
+      "efectos": {
+        "Daño elemental": "1D6 por nivel",
+        "Duración": "1 min por nivel"
+      }
+    },
+    {
+      "nombre": "Ataque con Conocimiento",
+      "nivel": 9,
+      "descripcion": "Eliges dos números de un D20; si coinciden, es un crítico. Doblas el daño y amputas.",
+      "activa": false,
+      "Requisitos": ["Carga salvaje"],
+      "Desbloquea": [ "Ataque Sangrante" ],
+      "efectos": {
+        "Golpe crítico": "Si coinciden dos números elegidos"
+      }
+    },
+    {
+      "nombre": "Superdepredador",
+      "nivel": 9,
+      "descripcion": "Tus atributos de Fuerza, Destreza y Constitución se igualan a los de tu enemigo si son menores.",
+      "activa": false,
+      "Requisitos": ["Carga salvaje", "Poder de la naturaleza"],
+      "Desbloquea": [ "Por encima de los Superdepredadores" ],
+      "efectos": {
+        "Atributos": "Igualados al enemigo"
+      }
+    },
+    {
+      "nombre": "Uno con la Naturaleza",
+      "nivel": 9,
+      "descripcion": "Te regeneras 5PG por turno. Puedes regenerar miembros amputados.",
+      "activa": false,
+      "Requisitos": ["Poder de la naturaleza"],
+      "Desbloquea": [ "Descubrimiento Interior" ],
+      "efectos": {
+        "Regeneración": "5PG por turno"
+      }
+    },
+    {
+      "nombre": "Ataque Sangrante",
+      "nivel": 12,
+      "descripcion": "Infliges 10D8 de daño y realizas la mitad del daño durante 1D4 turnos.",
+      "activa": false,
+      "Requisitos": ["Ataque con conocimiento"],
+      "Desbloquea": [ "Nacido para Cazar" ],
+      "efectos": {
+        "Daño inicial": "10D8",
+        "Daño continuado": "Mitad durante 1D4 turnos"
+      }
+    },
+    {
+      "nombre": "Por encima de los Superdepredadores",
+      "nivel": 12,
+      "descripcion": "Puedes domesticar un Destello.",
+      "activa": false,
+      "Requisitos": ["Superdepredador"],
+      "Desbloquea": [ "Nacido para Cazar", "Sangre Pura" ],
+      "efectos": {
+        "Habilidad": "Domesticar un Destello"
+      }
+    },
+    {
+      "nombre": "Descubrimiento Interior",
+      "nivel": 12,
+      "descripcion": "Otorgas un poder mágico a un objeto que lleves más de medio año contigo.",
+      "activa": false,
+      "Requisitos": [ "Uno con la naturaleza" ],
+      "Desbloquea": [ "Sangre Pura" ],
+      "efectos": {
+        "Poder mágico": "Seleccionar de la lista de objetos intermedios"
+      }
+    },
+    {
+      "nombre": "Nacido para Cazar",
+      "nivel": 15,
+      "descripcion": "Eres inmortal al paso del tiempo. Conjuros de muerte instantánea no te afectan.",
+      "activa": false,
+      "Requisitos": ["Ataque sangrante", "Por encima de los superdepredadores"],
+      "Desbloquea": [ "Rey de Reyes", "Cazador supremo" ],
+      "efectos": {
+        "Inmortalidad": "Contra el paso del tiempo y conjuros instantáneos"
+      }
+    },
+    {
+      "nombre": "Sangre Pura",
+      "nivel": 15,
+      "descripcion": "Inmune a venenos y regeneración mejorada con Uno con la naturaleza.",
+      "activa": false,
+      "Requisitos": ["Por encima de los superdepredadores","Descubrimiento interior"],
+      "Desbloquea": [ "Rey de Reyes", "Cazador supremo" ],
+      "efectos": {
+        "Inmunidad": "Venenos naturales y mágicos"
+      }
+    },
+    {
+      "nombre": "Rey de Reyes",
+      "nivel": 17,
+      "descripcion": "Obtienes 400PG adicionales y +1 de CA por nivel.",
+      "activa": false,
+      "Requisitos": ["Nacido para cazar","Sangre Pura"],
+      "Desbloquea": [ ],
+      "efectos": {
+        "Vida adicional": "400PG",
+        "CA": "+1 por nivel"
+      }
+    },
+    {
+      "nombre": "Cazador supremo",
+      "nivel": 17,
+      "descripcion": "Obtienes ventaja en ataque, daño máximo y 400PG adicionales.",
+      "activa": false,
+      "Requisitos": [ "Nacido para cazar","Sangre pura"],
+      "Desbloquea": [ ],
+      "efectos": {
+        "Ventaja en ataque": "Sí",
+        "Daño": "Máximo en dados",
+        "Vida adicional": "400PG"
+      }
+    }
+  ]
+}

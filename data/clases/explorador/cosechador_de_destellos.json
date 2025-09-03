@@ -1,0 +1,202 @@
+{
+    "idSubclase": "cosechador_de_destellos",
+    "nombre": "Cosechador de Destellos",
+    "esBasica": false,
+    "descripcion": "Un experto cazador entrenado para rastrear y derrotar a los Destellos, utilizando habilidades centelleantes y tácticas implacables.",
+    "imagen": "/images/subclases/cosechador_de_destellos.jpg",
+    "diagrama": "/diagrama/diagrama_cosechador_de_destellos.jpg",
+    "habilidades": [
+        {
+            "nombre": "Adaptación Centelleante",
+            "nivel": 1,
+            "descripcion": "Tu Destreza siempre se iguala con la de tu presa en caso de que sea mayor.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Golpe Duro", "Estudio Salvaje", "Reflejo de la Hoja"],
+            "efectos": {
+                "Atributo": "Iguala tu Destreza con la de tu presa si es mayor"
+            }
+        },
+        {
+            "nombre": "Golpe Duro", 
+            "nivel": 3,
+            "descripcion": "Pegas un codazo en la cara del objetivo, causando 1D6 + Fue/Des y aturdiéndolo 1D2 turnos. Tu siguiente ataque inflige 4D8 + Fue/Des.",
+            "activa": true,
+            "Requisitos": [ "Adaptación Centelleante" ],
+            "Desbloquea": [ "Devastar", "Agilidad Centelleante"],
+            "efectos": {
+                "Daño Codazo": "1D6 + Fue/Des.",
+                "Aturdimiento": "1D2 turnos.",
+                "Daño Siguiente Ataque": "4D8 + Fue/Des."
+            }
+        },
+        {
+            "nombre": "Estudio Salvaje",
+            "nivel": 3,
+            "descripcion": "Obtienes +2 por cada 3 niveles para cualquier tirada de habilidad relacionada con los Destellos.",
+            "activa": false,
+            "Requisitos": [ "Adaptación Centelleante" ],
+            "Desbloquea": [ "Devastar", "Agilidad Centelleante", "Raíces Salvajes" ],
+            "efectos": {
+                "Bonus Habilidad": "+2 por cada 3 niveles."
+            }
+        },
+        {
+            "nombre": "Reflejo de la Hoja",
+            "nivel": 3,
+            "descripcion": "Usas la luz para reflejarla con tu espada y cegar durante un turno al enemigo. Proporciona ataque furtivo 1D8/nivel de explorador. Contra Destellos, infliges 3D8/nivel de explorador.",
+            "activa": true,
+            "Requisitos": [ "Adaptación Centelleante" ],
+            "Desbloquea": [ "Agilidad Centelleante", "Raíces Salvajes" ],
+            "efectos": {
+                "Cegar": "1 turno",
+                "Ataque Furtivo": "1D8/nivel.",
+                "Daño a Destellos": "3D8/nivel."
+            }
+        },
+        {
+            "nombre": "Devastar",
+            "nivel": 5,
+            "descripcion": "Tu daño nunca puede ser inferior a la mitad del dado. Contra Destellos, siempre haces el máximo del dado.",
+            "activa": false,
+            "Requisitos": [ "Golpe Duro", "Estudio Salvaje" ],
+            "Desbloquea": [ "Brazo Centelleante"],
+            "efectos": {
+                "Daño Mínimo": "Mitad del dado.",
+                "Daño Máximo": "Siempre contra Destellos."
+            }
+        },
+        {
+            "nombre": "Agilidad Centelleante",
+            "nivel": 5,
+            "descripcion": "Aumenta en 10 pies tu velocidad por cada +2 Bonificador de Destreza. No te ralentiza el terreno difícil y con CD Equilibrio 15 puedes caminar por encima de la nieve u otros tipos de terreno.",
+            "activa": false,
+            "Requisitos": [ "Golpe Duro", "Estudio Salvaje", "Reflejo de la Hoja" ],
+            "Desbloquea": [ "Brazo Centelleante"],
+            "efectos": {
+                "Velocidad Extra": "10 pies por cada +2 Bonificador de Destreza.",
+                "Terreno Dificil": "No afecta.",
+                "Caminar Sobre Nieve": "CD 15 Equilibrio."
+            }
+        },
+        {
+            "nombre": "Raíces Salvajes",
+            "nivel": 5,
+            "descripcion": "Controlas las raíces de la tierra y apresan a tu víctima. Fuerza enfrentada CD 18 para soltarse.",
+            "activa": true,
+            "Requisitos": [ "Estudio Salvaje", "Reflejo de la Hoja" ],
+            "Desbloquea": [ "Brazo Centelleante" ],
+            "efectos": {
+                "CD Fuerza": 18
+            }
+        },
+        {
+            "nombre": "Brazo Centelleante",
+            "nivel": 7,
+            "descripcion": "Obtienes tantos ataques extra como la mitad de tu Bonificador de Destreza.",
+            "activa": false,
+            "Requisitos": [ "Devastar", "Agilidad Centelleante", "Raíces Salvajes" ],
+            "Desbloquea": [ "Estocada Profunda","Marca del Cazador",  "Reflejos Inhumanos" ],
+            "efectos": {
+                "Ataques Extra": "La mitad de tu bonificador de Destreza."
+            }
+        },
+        {
+            "nombre": "Estocada Profunda",
+            "nivel": 9,
+            "descripcion": "Perforas al enemigo, causando 3D8 más la mitad de tu nivel de explorador como daño continuo hasta que el enemigo trate la herida.",
+            "activa": true,
+            "Requisitos": [ "Brazo Centelleante" ],
+            "Desbloquea": [ "Acelerado","Reflejos Inhumanos" ],
+            "efectos": {
+                "Daño": "3D8 + mitad del nivel de explorador.",
+                "Sangrado": "Continuo hasta tratar la herida."
+            }
+        },
+        {
+            "nombre": "Marca del Cazador",
+            "nivel": 9,
+            "descripcion": "Dotas de una marca mágica a un Destello que te permite conocer siempre su ubicación. Si está invisible dentro de 100 pies, lo ves. Si estás dormido y el destello se acerca, la marca te despierta.",
+            "activa": true,
+            "Requisitos": [ "Brazo Centelleante" ],
+            "Desbloquea": [ "Reflejos Inhumanos","Sin Olor"],
+            "efectos": {
+                "Ubicación": "Siempre visible.",
+                "Despertar": "Si estás dormido y el Destello se acerca."
+            }
+        },
+        {
+            "nombre": "Acelerado",
+            "nivel": 12,
+            "descripcion": "Cuando tu último ataque es crítico, reinicias tu turno. Solo se puede usar una vez por asalto.",
+            "activa": false,
+            "Requisitos": [ "Estocada Profunda" ],
+            "Desbloquea": [ "Carga de Hojas / Huida con Flechas" ],
+            "efectos": {
+                "Reinicio Turno": "Con crítico, 1 vez por asalto",
+                "Acumulable": false
+            }
+        },
+        {
+            "nombre": "Reflejos Inhumanos",
+            "nivel": 12,
+            "descripcion": "Los Destellos no pueden realizarte críticos. Cuando otra criatura lo intente, debe repetir la tirada. Solo se confirma el crítico con un 20 natural.",
+            "activa": false,
+            "Requisitos": [ "Brazo Centelleante","Estocada Profunda","Marca del Cazador" ],
+            "Desbloquea": [ "Carga de Hojas / Huida con Flechas", "Experto" ],
+            "efectos": {
+                "Inmunidad Critico Destellos": true,
+                "Repetir Crítico": "Si no es 20 natural"
+            }
+        },
+        {
+            "nombre": "Sin Olor",
+            "nivel": 12,
+            "descripcion": "Eres imposible de rastrear y las tiradas para escucharte, avistarte o buscarte tienen una penalización de -1/nivel de Cosechador de Destellos.",
+            "activa": false,
+            "Requisitos": [ "Marca del Cazador" ],
+            "Desbloquea": [ "Experto" ],
+            "efectos": {
+                "Penalización": "-1/nivel para rastrearte"
+            }
+        },
+        {
+            "nombre": "Carga de Hojas / Huida con Flechas",
+            "nivel": 15,
+            "descripcion": "Saltas hasta 10 pies/Bonificador de Fuerza o Destreza hacia una dirección (diagonal incluida) e infliges 5D8 + Fuerza o Destreza por cada 5 pies de salto. 15 pies serían 6D8. Huida con flechas hace lo mismo pero saltando hacia atrás.",
+            "activa": true,
+            "Requisitos": [ "Acelerado", "Reflejos Inhumanos" ],
+            "Desbloquea": [ "Cosechador" ],
+            "efectos": {
+              "Tipo": ["Carga de hojas", "Huida con flechas"],
+              "Salto": "Hasta 10 pies + Bonificador de Fuerza o Destreza",
+              "Daño": "5D8 + Fuerza o Destreza por cada 5 pies de salto",
+              "Ejemplo": "15 pies de salto infligen 6D8 de daño"
+            }
+          },
+        {
+            "nombre": "Experto",
+            "nivel": 15,
+            "descripcion": "Los venenos que uses siempre infligen el total del daño o efecto en enemigos que hayas estudiado.",
+            "activa": false,
+            "Requisitos": [ "Sin Olor" ],
+            "Desbloquea": [ "Cosechador" ],
+            "efectos": {
+                "Veneno": "Máximo daño o efecto"
+            }
+        },
+        {
+            "nombre": "Cosechador",
+            "nivel": 17,
+            "descripcion": "Eres inmune a cualquier efecto mágico o físico de habilidades especiales de criaturas Destello. Contra ellos, todos tus ataques se consideran críticos y tu CA aumenta en 10.",
+            "activa": false,
+            "Requisitos": [ "Carga de Hojas / Huida con Flechas", "Reflejos Inhumanos", "Experto"],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Inmunidad": "Efectos mágicos y físicos de Destellos",
+                "Crítico": "Todos los ataques contra Destellos",
+                "Bonus CA": "+10 contra Destellos"
+            }
+        }
+    ]
+}

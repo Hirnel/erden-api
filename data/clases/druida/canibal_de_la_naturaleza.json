@@ -1,0 +1,238 @@
+{
+    "idSubclase": "canibal_de_la_naturaleza",
+    "nombre": "Caníbal de la Naturaleza",
+    "esBasica": false,
+    "descripción": "Un druida que abraza su lado más salvaje, fusionándose con la naturaleza y devorando su fuerza vital para aumentar su poder. Este arquetipo se especializa en formas ferales, ataques brutales y la utilización del entorno natural como arma.",
+    "imagen": "/images/subclases/canibal_de_la_naturaleza.jpg",
+    "diagrama": "/diagrama/diagrama_canibal_de_la_naturaleza.jpg",
+    "habilidades": [
+        {
+            "nombre": "Furia Natural",
+            "nivel": 1,
+            "Descripción": "Obtienes un ataque extra y ese ataque aumenta en un tamaño el dado. Este talento solo se puede usar una vez cada dos turnos.",
+            "activa": true,
+            "Requisitos": [  ],
+            "Desbloquea": [ "Tajo Cruzado", "Descubrir tus Dones", "Raíces Enredadoras" ],
+            "efectos": {
+                "Ataque Extra": true,
+                "Aumento Daño": "Incrementa el tamaño del dado"
+            }
+        },
+        {
+            "nombre": "Tajo Cruzado",
+            "nivel": 3,
+            "Descripción": "Golpeas con ambas armas simultáneamente. Además del daño de las armas, infliges 2D8 de daño por nivel de druida.",
+            "activa": true,
+            "Requisitos": [  "Furia Natural" ],
+            "Desbloquea": [ "Transformación Feral" ],
+            "efectos": {
+                "Daño": "2D8 por nivel de druida"
+            }
+        },
+        {
+            "nombre": "Descubrir tus Dones",
+            "nivel": 3,
+            "Descripción": "Por cada punto de Sabiduría, elige una transformación en la que podrás convertirte más adelante. Opciones: Gran Felino, Oso, Lechuza, Foca, Águila, Mono, Pulpo, Serpiente, Animal pequeño, Animal diminuto.",
+            "activa": false,
+            "Requisitos": [  "Furia Natural" ],
+            "Desbloquea": [ "Transformación Feral" ],
+            "efectos": {
+                "Opciones": [
+                    "Gran Felino",
+                    "Oso",
+                    "Lechuza",
+                    "Foca",
+                    "Águila",
+                    "Mono",
+                    "Pulpo",
+                    "Serpiente",
+                    "Animal pequeño",
+                    "Animal diminuto"
+                ]
+            }
+        },
+        {
+            "nombre": "Raíces Enredadoras",
+            "nivel": 3,
+            "Descripción": "Controlas las raíces del suelo e inmovilizas a un objetivo por cada bonificador de Sabiduría que poseas. CD Fuerza 18 para resistir.",
+            "activa": true,
+            "Requisitos": [  "Furia Natural" ],
+            "Desbloquea": [ "Transformación Feral" ],
+            "efectos": {
+                "Inmovilización": "Número de objetivos igual al bonificador de Sabiduría",
+                "CD": 18
+            }
+        },
+        {
+            "nombre": "Transformación Feral",
+            "nivel": 5,
+            "Descripción": "Te transformas en uno de los animales mencionados en 'Descubrir tus dones'. Tus características físicas se adaptan a las del animal, pero no puedes tener menos de las que ya posees.",
+            "activa": true,
+            "Requisitos": [ "Tajo Cruzado", "Descubrir tus Dones", "Raíces Enredadoras" ],
+            "Desbloquea": [ "Embestida", "Esencia Vital", "Piel Robusta" ],
+            "efectos": {
+                "Transformación": "Seleccionada de Descubrir tus dones"
+            }
+        },
+        {
+            "nombre": "Embestida",
+            "nivel": 7,
+            "Descripción": "Saltas contra un enemigo hasta 10 pies por cada punto de bonificador de Fuerza, Destreza o Constitución. Por cada 10 pies haces 2D6 + tu nivel de Druida + tu daño de ataque.",
+            "activa": true,
+            "Requisitos": [ "Transformación Feral" ],
+            "Desbloquea": [ "Rugido Salvaje","Mordisco" ],
+            "efectos": {
+                "Movimiento": "10 pies por bonificador físico",
+                "Daño": "2D6 + nivel de Druida + daño de ataque"
+            }
+        },
+        {
+            "nombre": "Esencia Vital",
+            "nivel": 7,
+            "Descripción": "Absorbes la esencia vital de las criaturas derrotadas, curándote 1D8 por cada nivel de druida.",
+            "activa": true,
+            "Requisitos": [ "Transformación Feral" ],
+            "Desbloquea": [ "Rugido Salvaje", "Mordisco", "Protección de la Naturaleza"],
+            "efectos": {
+                "Curación": "1D8 por nivel de Druida"
+            }
+        },
+        {
+            "nombre": "Piel Robusta",
+            "nivel": 7,
+            "Descripción": "El siguiente ataque que recibas hará la mitad de daño.",
+            "activa": true,
+            "Requisitos": [ "Transformación Feral" ],
+            "Desbloquea": [ "Mordisco", "Protección de la Naturaleza" ],
+            "efectos": {
+                "Reducción Daño": "Mitad del daño recibido"
+            }
+        },
+        {
+            "nombre": "Rugido Salvaje",
+            "nivel": 9,
+            "Descripción": "Aturdes a los enemigos a 20 pies de ti. CD Voluntad 18 o quedan aturdidos por 1D4 turnos. Si alguien muere mientras está aturdido, los aliados entran en pánico como si se les lanzara el conjuro de Miedo.",
+            "activa": true,
+            "Requisitos": [ "Embestida","Esencia Vital" ],
+            "Desbloquea": [ "Cuerpo y Espíritu Natural", "Crecimiento Salvaje" ],
+            "efectos": {
+                "area": "20 pies",
+                "duracionAturdimiento": "1D4 turnos",
+                "panico": "Efecto de Miedo en aliados"
+            }
+        },
+        {
+            "nombre": "Mordisco",
+            "nivel": 9,
+            "Descripción": "Muerdes ferozmente al enemigo, causando 10D8 de daño y sangrando durante 1D6 turnos por 6D6 de daño por turno. Si tu Fuerza supera por 10 puntos la Constitución del enemigo, puedes matarlo instantáneamente. Solo se puede usar 3 veces por objetivo.",
+            "activa": true,
+            "Requisitos": [ "Embestida", "Esencia Vital", "Piel Robusta"],
+            "Desbloquea": [ "Cuerpo y Espíritu Natural", "Crecimiento Salvaje", "Vínculo Natural" ],
+            "efectos": {
+                "Daño": "10D8 inicial, 6D6 por turno durante 1D6 turnos",
+                "Muerte Instantanea": "Si Fuerza supera en 10 puntos la Constitución del enemigo",
+                "Usos Por Objetivo": 3
+            }
+        },
+        {
+            "nombre": "Protección de la Naturaleza",
+            "nivel": 9,
+            "Descripción": "Los daños elementales que recibas no pueden sacar el máximo en los dados.",
+            "activa": false,
+            "Requisitos": [ "Esencia Vital", "Piel Robusta" ],
+            "Desbloquea": [ "Crecimiento Salvaje", "Vínculo Natural" ],
+            "efectos": {
+                "Reducción": "Los dados no pueden sacar el máximo"
+            }
+        },
+        {
+            "nombre": "Cuerpo y Espíritu Natural",
+            "nivel": 12,
+            "Descripción": "Obtienes la vitalidad de la naturaleza: +4 a dos características físicas, 350 PG adicionales y +4 a tu armadura natural.",
+            "activa": true,
+            "Requisitos": [ "Rugido Salvaje", "Mordisco" ],
+            "Desbloquea": [ "Fusión Antinatural", "Árbol de la Vida" ],
+            "efectos": {
+                "Bonus Caracteristicas": "+4 a dos características físicas",
+                "Vida Adicional": "+350 PG",
+                "Armadura": "+4 armadura natural"
+            }
+        },
+        {
+            "nombre": "Crecimiento Salvaje",
+            "nivel": 12,
+            "Descripción": "Haces crecer un árbol en 1D6 turnos. Produce frutos que curan 6D8 cada uno y polen que quita estados anormales.",
+            "activa": true,
+            "Requisitos": [ "Rugido Salvaje","Mordisco", "Protección de la Naturaleza" ],
+            "Desbloquea": [ "Fusión Antinatural", "Árbol de la Vida","Presa Imperceptible" ],
+            "efectos": {
+                "Duración": "1D6 turnos",
+                "Frutos": "Curación de 6D8 por fruto",
+                "Polen": "Elimina estados anormales"
+            }
+        },
+        {
+            "nombre": "Vínculo Natural",
+            "nivel": 12,
+            "Descripción": "No necesitas comer, beber ni dormir. Con un descanso corto recuperas todos tus talentos y conjuros.",
+            "activa": false,
+            "Requisitos": [ "Mordisco", "Protección de la Naturaleza" ],
+            "Desbloquea": [ "Árbol de la Vida", "Presa Imperceptible" ],
+            "efectos": {
+                "Autosuficiencia": true,
+                "Descanso Corto": "Recupera todos los talentos y conjuros"
+            }
+        },
+        {
+            "nombre": "Fusión Antinatural",
+            "nivel": 15,
+            "Descripción": "Seleccionas dos animales y te conviertes en un híbrido de ambos, combinando sus características.",
+            "activa": false,
+            "Requisitos": [ "Cuerpo y Espíritu Natural", "Crecimiento salvaje" ],
+            "Desbloquea": [ "Canibalizador de la Naturaleza" ],
+            "efectos": {
+                "Fusión": "Híbrido de dos animales"
+            }
+        },
+        {
+            "nombre": "Árbol de la Vida",
+            "nivel": 15,
+            "Descripción": "Transformas a un enemigo en un árbol vivo si falla una tirada de salvación de Constitución CD 15. La transformación es reversible solo por ti.",
+            "activa": true,
+            "Requisitos": [ "Cuerpo y Espíritu Natural", "Crecimiento salvaje", "Vínculo Natural" ],
+            "Desbloquea": [ "Canibalizador de la Naturaleza" ],
+            "efectos": {
+                "Transformación": "Convertir en árbol",
+                "Reversión": "Solo reversible por el druida"
+            }
+        },
+        {
+            "nombre": "Presa Imperceptible",
+            "nivel": 15,
+            "Descripción": "Si pasas 2 turnos quieto cerca de algo natural, tu piel, ropaje y todo lo que lleves se fusiona e iguala textura, olor y todas las propiedades de aquello. La única forma de diferenciarlo con el entorno es atacarlo y que se mueva o ver la sangre.",
+            "activa": true,
+            "Requisitos": [ "Crecimiento salvaje","Vínculo Natural" ],
+            "Desbloquea": [ "Canibalizador de la Naturaleza" ],
+            "efectos": {
+                "Camuflaje Total": {
+                    "Condición": "2 turnos quieto",
+                    "Efecto": "Se fusiona con el entorno natural igualando textura, olor y propiedades",
+                    "Detectar": "Solo se puede detectar si es atacado o si se ve sangre"
+                }
+            }
+        },
+        {
+            "nombre": "Canibalizador de la Naturaleza",
+            "nivel": 17,
+            "Descripción": "Devora el corazón de una criatura de nivel 10 o superior, fusionándolo con tu cuerpo. Obtienes su esperanza de vida, puedes morir tantas veces como corazones poseas. Furia natural no tiene límite de usos.",
+            "activa": false,
+            "Requisitos": [ "Fusión antinatural", "Árbol de la vida", "Presa Imperceptible" ],
+            "Desbloquea": [  ],
+            "efectos": {
+                "Esperanza De Vida": "Se suma a la tuya",
+                "Muertes Permitidas": "Igual al número de corazones",
+                "Sin Limite": "Furia natural ilimitada"
+            }
+        }
+    ]
+}

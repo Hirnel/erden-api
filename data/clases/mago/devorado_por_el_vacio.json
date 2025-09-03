@@ -1,0 +1,241 @@
+{
+    "idSubclase": "mago_devorado_por_el_vacio",
+    "nombre": "Mago Devorado por el Vacío",
+    "esBasica": false,
+    "descripcion": "Un ser marcado por el vacío, canalizando su energía abisal para devastar a sus enemigos y alterar el equilibrio natural.",
+    "imagen": "/images/subclases/devorado_por_el_vacio.jpg",
+    "diagrama": "/diagrama/diagrama_devorado_por_el_vacio.jpg",
+    "habilidades": [
+        {
+            "nombre": "Descarga del Vacío",
+            "nivel": 1,
+            "descripcion": "Lanzas un rayo de energía del vacío que causa 3D8/2 niveles. Los objetivos sufren Éxtasis abisal.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Explosión de Vacío", "Caminar por el Vacío", "Escudo del Vacío" ],
+            "efectos": {
+                "Daño": "3D8/2 niveles",
+                "Extasis Abisal": "3D8 extra por marca"
+            }
+        },
+        {
+            "nombre": "Explosión de Vacío", 
+            "nivel": 3,
+            "descripcion": "Una burbuja de vacío explota en un área de 25 pies, causando 6D8 de daño.",
+            "activa": true,
+            "Requisitos": [  "Descarga del Vacío" ],
+            "Desbloquea": [ "Mano del Vacío", "Aura de Vacío" ],
+            "efectos": {
+                "Área": "25 pies",
+                "Daño": "6D8"
+            }
+        },
+        {
+            "nombre": "Caminar por el Vacío", 
+            "nivel": 3,
+            "descripcion": "Abres una grieta en el aire y te teletransportas a un lugar a 40 pies de distancia.",
+            "activa": true,
+            "Requisitos": [  "Descarga del Vacío" ],
+            "Desbloquea": [ "Mano del Vacío", "Aura de Vacío", "Transformación" ],
+            "efectos": {
+                "Teletransporte": "40 pies"
+            }
+        },
+        {
+            "nombre": "Escudo del Vacío",
+            "nivel": 3,
+            "descripcion": "Invocas un escudo que protege al objetivo con puntos de vida específicos según tu nivel.",
+            "activa": true,
+            "Requisitos": [  "Descarga del Vacío" ],
+            "Desbloquea": [ "Aura de Vacío", "Transformación" ],
+            "efectos": {
+                "Niveles": {
+                    "Nivel 3": "30 Pg",
+                    "Nivel 5": "50 Pg",
+                    "Nivel 7": "70 Pg",
+                    "Nivel 9": "80 Pg",
+                    "Nivel 12": "100 Pg",
+                    "Nivel 15": "150 Pg",
+                    "Nivel 17": "250 Pg"
+                }
+            }
+        },
+        {
+            "nombre": "Mano del Vacío", 
+            "nivel": 5,
+            "descripcion": "Invocas una mano que causa 3D8 de daño y lanza al objetivo 10 pies por bonificador de Carisma.",
+            "activa": true,
+            "Requisitos": [ "Explosión de Vacío" ],
+            "Desbloquea": [ "Ritual" ],
+            "efectos": {
+                "Daño": "3D8",
+                "Lanzamiento": "10 pies por Bonf Car",
+                "Daño Contundente": "1D6 por 10 pies lanzados"
+            }
+        },
+        {
+            "nombre": "Aura de Vacío", 
+            "nivel": 5,
+            "descripcion": "Tus ataques de vacío obtienen +5 a tiradas de salvación y el daño mínimo siempre es la mitad del dado.",
+            "activa": false,
+            "Requisitos": [ "Explosión de Vacío", "Caminar por el Vacío", "Escudo del Vacío" ],
+            "Desbloquea": [ "Ritual" ],
+            "efectos": {
+                "Bonificación Salvación": "+5",
+                "Daño Mínimo": "Mitad del dado"
+            }
+        },
+        {
+            "nombre": "Transformación",
+            "nivel": 5,
+            "descripcion": "Fusión con el vacío, te conviertes en abisal. Repetición de 1 en dados de ataque/daño. Vulnerabilidad a elementos.",
+            "activa": false,
+            "Requisitos": [ "Escudo del Vacío" ],
+            "Desbloquea": [ "Ritual" ],
+            "efectos": {
+                "Vida": "6D8 por nivel",
+                "Repitir Unos": true,
+                "Vulnerabilidad Elementos": true
+            }
+        },
+        {
+            "nombre": "Ritual",
+            "nivel": 7,
+            "imagen": "/images/subclases/centinela_del_vacio.jpg",
+            "descripcion": "Elige una criatura que podrás invocar siempre: Susurros Oníricos, Centinelas del Vacío o Sombras Voraces.",
+            "activa": false,
+            "Requisitos": ["Golpe a Traición", "¿Caer? Sí claro, porque tú lo digas"],
+            "Desbloquea": ["Vórtice Devorador", "Paso del Vacío", "Aura Brumosa"],
+            "efectos": {
+                "Invocaciones": [
+                    {
+                        "Nombre": "Centinelas del Vacío",
+                        "Descripción": "Guardianes ancestrales del vacío, gigantescos y compuestos de energía pura."
+                    },
+                    {
+                        "Nombre": "Susurros Oníricos",
+                        "Descripción": "Entidades etéreas que se alimentan de sueños y pesadillas."
+                    },
+                    {
+                        "Nombre": "Sombras Voraces",
+                        "Descripción": "Criaturas oscuras que se nutren de la luz, consumiendo lentamente a sus presas."
+                    }
+                ]
+            }
+        },        
+        {
+            "nombre": "Vórtice Devorador", 
+            "nivel": 9,
+            "descripcion": "Un vórtice absorbe la vida de los enemigos, causando 3D8 por bonificador de Int. Toca el vórtice para restaurar Escudo del vacío.",
+            "activa": true,
+            "Requisitos": [ "Ritual" ],
+            "Desbloquea": [ "Poder del Vacío" ],
+            "efectos": {
+                "Daño": "3D8 por Bonf Int"
+            }
+        },
+        {
+            "nombre": "Paso del Vacío", 
+            "nivel": 9,
+            "descripcion": "Puedes caminar por el aire con total normalidad.",
+            "activa": false,
+            "Requisitos": [ "Ritual" ],
+            "Desbloquea": [ "Poder del Vacío", "Conocimiento del Vacío" ],
+            "efectos": {
+                "Habilidad": "Caminar por el aire"
+            }
+        },
+        {
+            "nombre": "Aura Brumosa",
+            "nivel": 9,
+            "descripcion": "Una bruma te rodea y hace más difícil que te impacten. Se te ataca con desventaja durante 1D6 turnos + Bonf Car.",
+            "activa": true,
+            "Requisitos": [ "Ritual" ],
+            "Desbloquea": [ "Conocimiento del Vacío"],
+            "efectos": {
+                "Duración": "1D6 turnos + Bonf Car",
+                "Desventaja Ataques": true
+            }
+        },
+        {
+            "nombre": "Poder del Vacío", 
+            "nivel": 12,
+            "descripcion": "Obtienes 2 conjuros adicionales de cada nivel.",
+            "activa": false,
+            "Requisitos": [ "Vórtice Devorador", "Paso del Vacío" ],
+            "Desbloquea": [ "Esferas Primordiales", "Aflicción de la Nada" ],
+            "efectos": {
+                "Conjuros Adicionales": "2 por nivel"
+            }
+        },
+        {
+            "nombre": "Conocimiento del Vacío",
+            "nivel": 12,
+            "descripcion": "Conoces 4 conjuros adicionales.",
+            "activa": false,
+            "Requisitos": [  "Paso del Vacío", "Aura Brumosa" ],
+            "Desbloquea": [ "Aflicción de la Nada", "Pisotón" ],
+            "efectos": {
+                "Conjuros Extra": 4
+            }
+        },
+        {
+            "nombre": "Esferas Primordiales", 
+            "nivel": 15,
+            "descripcion": "Almacenas conjuros en esferas flotantes según tu bonificador de Int. Usarlos es una acción estándar.",
+            "activa": false,
+            "Requisitos": [  "Poder del Vacío" ],
+            "Desbloquea": [ "Saña Malnacida" ],
+            "efectos": {
+                "Conjuros por Esfera": "Bonf Int",
+                "Duración": "24 horas"
+            }
+        },
+        {
+            "nombre": "Aflicción de la Nada", 
+            "nivel": 15,
+            "descripcion": "Tus ataques ahora realizan críticos con 19/20.",
+            "activa": false,
+            "Requisitos": [ "Poder del Vacío", "Conocimiento del Vacío" ],
+            "Desbloquea": [ "Saña Malnacida", "Armonía"],
+            "efectos": {
+                "Crítico Ampliado": "19/20"
+            }
+        },
+        {
+            "nombre": "Pisotón",
+            "nivel": 15,
+            "descripcion": "Genera púas en un radio de 100 pies causando 15D8 + 50 de daño. CD 18 Destreza para mitad de daño.",
+            "activa": true,
+            "Requisitos": [ "Conocimiento del Vacío" ],
+            "Desbloquea": [ "Armonía" ],
+            "efectos": {
+                "Área": "100 pies",
+                "Daño": "15D8 + 50"
+            }
+        },
+        {
+            "nombre": "Saña Malnacida",
+            "nivel": 17,
+            "descripcion": "Por cada ataque que recibes, puedes lanzar una Descarga del vacío de manera instantánea y gratuita.",
+            "activa": false,
+            "Requisitos": [ "Golpe a Traición", "¿Caer? Sí claro, porque tú lo digas" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Descarga Gratuita": "1 por ataque recibido"
+            }
+        },
+        {
+            "nombre": "Armonía",
+            "nivel": 17,
+            "descripcion": "Descarga del vacío es ahora una acción gratuita, sin límite de marcas acumuladas, y puedes lanzar hasta 3 por turno.",
+            "activa": false,
+            "Requisitos": [ "Golpe a Traición", "¿Caer? Sí claro, porque tú lo digas" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Acciones Gratuitas": "3 por turno",
+                "Sin Límite Marcas": true
+            }
+        }
+    ]
+}

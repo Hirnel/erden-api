@@ -1,0 +1,233 @@
+{
+    "id": "bardo",
+    "nombre": "Bardo",
+    "esBasica": true,
+    "descripcion": [
+      "Canturreando mientras desliza sus dedos sobre un antiguo monumento, en unas olvidadas ruinas hace largo tiempo, el conocimiento brota en la mente de una témere envuelta en pieles desgastadas, conjurado gracias a la magia de su canción, un conocimiento que habla sobre la gente que construyó el monumento y la mítica saga que representa.",
+    "Un severo guerrero humano golpea su espada rítmicamente contra su cota de mallas, marcando el tempo para su canto de guerra y alentando la valentía y el heroísmo de sus compañeros. La magia de su canción los fortalece y estimula.",
+    "Riendo mientras afina su cítara, un humano envuelve con su magia sutil a los nobles reunidos, asegurándose de que las palabras de sus compañeros serán bien recibidas.",
+    "Ya sea un erudito, un poeta o un canalla, un bardo teje su magia a través de sus palabras y su música para inspirar a los aliados, desmoralizar a los enemigos, manipular mentes, crear ilusiones e incluso sanar heridas."
+  ],
+    "imagen": "/images/bardo.jpg",
+    "rasgosDeClase": {
+      "competencias": {
+        "Armadura": ["Armadura ligera"],
+        "Armas": ["Armas simples", "Ballesta de mano", "Espada larga", "Estoque", "Espada corta"],
+        "Herramientas": ["Tres instrumentos musicales"],
+        "Tirada de Salvación": ["Destreza", "Carisma"],
+        "Habilidades": [
+          "Artesanía",
+          "Averiguar intenciones",
+          "Concentración",
+          "Conocimiento de conjuros",
+          "Descifrar",
+          "Diplomacia",
+          "Disfrazarse",
+          "Engañar",
+          "Equilibrio",
+          "Escapismo",
+          "Esconderse",
+          "Escuchar",
+          "Interpretar",
+          "Juego de manos",
+          "Movimientos sigilosos",
+          "Reunir información",
+          "Saberes (todos)"
+        ]
+      },
+      "habilidadesBasicas": [
+        {
+          "nombre": "Conocedor Nerkiano",
+          "descripcion": "Has aprendido a descifrar y reformular la realidad en armonía con tu música y tus deseos. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones."
+        },
+        {
+          "nombre": "Inspiración de Bardo",
+          "descripcion": "Puedes inspirar a otros a través de palabras estimulantes o de la música, otorgando un dado de inspiración a una criatura dentro de un rango de 60 pies."
+        },
+        {
+          "nombre": "Trucos",
+          "descripcion": "Conoces dos trucos de tu elección de la lista de conjuros del bardo. Aprendes trucos de bardo adicionales en niveles superiores."
+        },
+        {
+          "nombre": "Canción de Descanso",
+          "descripcion": "Puedes usar música o una oración reconfortante durante un descanso corto para ayudar a revitalizar a tus aliados, proporcionando puntos de golpe adicionales."
+        },
+        {
+          "nombre": "Vibrato Nerkiano",
+          "descripcion": "A partir del nivel 6, puedes usar notas musicales para interrumpir la magia y otorgar ventajas en tiradas de salvación contra miedo o encantamientos."
+        },
+        {
+          "nombre": "Herencia de Ariaen",
+          "descripcion": "En el nivel 15 y cada tres niveles, puedes sustituir un conjuro de nivel 1 como si fuera un truco."
+        }
+      ]
+    },
+    "progresion": [
+      {
+        "Nivel": 1,
+        "Bono De Competencia": "+1",
+        "Rasgos": ["Conocedor Nerkiano", "Inspiración de Bardo"],
+        "Trucos Conocidos": 0,
+        "Conjuros Conocidos": 5
+      },
+      {
+        "Nivel": 2,
+        "Bono De Competencia": "+1",
+        "Rasgos": ["Trucos"],
+        "Trucos Conocidos": 2,
+        "Conjuros Conocidos": 6
+      },
+      {
+        "Nivel": 3,
+        "Bono De Competencia": "+1",
+        "Rasgos": ["Canción de Descanso"],
+        "Trucos Conocidos": 3,
+        "Conjuros Conocidos": 6
+      },
+      {
+        "Nivel": 4,
+        "Bono De Competencia": "+2",
+        "Rasgos": ["+1 Característica"],
+        "Trucos Conocidos": 3,
+        "Conjuros Conocidos": 7
+      },
+      {
+        "Nivel": 5,
+        "Bono De Competencia": "+2",
+        "Rasgos": [],
+        "Trucos Conocidos": 4,
+        "Conjuros Conocidos": 8
+      },
+      {
+        "Nivel": 6,
+        "Bono De Competencia": "+3",
+        "Rasgos": ["Vibrato Nerkiano"],
+        "Trucos Conocidos": 4,
+        "Conjuros Conocidos": 9
+      },
+      {
+        "Nivel": 7,
+        "Bono De Competencia": "+3",
+        "Rasgos": ["+1 Característica"],
+        "Trucos Conocidos": 5,
+        "Conjuros Conocidos": 10
+      },
+      {
+        "Nivel": 8,
+        "Bono De Competencia": "+4",
+        "Rasgos": [],
+        "Trucos Conocidos": 5,
+        "Conjuros Conocidos": 11
+      },
+      {
+        "Nivel": 9,
+        "Bono De Competencia": "+4",
+        "Rasgos": ["+1 Característica"],
+        "Trucos Conocidos": 6,
+        "Conjuros Conocidos": 12
+      },
+      {
+        "Nivel": 10,
+        "Bono De Competencia": "+5",
+        "Rasgos": [],
+        "Trucos Conocidos": 7,
+        "Conjuros Conocidos": 14
+      },
+      {
+        "Nivel": 11,
+        "Bono De Competencia": "+5",
+        "Rasgos": [],
+        "Trucos Conocidos": 8,
+        "Conjuros Conocidos": 15
+      },
+      {
+        "Nivel": 12,
+        "Bono De Competencia": "+6",
+        "Rasgos": ["+1 Característica"],
+        "Trucos Conocidos": 8,
+        "Conjuros Conocidos": 16
+      },
+      {
+        "Nivel": 13,
+        "Bono De Competencia": "+6",
+        "Rasgos": [],
+        "Trucos Conocidos": 9,
+        "Conjuros Conocidos": 20
+      },
+      {
+        "Nivel": 14,
+        "Bono De Competencia": "+6",
+        "Rasgos": [],
+        "Trucos Conocidos": 9,
+        "Conjuros Conocidos": 20
+      },
+      {
+        "Nivel": 15,
+        "Bono De Competencia": "+6",
+        "Rasgos": ["Herencia de Ariaen"],
+        "Trucos Conocidos": 10,
+        "Conjuros Conocidos": 21
+      },
+      {
+        "Nivel": 16,
+        "Bono De Competencia": "+7",
+        "Rasgos": ["+1 Característica"],
+        "Trucos Conocidos": 11,
+        "Conjuros Conocidos": 22
+      },
+      {
+        "Nivel": 17,
+        "Bono De Competencia": "+7",
+        "Rasgos": [],
+        "Trucos Conocidos": 12,
+        "Conjuros Conocidos": 23
+      },
+      {
+        "Nivel": 18,
+        "Bono De Competencia": "+8",
+        "Rasgos": [],
+        "Trucos Conocidos": 13,
+        "Conjuros Conocidos": 25
+      },
+      {
+        "Nivel": 19,
+        "Bono De Competencia": "+9",
+        "Rasgos": [],
+        "Trucos Conocidos": 14,
+        "Conjuros Conocidos": 26
+      },
+      {
+        "Nivel": 20,
+        "Bono De Competencia": "+9",
+        "Rasgos": ["+1 Característica"],
+        "Trucos Conocidos": 15,
+        "Conjuros Conocidos": 26
+      },
+      {
+        "Nivel": [ ],
+        "Bono De Competencia": "+1/3niveles",
+        "Rasgos": ["+1 Característica/4 niveles"],
+        "Trucos Conocidos":"+1/2nivel",
+        "Conjuros Conocidos": "+2/3nivel"
+      } 
+    ],
+    "subclases": [
+        {
+            "idSubclase": "cabronazo",
+            "nombre": "Bardo Cabronazo",
+            "descripcion": "Especializado en usar su carisma y actitud desafiante para controlar el campo de batalla. Los Cabronazos son maestros de la intimidación, provocando y confundiendo a sus enemigos mientras inspiran a sus aliados a realizar hazañas heroicas.",
+            "imagen": "/images/cabronazo.jpg",
+            "esBasica": false,
+            "habilidades": []
+        },
+        {
+            "idSubclase": "orador_de_batalla",
+            "nombre": "Orador de Batalla",
+            "descripcion": "Un maestro del liderazgo en combate, el Orador de Batalla utiliza su voz para coordinar a sus aliados y desmoralizar a sus enemigos. Sus palabras son tan afiladas como una espada y tan inspiradoras como un himno heroico.",
+            "imagen": "/images/orador_de_batalla.jpg",
+            "esBasica": false,
+            "habilidades": []
+            }      
+    ]
+  }
+  

@@ -1,0 +1,178 @@
+{
+    "idSubclase": "uno_con_lo_sagrado",
+    "nombre": "Uno con lo Sagrado",
+    "esBasica": false,
+    "descripcion": "Un paladín que encarna la conexión directa con las fuerzas divinas, capaz de curar, proteger y desatar un poder sagrado abrumador para inspirar a sus aliados y purgar a sus enemigos.",
+    "imagen": "/images/subclases/uno_con_lo_sagrado.jpg",
+    "diagrama": "/diagrama/diagrama_uno_con_lo_sagrado.jpg",
+    "habilidades": [
+        {
+            "nombre": "Sobrecarga Sagrada",
+            "nivel": 1,
+            "descripcion": "Lanzas una poderosa energía sacra que puede hacer 1D8 de daño por nivel de paladín a un objetivo o curar la misma cantidad a un objetivo, cuenta como una acción gratuita.",
+            "activa": true,
+            "Requisitos": [],
+            "Desbloquea": [ "Limpieza", "Reminiscencia", "Fuerza del Justo" ],
+            "efectos": {
+              "Estela": "Cuando curas a un objetivo, este deja una estela de luz a su camino que le otorga 3 puntos a la CA durante 1D4 turnos. Esto ocurre cuando has alcanzado el nivel 12 de paladín."
+            }
+          },
+          {
+            "nombre": "Limpieza", 
+            "nivel": 3,
+            "descripcion": "Curas un efecto alterado o maldición.",
+            "activa": true,
+            "Requisitos": [ "Sobrecarga Sagrada" ],
+            "Desbloquea": [ "Grimorio Divino" ],
+            "efectos": {
+              "Curación": "Cura un efecto alterado o maldición."
+            }
+          },
+          {
+            "nombre": "Reminiscencia", 
+            "nivel": 3,
+            "descripcion": "Cuando curas a un objetivo, sanas la mitad del daño a aliados que estén a 5 pies.",
+            "activa": false,
+            "Requisitos": [ "Sobrecarga Sagrada" ],
+            "Desbloquea": [ "Grimorio Divino" ],
+            "efectos": {
+              "Curación Secundaria": "Mitad del daño curado a aliados que estén a 5 pies."
+            }
+          },
+          {
+            "nombre": "Fuerza del Justo",
+            "nivel": 3,
+            "descripcion": "Tus sanaciones llegan más lejos; 10 pies más por cada nivel de paladín.",
+            "activa": false,
+            "Requisitos": [ "Sobrecarga Sagrada" ],
+            "Desbloquea": [  "Grimorio Divino" ],
+            "efectos": {
+              "Alcance": "10 pies más por cada nivel de paladín."
+            }
+          },
+          {
+            "nombre": "Grimorio Divino",
+            "nivel": 5,
+            "imagen": "/images/subclases/grimorio_divino.jpg", 
+            "descripcion": "Contiene escrituras sagradas que rebosan de divinidad. Permiten al paladín usar Sobrecarga Sagrada aún sin puntos para seguir lanzando talentos. No cuenta para añadir puntos de cansancio. 5 veces al día puedes leer el texto sagrado para cancelar un crítico enemigo.",
+            "activa": false,
+            "Requisitos": [ "Limpieza", "Reminiscencia", "Fuerza del Justo" ],
+            "Desbloquea": [ "Grandeza", "Al Pie del Cañón", "Fulgor" ],
+            "efectos": {
+              "Uso Adicional": "Permite lanzar Sobrecarga Sagrada sin costo y cancelar un crítico enemigo 5 veces al día."
+            }
+          },
+          {
+            "nombre": "Grandeza", 
+            "nivel": 7,
+            "descripcion": "Gastas todo tu turno, incluido movimiento y cualquier otra acción en lanzar una fuerza sagrada que cura la mitad de la vida total del objetivo. El siguiente turno no puedes lanzar Grandeza y te mueves la mitad de tu movimiento.",
+            "activa": true,
+            "Requisitos": [ "Grimorio Divino" ],
+            "Desbloquea": [ "Conocer la Vida" ],
+            "efectos": {
+              "Curación": "Cura la mitad de la vida total del objetivo.",
+              "Restricción": "No puedes lanzar Grandeza el siguiente turno y te mueves a la mitad de tu velocidad."
+            }
+          },
+          {
+            "nombre": "Al Pie del Cañón", 
+            "nivel": 7,
+            "descripcion": "Si un aliado a menos de 15 pies que tenga familiaridad con tu alineamiento realiza un crítico, puedes lanzarle instantáneamente Sobrecarga Sagrada a él o al enemigo.",
+            "activa": false,
+            "Requisitos": [ "Grimorio Divino" ],
+            "Desbloquea": [ "Conocer la Vida" ],
+            "efectos": {
+              "Reacción": "Permite lanzar Sobrecarga Sagrada a un aliado o enemigo si un aliado realiza un crítico."
+            }
+          },
+          {
+            "nombre": "Fulgor",
+            "nivel": 7,
+            "descripcion": "Realizas una rociada de luz que sana a un objetivo 5D6. Cuenta como una acción estándar.",
+            "activa": true,
+            "Requisitos": [ "Grimorio Divino" ],
+            "Desbloquea": [ "Conocer la Vida" ],
+            "efectos": {
+              "Curación": "Sana a un objetivo 5D6."
+            }
+          },
+          {
+            "nombre": "Conocer la Vida",
+            "nivel": 9,
+            "descripcion": "Sabes cuánta energía vital le queda a tus aliados.",
+            "activa": false,
+            "Requisitos": [ "Grandeza", "Al Pie del Cañón", "Fulgor" ],
+            "Desbloquea": [ "Refuerzo Sagrado", "Saber", "Iluminación Divina" ],
+            "efectos": {
+              "Detección": "Permite conocer la cantidad de energía vital restante en tus aliados."
+            }
+          },
+          {
+            "nombre": "Refuerzo Sagrado", 
+            "nivel": 12,
+            "descripcion": "Ahora Grandeza no te impide volver a lanzarlo al siguiente turno y no restringe tu movimiento.",
+            "activa": false,
+            "Requisitos": [ "Conocer la Vida" ],
+            "Desbloquea": [ "Pulso Sacro" ],
+            "efectos": {
+              "Mejora": "Permite lanzar Grandeza consecutivamente sin restricciones."
+            }
+          },
+          {
+            "nombre": "Saber", 
+            "nivel": 12,
+            "descripcion": "Los 1 en tus dados puedes repetirlos siempre.",
+            "activa": false,
+            "Requisitos": [ "Conocer la Vida" ],
+            "Desbloquea": [ "Pulso Sacro" ],
+            "efectos": {
+              "Repetición": "Permite repetir resultados de 1 en tiradas de dados."
+            }
+          },
+          {
+            "nombre": "Iluminación Divina",
+            "nivel": 12,
+            "descripcion": "Puedes lanzar Fulgor la mitad de veces de tu nivel de paladín en ese turno. Solo puedes hacer esto una vez por cada descanso largo.",
+            "activa": false,
+            "Requisitos": [ "Conocer la Vida" ],
+            "Desbloquea": [ "Pulso Sacro" ],
+            "efectos": {
+              "Multiplicador": "Permite lanzar Fulgor varias veces en un turno, limitado a la mitad de tu nivel de paladín."
+            }
+          },
+          {
+            "nombre": "Pulso Sacro",
+            "nivel": 15,
+            "descripcion": "Después de lanzar Sobrecarga Sagrada durante 2 turnos, curas la mitad de esa cantidad al objetivo y le proporcionas +1/nivel de paladín al ataque y al daño en su siguiente ataque.",
+            "activa": false,
+            "Requisitos": [ "Refuerzo Sagrado", "Saber", "Iluminación Divina" ],
+            "Desbloquea": [ "Himno de la Protección", "Himno de la Vida"],
+            "efectos": {
+              "Curación Continua": "Cura la mitad del valor de Sobrecarga Sagrada durante 2 turnos.",
+              "Bonificación": "+1 al ataque y daño por nivel de paladín."
+            }
+          },
+          {
+            "nombre": "Himno de la Protección", 
+            "nivel": 17,
+            "descripcion": "Colocas un aura protectora alrededor de todos tus aliados que les proporciona un escudo que les defiende 15 puntos de vida por cada nivel de paladín que poseas.",
+            "activa": true,
+            "Requisitos": [ "Pulso Sacro" ],
+            "Desbloquea": [],
+            "efectos": {
+              "Escudo Protector": "Otorga 15 puntos de vida de escudo por nivel de paladín."
+            }
+          },
+          {
+            "nombre": "Himno de la Vida",
+            "nivel": 17,
+            "descripcion": "Puedes lanzar Resurrección verdadera sin dejar secuelas. El objetivo resucita con una condición perfecta, regenerando miembros perdidos y recuperando capacidades como gusto o visión. Solo se puede realizar una vez en la vida de cada persona.",
+            "activa": true,
+            "Requisitos": [ "Pulso Sacro" ],
+            "Desbloquea": [],
+            "efectos": {
+              "Resurrección Perfecta": "Permite lanzar Resurrección Verdadera sin secuelas y con restauración completa."
+            }
+          }          
+    ]
+}

@@ -1,0 +1,226 @@
+{
+    "idSubclase": "bienhechor",
+    "nombre": "Bienhechor",
+    "esBasica": false,
+    "descripcion": "Un ser de luz y sanación, el bienhechor utiliza sus talentos sagrados para proteger, curar y fortalecer a sus aliados, mientras inflige daño a sus enemigos a través de su conexión divina.",
+    "imagen": "/images/subclases/bienhechor.jpg",
+    "diagrama": "/diagrama/diagrama_bienhechor.jpg",
+    "habilidades": [
+        {
+            "nombre": "Llamada",
+            "nivel": 1,
+            "descripcion": "Lanzas un rezo que te requiere un asalto completo y curas a un máximo de 5 personas a tu elección que estén como máximo a 35pies de ti. Curas 1D8/nivel + nivel de clérigo.",
+            "activa": true,
+            "Requisitos": [],
+            "Desbloquea": [ "Reposo", "Cadenas sagradas", "Suelo sacro"],
+            "efectos": {
+                "Curación": "1D8/nivel + nivel de clérigo",
+                "Alcance": "35 pies",
+                "Max Objetivos": 5
+            }
+        },
+        {
+            "nombre": "Reposo",
+            "nivel": 3,
+            "descripcion": "Elimina maldiciones, efectos de estado y un punto de cansancio.",
+            "activa": true,
+            "Requisitos": ["Llamada"],
+            "Desbloquea": [ "Chispa divina"],
+            "efectos": {
+                "Eliminar Efectos": ["maldiciones", "efectos de estado", "1 punto de cansancio"]
+            }
+        },
+        {
+            "nombre": "Cadenas sagradas",
+            "nivel": 3,
+            "descripcion": "Lanzas desde tus manos unas cadenas que restringen al enemigo al suelo. CD Fue 16 o se quedará en el sitio inmovilizado hasta que rompa las cadenas. Fallar la tirada hace que aumente en 1 punto por turno la CD hasta un máximo de 25. Como máximo puedes encadenar igual a tu Bonificador de Sab.",
+            "activa": true,
+            "Requisitos": ["Llamada"],
+            "Desbloquea": [ "Chispa divina", "Pulso", "Protección del mártir"],
+            "efectos": {
+                "CD Inicial": 16,
+                "CD Máxima": 25,
+                "enemigosMaximos": "Bonificador de Sabiduría"
+            }
+        },
+        {
+            "nombre": "Suelo sacro",
+            "nivel": 3,
+            "descripcion": "Invocas un circulo de 20pies,hasta a 100pies de distancia, que cura durante 4 turnos 2D6/nivel de clérigo y realiza 1D6/nivel de clérigo de daño a enemigos.",
+            "activa": true,
+            "Requisitos": ["Llamada"],
+            "Desbloquea": [ "Protección del mártir"],
+            "efectos": {
+                "curacionAliados": "2D6/nivel",
+                "danioEnemigos": "1D6/nivel",
+                "duracion": "4 turnos",
+                "area": "Círculo de 20 pies, hasta 100 pies de distancia"
+            }
+        },
+        {
+            "nombre": "Chispa divina",
+            "nivel": 5,
+            "descripcion": "Como acción gratuita puedes sanar 4D8 a un objetivo.",
+            "activa": true,
+            "Requisitos": ["Reposo"],
+            "Desbloquea": [ "Salmo curativo"],
+            "efectos": {
+                "curacion": "4D8",
+                "accion": "gratuita"
+            }
+        },
+        {
+            "nombre": "Pulso",
+            "nivel": 5,
+            "descripcion": "Marcas con el simbolo de tu Dios a un objetivo que tiene que estar familiarizado con tu alineamiento descargas sagradas que curan 2D6 durante tantos niveles cómo tu nivel de clérigo.",
+            "activa": true,
+            "Requisitos": [ "Cadenas sagradas" ],
+            "Desbloquea": [ "Salmo curativo", "Salmo protector"],
+            "efectos": {
+                "curacionPorTurno": "2D6",
+                "duracion": "Tu nivel de clérigo"
+            }
+        },
+        {
+            "nombre": "Protección del mártir",
+            "nivel": 5,
+            "descripcion": "Colocas un aura alrrededor de un objetivo que cuando sufre 25 de daño explota e inflinje 10 veces el nivel del clérigo al que rompió el escudo. El escudo brilla ligeramente aún de día.",
+            "activa": true,
+            "Requisitos": [ "Suelo sacro" ],
+            "Desbloquea": [ "Salmo protector" ],
+            "efectos": {
+                "Escudo": "25 de daño absorbido",
+                "Explosión": "10x nivel de clérigo",
+                "Visibilidad": "Brilla incluso de día"
+            }
+        },
+        {
+            "nombre": "Salmo curativo",
+            "nivel": 7,
+            "descripcion": "Cantas un salmo de manera pasiva que no impide que lances hechizos, talentos u hables y tus curaciones sanan un tamaño de dado más.",
+            "activa": false,
+            "Requisitos": [ "Chispa divina","Pulso" ],
+            "Desbloquea": [ "Sanación desesperada", "Resonancia" ],
+            "efectos": {
+                "Mejora Curación": "Un tamaño de dado más"
+            }
+        },
+        {
+            "nombre": "Salmo protector",
+            "nivel": 7,
+            "descripcion": "Cantas un salmo de manera pasiva que no impide que lances hechizos, talentos u hables y tus curaciones proporcionan un escudo equivalente al cuadruple de tu nivel de clérigo.",
+            "activa": false,
+            "Requisitos": [ "Pulso", "Protección del mártir" ],
+            "Desbloquea": [ "Resonancia", "Destilar vida"],
+            "efectos": {
+                "Escudo": "4x nivel de clérigo"
+            }
+        },
+        {
+            "nombre": "Sanación desesperada",
+            "nivel": 9,
+            "descripcion": "Si un aliado ve su vida por debajo de 10pg puedes de manera gratuita lanzar Llamada después del turno del enemigo.",
+            "activa": false,
+            "Requisitos": [ "Salmo curativo" ],
+            "Desbloquea": [ "Bienhechor" ],
+            "efectos": {
+                "Activación": "Aliado con menos de 10 puntos de vida",
+                "Acción": "Llamada gratuita"
+            }
+        },
+        {
+            "nombre": "Resonancia",
+            "nivel": 9,
+            "descripcion": "Cuando una curación de talento termina, existe un 10% de probabilidades de que se active en ese objetivo Llamada.",
+            "activa": false,
+            "Requisitos": [ "Salmo curativo", "Salmo protector" ],
+            "Desbloquea": [ "Bienhechor" ],
+            "efectos": {
+                "probabilidadActivacion": "10%"
+            }
+        },
+        {
+            "nombre": "Destilar vida",
+            "nivel": 9,
+            "descripcion": "Adquieres la capacidad de que tu magia sagrada sea liquida y puedes crear pociones con ella. Puedes crear tantas pociones como la mitad de tu nivel de clérigo al día. Las pociones curan 1D8/nivel + nivel de clérigo.",
+            "activa": false,
+            "Requisitos": [ "Salmo protector" ],
+            "Desbloquea": [ "Bienhechor" ],
+            "efectos": {
+                "pocionesMaximas": "Mitad de tu nivel de clérigo al día",
+                "curacionPocion": "1D8/nivel + nivel de clérigo"
+            }
+        },
+        {
+            "nombre": "Bienhechor",
+            "nivel": 12,
+            "descripcion": "Tus talentos y hechizos de sanación siempre curan el máximo del dado. Te crecen alas a voluntad y puedes volar de manera perfecta. Tu movimiento es de 75 pies con vuelo.",
+            "activa": false,
+            "Requisitos": [ "Sanación desesperada","Resonancia","Destilar vida"],
+            "Desbloquea": [ "Mente sagrada", "Cuerpo sagrado" ],
+            "efectos": {
+                "Curación Máxima": "Siempre el máximo del dado",
+                "Vuelo": "Movimiento de 75 pies, vuelo perfecto"
+            }
+        },
+        {
+            "nombre": "Mente sagrada",
+            "nivel": 15,
+            "descripcion": "Los conjuros o talentos que sufres de maldicion o estados alterados existe un 20% de posibilidades de que reboten y afecten a quien lo lanzó.",
+            "activa": false,
+            "Requisitos": [ "Bienhechor"],
+            "Desbloquea": [ "Existencia vital","Existencia etérea" ],
+            "efectos": {
+                "Probabilidad Rebote": "20%"
+            }
+        },
+        {
+            "nombre": "Cuerpo sagrado",
+            "nivel": 15,
+            "descripcion": "Existe un 10% de posibilidades de reducir a la mitad el daño recibido.",
+            "activa": false,
+            "Requisitos": [ "Bienhechor"],
+            "Desbloquea": [ "Existencia etérea","Existencia mortal" ],
+            "efectos": {
+                "Reduccion Daño": "50%",
+                "Probabilidad": "10%"
+            }
+        },
+        {
+            "nombre": "Existencia vital",
+            "nivel": 17,
+            "descripcion": "Cuando un aliado muere le resucitas instantáneamente, incluso si es con el conjuro 'Desintegrar', 'Muerte verdadera'. No afecta a muertes causadas por Dioses, Dragones o semi-dioses.",
+            "activa": false,
+            "Requisitos": [ "Mente sagrada"],
+            "Desbloquea": [  ],
+            "efectos": {
+                "Resurrección": "Aliado resucitado instantáneamente",
+                "Limitaciones": "No afecta muertes por dioses, dragones o semidioses"
+            }
+        },
+        {
+            "nombre": "Existencia etérea",
+            "nivel": 17,
+            "descripcion": "Resucitas a un aliado muerto, quien adquiere un nivel de una clase aleatoria.",
+            "activa": false,
+            "Requisitos": [ "Mente sagrada", "Cuerpo sagrado"],
+            "Desbloquea": [  ],
+            "efectos": {
+                "Resurrección": "Aliado resucitado con clase aleatoria",
+                "Limitaciones": "No afecta muertes por dioses, dragones o semidioses"
+            }
+        },
+        {
+            "nombre": "Existencia mortal",
+            "nivel": 17,
+            "descripcion": "Resucitas a un aliado como un ser destilado de Veridium.",
+            "activa": false,
+            "Requisitos": [ "Cuerpo sagrado"],
+            "Desbloquea": [  ],
+            "efectos": {
+                "Resurrección": "Aliado resucitado como ser de Veridium",
+                "Limitaciones": "No afecta muertes por dioses, dragones o semidioses"
+            }
+        }
+    ]
+}

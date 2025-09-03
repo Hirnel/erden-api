@@ -1,0 +1,254 @@
+{
+    "idSubclase": "segador",
+    "nombre": "Segador",
+    "esBasica": false,
+    "descripcion": "Un clérigo que utiliza las fuerzas oscuras y simbólicas para consumir a sus enemigos y obtener poder. Sus habilidades son letales y basadas en sacrificios, drenaje y control.",
+    "imagen": "/images/subclases/segador.jpg",
+    "diagrama": "/diagrama/diagrama_segador.jpg",
+    "habilidades": [
+        {
+            "nombre": "Devorar",
+            "nivel": 1,
+            "descripcion": "Lanzas una peste que devora al enemigo por dentro, causando 1D8 de daño por nivel de clérigo. Cuando sacas el máximo en un dado de daño, te curas 1D4 por cada dado.",
+            "activa": true,
+            "Requisitos": [],
+            "Desbloquea": ["Pesadillas Aullantes", "Labrar","Descarga Vil"],
+            "efectos": {
+                "Daño": "1D8/nivel de clérigo",
+                "Curación": "1D4 por dado cuando sacas el máximo"
+            }
+        },
+        {
+            "nombre": "Pesadillas Aullantes",
+            "nivel": 3,
+            "descripcion": "Invocas espectros que golpean al enemigo. CD Sab 18 o sufren 4D8 de daño y su movimiento se reduce a la mitad durante 10 asaltos. Si realizas un crítico, el enemigo sufre una maldición que le hace ver espectros que repiten el daño hasta que muera o sea purificado.",
+            "activa": true,
+            "Requisitos": [ "Devorar" ],
+            "Desbloquea": [ "Insomnio" ],
+            "efectos": {
+                "Daño": "4D8",
+                "Movimiento Reducido": "Mitad durante 10 turnos",
+                "Maldición": "Espectros que repiten daño"
+            }
+        },
+        {
+            "nombre": "Labrar",
+            "nivel": 3,
+            "descripcion": "Obtienes un pequeño sub-espacio en el que puedes almacenar una parte del cuerpo de un enemigo que tú hayas matado.",
+            "activa": false,
+            "Requisitos": [ "Devorar" ],
+            "Desbloquea": [ "Sembrar" ],
+            "efectos": {
+                "Subespacio": "Capacidad para almacenar partes del cuerpo de enemigos"
+            }
+        },
+        {
+            "nombre": "Descarga Vil",
+            "nivel": 3,
+            "descripcion": "Golpeas el pecho de un enemigo, causando 4D8/5 niveles de clérigo + 1D6/nivel de clérigo. Si sacas dos críticos consecutivos y el enemigo falla una tirada crítica, sufre un ataque al corazón y muere (una vez por enemigo).",
+            "activa": true,
+            "Requisitos": [ "Devorar" ],
+            "Desbloquea": [ "Dolor Trémulo" ],
+            "efectos": {
+                "Daño": "4D8/5 niveles + 1D6/nivel de clérigo",
+                "Efecto Especial": "Ataque al corazón y muerte si se cumplen las condiciones"
+            }
+        },
+        {
+            "nombre": "Insomnio",
+            "nivel": 5,
+            "descripcion": "Los afectados por Pesadillas aullantes obtienen 1 punto de cansancio, reduciendo su Ataque y Daño en 3 (máximo 3 puntos de cansancio por este efecto).",
+            "activa": false,
+            "Requisitos": [ "Pesadillas Aullantes" ],
+            "Desbloquea": [ "Delírio" ],
+            "efectos": {
+                "Cansancio": "+1 por efecto",
+                "Penalización": "-3 Ataque y Daño"
+            }
+        },
+        {
+            "nombre": "Sembrar",
+            "nivel": 5,
+            "descripcion": "Realizas un ritual en el que ofreces todo lo almacenado en tu sub-espacio.",
+            "activa": false,
+            "Requisitos": [ "Labrar" ],
+            "Desbloquea": [ "Cosechar" ],
+            "efectos": {
+                "Ritual": "Usa todo lo almacenado en el sub-espacio"
+            }
+        },
+        {
+            "nombre": "Dolor Trémulo",
+            "nivel": 5,
+            "descripcion": "Provocas espasmos en el cuerpo del enemigo, reduciendo su Ataque y Daño en 4. Sus tiradas de salvación tienen un penalizador de -3.",
+            "activa": false,
+            "Requisitos": [ "Descarga Vil" ],
+            "Desbloquea": [ "Estertor" ],
+            "efectos": {
+                "Penalización": "-4 Ataque y Daño, -3 a CD de salvación"
+            }
+        },
+        {
+            "nombre": "Delírio",
+            "nivel": 7,
+            "descripcion": "Pesadillas aullantes saltan entre tantos enemigos como tu bonificador de Sabiduría.",
+            "activa": false,
+            "Requisitos": [ "Insomnio" ],
+            "Desbloquea": [ "Mente" ],
+            "efectos": {
+                "Enemigos": "Cantidad igual a tu bonificador de Sabiduría"
+            }
+        },
+        {
+            "nombre": "Cosechar",
+            "nivel": 7,
+            "descripcion": "Dependiendo de la simbología, la calidad del tributo y del rezo ofrecido, obtienes una mejora de un talento (a discreción del máster).",
+            "activa": false,
+            "Requisitos": [ "Sembrar" ],
+            "Desbloquea": [ "Mente", "Cuerpo" ],
+            "efectos": {
+                "Mejora": "Talento mejorado según simbología y tributo"
+            }
+        },
+        {
+            "nombre": "Estertor",
+            "nivel": 7,
+            "descripcion": "Si un enemigo sufre Descarga vil dos veces, recibe una tercera automáticamente con daño máximo en los dados.",
+            "activa": false,
+            "Requisitos": [  "Dolor Trémulo" ],
+            "Desbloquea": [ "Cuerpo" ],
+            "efectos": {
+                "Daño Maximo": "Tercer ataque con daño máximo"
+            }
+        },
+        {
+            "nombre": "Mente",
+            "nivel": 9,
+            "descripcion": "Recibes una mejora física que otorga +2, +2, +2 a tus características mentales a elegir.",
+            "activa": false,
+            "Requisitos": ["Delírio","Cosechar"],
+            "Desbloquea": [ "Control", "Drenar y Alimentar" ],
+            "efectos": {
+                "Mejora": "+2 en tres características mentales"
+            }
+        },
+        {
+            "nombre": "Cuerpo",
+            "nivel": 9,
+            "descripcion": "Recibes una mejora física que otorga +2, +2, +2 a tus características físicas a elegir.",
+            "activa": false,
+            "Requisitos": [ "Cosechar","Estertor" ],
+            "Desbloquea": [ "Drenar y Alimentar", "Calamidad" ],
+            "efectos": {
+                "Mejora": "+2 en tres características físicas"
+            }
+        },
+        {
+            "nombre": "Control",
+            "nivel": 12,
+            "descripcion": "Puedes controlar insectos a voluntad, usándolos para aturdir enemigos e infligir daño.",
+            "activa": false,
+            "Requisitos": [ "Mente" ],
+            "Desbloquea": [ "Manifestación de Poder" ],
+            "efectos": {
+                "Daño": "1D6/nivel de clérigo",
+                "Efecto": "Aturdir enemigos"
+            }
+        },
+        {
+            "nombre": "Drenar y Alimentar",
+            "nivel": 12,
+            "descripcion": "Apuntas a un objetivo que debe realizar una prueba de Sabiduría CD 18. Si falla, le drenas 5D8 + 20 por turno y sanas a otro objetivo por la mitad del daño causado.",
+            "activa": true,
+            "Requisitos": [ "Mente" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Daño": "5D8 + 20 por turno",
+                "Curación": "Mitad del daño drenado"
+            }
+        },
+        {
+            "nombre": "Calamidad",
+            "nivel": 12,
+            "descripcion": "Tus ataques generan un aura que daña a un segundo enemigo cercano.",
+            "activa": true,
+            "Requisitos": [ "Cuerpo" ],
+            "Desbloquea": [ "Desgarrar" ],
+            "efectos": {
+                "Daño Primario": "12D8",
+                "Daño Secundario": "8D8"
+            }
+        },
+        {
+            "nombre": "Manifestación de Poder",
+            "nivel": 15,
+            "descripcion": "Controlas insectos desde tu propio cuerpo. La masa de insectos tiene tu vida y siempre inflige daño.",
+            "activa": false,
+            "Requisitos": [ "Control" ],
+            "Desbloquea": [ "Segador Real" ],
+            "efectos": {
+                "Daño": "1D8/nivel de clérigo",
+                "vida": "Igual a la tuya"
+            }
+        },
+        {
+            "nombre": "Carne Corrosiva",
+            "nivel": 15,
+            "descripcion": "Después de sufrir Drenar y Alimentar sufre 2D6 hasta que reciba cualquier tipo de curación física o mágica.",
+            "activa": false,
+            "Requisitos": ["Drenar y Alimentar"],
+            "Desbloquea": ["Segador Decisivo"],
+            "efectos": {
+                "Daño Continuo": "2D6 hasta ser curado físicamente o mágicamente"
+            }
+        },
+        {
+            "nombre": "Desgarrar",
+            "nivel": 15,
+            "descripcion": "Clavas tus dedos en el enemigo, ganando +10 al Ataque y Daño. Antes de sacar la mano, activas Devorar sin costo.",
+            "activa": true,
+            "Requisitos": [ "Calamidad" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Bonificación": "+10 Ataque y Daño",
+                "Habilidad Adicional": "Activa Devorar sin costo"
+            }
+        },
+        {
+            "nombre": "Segador Real",
+            "nivel": 17,
+            "descripcion": "Puedes levantar el mismo peso que el tipo de insecto con el que estás vinculado. Infligen 2D8/nivel y los críticos pueden amputar extremidades.",
+            "activa": false,
+            "Requisitos": [ "Manifestación de Poder" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Daño": "2D8/nivel",
+                "Crítico": "Amputa extremidades"
+            }
+        },
+        {
+            "nombre": "Segador Decisivo",
+            "nivel": 17,
+            "descripcion": "Usa Drenar y Alimentar tantas veces como tu nivel de clérigo. Puedes drenar a un objetivo y alimentarte a ti mismo con tantos rayos como tu bonificador de Carisma.",
+            "activa": false,
+            "Requisitos": [ "Carne Corrosiva" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Usos": "Ilimitados según nivel",
+                "Bonificación": "Drenar según bonificador de Carisma"
+            }
+        },
+        {
+            "nombre": "Segador glorioso",
+            "nivel": 17,
+            "descripcion": "Después de usar Desgarrar, puedes usar los talentos del enemigo sin costo durante 1D6 + 1 turnos.",
+            "activa": false,
+            "Requisitos": [ "Desgarrar" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Duración ": "1D6 + 1 turnos",
+                "Habilidad": "Usar talentos del enemigo"
+            }
+        }
+    ]
+}

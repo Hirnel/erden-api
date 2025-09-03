@@ -1,0 +1,210 @@
+{
+    "Céntreden": {
+      "id_reino": "centreden",  
+      "nombre": "Céntreden",
+      "clima": "Mediterráneo",
+      "cultura": {
+        "Obairean Noach": {
+          "descripcion": "Hombres libres, extranjeros de nacimiento que residen en Céntreden.",
+          "restricciones": {
+            "matrimonio": "No pueden casarse con ciudadanos de Céntreden.",
+            "propiedades": "No pueden poseer propiedades ni negocios.",
+            "derechos_politicos": "Carecen de derechos políticos.",
+            "impuestos": "Deben pagar un impuesto anual."
+          },
+          "obligaciones": {
+            "servicio_militar": "Tras 7 años de residencia, deben prestar servicio en la Gendarme durante un mínimo de 7 años."
+          }
+        },
+        "Marcados": {
+          "descripcion": "Niños con marcas especiales ingresados en escuelas militares o académicas.",
+          "beneficios": {
+            "familia": "Exentos de impuestos hasta la mayoría de edad del niño.",
+            "educacion": "Reciben educación gratuita en academias militares o académicas."
+          }
+        },
+        "Veteranos": {
+          "descripcion": "Participantes en la Batalla de la Primera Llama.",
+          "beneficios": {
+            "hogar": "Se les garantiza un hogar.",
+            "pension": "Reciben una pensión vitalicia.",
+            "impuestos": "Exentos de pagar impuestos."
+          }
+        },
+        "nombres": {
+          "estructura": "El primer apellido es siempre \"Érena\", seguido de los apellidos familiares.",
+          "herencia": "Los nombres de los padres se convierten en apellidos del hijo."
+        }
+      },
+      "economia": {
+        "externa": {
+          "comercio": {
+            "madera": "Intercambiada con Tsurunas por metales preciosos y gemas.",
+            "orfebreria": "Producción de objetos con oro y plata obtenidos localmente.",
+            "aceite": "Producto exportado de los olivos del sur."
+          },
+          "moneda": {
+            "descripcion": "Monedas con la imagen de un hombre ciego y el contorno del territorio del reino."
+          }
+        },
+        "interna": {
+          "produccion": {
+            "agricultura": "Cultivo de patatas, trigo, hortalizas y verduras.",
+            "ganaderia": "Dedicada a complementar la agricultura.",
+            "recursos_naturales": {
+              "bosques": "Producción de madera.",
+              "montañas": "Extracción de plata y metales diversos.",
+              "fangal": "Obtención de oro.",
+              "olivares": "Producción de aceite."
+            }
+          }
+        }
+      },
+      "ejercito": {
+        "estructura": {
+          "maestro_del_amanecer": {
+            "descripcion": "Máximo rango militar, nivel 41.",
+            "atribuciones": "Encargado de la Guardia Ígnea."
+          },
+          "guardia_ignea": {
+            "descripcion": "Protegen al Maestro del Amanecer y cumplen funciones burocráticas.",
+            "niveles": "Oscilan entre el nivel 21 y superiores."
+          },
+          "ramas": [
+            "Dragones del Fulgor",
+            "El Sumario",
+            "Los Inmaculados"
+          ],
+          "rango_militar": {
+            "generales": {
+              "descripcion": "Sin límite definido en el tamaño de sus ejércitos.",
+              "niveles": "Oscilan entre el nivel 21 y 25."
+            },
+            "veteranos": {
+              "descripcion": "Sobrevivientes de la Primera Llama.",
+              "niveles": "Suelen ser entre nivel 10 y superiores."
+            },
+            "comandantes": {
+              "descripcion": "A cargo de batallones de mil soldados.",
+              "niveles": "Oscilan entre el nivel 18 y 20."
+            },
+            "llamados": {
+              "descripcion": "Encargados de que las órdenes sean repartidas en batalla.",
+              "niveles": "Oscilan entre el nivel 11 y 13."
+            },
+            "caminantes": {
+              "descripcion": "Unidades de élite de quince soldados.",
+              "niveles": "Oscilan entre el nivel 14 y 16."
+            },
+            "capitanes": {
+              "descripcion": "Dirigen a cien soldados.",
+              "niveles": "Oscilan entre el nivel 9 y 10."
+            },
+            "edriacos": {
+              "descripcion": "Lideran grupos de diez soldados.",
+              "niveles": "Oscilan entre el nivel 6 y 8."
+            },
+            "soldados": {
+              "descripcion": "Rango básico del ejército.",
+              "niveles": "Oscilan entre el nivel 3 y 5."
+            },
+            "cadetes": {
+              "descripcion": "Niños en formación militar, ingresados desde los tres años si son marcados.",
+              "niveles": "Nivel 1."
+            }
+          }
+        },
+        "fortalezas": {
+          "oeste": "Construida para defenderse de Clarco.",
+          "sur": "Protección contra Thoasan Baich."
+        },
+        "conflictos": {
+          "wrynit_glanb": {
+            "descripcion": "Guerras activas con este territorio.",
+            "tacticas": "Especialistas en guerras de guerrillas."
+          },
+          "thoasan_baich": {
+            "descripcion": "Conflictos bélicos, políticos y económicos."
+          }
+        }
+      },
+      "fauna": {
+        "destellos": "Diversas criaturas letales presentes en los biomas del reino.",
+        "animales": [
+          "Lobos",
+          "Osos",
+          "Bestias mágicas"
+        ]
+      },
+      "flora": {
+        "aceite": "Producido a partir de un tipo de árbol cultivado al este.",
+        "plantas": [
+          "Lavanda",
+          "Romero",
+          "Adelfas"
+        ],
+        "arboles": [
+          "Castaño",
+          "Roble",
+          "Pino"
+        ],
+        "cultivos": {
+          "norte": "Plantaciones de remolacha procesadas para producir azúcar."
+        }
+      },
+      "historia": {
+        "fundacion": {
+          "año": "7 A.S.H.",
+          "lider": "Ferlnes"
+        },
+        "nombre": {
+          "cambio": {
+            "año": "14 A.S.H.",
+            "motivo": "Evitar conflictos políticos con otros reinos."
+          }
+        },
+        "lider_actual": "Galahad Elil"
+      },
+      "leyes": {
+        "principales": {
+          "asesinato": "Castigado con la pena de muerte.",
+          "esclavitud": "Venta de esclavos penada con la muerte.",
+          "blasfemia": "Multas por insultos a las deidades."
+        },
+        "nocturnas": {
+          "visitantes": "Deben abandonar las murallas por la noche si no son de un reino amistoso."
+        }
+      },
+      "torre_de_magia": {
+        "archimago": {
+          "nombre": "Lyar",
+          "descripcion": "Presunto héroe antiguo, encargado de gestionar la magia."
+        },
+        "escuelas": [
+          "Fuego",
+          "Aire",
+          "Tierra",
+          "Agua",
+          "Sangre",
+          "Vacío"
+        ],
+        "estructuras": {
+          "reliquias": "Administración y cuidado del tesoro de la torre.",
+          "viajes": "Supervisión de entradas y salidas."
+        }
+      },
+      "nombres": [
+        "Hirneldor",
+        "Centreva",
+        "Auvimara",
+        "Céntrin",
+        "Hirmund",
+        "Centrela",
+        "Auvimar",
+        "Cendrik",
+        "Hirnalia",
+        "Auvindor"
+      ]
+    }
+  }
+  

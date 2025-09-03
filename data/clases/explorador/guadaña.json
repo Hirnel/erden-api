@@ -1,0 +1,221 @@
+{
+    "idSubclase": "guadana",
+    "nombre": "Guadaña",
+    "esBasica": false,
+    "descripcion": "Una subclase letal que mezcla regeneración, habilidades depredadoras y un vínculo con la mística Piedra Luna para convertir al portador en un cazador definitivo.",
+    "imagen": "/images/guadana.jpg",
+    "diagrama": "/diagrama/diagrama_guadana.jpg",
+    "habilidades": [
+        {
+            "nombre": "Piedra Luna",
+            "nivel": 1,
+            "descripcion": "Ingieres polvo de una piedra que cae en la región de Revenhoe que proviene de la Luna Blanca de Ohh. Una vez cada 5 años la luna se torna de color azul una noche en esa región y hay una pequeña lluvia de piedras. Romper esas piedras en polvo e ingerirlas te proporciona 5pg de regeneración por turno y eres inmune a venenos naturales. No se te puede dormir de ninguna de las maneras. Tu descanso largo se hace en el tiempo de uno corto.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Comportamiento Depredatorio", "Como lo Haces", "Grandes Sentidos" ],
+            "efectos": {
+                "Regeneración": "5pg por turno.",
+                "Inmunidad": ["Venenos naturales", "Sueño"],
+                "Descanso": "Descanso largo en tiempo de uno corto."
+            }
+        },
+        {
+            "nombre": "Comportamiento Depredatorio", 
+            "nivel": 3,
+            "descripcion": "Has analizado el comportamiento de un ser vivo tanto que obtienes bonificadores a ataque, daño y habilidades de percepción según tu nivel.",
+            "activa": false,
+            "Requisitos":   [ "Piedra Luna" ],
+            "Desbloquea": [ "A la Yugular", "Heridas Latentes" ],
+            "efectos": {
+              "Niveles": {
+                "Nivel 3": { "Ataque": "+1", "Daño": "+1", "Percepcion": "+2" },
+                "Nivel 5": { "Ataque": "+3", "Daño": "+3", "Percepcion": "+4" },
+                "Nivel 7": { "Ataque": "+5", "Daño": "+5", "Percepcion": "+6" },
+                "Nivel 9": { "Ataque": "+7", "Daño": "+7", "Percepcion": "+8" },
+                "Nivel 12": { "Ataque": "+9", "Daño": "+9", "Percepcion": "+10" },
+                "Nivel 15": { "Ataque": "+12", "Daño": "+12", "Percepcion": "+12" },
+                "Nivel 17": { "Ataque": "+15", "Daño": "+15", "Percepcion": "+15" }
+              },
+              "Ventaja": "Siempre atacas con ventaja"
+            }
+          },
+          {
+            "nombre": "Como lo Haces",
+            "nivel": 3,
+            "descripcion": "Estás acostumbrado a la pelea, puedes realizar una tirada de ataque enfrentada al ser atacado.",
+            "activa": false,
+            "Requisitos": [ "Piedra Luna" ],
+            "Desbloquea": [  "A la Yugular", "Heridas Latentes", "Si Tiene Cabeza, Puede Morir" ],
+            "efectos": {
+              "Contraataque": "Si superas la tirada de ataque, bloqueas el ataque pero sufres 5pg fijos",
+              "Empate": "Si las tiradas son iguales, recibes daño normalmente"
+            }
+          },
+          {
+            "nombre": "Grandes Sentidos",
+            "nivel": 3,
+            "descripcion": "Tus sentidos se han agudizado enormemente.",
+            "activa": false,
+            "Requisitos": [ "Piedra Luna" ],
+            "Desbloquea": [ "Heridas Latentes", "Si Tiene Cabeza, Puede Morir" ],
+            "efectos": {
+              "Vision": "Visión en oscuridad absoluta 120 pies",
+              "Movimiento": "+30 pies",
+              "Caracteristica": "+2 a una característica cada 4 niveles"
+            }
+          },
+          {
+            "nombre": "A la Yugular", 
+            "nivel": 5,
+            "descripcion": "Apuntas con tu arma, incluso en cuerpo a cuerpo, al cuello del enemigo para realizar un golpe letal.",
+            "activa": true,
+            "Requisitos": [ "Comportamiento Depredatorio", "Como lo Haces" ],
+            "Desbloquea": [ "Heridas Latentes" ],
+            "efectos": {
+              "Daño": "1D8 por nivel de Explorador"
+            }
+          },
+          {
+            "nombre": "Heridas Latentes",
+            "nivel": 5,
+            "descripcion": "Has combatido tanto contra un enemigo que obtienes bonificadores defensivos contra él.",
+            "activa": false,
+            "Requisitos": [ "Comportamiento Depredatorio", "Cómo lo Haces", "Grandes Sentidos" ],
+            "Desbloquea": [ "Golpe Vicioso",  "Golpe Irracional" ],
+            "efectos": {
+              "CA": "+2 contra el enemigo habitual"
+            }
+          },
+          {
+            "nombre": "Si Tiene Cabeza, Puede Morir",
+            "nivel": 5,
+            "descripcion": "Obtienes bonificadores generales al ataque y al daño contra todo enemigo.",
+            "activa": false,
+            "Requisitos": [ "Cómo lo Haces", "Grandes Sentidos" ],
+            "Desbloquea": [ "Golpe Irracional" ],
+            "efectos": {
+              "Ataque": "+1",
+              "Daño": "+1"
+            }
+          },
+          {
+            "nombre": "Golpe Vicioso", 
+            "nivel": 7,
+            "descripcion": "Realizas un ataque sumamente entrenado que aumenta tu defensa tras ejecutarlo.",
+            "activa": true,
+            "Requisitos": [ "A la Yugular", "Heridas Latentes" ],
+            "Desbloquea": [ "Saber Buscar el Hueco" ],
+            "efectos": {
+              "Bonificador": "Añade tu bonificador de ataque a la CA en el siguiente turno"
+            }
+          },
+          {
+            "nombre": "Golpe Irracional",
+            "nivel": 7,
+            "descripcion": "Puedes añadir tu CA y tu nivel de explorador por dos en tu tirada de ataque y daño.",
+            "activa": true,
+            "Requisitos": [ "Heridas Latentes", "Si Tiene Cabeza, Puede Morir" ],
+            "Desbloquea": [ "Saber Buscar el Hueco" ],
+            "efectos": {
+              "Ataque": "CA + Nivel x2",
+              "Efecto Secundario": "El próximo turno pierdes esa cantidad en CA"
+            }
+          },
+          {
+            "nombre": "Saber Buscar el Hueco",
+            "nivel": 9,
+            "descripcion": "Eres capaz de encontrar las debilidades más fácilmente, incrementando tu crítico.",
+            "activa": false,
+            "Requisitos": [  "Golpe Vicioso", "Golpe Irracional" ],
+            "Desbloquea": [ "Cazador", "Collar de Premios" ],
+            "efectos": {
+              "Critico": "Doble crítico normal, Cuádruple contra enemigo predilecto"
+            }
+          },
+          {
+            "nombre": "Cazador",
+            "nivel": 12,
+            "descripcion": "Tu experiencia de caza es tan avanzada que tus ataques nunca hacen un daño mínimo.",
+            "activa": false,
+            "Requisitos": [ "Saber Buscar el Hueco" ],
+            "Desbloquea": [  "Dardos Venenosos", "Dardos tranquilizantes" ],
+            "efectos": {
+              "Daño Minimo": "No puede ser menor de la mitad del valor del dado"
+            }
+          },
+          {
+            "nombre": "Collar de Premios",
+            "nivel": 12,
+            "descripcion": "Cada 100 enemigos predilectos que has matado, obtienes +1 a Fuerza, Destreza o Constitución.",
+            "activa": false,
+            "Requisitos": [ "Saber Buscar el Hueco" ],
+            "Desbloquea": [ "Dardos tranquilizantes", "Dardos Alucinógenos" ],
+            "efectos": {
+              "bonus": "+1 a Fuerza, Destreza o Constitución por cada 100 enemigos predilectos eliminados."
+            }
+          },
+          {
+            "nombre": "Dardos Venenosos",
+            "nivel": 15,
+            "descripcion": "Pinchas un dardo en tu piel empapándolo en sangre y lo lanzas contra tu objetivo. El objetivo debe realizar una tirada de Constitución con CD 18 o sufre 1D8 de daño venenoso durante 2D8 turnos. Los efectos son acumulativos hasta que la presa fallezca. Se pueden curar con medicina CD 25 o sanación mágica.",
+            "activa": false,
+            "Requisitos": [ "Cazador" ],
+            "Desbloquea": [ "Guadaña" ],
+            "efectos": {
+              "dañoVeneno": "1D8 por turno durante 2D8 turnos",
+              "condicion": "CD 18 de Constitución para evitar el daño",
+              "curacion": "Curable con medicina CD 25 o sanación mágica",
+              "acumulativo": true
+            }
+          },
+          {
+            "nombre": "Dardos tranquilizantes",
+            "nivel": 15,
+            "descripcion": "Pinchas un dardo en tu piel empapándolo en sangre y lo lanzas contra tu objetivo. El objetivo debe realizar una tirada de Constitución con CD 18 o sufre un estado inducido de coma durante 1D6 + 4 turnos. Se pueden curar con medicina CD 25 o sanación mágica.",
+            "activa": false,
+            "Requisitos": [ "Cazador", "Collar de Premios" ],
+            "Desbloquea": [ "Dardos Alucinógenos" ],
+            "efectos": {
+              "estado": "Coma inducido",
+              "duracion": "1D6 + 4 turnos",
+              "condicion": "CD 18 de Constitución para evitar",
+              "curacion": "Curable con medicina CD 25 o sanación mágica"
+            }
+          },
+          {
+            "nombre": "Dardos Alucinógenos",
+            "nivel": 15,
+            "descripcion": "Pinchas un dardo en tu piel empapándolo en sangre y lo lanzas contra tu objetivo. El objetivo debe realizar una tirada de Constitución con CD 18 o sufrirá alucinaciones y quedará fuera de combate durante 1D6 + 4 turnos. Se pueden curar con medicina CD 25 o sanación mágica.",
+            "activa": false,
+            "Requisitos": [ "Collar de Premios" ],
+            "Desbloquea": [ "Guadaña" ],
+            "efectos": {
+              "estado": "Alucinaciones y fuera de combate",
+              "duracion": "1D6 + 4 turnos",
+              "condicion": "CD 18 de Constitución para evitar",
+              "curacion": "Curable con medicina CD 25 o sanación mágica"
+            }
+          },
+          {
+            "nombre": "Guadaña",
+            "nivel": 17,
+            "descripcion": "Has ingerido tanta Piedra Luna que tienes que realizar una tirada de Salvación con CD 20. Tienes 3 intentos, uno por día para poder superarlo. Si la superas, regeneras 20 PG por turno, puedes usar Detectar Monstruo de manera pasiva, siempre sacas crítico al rastrear y si a tu enemigo predilecto le queda menos de 30 PG lo ejecutas si quieres. Aumentas tu daño en 1D8 a enemigos normales y 4D8 a predilectos. Si no superas la tirada falleces y la Resurrección Verdadera no funciona. No puedes morir por efectos de tiempo.",
+            "activa": false,
+            "Requisitos": [ "Dardos Venenosos", "Dardos tranquilizantes", "Dardos Alucinógenos" ],
+            "Desbloquea": [  ],
+            "efectos": {
+              "tiraSalvacion": "CD 20, 3 intentos, 1 por día",
+              "regeneracion": "20 PG por turno al superar la tirada",
+              "detectarMonstruo": "Siempre pasivo",
+              "rastreo": "Crítico automático",
+              "ejecucion": "Ejecuta a predilectos con menos de 30 PG",
+              "bonusDanio": {
+                "normales": "1D8",
+                "predilectos": "4D8"
+              },
+              "falloTirada": "Muerte instantánea, no resucitable",
+              "inmortalidad": "No puede morir por efectos del tiempo"
+            }
+          }
+    ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "picaro",
+  "nombre": "Pícaro",
+  "esBasica": true,
+  "descripcion": [
+    "Mientras hace señas a sus compañeros para que esperen, una témere se arrastra a través del jardín de la finca. Presiona su oreja contra la puerta, saca un juego de herramientas y coge la ganzúa tan rápido como un pestañeo. Luego desaparece en las sombras mientras su compañero guerrero avanza para pegar una patada a la puerta y abrirla.",
+    "Un humano acecha en las sombras de un callejón mientras su cómplice se prepara para la emboscada. Cuando su objetivo, un esclavista muy conocido de Corcos, pasa por el callejón, el cómplice grita, el esclavista corre a investigar, y la hoja del asesino corta su garganta antes de que pueda hacer ningún sonido.",
+    "A pesar de su gran tamaño, el arquetipo usa su fuerza colosal para agarrarse con una mano de una viga del techo mientras los guardias pasean bajo sus pies haciendo la ronda. El coloso cae sigiloso cual sombra y apuñala a los guardias en el cuello.",
+    "Los pícaros confían sus habilidades, el sigilo y las vulnerabilidades de sus oponentes para lograr sacar ventaja en cualquier situación. Tienen un don para encontrar la solución a prácticamente cualquier problema, demostrando un ingenio y versatilidad, que es la piedra angular de cualquier buen grupo de aventureros."
+  ],
+  "imagen": "/images/picaro.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera"],
+      "Armas": ["Armas simples", "Ballesta de mano", "Espada larga", "Estoque", "Espada corta"],
+      "Herramientas": ["Herramientas de ladrón"],
+      "Tiradas De Salvacion": ["Destreza", "Inteligencia"],
+      "Habilidades": [
+        "Acrobacias",
+        "Atletismo",
+        "Engañar",
+        "Interpretación",
+        "Intimidar",
+        "Investigación",
+        "Juego de Manos",
+        "Percepción",
+        "Perspicacia",
+        "Persuasión",
+        "Sigilo"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Ataque Furtivo",
+        "descripcion": "Tu ataque furtivo inflige daño adicional cuando tienes ventaja en una tirada de ataque o si el objetivo está distraído por otro adversario.",
+        "efectos": {
+          "Daño Adicional": "+1D6 por nivel progresivo"
+        }
+      },
+      {
+        "nombre": "Jerga de Ladrones",
+        "descripcion": "Conoces un argot secreto que te permite comunicar mensajes ocultos a otros pícaros. También puedes leer signos y símbolos secretos usados por ladrones."
+      },
+      {
+        "nombre": "Acción Astuta",
+        "descripcion": "A partir del nivel 3, puedes usar una acción adicional en cada turno de combate para correr, esquivar o esconderte."
+      },
+      {
+        "nombre": "Esquiva Asombrosa",
+        "descripcion": "A partir del nivel 5, puedes usar tu reacción para reducir a la mitad el daño recibido de un ataque que puedes ver."
+      },
+      {
+        "nombre": "Evasión",
+        "descripcion": "A partir del nivel 9, puedes evitar por completo el daño de efectos de área si tienes éxito en una tirada de salvación de Destreza."
+      },
+      {
+        "nombre": "Acción Extra",
+        "descripcion": "En los niveles 6 y 14, puedes realizar una acción adicional en tu turno."
+      },
+      {
+        "nombre": "Sentido Ciego",
+        "descripcion": "A partir del nivel 14, puedes detectar la posición de criaturas invisibles o escondidas dentro de un rango de 10 pies si puedes oír."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono de Competencia": "+1",
+      "Ataque Furtivo": "+1D6",
+      "Rasgos de Pícaro": ["Ataque Furtivo", "Jerga de Ladrones"]
+    },
+    {
+      "Nivel": 2,
+      "Bono de Competencia": "+1",
+      "Ataque Furtivo": "+1D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 3,
+      "Bono de Competencia": "+1",
+      "Ataque Furtivo": "+2D6",
+      "Rasgos de Pícaro": ["Acción Astuta"]
+    },
+    {
+      "Nivel": 4,
+      "Bono de Competencia": "+2",
+      "Ataque Furtivo": "+2D6",
+      "Rasgos de Pícaro": ["+1 Característica"]
+    },
+    {
+      "Nivel": 5,
+      "Bono de Competencia": "+2",
+      "Ataque Furtivo": "+3D6",
+      "Rasgos de Pícaro": ["Esquiva Asombrosa"]
+    },
+    {
+      "Nivel": 6,
+      "Bono de Competencia": "+3",
+      "Ataque Furtivo": "+3D6",
+      "Rasgos de Pícaro": ["Acción Extra"]
+    },
+    {
+      "Nivel": 7,
+      "Bono de Competencia": "+3",
+      "Ataque Furtivo": "+4D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 8,
+      "Bono de Competencia": "+4",
+      "Ataque Furtivo": "+4D6",
+      "Rasgos de Pícaro": ["+1 Característica"]
+    },
+    {
+      "Nivel": 9,
+      "Bono de Competencia": "+4",
+      "Ataque Furtivo": "+5D6",
+      "Rasgos de Pícaro": ["Evasión"]
+    },
+    {
+      "Nivel": 10,
+      "Bono de Competencia": "+5",
+      "Ataque Furtivo": "+5D6",
+      "Rasgos de Pícaro": ["Sentido Ciego"]
+    },
+    {
+      "Nivel": 11,
+      "Bono de Competencia": "+5",
+      "Ataque Furtivo": "+6D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 12,
+      "Bono de Competencia": "+6",
+      "Ataque Furtivo": "+6D6",
+      "Rasgos de Pícaro": ["+1 Característica"]
+    },
+    {
+      "Nivel": 13,
+      "Bono de Competencia": "+6",
+      "Ataque Furtivo": "+7D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 14,
+      "Bono de Competencia": "+6",
+      "Ataque Furtivo": "+7D6",
+      "Rasgos de Pícaro": ["Acción Extra"]
+    },
+    {
+      "Nivel": 15,
+      "Bono de Competencia": "+6",
+      "Ataque Furtivo": "+8D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 16,
+      "Bono de Competencia": "+7",
+      "Ataque Furtivo": "+8D6",
+      "Rasgos de Pícaro": ["+1 Característica"]
+    },
+    {
+      "Nivel": 17,
+      "Bono de Competencia": "+7",
+      "Ataque Furtivo": "+9D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 18,
+      "Bono de Competencia": "+8",
+      "Ataque Furtivo": "+9D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 19,
+      "Bono de Competencia": "+9",
+      "Ataque Furtivo": "+10D6",
+      "Rasgos de Pícaro": []
+    },
+    {
+      "Nivel": 20,
+      "Bono de Competencia": "+9",
+      "Ataque Furtivo": "+10D6",
+      "Rasgos de Pícaro": ["+1 Característica"]
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/2niveles",
+      "Ataque Furtivo": "+2D6/nivel",
+      "Rasgos de Pícaro": ["+1Caracteristica/4nivel"]
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "picaro_de_ganzua",
+      "nombre": "Pícaro de Ganzua",
+      "descripcion": "Especialista en aprovechar las sombras para atacar con precisión letal.",
+      "imagen": "/images/subclases/picaro_de_ganzua.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "picaro_de_la_urdimbre",
+      "nombre": "Pícaro de la Urdimbre",
+      "descripcion": "Maestro en el arte de las intrigas y conspiraciones, moviéndose entre las redes del poder.",
+      "imagen": "/images/subclases/picaro_de_la_urdimbre.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "picaro_de_umbrif",
+      "nombre": "Pícaro de Umbrif",
+      "descripcion": "Sombra personificada, utiliza habilidades mágicas y físicas para infiltrarse y sabotear.",
+      "imagen": "/images/subclases/picaro_de_umbrif.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

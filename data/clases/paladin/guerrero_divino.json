@@ -1,0 +1,318 @@
+{
+    "idSubclase": "guerrero_divino",
+    "nombre": "Guerrero Divino",
+    "esBasica": false,
+    "descripcion": "Un paladín bendecido por los dioses, que canaliza poder sagrado a través de su cuerpo y sus armas, llevando justicia y destrucción a los enemigos de su fe. Combina ataques devastadores con habilidades divinas para proteger y guiar a sus aliados.",
+    "imagen": "/images/subclases/guerrero_divino.jpg",
+    "diagrama": "/diagrama/diagrama_guerrero_divino.jpg",
+    "habilidades": [
+        {
+            "nombre": "Hoja de la Justicia",
+            "nivel": 1,
+            "descripcion": "Tus dos siguientes ataques contra alguien que haya blasfemado contra tu dios hacen el doble de daño.",
+            "activa": true,
+            "Requisitos": [  ],
+            "Desbloquea": [ "Lluvia de Cuchillas", "Poder Sagrado", "Espada Fragmentada" ],
+            "efectos": {
+                "Doble Daño": true,
+                "Condición": "Blasfemia contra tu dios"
+            }
+        },
+        {
+            "nombre": "Lluvia de Cuchillas", 
+            "nivel": 3,
+            "descripcion": "Golpeas a todos los enemigos cercanos sin posibilidad de fallar, infligiendo el daño medio de tu arma incluyendo bonificadores.",
+            "activa": true,
+            "Requisitos": [ "Hoja de la Justicia" ],
+            "Desbloquea": [ "Suelo Deslizante" ],
+            "efectos": {
+                "Área": "Cercanos",
+                "Daño": "Medio del arma"
+            }
+        },
+        {
+            "nombre": "Poder Sagrado",
+            "nivel": 3,
+            "descripcion": "Tu Fuerza aumenta en +1 por cada bonificador de Carisma.",
+            "activa": false,
+            "Requisitos": [ "Hoja de la Justicia" ],
+            "Desbloquea": [ "Inquietud" ],
+            "efectos": {
+                "Bono Fuerza": "+1 por Bonf Carisma"
+            }
+        },
+        {
+            "nombre": "Espada Fragmentada",
+            "nivel": 3,
+            "descripcion": "Das una fuerte estocada que parece que la propia espada se rompe y golpeas 3 veces más al enemigo. (si tienes 2 ataques en el turno, puedes atacar, decir que usas espada fragmentada, realizar tiradas de ataque del ataque normal, de las 3 estocadas, y luego de tu siguiente ataque si decides atacar)",
+            "activa": true,
+            "Requisitos": [ "Hoja de la Justicia" ],
+            "Desbloquea": [ "Ataque Abrumador" ],
+            "efectos": {
+                "Golpes Adicionales": 3
+            }
+        },
+        {
+            "nombre": "Suelo Deslizante", 
+            "nivel": 5,
+            "descripcion": "Los enemigos impactados por Lluvia de cuchillas son derribados si superas su CA por 10, o retroceden 5' si superas su CA por 5.",
+            "activa": false,
+            "Requisitos": [ "Lluvia de Cuchillas" ],
+            "Desbloquea": [ "Aforismo", "Inquietud" ],
+            "efectos": {
+                "Derribo": "CA +10",
+                "Retroceso": "CA +5"
+            }
+        },
+        {
+            "nombre": "Ataque Abrumador",
+            "nivel": 5,
+            "descripcion": "Si el enemigo sufre Espada Fragmentada sin defensa absoluta, queda aturdido hasta su siguiente turno.",
+            "activa": false,
+            "Requisitos": [ "Espada Fragmentada" ],
+            "Desbloquea": [ "Inquietud", "Vehemencia Glacial" ],
+            "efectos": {
+                "Aturdimiento": true
+            }
+        },
+        {
+            "nombre": "Aforismo",
+            "nivel": 7,
+            "descripcion": "Lluvia de cuchillas sana a tus aliados en vez de dañarlos, restaurando la mitad del daño infligido.",
+            "activa": false,
+            "Requisitos": [ "Suelo Deslizante" ],
+            "Desbloquea": [ "Gracia Sagrada" ],
+            "efectos": {
+                "Curación Aliados": "Mitad del daño infligido"
+            }
+        },
+        {
+            "nombre": "Inquietud",
+            "nivel": 7,
+            "descripcion": "Das una orden a alguien abrumado por ti, obligándolo a obedecer durante 1D3+1 turnos.",
+            "activa": true,
+            "Requisitos": [ "Poder Sagrado", "Suelo Deslizante",  "Ataque Abrumador" ],
+            "Desbloquea": [ "Súplica Divina", "Cruda Experiencia" ],
+            "efectos": {
+                "Duración": "1D3+1 turnos"
+            }
+        },
+        {
+            "nombre": "Vehemencia Glacial",
+            "nivel": 7,
+            "descripcion": "Te vuelves competente con todas las armas y puedes usar un arma a dos manos con una sola mano.",
+            "activa": false,
+            "Requisitos": [ "Ataque Abrumador" ],
+            "Desbloquea": [ "Sútil Matanza Divina" ],
+            "efectos": {
+                "Competencia Armas": true,
+                "Uso Armas Dos Manos": true
+            }
+        },
+        {
+            "nombre": "Súplica Divina", 
+            "nivel": 9,
+            "descripcion": "Invocas armas protectoras de tu dios con bonificaciones y encantamientos que evolucionan con el nivel.",
+            "activa": true,
+            "Requisitos": [ "Inquietud" ],
+            "Desbloquea": [ "Cólera Divina" ],
+            "efectos": {
+                "Armas Mágicas": {
+                    "Niveles": {
+                        "Nivel 9": "+3",
+                        "Nivel 12": "+3 con encantamiento",
+                        "Nivel 15": "+4 con dos encantamientos",
+                        "Nivel 20": "+5 con tres encantamientos o Vorpalina"
+                    }
+                }
+            }
+        },
+        {
+            "nombre": "Cruda Experiencia",
+            "nivel": 9,
+            "descripcion": "Obtienes +4 a iniciativa y tras un golpe de gracia reinicias tu turno pero con un solo ataque.",
+            "activa": false,
+            "Requisitos": [ "Inquietud" ],
+            "Desbloquea": [ "Cólera Divina" ],
+            "efectos": {
+                "Bono Iniciativa": 4,
+                "Reinicio Turno": true
+            }
+        },
+        {
+            "nombre": "Gracia Sagrada", 
+            "nivel": 12,
+            "descripcion": "Te mueves 15' más en combate y puedes moverte entre ataques.",
+            "activa": false,
+            "Requisitos": [ "Aforismo" ],
+            "Desbloquea": [ "Reflejos Trancendentales", "Filo Sagrado" ],
+            "efectos": {
+                "Movimiento Extra": "15'"
+            }
+        },
+        {
+            "nombre": "Cólera Divina",
+            "nivel": 12,
+            "descripcion": "Añades tu bonificador de Carisma al daño.",
+            "activa": false,
+            "Requisitos": [ "Súplica Divina", "Cruda Experiencia" ],
+            "Desbloquea": [ "Filo Sagrado", "Llamada Bendita" ],
+            "efectos": {
+                "Bono Daño": "Bonf Carisma"
+            }
+        },
+        {
+            "nombre": "Sútil Matanza Divina",
+            "nivel": 12,
+            "descripcion": "Puedes combatir con dos armas sin penalización y moverte 15' tras matar a un enemigo para atacar a otro.",
+            "activa": false,
+            "Requisitos": [ "Vehemencia Glacial" ],
+            "Desbloquea": [ "Llamada Bendita", "Juicio" ],
+            "efectos": {
+                "Combate Dos Armas": true,
+                "Movimiento Extra Ataque": "15'"
+            }
+        },
+        {
+            "nombre": "Reflejos Trancendentales", 
+            "nivel": 15,
+            "descripcion": "Por cada 2 puntos de Destreza o Sabiduría obtienes un ataque extra.",
+            "activa": false,
+            "Requisitos": [ "Gracia Sagrada" ],
+            "Desbloquea": [ "Ira Desafiante" ],
+            "efectos": {
+                "Ataques Extras": "1 cada 2 puntos de Des/Sab"
+            }
+        },
+        {
+            "nombre": "Filo Sagrado",
+            "nivel": 15,
+            "descripcion": "Tus armas obtienen 1 dado de daño más.",
+            "activa": false,
+            "Requisitos": [ "Gracia Sagrada", "Cólera Divina" ],
+            "Desbloquea": [ "Paso Sacro" ],
+            "efectos": {
+              "Bonus Daño": "+1 dado de daño adicional"
+            }
+        },  
+        {
+            "nombre": "Paso Sacro",
+            "nivel": 15,
+            "descripcion": "El suelo por donde caminas y 30' alrededor vibra y desprende una luz que esté en sintonía con tu deidad. Los enemigos que estén dentro sufren 5d10 de daño por asalto y cura a los aliados 3d6. Dura 1 minuto. Aunque vueles y no pises el suelo, el efecto sigue siendo efectivo. El área permanece donde la invocaste.",
+            "activa": true,
+            "Requisitos": [ "Filo Sagrado", "Llamada Bendita"],
+            "Desbloquea": [ "Gracia del Justo" ],
+            "efectos": {
+              "área": "30 pies alrededor",
+              "Daño Enemigos": "5d10 por asalto",
+              "Curación Aliados": "3d6 por asalto",
+              "Duración": "1 minuto"
+            }
+        },                  
+        {
+            "nombre": "Llamada Bendita",
+            "nivel": 15,
+            "descripcion": "Invocas un guerrero espiritual de tu deidad completamente obediente que dura hasta morir o al final del día.",
+            "activa": true,
+            "Requisitos": [ "Cólera Divina", "Sútil Matanza Divina" ],
+            "Desbloquea": [ "Paso Sacro", "Gracia del Justo" ],
+            "efectos": {
+                "Duración": "Hasta muerte o fin del día"
+            }
+        },
+        {
+            "nombre": "Juicio",
+            "nivel": 15,
+            "descripcion": "Tus críticos pueden amputar extremidades si así lo quieres, para ello has de volver a realizar una tirada de ataque y superar la CA del enemigo en 10 puntos. Si lo haces, amputas un miembro seleccionado a excepción de la cabeza. Si no, realizas el crítico con normalidad.",
+            "activa": false,
+            "Requisitos": [ "Sútil Matanza Divina" ],
+            "Desbloquea": [ "Veredicto" ],
+            "efectos": {
+              "amputacionCritica": {
+                "condicion": "Superar CA en +10 en ataque crítico",
+                "efecto": "Amputación de extremidad (excepto cabeza)"
+              }
+            }
+        },
+        {
+            "nombre": "Ira Desafiante",
+            "nivel": 17,
+            "descripcion": "Das un paso y te mueves a un punto donde tu vista alcance. Si hay enemigos en medio, tienes un ataque extra a cada uno de ellos.",
+            "activa": true,
+            "Requisitos": [ "Reflejos Trancendentales" ],
+            "Desbloquea": [ "Guardia Sagrada" ],
+            "efectos": {
+              "Movimiento": "Teletransporte a un punto visible",
+              "Ataque Extra": "1 ataque extra a cada enemigo en el trayecto"
+            }
+        }, 
+        {
+            "nombre": "Gracia del Justo",
+            "nivel": 17,
+            "descripcion": "Cuando te sana un aliado, sanas la mitad de esa curación a otro aliado de manera pasiva.",
+            "activa": false,
+            "Requisitos": [ "Paso Sacro", "Llamada Bendita" ],
+            "Desbloquea": [ "Sentencia", "Oratoria Exaltada"],
+            "efectos": {
+              "Curación Compartida": "Mitad de la curación recibida es transferida a otro aliado"
+            }
+        },                             
+        {
+            "nombre": "Veredicto",
+            "nivel": 17,
+            "descripcion": "Puedes ordenar una acción a una criatura de hasta 150pg de vida. La criatura objetivo ha de tirar una prueba de Sabiduría CD 15 + el daño sufrido por el Paladín que le dé el Veredicto.",
+            "activa": true,
+            "Requisitos": [ "Juicio" ],
+            "Desbloquea": [ "Oratoria Exaltada" ],
+            "efectos": {
+              "Acción Forzada": {
+                "Condición": "150pg o menos",
+                "Resistencia": "Prueba de Sabiduría CD 15 + daño recibido"
+              }
+            }
+         },
+         {
+            "nombre": "Guardia Sagrada",
+            "nivel": 19,
+            "descripcion": "Una llamada divina siempre te avisa y nunca te encontrarás desprevenido, ni cuando duermas.",
+            "activa": false,
+            "Requisitos": [ "Ira Desafiante" ],
+            "Desbloquea": [],
+            "efectos": {
+              "Alerta Permanente": "No puede ser sorprendido, incluso al dormir"
+            }
+        },          
+        {
+            "nombre": "Sentencia",
+            "nivel": 19,
+            "descripcion": "El arma que corresponde a la imagen de tu deidad cae del cielo y golpea al enemigo señalado sin posibilidad de esquivar. Hace 10d6 de daño. Puedes extraer el arma y usarla en combate durante 5 minutos por nivel. Es un arma mágica +4 Retornante Afilada explosiva ígnea / congelante / electrizante.",
+            "activa": true,
+            "Requisitos": [ "Gracia del Justo" ],
+            "Desbloquea": [],
+            "efectos": {
+              "Invocación Arma": {
+                "Daño Inicial": "10d6",
+                "Duración": "5 minutos por nivel",
+                "Mejoras": [
+                  "+4 Retornante",
+                  "Afilada",
+                  "Explosiva ígnea",
+                  "Congelante",
+                  "Electrizante"
+                ]
+              }
+            }
+        },
+        {
+            "nombre": "Oratoria Exaltada",
+            "nivel": 19,
+            "descripcion": "Tus bonificadores de características se suman a los de tus aliados cuando están juntos en un combate a menos de 40 pies.",
+            "activa": false,
+            "Requisitos": [ "Gracia del Justo", "Veredicto"],
+            "Desbloquea": [],
+            "efectos": {
+              "Bono Cooperativo": "Los bonificadores de características se suman con los aliados a menos de 40 pies"
+            }
+          }            
+    ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "explorador",
+  "nombre": "Explorador",
+  "esBasica": true,
+  "descripcion": [
+    "Un humano de aspecto duro y salvaje acecha en solitario, oculto entre las sombras de los árboles, a unos bandido que planean una incursión en una granja cercana. Con una espada corta en cada mano, se trasforma en un torbellino de acero, derribando un enemigo tras otro.",
+    "Tras saltar rodando fuera de un cono de aire helado, el tsunya se afianza y desenfunda su arco para disparar una flecha al destello montañoso. Ignorando la ola de miedo que emana de la criatura, arroja una flecha tras otra tratando de encontrar las brechas entre las flexibles escamas.",
+    "Con su mano en alto, el arquetipo silba al domador que corre hacia sus enemigos y los descuartiza antes de que sepan que les ha matado.",
+    "Lejos del bullicio de las ciudades y pueblos, más allá de las defensas que mantienen a las granjas más lejanas protegidas de los terrores de la naturaleza, en medio de tupidos bosques sin caminos y a través de enormes y vacías llanuras, los exploradores mantienen su interminable guardia.",
+    "Antaño los exploradores humanos eran el vínculo entre civilización y Círculo druídico. Ya una vez el círculo se estableció hace siglos, estos posibles druidas con entrenamiento marcial fueron desechados por los druidas.",
+    "Ahora viven como exploradores de pueblos pequeños, cazadores de bestias que atacan pueblos que no tienen ayuda. Enseñan los secretos de la naturaleza y con ello son felices.",
+    "Algunos se especializan en la caza de humanos o razas elevadas para mantener los caminos seguros. La gran mayoría de los que se dedican a estas acciones han sufrido el azote de los bandidos y ahora ellos son quienes azotan a dichos ladrones."
+  ],
+  "imagen": "/images/explorador.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera", "Armadura media", "Escudos"],
+      "Armas": ["Armas simples", "Armas marciales"],
+      "Herramientas": [],
+      "Tiradas De Salvacion": ["Fuerza", "Destreza"],
+      "Habilidades": [
+        "Atletismo",
+        "Investigación",
+        "Trato con Animales",
+        "Naturaleza",
+        "Percepción",
+        "Perspicacia",
+        "Sigilo",
+        "Supervivencia"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Compañero Animal",
+        "descripcion": "Obtienes un compañero animal de tu mismo tipo de tamaño que te acompaña y ayuda en tus misiones."
+      },
+      {
+        "nombre": "Trucos",
+        "descripcion": "Conoces pequeños juegos mágicos gracias a la herencia de los druidas. Aprendes trucos de explorador adicionales en niveles superiores."
+      },
+      {
+        "nombre": "Aptitud Marcial",
+        "descripcion": "Puedes realizar con armas a distancia las mismas aptitudes que realizas con armas cuerpo a cuerpo."
+      },
+      {
+        "nombre": "Neutralidad Natural",
+        "descripcion": "Eres neutral a todas las bestias, incluidas las mágicas, lo que facilita el trato con ellas."
+      },
+      {
+        "nombre": "Instinto Depredatorio",
+        "descripcion": "Obtienes doble ventaja contra tus presas favoritas y al daño sumas tantos dados como la mitad de tu nivel total de explorador.",
+        "tablaPresas": [
+          "Aberración",
+          "Ajeno",
+          "Animal",
+          "Bestia mágica",
+          "Cieno",
+          "Constructo",
+          "Dragón",
+          "Elemental",
+          "Fata",
+          "Gigante",
+          "Elevados monstruosos",
+          "Elevados de raza",
+          "Muerto viviente",
+          "Planta",
+          "Sabandija",
+          "Semi-dios"
+        ]
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Aptitud Marcial", "Compañero Animal", "Trucos"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Neutralidad Natural"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+2",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica", "Ataque Adicional" ],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Instinto Depredatorio"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+4",
+      "Rasgos": [ "Afinidad Animal" ],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica", "Ataque Adicional"],
+      "Trucos Conocidos": 4
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 4
+    },
+    {
+      "Nivel": 11,
+      "Bono De Competencia": "+5",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 4
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["+1 Característica", "Ataque Adicional"],
+      "Trucos Conocidos": 5
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+6",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 5
+    },
+    {
+      "Nivel": 14,
+      "Bono De Competencia": "+7",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 5
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+7",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 6
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["+1 Característica", "Ataque Adicional"],
+      "Trucos Conocidos": 6
+    },
+    {
+      "Nivel": 17,
+      "Bono De Competencia": "+8",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 7
+    },
+    {
+      "Nivel": 18,
+      "Bono De Competencia": "+8",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 8
+    },
+    {
+      "Nivel": 19,
+      "Bono De Competencia": "+9",
+      "Rasgos": [ ],
+      "Trucos Conocidos": 9
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+10",
+      "Rasgos": ["+1 Característica", "Ataque Adicional"],
+      "Trucos Conocidos": 10
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/nivel",
+      "Rasgos": ["Ataque Adicional/4 niveles","+1 Caracteristica/4nivel"],
+      "Trucos Conocidos": ["+1/2nivel"]
+    }
+
+  ],
+  "subclases": [
+    {
+      "idSubclase": "guadaña",
+      "nombre": "Guadaña",
+      "descripcion": "Especialistas en el daño letal y caza de presas mágicas y bestias únicas.",
+      "imagen": "/images/subclases/guadaña.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "domador_nocturno",
+      "nombre": "Domador Nocturno",
+      "descripcion": "Controlan bestias nocturnas y atacan con sigilo absoluto.",
+      "imagen": "/images/subclases/domador_nocturno.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "cosechador_de_destellos",
+      "nombre": "Cosechador de Destellos",
+      "descripcion": "Maestros en recolectar y aprovechar energía mística durante sus cacerías.",
+      "imagen": "/images/subclases/cosechador_de_destellos.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "cazador_indomable",
+      "nombre": "Cazador Indomable",
+      "descripcion": "Indomables en batalla, pueden resistir grandes cantidades de daño mientras cazan.",
+      "imagen": "/images/subclases/cazador_indomable.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "batidor_del_vacio",
+      "nombre": "Batidor del Vacío",
+      "descripcion": "Utilizan el vacío como herramienta para desplazarse y acechar.",
+      "imagen": "/images/subclases/batidor_del_vacío.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

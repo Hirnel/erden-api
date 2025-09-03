@@ -1,0 +1,365 @@
+{
+  "idSubclase": "invocador_de_los_antiguos",
+  "nombre": "Invocador de los Antiguos",
+  "esBasica": false,
+  "descripcion": "Un maestro que invoca espíritus y cadáveres para usarlos en combate. Este invocador utiliza poderes oscuros y habilidades pasadas para superar cualquier desafío.",
+  "imagen": "/images/subclases/invocador_de_los_antiguos.jpg",
+  "diagrama": "/diagrama/diagrama_invocador_de_los_antiguos.jpg",
+  "habilidades": [
+    {
+      "nombre": "Invocación Mortal",
+      "nivel": 1,
+      "descripcion": "Usando un cadáver, invocas a un Espíritu antiguo que está conectado a ti. Además, puedes invocar un Muerto armado con las siguientes características.",
+      "activa": true,
+      "Requisitos": [],
+      "Desbloquea": [ "Conocer otras Vidas", "Mejora Crimita", "Mejora Edriana", "Mejora Glolesca", "Experiencia Pasada" ],
+      "efectos": {
+        "muerto_armado": {
+          "descripcion": "Un cadáver que sigue tus órdenes simples, no tiene inteligencia y no entiende bien tu idioma. Sus ataques son terriblemente infecciosos.",
+          "mordisco": {
+            "ataque": "+5",
+            "dano": "2D8 + 2D4",
+            "efecto": "Añade 1 punto de cansancio"
+          },
+          "arannazo": {
+            "ataque": "+5",
+            "dano": "3D6 + 1D6",
+            "efecto": "Hace soltar lo que el objetivo porta en la mano (resistencia Con 18)"
+          },
+          "limite": "Sólo puedes tener un Muerto armado a la vez",
+          "duracion": "Invocación permanente"
+        }
+      },
+      "imagenes": [
+        "/images/subclases/muerto_armado_1.jpg",
+        "/images/subclases/muerto_armado_2.jpg"
+      ]
+    },
+    {
+      "nombre": "Conocer otras Vidas",
+      "nivel": 3,
+      "descripcion": [
+        "Esclareces tus pesquisas, conoces tus otras vidas pasadas, no con completa",
+        "exactitud de quien o que eras, pero si tus habilidades. 1Min/nivel puedes usar tu Rivrim y usar tus",
+        "antiguas habilidades. Has de completar las fichas antes de iniciar las partidas para no interrumpir el juego."
+      ],
+      "activa": false,
+      "Requisitos": ["Invocación Mortal"],
+      "Desbloquea": [ "Bárbaro","Bardo","Brujo","Chamán","Clérigo","Druida","Explorador","Guerrero","Mago","Paladín","Pícaro", "Gran Invocación Mortal" ],
+      "efectos": {
+        "duracion": "1 minuto por nivel",
+        "habilidades": "Uso de habilidades pasadas"
+      }
+    },
+    {
+      "nombre": "Bárbaro",
+      "nivel": 1,
+      "descripcion": [
+        "Los bárbaros canalizan su furia para potenciar sus habilidades de combate.",
+        "Utilizan su fuerza y resistencia para dominar el campo de batalla."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "fuerza": "+3",
+          "resistencia": "+2"
+        },
+        "habilidades": ["Furia Primigenia", "Resistencia Mejorada"]
+      }
+    },
+    {
+      "nombre": "Bardo",
+      "nivel": 1,
+      "descripcion": [
+        "Los bardos son maestros de las palabras y la música.",
+        "Utilizan su arte para inspirar aliados y confundir enemigos."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "carisma": "+3",
+          "sabiduria": "+1"
+        },
+        "habilidades": ["Inspiración Bardica", "Canción de Descanso"]
+      }
+    },
+    {
+      "nombre": "Chamán",
+      "nivel": 1,
+      "descripcion": [
+        "Los chamanes son guías espirituales que conectan con los espíritus de la naturaleza.",
+        "Canalizan energías espirituales para sanar y controlar el entorno."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "sabiduria": "+3",
+          "inteligencia": "+1"
+        },
+        "habilidades": ["Invocar Espíritu", "Control del Clima"]
+      }
+    },
+    {
+      "nombre": "Clérigo",
+      "nivel": 1,
+      "descripcion": [
+        "Los clérigos son servidores divinos que canalizan el poder de sus deidades.",
+        "Usan su fe para sanar a los aliados y castigar a los enemigos."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "sabiduria": "+3",
+          "carisma": "+1"
+        },
+        "habilidades": ["Curación Divina", "Golpe Sagrado"]
+      }
+    },
+    {
+      "nombre": "Druida",
+      "nivel": 1,
+      "descripcion": [
+        "Los druidas son guardianes de la naturaleza que utilizan sus poderes para proteger los ecosistemas.",
+        "Pueden transformarse en animales y lanzar poderosos hechizos naturales."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "sabiduria": "+3",
+          "destreza": "+1"
+        },
+        "habilidades": ["Forma Salvaje", "Viento Protector"]
+      }
+    },
+    {
+      "nombre": "Explorador",
+      "nivel": 1,
+      "descripcion": [
+        "Los exploradores son maestros del rastreo y supervivencia.",
+        "Pueden adaptarse a cualquier entorno y rastrear presas con precisión."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "destreza": "+3",
+          "sabiduria": "+2"
+        },
+        "habilidades": ["Rastreo", "Disparo Preciso"]
+      }
+    },
+    {
+      "nombre": "Guerrero",
+      "nivel": 1,
+      "descripcion": [
+        "Los guerreros son combatientes versátiles que dominan una amplia variedad de armas y armaduras.",
+        "Son el núcleo de cualquier grupo de aventureros."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "fuerza": "+2",
+          "destreza": "+2"
+        },
+        "habilidades": ["Ataque Extra", "Dominio de Armas"]
+      }
+    },
+    {
+      "nombre": "Mago",
+      "nivel": 1,
+      "descripcion": [
+        "Los magos son estudiosos de la magia y los secretos arcanos.",
+        "Canalizan su conocimiento para lanzar poderosos hechizos."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "inteligencia": "+3",
+          "sabiduria": "+2"
+        },
+        "habilidades": ["Misil Mágico", "Escudo Arcano"]
+      }
+    },
+    {
+      "nombre": "Paladín",
+      "nivel": 1,
+      "descripcion": [
+        "Los paladines son campeones sagrados que luchan contra las fuerzas del mal.",
+        "Utilizan su fe para proteger a los débiles y castigar a los malvados."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "fuerza": "+2",
+          "carisma": "+2"
+        },
+        "habilidades": ["Imposición de Manos", "Aureola de Protección"]
+      }
+    },
+    {
+      "nombre": "Pícaro",
+      "nivel": 1,
+      "descripcion": [
+        "Los pícaros son expertos en el sigilo y la infiltración.",
+        "Destacan en maniobras rápidas y ataques devastadores en combate."
+      ],
+      "activa": false,
+      "Requisitos": ["Conocer otras Vidas"],
+      "Desbloquea": [],
+      "efectos": {
+        "bonos": {
+          "destreza": "+3",
+          "inteligencia": "+2"
+        },
+        "habilidades": ["Ataque Furtivo", "Esquiva Asombrosa"]
+      }
+    },
+    {
+      "nombre": "Mejora Crimita",
+      "nivel": 3,
+      "descripcion": "Obtienes 2 puntos de Destreza a los niveles 7, 9, 12, 15, 17.",
+      "activa": false,
+      "Requisitos": ["Invocación Mortal"],
+      "Desbloquea": [ ],
+      "efectos": {
+        "destreza": "+2 en los niveles 7, 9, 12, 15, 17"
+      }
+    },
+    {
+      "nombre": "Mejora Edriana",
+      "nivel": 3,
+      "descripcion": "Obtienes 2 puntos de Fuerza a los niveles 7, 9, 12, 15, 17.",
+      "activa": false,
+      "Requisitos": ["Invocación Mortal"],
+      "Desbloquea": [ ],
+      "efectos": {
+        "fuerza": "+2 en los niveles 7, 9, 12, 15, 17"
+      }
+    },
+    {
+      "nombre": "Mejora Glolesca",
+      "nivel": 3,
+      "descripcion": "Obtienes 2 puntos de Constitución a los niveles 7, 9, 12, 15, 17.",
+      "activa": false,
+      "Requisitos": ["Invocación Mortal"],
+      "Desbloquea": [ ],
+      "efectos": {
+        "constitucion": "+2 en los niveles 7, 9, 12, 15, 17"
+      }
+    },
+    {
+      "nombre": "Experiencia Pasada",
+      "nivel": 3,
+      "descripcion": "No te afectan los ataques de oportunidad ni de sorpresa. Obtienes +3 a la CA, al ataque y al daño.",
+      "activa": false,
+      "Requisitos": [ "Invocación Mortal" ],
+      "Desbloquea": [ "Rayo de Desorden" ],
+      "efectos": {
+        "inmunidad": [
+          "Ataques de oportunidad",
+          "Ataques de sorpresa"
+        ],
+        "bonusCA": "+3",
+        "bonusAtaque": "+3",
+        "bonusDanio": "+3"
+      }
+    },
+    {
+      "nombre": "Gran Invocación Mortal",
+      "nivel": 7,
+      "descripcion": "Tus invocaciones mejoran y son iguales de fuertes que cuando estaban vivos. Puedes usar 'Invocación mortal' hasta 5 veces a la vez durante 24 horas por nivel de brujo.",
+      "activa": false,
+      "Requisitos": [ "Conocer otras Vidas", "Rayo de Desorden" ],
+      "Desbloquea": ["Otro Saber en tu Mente", "Azote Encantador" ],
+      "efectos": {
+        "usoMaximo": 5,
+        "duracion": "24 horas/nivel"
+      }
+    },
+    {
+      "nombre": "Rayo de Desorden",
+      "nivel": 7,
+      "descripcion": "Lanzas un rayo caótico que inflige daño aleatorio dependiendo del resultado de un D6. Los efectos pueden incluir fuego, hielo, electricidad, ácido o energía mágica pura.",
+      "activa": true,
+      "Requisitos": [ "Experiencia Pasada" ],
+      "Desbloquea": [ "Gran Invocación Mortal" ],
+      "efectos": {
+        "dano": "Variable (1D6 para determinar tipo de daño)",
+        "tipo": [
+          "Fuego",
+          "Hielo",
+          "Electricidad",
+          "Ácido",
+          "Energía mágica pura"
+        ]
+      }
+    },
+    {
+      "nombre": "Otro Saber en tu Mente",
+      "nivel": 12,
+      "descripcion": "Obtienes conocimientos oscuros y olvidados que te permiten aprender un conjuro de nivel superior al que puedes lanzar.",
+      "activa": false,
+      "Requisitos": [ "Gran Invocación Mortal" ],
+      "Desbloquea": [ "Fuego del Alma" ],
+      "efectos": {
+        "conocimiento": "Aprender un conjuro de nivel superior",
+        "limitacion": "Sólo se puede usar una vez por nivel"
+      }
+    },
+    {
+      "nombre": "Azote Encantador",
+      "nivel": 12,
+      "descripcion": "Puedes desactivar todas las invocaciones y encantamientos de un objetivo en un radio de 30 pies. El efecto dura 1D4 turnos.",
+      "activa": true,
+      "Requisitos": [ "Gran Invocación Mortal" ],
+      "Desbloquea": [ "Llamada a los astros" ],
+      "efectos": {
+        "area": "30 pies",
+        "duracion": "1D4 turnos",
+        "efecto": "Desactiva invocaciones y encantamientos"
+      }
+    },
+    {
+      "nombre": "Fuego del Alma",
+      "nivel": 15,
+      "descripcion": "Quema por dentro al objetivo, siempre hace la mitad de la vida total que posea. Solo se puede lanzar una vez al día a un mismo objetivo.",
+      "activa": true,
+      "Requisitos": [ ],
+      "Desbloquea": [ ],
+      "efectos": {
+        "dano": "Mitad de la vida total del objetivo",
+        "limite": "1 uso diario por objetivo"
+      }
+    },
+    {
+      "nombre": "Llamada a los astros",
+      "nivel": 15,
+      "descripcion": "Invocas una lluvia de meteoritos en un punto de tu rango de visión, infligiendo 15D6 de daño de fuego y 4D6 + 10 contundente con cada astro. Invocas un 1D4+3 astros. El fuego impacta y daña a 30' a su alrededor.",
+      "activa": true,
+      "Requisitos": [ ],
+      "Desbloquea": [ ],
+      "efectos": {
+        "meteoritos": "1D4 + 3",
+        "dano": "15D6 de fuego y 4D6 + 10 contundente",
+        "radio": "30 pies"
+      }
+    }
+  ]
+}

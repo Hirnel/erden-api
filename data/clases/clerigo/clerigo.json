@@ -1,0 +1,204 @@
+{
+  "id": "clerigo",
+  "nombre": "Clérigo",
+  "esBasica": true,
+  "descripcion": [
+    "Con sus brazos y ojos alzados hacia el sol y una plegaria en los labios, un humano empieza a resplandecer con una luz interna que se extiende para curar a sus aguerridos compañeros.",
+    "Entonando un cántico de gloria, un enano blande su hacha en amplios barridos para pasar a través de las formaciones de orcos situadas frente a él, gritando alabanzas a los dioses por cada enemigo abatido.",
+    "Conjurando una bendición, un tsunya eleva la vitalidad y fuerza de su compañero para que se enfrente al destello que se ha cruzado en su camino.",
+    "Los clérigos son intermediarios entre el mundo mortal y los no tan distantes Dioses. Tan diferentes entre ellos como los dioses a los que sirven, los clérigos se esfuerzan por personificar las obras de sus deidades. No son sacerdotes ordinarios, un clérigo se encuentra imbuido de magia divina."
+  ],
+  "imagen": "/images/clerigo.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera", "Armadura media", "Armadura pesada", "Escudos"],
+      "Armas": ["Todas las armas simples"],
+      "Herramientas": ["Ninguna"],
+      "Tiradas De Salvacion": ["Sabiduría", "Carisma"],
+      "Habilidades": [
+        "Artesanía",
+        "Concentración",
+        "Conocimiento de conjuros",
+        "Diplomacia",
+        "Saber (Nerkia, historia, religión, realeza y nobleza)",
+        "Sanar"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Conocedor Nerkiano",
+        "descripcion": "Conoces los misterios de la energía del mundo. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones."
+      },
+      {
+        "nombre": "Trucos",
+        "descripcion": "Conoces dos trucos de tu elección de la lista de conjuros del clérigo. Aprendes trucos adicionales en niveles superiores, como se indica en la progresión."
+      },
+      {
+        "nombre": "Dominio Divino",
+        "descripcion": "Elige un dominio relacionado con tu deidad. Obtienes conjuros de dominio y habilidades especiales sin gastar poder interior. A nivel 1 obtienes el primer dominio, y nuevos dominios en niveles superiores."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Conocedor Nerkiano","Trucos","Dominio Divino"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 3
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+1",
+      "Rasgos": [],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 4
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 5
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 6
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+2",
+      "Rasgos": [],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 7
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 8
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+3",
+      "Rasgos": [],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 9
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": [],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 11
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 11,
+      "Bono De Competencia": "+5",
+      "Rasgos": [],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 13
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 14
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+6",
+      "Rasgos": [],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 15
+    },
+    {
+      "Nivel": 14,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 16
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+7",
+      "Rasgos": [],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 17
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 18
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+9",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 10,
+      "Conjuros Conocidos": 20
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/2nivel",
+      "Rasgos": ["+1 Característica/4 niveles"],
+      "Trucos Conocidos": "+1/2nivel",
+      "Conjuros Conocidos": "+2/3nivel"
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "bienhechor",
+      "nombre": "Bienhechor",
+      "descripcion": "Especializado en la sanación y el apoyo, los Bienhechores son faros de luz y esperanza en los momentos más oscuros.",
+      "imagen": "/images/subclases/bienhechor.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "cosechador",
+      "nombre": "Cosechador",
+      "descripcion": "Un clérigo que guía las almas perdidas al más allá, cosechando la energía de los caídos para fortalecer su causa.",
+      "imagen": "/images/subclases/cosechador.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "sacerdote_del_vacio",
+      "nombre": "Sacerdote del Vacío",
+      "descripcion": "Vinculado al Vacío, estos clérigos manejan poderes oscuros y misteriosos para cumplir los designios de su deidad.",
+      "imagen": "/images/subclases/sacerdote_del_vacio.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "segador",
+      "nombre": "Segador",
+      "descripcion": "Maestros en el combate y la justicia divina, los Segadores son los guerreros de la fe, portadores de la voluntad de los dioses.",
+      "imagen": "/images/subclases/segador.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

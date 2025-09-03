@@ -1,0 +1,191 @@
+{
+    "idSubclase": "chaman_revitalizador",
+    "nombre": "Chamán Revitalizador",
+    "esBasica": false,
+    "descripcion": "Un sanador natural que utiliza la fuerza de la naturaleza para restaurar la vida, proteger aliados y controlar el campo de batalla. Sus habilidades combinan curación, daño a distancia y efectos de control, haciendo que sea un pilar esencial para cualquier grupo.",
+    "imagen": "/images/chaman_revitalizador.jpg",
+    "diagrama": "/diagrama/diagrama_chaman_revitalizador.jpg",
+    "habilidades": [
+        {
+            "nombre": "Flujo revitalizante",
+            "nivel": 1,
+            "descripcion": "Invocas una corriente de agua que serpentea por las heridas del objetivo y le cura durante varios turnos.",
+            "efectos": {
+                "curacionPorTurno": {
+                    "nivel_1": "1D8 durante 1D6 + 2 turnos",
+                    "nivel_3": "2D8 durante 1D6 + 2 turnos",
+                    "nivel_5": "3D8 durante 1D6 + 2 turnos",
+                    "nivel_7": "4D8 durante 1D6 + 2 turnos",
+                    "nivel_9": "6D8 durante 1D6 + 2 turnos",
+                    "nivel_12": "8D8 durante 1D6 + 2 turnos",
+                    "nivel_17": "12D8 durante 1D6 + 2 turnos"
+                }
+            }
+        },
+        {
+            "nombre": "Nutrirse de la naturaleza",
+            "nivel": 3,
+            "descripcion": "Absorbes la fuerza de la naturaleza para curarte un porcentaje de tu vida máxima dependiendo de tu nivel.",
+            "efectos": {
+                "curacion": {
+                    "niveles_1_5": "25%",
+                    "niveles_6_10": "50%",
+                    "niveles_11_16": "75%",
+                    "niveles_17": "100%"
+                }
+            }
+        },
+        {
+            "nombre": "Piel totémica",
+            "nivel": 3,
+            "descripcion": "Recubres a un objetivo con una capa de madera que protege y cura al romperse.",
+            "efectos": {
+                "proteccionYSanacion": {
+                    "nivel_3": "10 y sana 5",
+                    "nivel_5": "20 y sana 10",
+                    "nivel_7": "30 y sana 15",
+                    "nivel_9": "40 y sana 20",
+                    "nivel_12": "50 y sana 25",
+                    "nivel_15": "60 y sana 30",
+                    "nivel_17": "70 y sana 35",
+                    "nivel_19": "80 y sana 40"
+                }
+            }
+        },
+        {
+            "nombre": "Aura totémica",
+            "nivel": 3,
+            "descripcion": "Invocas un tótem que cura a tus aliados en un radio de 40 pies.",
+            "efectos": {
+                "curacionPorAsalto": {
+                    "nivel_3": "10 durante 3 turnos",
+                    "nivel_5": "15 durante 3 turnos",
+                    "nivel_7": "20 durante 3 turnos",
+                    "nivel_9": "40 durante 3 turnos",
+                    "nivel_12": "45 durante 3 turnos",
+                    "nivel_15": "60 durante 3 turnos",
+                    "nivel_17": "65 durante 3 turnos",
+                    "nivel_19": "80 durante 3 turnos"
+                }
+            }
+        },
+        {
+            "nombre": "Salto hiriente",
+            "nivel": 5,
+            "descripcion": "Tus conjuros o talentos de daño saltan automáticamente a otro enemigo. Si superas la CA de un tercer objetivo, los afecta a los tres.",
+            "efectos": {
+                "rebote": "Mínimo 1 enemigo adicional, hasta 3 si superas CA"
+            }
+        },
+        {
+            "nombre": "Desgarro de sangre",
+            "nivel": 5,
+            "descripcion": "Realizas un ataque a distancia que hiere al enemigo desgarrándole la piel. Hace daño directo y aplica un efecto de sangrado.",
+            "efectos": {
+                "danio": "3D8 + Sabiduría",
+                "sangrado": "Mitad del daño durante 1D4 turnos"
+            }
+        },
+        {
+            "nombre": "Relámpago",
+            "nivel": 5,
+            "descripcion": "Lanzas un relámpago que inflige daño creciente según tu nivel.",
+            "efectos": {
+                "danioPorNivel": {
+                    "nivel_3": "2D8",
+                    "nivel_5": "3D8",
+                    "nivel_7": "4D8",
+                    "nivel_9": "5D8",
+                    "nivel_12": "6D8",
+                    "nivel_15": "7D8",
+                    "nivel_17": "10D8"
+                }
+            }
+        },
+        {
+            "nombre": "Control de la tierra",
+            "nivel": 5,
+            "descripcion": "Convierte un área de 30 pies en terreno difícil que reduce la movilidad de los enemigos y afecta su ataque y concentración.",
+            "efectos": {
+                "reduccionMovilidad": "Mitad",
+                "penalizacion": "-5 a ataque o concentración"
+            }
+        },
+        {
+            "nombre": "Guardia feral",
+            "nivel": 7,
+            "descripcion": "Invocas 4 bestias equivalentes a tu nivel máximo de chamán que obedecen tus órdenes.",
+            "efectos": {
+                "invocacion": "4 bestias equivalentes a tu nivel"
+            }
+        },
+        {
+            "nombre": "Furia de la naturaleza",
+            "nivel": 7,
+            "descripcion": "Tus conjuros y talentos realizan crítico con 19/20.",
+            "efectos": {
+                "rangoCritico": "19/20"
+            }
+        },
+        {
+            "nombre": "Salpicadura",
+            "nivel": 9,
+            "descripcion": "Lanzas ácido o lava en un cono de 20 pies, dañando a todos los enemigos.",
+            "efectos": {
+                "danio": "5D6 inicial, luego 10 por turno durante 5 turnos",
+                "area": "Cono de 20 pies"
+            }
+        },
+        {
+            "nombre": "Avaricia revitalizante",
+            "nivel": 9,
+            "descripcion": "Los unos en tus dados de sanación siempre se repiten.",
+            "efectos": {
+                "mejoraCuracion": "Repetir unos en dados de sanación"
+            }
+        },
+        {
+            "nombre": "Transferencia vital",
+            "nivel": 12,
+            "descripcion": "Sacrificas una bestia invocada para sanar o dañar el doble de su vida máxima.",
+            "efectos": {
+                "sanacion": "Doble de la vida máxima de la bestia",
+                "danio": "Doble de la vida máxima de la bestia"
+            }
+        },
+        {
+            "nombre": "Energía",
+            "nivel": 15,
+            "descripcion": "Tus sanaciones directas aumentan el ataque y tus talentos dañinos reducen el ataque de los enemigos durante varios turnos.",
+            "efectos": {
+                "bonusSanacion": "Mitad de tu nivel al ataque del objetivo",
+                "reduccionAtaque": "Mitad de tu nivel en los enemigos durante 2D4+2 turnos"
+            }
+        },
+        {
+            "nombre": "Semilla de la vida",
+            "nivel": 15,
+            "descripcion": "Plantas una semilla que explota y cura al objetivo cuando llega a 0 puntos de vida.",
+            "efectos": {
+                "curacion": "50 puntos al activarse",
+                "limite": "0/5 semillas activas"
+            }
+        },
+        {
+            "nombre": "La muerte alimenta",
+            "nivel": 15,
+            "descripcion": "Cuando un enemigo muere genera esporas que curan al 25% de la vida total de los aliados cercanos.",
+            "efectos": {
+                "curacionArea": "25% de la vida total a aliados en 10 pies"
+            }
+        },
+        {
+            "nombre": "La naturaleza soy yo",
+            "nivel": 17,
+            "descripcion": "Tus conjuros o talentos de sanación siempre realizan el máximo de los dados.",
+            "efectos": {
+                "curacionMaxima": "Siempre el máximo de los dados"
+            }
+        }
+    ]
+}

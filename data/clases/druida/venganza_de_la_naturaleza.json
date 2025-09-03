@@ -1,0 +1,241 @@
+{
+    "idSubclase": "venganza_de_la_naturaleza",
+    "nombre": "Venganza de la Naturaleza",
+    "esBasica": false,
+    "descripcion": "Un druida que ha trascendido las limitaciones de las transformaciones, fusionándose con las fuerzas primordiales de la naturaleza para desatar su furia y proteger el equilibrio natural.",
+    "imagen": "/images/subclases/venganza_de_la_naturaleza.jpg",
+    "diagrama": "/diagrama/diagrama_venganza_de_la_naturaleza.jpg",
+    "habilidades": [
+        {
+            "nombre": "Control Animal",
+            "nivel": 1,
+            "descripcion": "Puedes controlar a las criaturas pequeñas y medianas en un área de 50 pies y hacer que ataquen a los objetivos que designes.",
+            "activa": true,
+            "Requisitos": [ "Control Animal" ],
+            "Desbloquea": [ "Lanzar Esquirlas", "Mosca Cojonera", "Vivir en los Bosques" ],
+            "efectos": {
+                "Área": "50 pies",
+                "Control": "Animales pequeños y medianos"
+            }
+        },
+        {
+            "nombre": "Lanzar Esquirlas",
+            "nivel": 3,
+            "descripcion": "Lanzas del suelo 2D6 esquirlas de tierra que cada una causa 1D8/nivel.",
+            "activa": true,
+            "Requisitos": [ "Control Animal" ],
+            "Desbloquea": [ "Antiguas Vivencias" ],
+            "efectos": {
+                "Esquirlas": "2D6",
+                "Daño Por Esquirla": "1D8/nivel"
+            }
+        },
+        {
+            "nombre": "Mosca Cojonera",
+            "nivel": 3,
+            "descripcion": "Si tienes una reacción disponible, puedes interrumpir un conjuro o talento de un enemigo usando este talento.",
+            "activa": true,
+            "Requisitos": [ "Control Animal" ],
+            "Desbloquea": [ "Antiguas Vivencias" ],
+            "efectos": {
+                "Interrupción": true
+            }
+        },
+        {
+            "nombre": "Vivir en los Bosques",
+            "nivel": 3,
+            "descripcion": "Tu piel endurecida por la intemperie te otorga +1 de CA natural cada 3 niveles.",
+            "activa": false,
+            "Requisitos": [],
+            "Desbloquea": [ "Antiguas Vivencias" ],
+            "efectos": {
+                "Bonus CA": "+1 cada 3 niveles"
+            }
+        },
+        {
+            "nombre": "Antiguas Vivencias",
+            "nivel": 5,
+            "descripcion": "Has vivido otras vidas siendo un animal. Puedes usar habilidades de tus vidas pasadas, eligiendo tantos animales como tu bonificador de Sabiduría. Obtienes sus capacidades físicas y habilidades innatas durante 1 minuto/nivel.",
+            "activa": true,
+            "Requisitos": [ "Lanzar Esquirlas", "Mosca Cojonera", "Vivir en los Bosques" ],
+            "Desbloquea": [ "Dolor Espinoso", "Sintonía con tu Lado Animal", "Infección" ],
+            "efectos": {
+                "Animales": "Tantos como bonificador de Sabiduría",
+                "Duración": "1 minuto/nivel"
+            }
+        },
+        {
+            "nombre": "Dolor Espinoso", 
+            "nivel": 7,
+            "descripcion": "Cada 3 ataques, el enemigo sufre 5D8 de daño cortante y de su piel salen espinas que dañan a aliados cercanos (3D8 de daño).",
+            "activa": false,
+            "Requisitos": [ "Antiguas Vivencias" ],
+            "Desbloquea": [ "Seta Bárbara" ],
+            "efectos": {
+                "Daño": "5D8 cortante",
+                "Espinas": "3D8 en 15 pies"
+            }
+        },
+        {
+            "nombre": "Sintonía con tu Lado Animal", 
+            "nivel": 7,
+            "descripcion": "Mejoras tus características físicas en +6, +4 y +2 a tu elección.",
+            "activa": false,
+            "Requisitos": [ "Antiguas Vivencias" ],
+            "Desbloquea": [ "Seta Bárbara", "Llamada Animal", "Furia Natural" ],
+            "efectos": {
+                "Bonus": "+6, +4, +2 en características físicas"
+            }
+        },
+        {
+            "nombre": "Infección",
+            "nivel": 7,
+            "descripcion": "Tus ataques causan 3D8 de daño extra de veneno.",
+            "activa": false,
+            "Requisitos": [ "Antiguas Vivencias" ],
+            "Desbloquea": [ "Furia Natural" ],
+            "efectos": {
+                "Daño Veneno": "3D8"
+            }
+        },
+        {
+            "nombre": "Seta Bárbara",
+            "nivel": 9,
+            "descripcion": "Invocas una seta que explota y causa 3D8 de daño durante 3 turnos. Solo puedes poner una seta por turno.",
+            "activa": true,
+            "Requisitos": [ "Dolor Espinoso" ],
+            "Desbloquea": [ "Dolor Recurrente" ],
+            "efectos": {
+                "Daño": "3D8 por 3 turnos",
+                "Limite": "Una seta por turno"
+            }
+        },
+        {
+            "nombre": "Llamada Animal",
+            "nivel": 9,
+            "descripcion": "Ahora puedes controlar animales de cualquier tamaño no mágico en un área de 100 pies/nivel de druida.",
+            "activa": false,
+            "Requisitos": [ "Sintonía con tu Lado Animal" ],
+            "Desbloquea": [ "Dolor Recurrente", "Conocimiento Arraigado", "Crecimiento Silvestre" ],
+            "efectos": {
+                "Área": "100 pies/nivel",
+                "Control": "Animales no mágicos"
+            }
+        },
+        {
+            "nombre": "Furia Natural",
+            "nivel": 9,
+            "descripcion": "Tus conjuros y talentos pueden hacer crítico con 19/20.",
+            "activa": false,
+            "Requisitos": [ "Sintonía con tu Lado Animal", "Infección" ],
+            "Desbloquea": [  "Crecimiento Silvestre" ],
+            "efectos": {
+                "Crítico": "Tus conjuros y talentos tienen crítico en 19/20"
+            }
+        },
+        {
+            "nombre": "Dolor Recurrente",  
+            "nivel": 12,
+            "descripcion": "Hieres a un enemigo, causando 4D8/nivel + 10 durante tantos turnos como la mitad de tu nivel.",
+            "activa": true,
+            "Requisitos": [ "Seta Bárbara" ],
+            "Desbloquea": [ "Regeneración del Vergel" ],
+            "efectos": {
+                "Daño": "4D8/nivel + 10",
+                "Duración": "Mitad del nivel"
+            }
+        },
+        {
+            "nombre": "Conocimiento Arraigado", 
+            "nivel": 12,
+            "descripcion": "Mejoras tus características mentales en +6, +4 y +2 a tu elección.",
+            "activa": false,
+            "Requisitos": [ "Llamada Animal" ],
+            "Desbloquea": [ "Regeneración del Vergel", "De la Muerte Nace la Vida" ],
+            "efectos": {
+                "mejoras_mentales": {
+                    "opciones": [
+                        {
+                            "bonificacion": "+6",
+                            "descripcion": "Incrementa una característica mental a tu elección."
+                        },
+                        {
+                            "bonificacion": "+4",
+                            "descripcion": "Incrementa una característica mental a tu elección."
+                        },
+                        {
+                            "bonificacion": "+2",
+                            "descripcion": "Incrementa una característica mental a tu elección."
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "nombre": "Crecimiento Silvestre",
+            "nivel": 12,
+            "descripcion": "Curas 2D8/nivel + 10 durante tantos turnos como la mitad de tu nivel.",
+            "activa": true,
+            "Requisitos": [ "Llamada Animal", "Furia Natural" ],
+            "Desbloquea": [
+                "Tajo Cruzado",
+                "Descubrir tus Dones",
+                "Raíces Enredadoras"
+            ],
+            "efectos": {
+                "Curación": "2D8/nivel + 10",
+                "Duración": "Mitad del nivel"
+            }
+        },
+        {
+            "nombre": "Regeneración del Vergel",
+            "nivel": 15,
+            "descripcion": "Obtienes regeneración de 10 PG/turno y puedes regenerar extremidades perdidas con ramas temporales.",
+            "activa": false,
+            "Requisitos": [  "Dolor Recurrente", "Conocimiento Arraigado"  ],
+            "Desbloquea": [ "Venganza Reencarnada" ],
+            "efectos": {
+                "Regeneración": "10 PG/turno",
+                "Extremidades": "Ramas temporales"
+            }
+        },
+        {
+            "nombre": "De la Muerte Nace la Vida",
+            "nivel": 15,
+            "descripcion": "Conviertes un cadáver en un árbol cuyos frutos sanan 2D8/nivel + 1D6 por nivel que tuviera el cadáver.",
+            "activa": true,
+            "Requisitos": [ "Conocimiento Arraigado", "Crecimiento Silvestre" ],
+            "Desbloquea": [ "Venganza Reencarnada" ],
+            "efectos": {
+                "Curación Frutos": "2D8/nivel + 1D6 por nivel del cadáver"
+            }
+        },
+        {
+            "nombre": "Venganza Reencarnada",
+            "nivel": 17,
+            "descripcion": "Invocas fenómenos naturales masivos (Terremoto, Huracán, Tsunami, Incendio, Grietas del Vacío, Poder de la Sangre, Huecos de Alma) dependiendo de tu nivel. Ganas inmortalidad al tiempo y resistencia a venenos mágicos y naturales.",
+            "activa": true,
+            "Requisitos": [],
+            "Desbloquea": [
+                "Tajo Cruzado",
+                "Descubrir tus Dones",
+                "Raíces Enredadoras"
+            ],
+            "efectos": {
+                "fenomenos": [
+                    "Terremoto",
+                    "Huracán",
+                    "Tsunami",
+                    "Incendio",
+                    "Grietas del Vacío",
+                    "Poder de la Sangre",
+                    "Huecos de Alma"
+                ],
+                "resistencias": [
+                    "Inmortalidad al tiempo",
+                    "Inmunidad a venenos mágicos y naturales"
+                ]
+            }
+        }
+    ]
+}

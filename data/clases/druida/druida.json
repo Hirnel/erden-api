@@ -1,0 +1,195 @@
+{
+  "id": "druida",
+  "nombre": "Druida",
+  "esBasica": true,
+  "descripcion": [
+    "Elevando un bastón nudoso envuelto con una bruma, un humano invoca la furia de la tormenta y hace descender rayos explosivos para aniquilar quemar parte del bosque y generar cenizas para el crecimiento y saneamiento de el mismo.",
+    "Acuclillado en la rama de un gran árbol y con la forma de un leopardo, un druida observa desde el interior de la jungla la extraña construcción de un templo dedicado a Umbrif, mientras mantiene un ojo puesto en las actividades de los cultistas.",
+    "Invocando una espada formada de puro fuego, un arquetipo carga contra un grupo de soldados que entran al bosque para arrasar y conseguir madera para sus campañas de guerra.",
+    "Ya sea invocando a las fuerzas elementales o emulando a las criaturas del mundo animal, los druidas son la personificación de la resistencia, astucia y furia de la naturaleza. Dicen no tener un dominio sobre la naturaleza.",
+    "En lugar de eso, se ven como una extensión de la voluntad indomable de la misma. Una voluntad deformada."
+  ],
+  "imagen": "/images/druida.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera", "Armadura media", "Escudos"],
+      "Armas": [
+        "Bastones",
+        "Cimitarras",
+        "Clavas",
+        "Dagas",
+        "Dardos",
+        "Hoces",
+        "Hondas",
+        "Lanzas",
+        "Mazas"
+      ],
+      "Herramientas": ["Kit de herboristería"],
+      "Tiradas De Salvacion": ["Inteligencia", "Sabiduría"],
+      "Habilidades": [
+        "Arcano",
+        "Medicina",
+        "Naturaleza",
+        "Percepción",
+        "Perspicacia",
+        "Religión",
+        "Supervivencia",
+        "Trato de Animales"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Conocedor Nerkiano",
+        "descripcion": "Conoces los misterios de la energía del mundo. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones."
+      },
+      {
+        "nombre": "Trucos",
+        "descripcion": "Conoces dos trucos de tu elección de la lista de conjuros del druida. Aprendes trucos adicionales en niveles superiores, como se indica en la progresión."
+      },
+      {
+        "nombre": "Forma Bestial",
+        "descripcion": "Puedes convertirte en una bestia a voluntad. Puedes transformarte en tantas formas de animales como niveles de druida tengas. Los tamaños pueden variar desde uno inferior al tuyo hasta uno superior."
+      },
+      {
+        "nombre": "Lengua Druídica",
+        "descripcion": "Conoces el idioma secreto de los druidas y puedes hablar con animales. Puedes usar el idioma para dejar mensajes ocultos que solo otros druidas pueden descifrar automáticamente."
+      },
+      {
+        "nombre": "Sabio",
+        "descripcion": "Eres capaz de convertir un conjuro de nivel 2 en un truco. Puedes hacerlo tantas veces como tu bonificador de Sabiduría."
+      },
+      {
+        "nombre": "Afinidad Animal",
+        "descripcion": "Los animales que superen una prueba de trato con animales pueden realizar actividades concretas por ti."
+      },
+      {
+        "nombre": "Mejora Bestial",
+        "descripcion": "Puedes superar en 2 rangos el tamaño en que puedes transformarte."
+      },
+      {
+        "nombre": "Uno con las Bestias",
+        "descripcion": "Vuelves a aumentar hasta 2 rangos el tamaño en que puedes transformarte."
+      },
+      {
+        "nombre": "Bestia Natural",
+        "descripcion": "Aumentas 1 rango el tamaño en el que puedes transformarte."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Conocedor Nerkiano","Trucos"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Forma Bestial","Lengua Druídica"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 2
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Sabio"],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Afinidad Animal"],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["Mejora Bestial"],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 4
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+9",
+      "Rasgos": ["Uno con las Bestias","Bestia Natural","+1 Característica"],
+      "Trucos Conocidos": 10
+    },
+    {
+      
+      "Bono De Competencia": "+2/2nivel",
+      "Rasgos": ["Bestia natural/10niveles","+1Caracteristica/4nivel"],
+      "Trucos Conocidos": "+1/2nivel"
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "canibal_de_la_naturaleza",
+      "nombre": "Canibal de la Naturaleza",
+      "descripcion": "Maestros en aprovechar todo lo que la naturaleza tiene para ofrecer, incluso a través de métodos poco ortodoxos.",
+      "imagen": "/images/subclases/canibal_de_la_naturaleza.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "druida_del_vacio",
+      "nombre": "Druida del Vacío",
+      "descripcion": "Druidas que manejan el poder del vacío, combinando su conexión natural con fuerzas misteriosas.",
+      "imagen": "/images/subclases/druida_del_vacio.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "espiritu_del_bosque_eterno",
+      "nombre": "Espíritu del Bosque Eterno",
+      "descripcion": "Guardianes espirituales de los bosques, conectados profundamente con la esencia de la naturaleza.",
+      "imagen": "/images/subclases/espiritu_del_bosque_eterno.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "uno_con_los_animales",
+      "nombre": "Uno con los Animales",
+      "descripcion": "Druidas que se convierten en líderes de las bestias, capaces de formar lazos únicos con animales.",
+      "imagen": "/images/subclases/uno_con_los_animales.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "venganza_de_la_naturaleza",
+      "nombre": "Venganza de la Naturaleza",
+      "descripcion": "Druidas que canalizan el poder destructivo de la naturaleza para castigar a aquellos que la dañan.",
+      "imagen": "/images/subclases/venganza_de_la_naturaleza.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+    "idSubclase":"chaman_guerrero",
+    "nombre": "Chamán Guerrero",
+    "esBasica": false,
+    "descripcion": "Un combatiente espiritual que canaliza la fuerza de la naturaleza y los espíritus para potenciar su cuerpo y su arma en combate. Especializado en daño directo y habilidades de curación, el Chamán Guerrero es una fuerza imparable en el campo de batalla.",
+    "imagen": "/images/chaman_guerrero.jpg",
+    "diagrama": "/diagrama/diagrama_chaman_guerrero.jpg",
+    "habilidades": [
+        {
+            "nombre": "Golpe Primordial",
+            "nivel": 1,
+            "descripcion": "Imbuye tu arma con energía pura y hace +1 daño por nivel de chamán.",
+            "activa": true,
+            "Requisitos": [],
+            "Desbloquea": [
+                "Dureza"
+            ],
+            "efectos": {
+                "bonusDanio": "+1 daño/nivel de Chamán"
+            }
+        },
+        {
+            "nombre": "Dureza",
+            "nivel": 3,
+            "descripcion": "Tu Fuerza o Constitución aumenta en 2 puntos a los niveles 3, 5, 7, 9, 12. Cuando tires dados para recuperar vida, los resultados de 1 siempre se repiten.",
+            "activa": true,
+            "Requisitos": [
+                "Golpe Primordial"
+            ],
+            "Desbloquea": [
+                "Ira Original",
+                "Favor Fundamental"
+            ],
+            "efectos": {
+                "atributo": "+2 Fuerza o Constitución en niveles indicados",
+                "recuperacion": "Repetir los 1 al recuperar vida"
+            }
+        },
+        {
+            "nombre": "Ira Original",
+            "nivel": 5,
+            "descripcion": "Si golpeas con un crítico obtienes un ataque extra, pero no se acumula.",
+            "activa": true,
+            "Requisitos": [
+                "Dureza"
+            ],
+            "Desbloquea": [
+                "Gloria Sangrienta"
+            ],
+            "efectos": {
+                "ataqueExtra": "1 al realizar un crítico"
+            }
+        },
+        {
+            "nombre": "Favor Fundamental",
+            "nivel": 5,
+            "descripcion": "Si tus hechizos o talentos son críticos, no cuentan como que los hayas gastado.",
+            "activa": true,
+            "Requisitos": [
+                "Dureza"
+            ],
+            "Desbloquea": [
+                "Arma Elemental"
+            ],
+            "efectos": {
+                "ahorroHechizos": "Críticos no consumen recursos"
+            }
+        },
+        {
+            "nombre": "Gloria Sangrienta",
+            "nivel": 7,
+            "descripcion": "Si portas dos armas a una mano, obtienes un ataque más con cada una de ellas.",
+            "activa": false,
+            "Requisitos": [
+                "Ira Original"
+            ],
+            "Desbloquea": [
+                "Saber Clavar el Diente",
+                "Sintonia con la Sangre"
+            ],
+            "efectos": {
+                "ataqueExtra": "1 por cada arma"
+            }
+        },
+        {
+            "nombre": "Arma Elemental",
+            "nivel": 7,
+            "descripcion": "Puedes imbuir un arma con un elemento mientras la portes. A nivel 10 puedes imbuir dos elementos, y a nivel 15 puedes imbuir tres elementos de manera indefinida.",
+            "activa": true,
+            "Requisitos": [
+                "Favor Fundamental"
+            ],
+            "Desbloquea": [
+                "Estallido de Energía",
+                "Llamada a la Victoria"
+            ],
+            "efectos": {
+                "elementos": "1 a nivel 7, 2 a nivel 10, 3 a nivel 15"
+            }
+        },
+        {
+            "nombre": "Saber Clavar el Diente",
+            "nivel": 9,
+            "descripcion": "El daño mínimo de tus tiradas nunca puede ser menos de la mitad del total.",
+            "activa": false,
+            "Requisitos": [
+                "Gloria Sangrienta"
+            ],
+            "Desbloquea": [
+                "Ver la Debilidad"
+            ],
+            "efectos": {
+                "minimoDanio": "Mitad del total"
+            }
+        },
+        {
+            "nombre": "Sintonia con la Sangre",
+            "nivel": 9,
+            "descripcion": "Recuperas la misma cantidad de vida que de daño realizado con un ataque.",
+            "activa": true,
+            "Requisitos": [
+                "Gloria Sangrienta"
+            ],
+            "Desbloquea": [],
+            "efectos": {
+                "curacion": "Igual al daño infligido"
+            }
+        },
+        {
+            "nombre": "Principio de la Matanza",
+            "nivel": 9,
+            "descripcion": "Entras en un trance donde, aunque llegues a vida negativa, no mueres. Obtienes +4 al ataque y daño. El trance no termina hasta que elimines a todos los enemigos.",
+            "activa": true,
+            "Requisitos": [
+                "Dureza",
+                "Sintonia con la Sangre",
+                "Estallido de Energía"
+            ],
+            "Desbloquea": [
+                "Ola de Pavor",
+                "Invocación Espiritual"
+            ],
+            "efectos": {
+                "bonus": "+4 al ataque y daño",
+                "inmortalidadTemporal": "No mueres mientras estés en trance"
+            }
+        },
+        {
+            "nombre": "Estallido de Energía",
+            "nivel": 9,
+            "descripcion": "Cuando superes en 10 la CA de tu objetivo, lo paralizas durante 1D4 asaltos.",
+            "activa": false,
+            "Requisitos": [
+                "Arma Elemental"
+            ],
+            "Desbloquea": [
+                "Principio de la Matanza"
+            ],
+            "efectos": {
+                "paralisis": "1D4 asaltos si superas CA por 10"
+            }
+        },
+        {
+            "nombre": "Llamada a la Victoria",
+            "nivel": 9,
+            "descripcion": "Regeneras todo el daño del último ataque recibido.",
+            "activa": true,
+            "Requisitos": [
+                "Arma Elemental"
+            ],
+            "Desbloquea": [
+                "Invocación Ansiosa"
+            ],
+            "efectos": {
+                "curacion": "Regenera daño del último ataque"
+            }
+        },
+        {
+            "nombre": "Ver la Debilidad",
+            "nivel": 12,
+            "descripcion": "Duplicas tu rango de crítico a niveles 12, 15, y 17, alcanzando un rango de 13/20 a nivel 17.",
+            "activa": false,
+            "Requisitos": [
+                "Saber Clavar el Diente"
+            ],
+            "Desbloquea": [],
+            "efectos": {
+                "critico": "Rango aumenta progresivamente hasta 13/20"
+            }
+        },
+        {
+            "nombre": "Ola de Pavor",
+            "nivel": 12,
+            "descripcion": "Ruges y empujas a tus enemigos 15' hacia atrás. CD de destreza (15 + Car + Sab) para evitar ser derribado.",
+            "activa": true,
+            "Requisitos": [
+                "Principio de la Matanza"
+            ],
+            "Desbloquea": [
+                "Totems"
+            ],
+            "efectos": {
+                "empuje": "15 pies",
+                "derribo": "CD 15 + Carisma + Sabiduría"
+            }
+        },
+        {
+            "nombre": "Invocación Espiritual",
+            "nivel": 12,
+            "descripcion": "Invocas 3 espíritus animales en sintonía con la naturaleza y desgarran a tu enemigo. Realizan un ataque completo y se desvanecen. Su bonificador de ataque es igual a tu nivel de chamán y su mordisco hace 3D8 + nivel, y el zarpazo hace 2D8 + 1D6 + nivel.",
+            "activa": true,
+            "Requisitos": [
+                "Principio de la Matanza"
+            ],
+            "Desbloquea": [
+                "Totems"
+            ],
+            "efectos": {
+                "cantidad_espiritus": 3,
+                "ataques": {
+                    "mordisco": "3D8 + nivel",
+                    "zarpazo": "2D8 + 1D6 + nivel"
+                },
+                "bonificador_ataque": "nivel de chamán",
+                "duracion": "Desaparecen tras un ataque completo"
+            }
+        },
+        {
+            "nombre": "Totems",
+            "nivel": 12,
+            "descripcion": "Selecciona entre varias habilidades al colocar un tótem. Puedes colocar un totem por cada 5 niveles de chaman guerrero.",
+            "activa": true,
+            "Requisitos": [
+                "Ola de Pavor",
+                "Principio de la Matanza",
+                "Invocación Espiritual"
+            ],
+            "Desbloquea": [
+                "Rocío del Mañana",
+                "Escudo Real",
+                "Piel Nueva",
+                "Remolino de Energía"
+            ],
+            "opciones": [
+                {
+                    "nombre": "Rocío del Mañana",
+                    "activa": false,
+                    "efectos": {
+                        "sangrado": "2 de daño sangrante por herida"
+                    }
+                },
+                {
+                    "nombre": "Escudo Real",
+                    "activa": false,
+                    "efectos": {
+                        "CA": "+4 a aliados en 45 pies"
+                    }
+                },
+                {
+                    "nombre": "Piel Nueva",
+                    "activa": false,
+                    "efectos": {
+                        "curacion": "5 puntos de vida por turno durante 1 minuto"
+                    }
+                },
+                {
+                    "nombre": "Remolino de Energía",
+                    "activa": false,
+                    "efectos": {
+                        "mejoraHechizos": "Lanzas conjuros como un nivel superior"
+                    }
+                }
+            ]
+        },
+        {
+            "nombre": "Invocación Espiritual",
+            "nivel": 12,
+            "descripcion": "Invocas 3 espíritus animales que desgarran a tu enemigo. Realizan un ataque completo y se desvanecen.",
+            "activa": true,
+            "Requisitos": [
+                "Principio de la Matanza"
+            ],
+            "Desbloquea": [
+                "Totems"
+            ],
+            "efectos": {
+                "ataque": "Bonificador igual a tu nivel de chamán",
+                "mordisco": "3D8 + nivel",
+                "zarpazo": "2D8 + 1D6 + nivel"
+            }
+        },
+        {
+            "nombre": "Invocación Ansiosa",
+            "nivel": 12,
+            "descripcion": "Formas 2 brazos espirituales adicionales con los que puedes atacar. Usas de manera gratuita 'Arma Elemental'.",
+            "activa": true,
+            "Requisitos": [
+                "Llamada a la Victoria"
+            ],
+            "Desbloquea": [
+                "Ascensión"
+            ],
+            "efectos": {
+                "brazos": "+2 brazos espirituales"
+            }
+        },
+        {
+            "nombre": "La Cúspide de la Tormenta",
+            "nivel": 15,
+            "descripcion": "Si superas la CA de tu enemigo en 10, obtienes un ataque extra y causas 4D6 de daño de rayo. Paralizas al enemigo si no supera una CD de Constitución 18.",
+            "activa": false,
+            "Requisitos": [
+                "Ver la Debilidad"
+            ],
+            "Desbloquea": [
+                "Espíritus Conectados"
+            ],
+            "efectos": {
+                "ataqueExtra": "1 al superar CA por 10",
+                "paralisis": "CD Constitución 18"
+            }
+        },
+        {
+            "nombre": "Ascensión",
+            "nivel": 15,
+            "descripcion": "Cuando lanzas un hechizo, realizas una copia que hace la mitad del efecto.",
+            "activa": true,
+            "Requisitos": [
+                "Invocación Ansiosa"
+            ],
+            "Desbloquea": [
+                "Espíritus Conectados"
+            ],
+            "efectos": {
+                "copia": "Mitad de daño o curación del hechizo original"
+            }
+        },
+        {
+            "nombre": "Espíritus Conectados",
+            "nivel": 17,
+            "descripcion": "Puedes lanzar conjuros a través de tus invocaciones o a quienes hayas vinculado tu alma.",
+            "activa": false,
+            "Requisitos": [
+                "La Cúspide de la Tormenta",
+                "Ascensión"
+            ],
+            "Desbloquea": [],
+            "efectos": {
+                "conexion": "Lanzar conjuros a través de invocaciones o almas vinculadas"
+            }
+        }
+    ]
+}

@@ -1,0 +1,379 @@
+{
+    "idSubclase":"chaman_elemental",
+    "nombre": "Chamán Elemental",
+    "esBasica": false,
+    "descripcion": "Maestro de los elementos, el Chamán Elemental canaliza el poder de la naturaleza para invocar fuerzas primordiales. Desde rayos y fuego hasta invocaciones de espíritus animales, el Chamán domina las energías elementales para desatar su ira sobre sus enemigos.",
+    "imagen": "/images/subclases/chaman_elemental.jpg",
+    "diagrama": "/diagrama/diagrama_chaman_elemental.jpg",
+    "habilidades": [
+      {
+        "nombre": "Choque Primordial",
+        "nivel": 1,
+        "descripcion": "Usas la fuerza de la naturaleza elemental para desatar poderes únicos como acciones gratuitas.",
+        "activa": true,
+        "Requisitos": [],
+        "Desbloquea": [ "Relámpago", "Uno con la Naturaleza", "Mareas Vivas", "Rociada de Fuego", "Susurro del Viento","Tierra del Sepulcro","Furia de la Sangre","Llamada al vacío","Golpe del Alma"],
+        "efectos": {
+          "Opciones": [
+            {
+              "Nombre": "Mareas Vivas",
+              "nivel": 1,
+              "efecto": "Te cura 5 PG por turno, acumulable hasta la mitad de tu nivel de Elementarista.",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            },
+            {
+              "Nombre": "Rociada de Fuego",
+              "nivel": 1,
+              "efecto": "Lanzas un cono de fuego de 20', infligiendo 2D8 de daño por nivel de Elementarista.",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            },
+            {
+              "Nombre": "Susurro del Viento",
+              "nivel": 3,
+              "efecto": "Dota a un objetivo de una marca que mejora su movilidad entre ataques.",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            },
+            {
+              "Nombre": "Tierra del Sepulcro",
+              "nivel": 3,
+              "efecto": "Rompe la tierra a 10' a tu alrededor, generando desventajas para enemigos y ataques de oportunidad.",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            },
+            {
+              "Nombre": "Furia de la Sangre",
+              "nivel": 5,
+              "efecto": "Marca a un objetivo para que reciba el doble de daño de tus ataques.",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            },
+            {
+              "Nombre": "Llamada al vacío",
+              "nivel": 5,
+              "efecto": "Marca a enemigos en un área de 40', deteniendo su movimiento durante un turno y reduciendo la mitad del movimiento al salir.",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            },
+            {
+              "Nombre": "Golpe del Alma",
+              "nivel": 7,
+              "efecto": "Impide al objetivo usar habilidades de vidas pasadas (Rivrim).",
+              "activa": false,
+              "Requisitos": ["Choque Primordial"],
+              "Desbloquea": [ ]
+            }
+          ]
+        }
+      },
+      {
+        "nombre": "Relámpago",
+        "nivel": 3,
+        "descripcion": "Lanzas un relámpago con tus manos que aumenta su poder según el nivel.",
+        "activa": true,
+        "Requisitos": ["Choque Primordial"],
+        "Desbloquea": [ "Gélido Despertar", "Mejora del Rayo" ],
+        "efectos": {
+          "niveles": {
+            "Nivel 3": "2D8",
+            "Nivel 5": "3D8",
+            "Nivel 7": "4D8",
+            "Nivel 9": "5D8",
+            "Nivel 12": "6D8",
+            "Nivel 15": "7D8",
+            "Nivel 17": "10D8"
+          }
+        }
+      },
+      {
+        "nombre": "Uno con la Naturaleza",
+        "nivel": 3,
+        "descripcion": "Tus conjuros tienen un 25% de probabilidad de no gastar espacios al lanzarse.",
+        "activa": true,
+        "Requisitos": ["Choque Primordial"],
+        "Desbloquea": [ "Mejora Elemental" ],
+        "efectos": {}
+      },
+      {
+        "nombre": "Gélido Despertar",
+        "nivel": 5,
+        "descripcion": "Elige entre las siguientes habilidades:",
+        "activa": true,
+        "Requisitos": ["Relámpago"],
+        "Desbloquea": ["Cadena del Cielo", "Maleficio"],
+        "efectos": {
+            "opciones": [
+                {
+                    "Nombre": "Pegar objetos",
+                    "Descripción": "Puedes pegar objetos entre sí de hasta 5 libras, aumentando 10 libras cada 5 niveles."
+                },
+                {
+                    "Nombre": "Lanza de Hielo",
+                    "Descripción": "Generas armas de hielo que infligen 1D8 + Fuerza + 3D6 mágico."
+                }
+            ]
+        }
+    },
+      {
+        "nombre": "Mejora del Rayo",
+        "nivel": 5,
+        "descripcion": "Repite los unos de tu talento Relámpago." ,
+        "activa": false,
+        "Requisitos": ["Relámpago"],
+        "Desbloquea": [ "Cadena del Cielo", "Maleficio"],
+        "efectos": {
+          "Dados": "Repite los unos de tu talento Relámpago."
+        }
+      },
+      {
+        "nombre": "Mejora Elemental",
+        "nivel": 5,
+        "descripcion": "Tus conjuros elementales ganan +1 dado de daño. Si los retienes un turno, su daño aumenta en 3 dados.",
+        "activa": false,
+        "Requisitos": ["Uno con la Naturaleza"],
+        "Desbloquea": ["Maleficio", "Drenar y Alimentar"],
+        "efectos": {}
+      },
+      {
+        "nombre": "Maleficio",
+        "nivel": 7,
+        "descripcion": "Convierte al objetivo en una criatura menuda, causándole un dolor extremo. Si muere en esa forma, muere en su forma real.",
+        "activa": false,
+        "Requisitos": ["Gélido Despertar", "Mejora del Rayo","Mejora Elemental"],
+        "Desbloquea": [ "Manada de Espíritus", "Cueva del Despertar"],
+        "efectos": {
+          "CD": "Sabiduría CD 18 para resistir"
+        }
+      },
+      {
+        "nombre": "Cadena del Cielo",
+        "nivel": 9,
+        "descripcion": ["Tus relámpagos tienen la posibilidad de saltar a 2 enemigos más 40% de que ocurra."
+        ],
+        "activa": false,
+        "Requisitos": ["Gélido Despertar", "Mejora del Rayo"],
+        "Desbloquea": ["Guía Espiritual", "Punto Flaco"],
+        "efectos": {
+          "Salto Enemigos": 2,
+          "Probabilidad": "40%"
+        }
+      },
+      {
+        "nombre": "Manada de Espíritus",
+        "nivel": 9,
+        "descripcion": "Invocas a 3 lobos que siguen tus órdenes durante 3 minutos por nivel. Puedes gastar puntos de poder interno para invocar lobos evolucionados y un huargo grande.",
+        "activa": true,
+        "Requisitos": ["Maleficio"],
+        "Desbloquea": ["Portal"],
+        "efectos": {
+          "lobo": {
+            "pg": "7/nivel",
+            "ataque": {
+              "mordisco": "3D8 + 2D6 de veneno + Fuerza",
+              "zarpazo": "2D8 + Fuerza"
+            },
+            "caracteristicas": {
+              "CA": 16,
+              "velocidad": "50'",
+              "especiales": ["Rastrear", "Visión en la penumbra"]
+            }
+          },
+          "huargo": {
+            "pg": "15/nivel",
+            "ataque": {
+              "mordisco": "5D8 + 3D6 de veneno + Fuerza",
+              "zarpazo": "4D8 + Fuerza"
+            },
+            "caracteristicas": {
+              "CA": 20,
+              "velocidad": "75'",
+              "especiales": ["Rastrear", "Visión en la oscuridad hasta 60'"]
+            }
+          }
+        }
+      },
+      {
+        "nombre": "Cueva del Despertar",
+        "nivel": 9,
+        "descripcion": ["Invoca a un oso que sigue tus órdenes 3min/nivel.Si gastas 3 usos de poder interno evoluciona e invoca a un Oso tamaño Enorme."],
+        "activa": true,
+        "Requisitos": [ "Maleficio" ],
+        "Desbloquea": [ "Portal" ],
+        "efectos": {
+          "duracion": "3 minutos por nivel",
+          "invocaciones": {
+            "Oso": {
+              "Pg": "15 por nivel de Chamán",
+              "Iniciativa": "+2",
+              "Velocidad": "40 pies",
+              "CA": 18,
+              "Ataque": {
+                "Mordisco": "3D8 + 2D6 de veneno + Fuerza",
+                "Zarpazo": "2D8 + Fuerza"
+              },
+              "Espacio": "10 pies",
+              "CualidadesEspeciales": ["Olfato", "Visión en la penumbra"],
+              "Salvaciones": {
+                "Fortaleza": "+10",
+                "Reflejos": "+7",
+                "Voluntad": "+4"
+              },
+              "Caracteristicas": {
+                "Fuerza": 20,
+                "Destreza": 14,
+                "Constitucion": 22,
+                "Inteligencia": 6,
+                "Sabiduria": 12,
+                "Carisma": 12
+              },
+              "Habilidades": {
+                "Avistar": "+7",
+                "Esconderse": "-1",
+                "Escuchar": "+5",
+                "Nadar": "+16"
+              }
+            },
+            "Gran Oso": {
+              "Pg": "30 por nivel de Chamán",
+              "Iniciativa": "+4",
+              "Velocidad": "60 pies",
+              "CA": 24,
+              "Ataque": {
+                "Mordisco": "4D8 + 3D6 de veneno + Fuerza",
+                "Zarpazo": "3D8 + Fuerza"
+              },
+              "Espacio": "10 pies",
+              "CualidadesEspeciales": ["Bramido: Asusta a todos los enemigos en 60 pies y se convierte en el objetivo principal de los enemigos." ],
+              "Salvaciones": {
+                "Fortaleza": "+18",
+                "Reflejos": "+10",
+                "Voluntad": "+8"
+              },
+              "Caracteristicas": {
+                "Fuerza": 26,
+                "Destreza": 16,
+                "Constitucion": 30,
+                "Inteligencia": 14,
+                "Sabiduria": 14,
+                "Carisma": 14
+              },
+              "Habilidades": {
+                "Avistar": "+7",
+                "Esconderse": "+4",
+                "Escuchar": "+12",
+                "Nadar": "+16",
+                "MoverseSigilosamente": "+15"
+              }
+            }
+          }
+        }
+      },      
+      {
+        "nombre": "Drenar y Alimentar",
+        "nivel": 9,
+        "descripcion": "Conectas tu energía vital a un enemigo (CD Sab 18). Drenas 5D8 + 20 por turno y sanas a otro objetivo la mitad del daño infligido.",
+        "activa": true,
+        "Requisitos": ["Mejora Elemental"],
+        "Desbloquea": ["Punto Flaco", "Avistamiento"],
+        "efectos": {}
+      },
+      {
+        "nombre": "Portal",
+        "nivel": 12,
+        "descripcion": "Creas una grieta en el espacio y viajas a otro lugar donde hayas estado y recuerdes.",
+        "activa": true,
+        "Requisitos": ["Manada de Espíritus","Cueva del despertar"],
+        "Desbloquea": ["Poder"],
+        "efectos": {
+          "tipo": "teletransporte",
+          "alcance": "indefinido",
+          "requisito_memoria": true
+        }
+      },
+      {
+        "nombre": "Poder",
+        "nivel": 15,
+        "descripcion": [
+          "Fijas el portal que has creado."
+        ],
+        "activa": true,
+        "Requisitos": [ "Portal" ],
+        "Desbloquea": [ "Punto Flaco" ],
+        "efectos": {
+          "duracion": "permanente",
+          "estabilidad": "alta",
+          "requisitos_uso": ["portal_existente"]
+        }
+      },
+      {
+        "nombre": "Guía Espiritual",
+        "nivel": 17,
+        "descripcion": ["Te permite lanzar conjuros en movimiento."],
+        "activa": false,
+        "Requisitos": ["Cadena del Cielo"],
+        "Desbloquea": ["Camino del Rayo"],
+        "efectos": {
+          "movilidad": "completa",
+          "conjuros_afectados": "todos",
+          "restricciones": "ninguna"
+        }
+      },
+      {
+        "nombre": "Punto Flaco",
+        "nivel": 17,
+        "descripcion": ["El daño de tus críticos no se puede curar de manera mágica."],
+        "activa": false,
+        "Requisitos": [ "Cadena del Cielo", "Poder", "Drenar y Alimentar" ],
+        "Desbloquea": [ "Camino del Rayo", "Conocimiento y Sabiduría" ],
+        "efectos": {
+          "criticos_no_curable": true,
+          "tipo_daño": "todos"
+        }
+      },
+      {
+        "nombre": "Avistamiento",
+        "nivel": 17,
+        "descripcion": ["Los objetivos no se pueden esconder detrás de paredes, piedras o muros, los percibes e igualmente les dañas." ],
+        "activa": false,
+        "Requisitos": ["Drenar y Alimentar"],
+        "Desbloquea": ["Conocimiento y Sabiduría"],
+        "efectos": {
+          "percepcion_objetivos": true,
+          "ignora_cobertura": true
+        }
+      },
+      {
+        "nombre": "Camino del Rayo",
+        "nivel": 19,
+        "descripcion": ["Te transformas en un rayo y tu velocidad es de 200'. Puedes moverte atravesando enemigos y tu contacto hace 15D8 + 1D6/nivel de Chamán + 2D4 de aturdimiento."],
+        "activa": true,
+        "Requisitos": ["Guía Espiritual","Punto flaco"],
+        "Desbloquea": [],
+        "efectos": {
+          "velocidad": "200 pies",
+          "daño_contacto": "15D8 + 1D6/nivel + 2D4 aturdimiento",
+          "movimiento_a_traves": true
+        }
+      },
+      {
+        "nombre": "Conocimiento y Sabiduría",
+        "nivel": 19,
+        "descripcion": [ "Dobla tus puntos de talentos que puedes usar."],
+        "activa": false,
+        "Requisitos": ["Punto flaco", "Avistamiento"],
+        "Desbloquea": [],
+        "efectos": {
+          "incremento_talentos": "2x"
+        }
+      }
+    ]
+  }
+  

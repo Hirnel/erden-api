@@ -1,0 +1,238 @@
+{
+    "id": "barbaro",
+    "nombre": "Bárbaro",
+    "esBasica": true,
+    "descripcion": [
+      "Un fornido arquetipo del Gran Mar Helado camina a grandes zancadas a través de la tormenta de nieve, envuelto en pieles y enarbolando su hacha. Se ríe mientras carga contra un Gusano de hielo que se atrevió a cruzarse en su camino.",
+      "Un orco gruñe y suelta espuma por la boca mientras su amo yaira experimenta con su cuerpo y retuerce sus articulaciones y ligamentos mientras piensa que le apetece hacer hoy.",
+      "Un temible Enano, habiendo existido desde el principio del mundo, cruje su cuello mientras suelta su ropa para no destrozarla, está cansado de su eterna vida y tiene la paciencia corta estos días. Te has puesto en su camino y le has tocado las pelotas.",
+      "Estos bárbaros, por diferentes que sean, se definen por su rabia: una furia desenfrenada, inagotable e irreflexiva. Más que una mera emoción, su ira es la ferocidad de un superdepredador, el implacable rugir de la tormenta, la devastadora agitación del mar. Para algunos, su rabia brota de la comunión con espíritus de animales salvajes. Otros recurren a su hirviente reserva de ira frente a un mundo lleno de dolor. Para los bárbaros, la furia es un poder que no sólo les proporciona un frenesí ciego en la batalla, sino también extraordinarios reflejos, resistencia y proezas de fuerza."
+  ],
+    "imagen": "/images/bárbaro.jpg",
+    "rasgosDeClase": {
+      "competencias": {
+        "Armadura": ["Armadura ligera", "Armadura media", "Escudos"],
+        "Armas": ["Armas simples", "Armas marciales"],
+        "Tiradas De Salvacion": ["Fuerza", "Constitución"],
+        "Habilidades": [
+          "Atletismo",
+          "Intimidar",
+          "Naturaleza",
+          "Percepción",
+          "Supervivencia",
+          "Trato con Animales"
+        ]
+      },
+      "habilidadesBasicas": [
+        {
+          "nombre": "Furia",
+          "descripcion": "En combate, luchas con una ferocidad primitiva. Puedes entrar en furia como acción adicional. Obtienes ventajas en tiradas de Fuerza, bonificador al daño y resistencia al daño contundente, perforante y cortante mientras no lleves armadura pesada.",
+          "efectos": {
+            "ventaja": ["Tiradas de Fuerza", "Salvaciones de Fuerza"],
+            "resistencia": ["Contundente", "Perforante", "Cortante"],
+            "bonoDanio": "Aumenta según el nivel de Bárbaro"
+          }
+        },
+        {
+          "nombre": "Defensa Sin Armadura",
+          "descripcion": "Mientras no lleves ninguna armadura, tu Clase de Armadura será igual a 10 + Modificador de Destreza + Modificador de Constitución.",
+          "efectos": {
+            "CA": "10 + Dest + Constitución",
+            "puedeUsarEscudo": true
+          }
+        },
+        {
+          "nombre": "Ataque Extra",
+          "descripcion": "A partir del nivel 5, puedes atacar dos veces en lugar de una con la acción de Atacar. A nivel 10, puedes realizar tres ataques en tu turno.",
+          "efectos": {
+            "ataquesAdicionales": {
+              "nivel5": 2,
+              "nivel10": 3,
+              "nivel15": 4,
+              "nivel20": 5
+            }
+          }
+        },
+        {
+          "nombre": "Crítico Brutal",
+          "descripcion": "Empezando en nivel 6, puedes tirar un dado de daño adicional al calcular el daño de un golpe crítico. Incrementa a 2 dados en nivel 12, 3 en nivel 16 y 4 en nivel 19.",
+          "efectos": {
+            "danoCriticoAdicional": {
+              "nivel6": 1,
+              "nivel12": 2,
+              "nivel16": 3,
+              "nivel19": 4
+            }
+          }
+        }
+      ]
+    },
+    "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Furia","Defensa sin armadura"],
+      "Número Furias": 2,
+      "Daño Extra Por Furia": "+8"
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+2",
+      "Rasgos": [],
+      "Número Furias": 2,
+      "Daño Extra Por Furia": "+10"
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Número Furias": 3,
+      "Daño Extra Por Furia": "+12"
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Número Furias": 3,
+      "Daño Extra Por Furia": "+12"
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Ataque adicional"],
+      "Número Furias": 3,
+      "Daño Extra Por Furia": "+16"
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Crítico brutal (1)"],
+      "Número Furias": 4,
+      "Daño Extra Por Furia": "+16"
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["Instinto salvaje"],
+      "Número Furias": 4,
+      "Daño Extra Por Furia": "+18"
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica"],
+      "Número Furias": 4,
+      "Daño Extra Por Furia": "+20"
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": [],
+      "Número Furias": 4,
+      "Daño Extra Por Furia": "+25"
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["Ataque adicional"],
+      "Número Furias": 4,
+      "Daño Extra Por Furia": "+25"
+    },
+    {
+      "Nivel": 11,
+      "Bono De Competencia": "+5",
+      "Rasgos": [],
+      "Número Furias": 5,
+      "Daño Extra Por Furia": "+28"
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["Crítico brutal (2)", "+1 Característica"],
+      "Número Furias": 5,
+      "Daño Extra Por Furia": "+30"
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+6",
+      "Rasgos": [],
+      "Número Furias": 5,
+      "Daño Extra Por Furia": "+32"
+    },
+    {
+      "Nivel": 14,
+      "Bono De Competencia": "+7",
+      "Rasgos": [],
+      "Número Furias": 5,
+      "Daño Extra Por Furia": "+32"
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["Ataque adicional"],
+      "Número Furias": 5,
+      "Daño Extra Por Furia": "+35"
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["Crítico brutal (3)", "+1 Característica"],
+      "Número Furias": 5,
+      "Daño Extra Por Furia": "+38"
+    },
+    {
+      "Nivel": 17,
+      "Bono De Competencia": "+9",
+      "Rasgos": [],
+      "Número Furias": 6,
+      "Daño Extra Por Furia": "+42"
+    },
+    {
+      "Nivel": 18,
+      "Bono De Competencia": "+10",
+      "Rasgos": [],
+      "Número Furias": 6,
+      "Daño Extra Por Furia": "+46"
+    },
+    {
+      "Nivel": 19,
+      "Bono De Competencia": "+12",
+      "Rasgos": ["Crítico brutal (4)"],
+      "Número Furias": "ilimitada",
+      "Daño Extra Por Furia": "+50"
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+15",
+      "Rasgos": ["Ataque adicional","+1 Característica"],
+      "Número Furias": "ilimitada",
+      "Daño Extra Por Furia": "+70"
+      },
+      {
+        "Nivel": [ ],
+        "Bono De Competencia": "+2/nivel",
+        "Rasgos": ["Ataque adicional/5 niveles", "+1 Característica/4 niveles"],
+        "Número Furias": [ ],
+        "Daño Extra Por Furia": "+35/nivel"
+      }
+    ],
+    "subclases": [
+        {
+            "idSubclase": "crisis_del_valle",
+            "nombre": "Crisis del Valle",
+            "descripcion": "Especialistas en combates largos y sangrientos, los Crisis del Valle simbolizan el caos y el desgaste en la batalla. Cada golpe recibido aumenta su fuerza, transformándolos en el corazón imparable de cualquier conflicto.",
+            "imagen": "/images/subclases/crisis_del_valle.jpg",
+            "esBasica": false,
+            "habilidades": []
+          },
+        {
+            "idSubclase": "Superdepredador",
+            "nombre": "Superdepredador",
+            "descripcion":"El depredador definitivo, una fuerza brutal que combina ataque, resistencia y habilidades de rastreo excepcionales. El Superdepredador no busca honor, sino la supremacía sobre cualquier presa.",
+            "imagen": "/images/subclases/superdepredador.jpg",
+            "esBasica": false,
+            "habilidades": []
+          }
+    ]
+  }
+  

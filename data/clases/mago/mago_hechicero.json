@@ -1,0 +1,264 @@
+{
+    "idSubclase": "mago_hechicero",
+    "nombre": "Mago Hechicero",
+    "esBasica": false,
+    "descripcion": "Un maestro del control mágico que canaliza energía elemental y fuerza bruta para devastar a sus enemigos y potenciar a sus aliados. Combina el conocimiento arcano con la capacidad de manipular elementos y el entorno.",
+    "imagen": "/images/subclases/mago_hechicero.jpg",
+    "diagrama": "/diagrama/diagrama_hechicero.jpg",
+    "habilidades": [
+        {
+            "nombre": "Devorar",
+            "nivel": 1,
+            "descripcion": "Canaliza una fuerza mágica que causa 2D8 por acción hasta que algo te interrumpa la canalización. No tiene límite de turnos. A nivel 10 mejora y pasa a causar 4D8. Llega a 45pies de distancia.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Navegar los Ríos", "Relámpago", "Conocimiento" ],
+            "efectos": {
+                "Daño": {
+                    "Nivel 1 - 9": "2D8 por acción",
+                    "Nivel 10+": "4D8 por acción"
+                },
+                "Alcance": "45 pies",
+                "Duración": "Ilimitada mientras no se interrumpa"
+            }
+        },
+        {
+            "nombre": "Navegar los Ríos", 
+            "nivel": 3,
+            "descripcion": "Clavas tus pies en el agua y ganas 40pies de movimiento a niveles 3, 5 ,10, 15, 20. El agua bajo tus pies se convierte en sólida que puedes controlar para moverte por ella.",
+            "activa": true,
+            "Requisitos": [ "Devorar" ],
+            "Desbloquea": [ "Control del Terreno"],
+            "efectos": {
+                "Velocidad": "40 pies (incremento en niveles 3, 5, 10, 15, 20)",
+                "Habilidad": "Caminar sobre agua sólida"
+            }
+        },
+        {
+            "nombre": "Relámpago", 
+            "nivel": 3,
+            "descripcion": "Lanzas un relámpago con tus manos que hace 1D8/nivel de mago hechicero y causa paralisis durante 1d2 turnos. Llega 100pies",
+            "activa": true,
+            "Requisitos": [ "Devorar" ],
+            "Desbloquea": [ "Control del Terreno", "Absorción de Energía", "Rezumar Conocimiento y Poder" ],
+            "efectos": {
+                "Daño": "1D8/nivel",
+                "Paralisis": "1D2 turnos",
+                "Alcance": "100 pies"
+            }
+        },
+        {
+            "nombre": "Conocimiento",
+            "nivel": 3,
+            "descripcion": "Conoces tres conjuros más de cada nivel.",
+            "activa": true,
+            "Requisitos": [ "Devorar" ],
+            "Desbloquea": [ "Rezumar Conocimiento y Poder" ],
+            "efectos": {
+                "Conjuros Adicionales": 3
+            }
+        },
+        {
+            "nombre": "Control del Terreno", 
+            "nivel": 5,
+            "descripcion": "Puedes levantar muros de hasta 15 pies de alto y 10 pies de ancho que tienen 50pg de vida. Para movilizar esa masa de tierra necesitas deformar el entorno. Puedes aplastar objetivos con este Talento. Aplastar causa 5D8 y tira Salvación Des CD 10+ nivel de mago o el objetivo quedará atrapado.",
+            "activa": true,
+            "Requisitos": [ "Navegar los Ríos", "Relámpago" ],
+            "Desbloquea": [ "Destello" ],
+            "efectos": {
+                "Muros": {
+                    "Altura": "15 pies",
+                    "Ancho": "10 pies",
+                    "PG": 50
+                },
+                "Daño": "5D8",
+                "CD Resistencia": "10 + nivel de mago"
+            }
+        },
+        {
+            "nombre": "Absorción de Energía", 
+            "nivel": 5,
+            "descripcion": "Reunes energía de tu entorno de manera pasiva. Cada hora recuperas un uso de conjuro aleatorio.",
+            "activa": true,
+            "Requisitos": [  "Navegar los Ríos", "Relámpago", "Conocimiento" ],
+            "Desbloquea": [ "Destello", "Esfera de Relámpagos", "Conocer los Elementos" ],
+            "efectos": {
+                "Recuperación": "1 conjuro aleatorio por hora"
+            }
+        },
+        {
+            "nombre": "Rezumar Conocimiento y Poder",
+            "nivel": 5,
+            "descripcion": "Obtienes un aumento significativo en tus habilidades intelectuales.",
+            "activa": true,
+            "Requisitos": [ "Relámpago", "Conocimiento" ],
+            "Desbloquea": [ "Conocer los Elementos"],
+            "efectos": {
+                "Bono": {
+                    "Int": 4,
+                    "Car": 4
+                }
+            }
+        },
+        {
+            "nombre": "Destello", 
+            "nivel": 7,
+            "descripcion": "Te teletransportas a otro lugar que seas capaz de ver igual a tu nivel de mago por 10 pies. Deslumbras a toda criatura que tengas enfrente y queda cegado 1D4 turnos.",
+            "activa": true,
+            "Requisitos": [ "Control del Terreno", "Absorción de Energía" ],
+            "Desbloquea": [  "El Aire que nos Rodea" ],
+            "efectos": {
+                "Teletransporte": "Nivel x 10 pies",
+                "Ceguera": "1D4 turnos"
+            }
+        },
+        {
+            "nombre": "Esfera de Relámpagos", 
+            "nivel": 7,
+            "descripcion": "Condensas tus relámpagos en tu mano y generas una esfera que lanzas en linea recta causando 12D8 con el epicentro y tiene un radio de 20pies que causa 8D8. La esfera la lanzas 50pies.",
+            "activa": true,
+            "Requisitos": [ "Absorción de Energía" ],
+            "Desbloquea": [ "El Aire que nos Rodea", "Cadena de Relámpagos", "Mejora Elemental" ],
+            "efectos": {
+                "Daño Epicentro": "12D8",
+                "Daño Área": "8D8",
+                "Radio": "20 pies",
+                "Alcance": "50 pies"
+            }
+        },
+        {
+            "nombre": "Conocer los Elementos",
+            "nivel": 7,
+            "descripcion": "Conoces muy bien uno de los cuatro elementos básicos; Agua, Tierra, Fuego, Aire. Puedes modificar cualquier talento o conjuro que lances de manera gratuita para que haga daño con ese elemento.",
+            "activa": true,
+            "Requisitos": [ "Absorción de Energía", "Rezumar Conocimiento y Poder" ],
+            "Desbloquea": [ "Mejora Elemental"],
+            "efectos": {
+                "Elementos": ["Agua", "Tierra", "Fuego", "Aire"]
+            }
+        },
+        {
+            "nombre": "El Aire que nos Rodea", 
+            "nivel": 9,
+            "descripcion": "Puedes caminar y correr por el aire a voluntad.",
+            "activa": true,
+            "Requisitos": [ "Destello", "Esfera de Relámpagos"],
+            "Desbloquea": [ "Conocer la Sangre" ],
+            "efectos": {
+                "Habilidad": "Caminar y correr por el aire"
+            }
+        },
+        {
+            "nombre": "Cadena de Relámpagos", 
+            "nivel": 9,
+            "descripcion": "Tus relámpagos que lances causan minimo la mitad de su daño total y saltan hasta a 5 objetivos que estén a menos de 25 pies entre ellos. Tiene una distancia máxima de 100pies para el primer impacto.",
+            "activa": true,
+            "Requisitos": [ "Esfera de Relámpagos" ],
+            "Desbloquea": [ "Conocer la Sangre", "De Vuelta a lo Elemental", "Eficacia" ],
+            "efectos": {
+                "Daño mínimo": "Mitad del total",
+                "Objetivos": 5,
+                "Alcance": "100 pies"
+            }
+        },
+        {
+            "nombre": "Mejora Elemental",
+            "nivel": 9,
+            "descripcion": "Descubres el cómo manejar uno de los tres elementos restantes y ocurre lo mismo que con Conocer los elementos. Elije un elemento entre Sangre, Vacío y Alma.",
+            "activa": true,
+            "Requisitos": [ "Esfera de Relámpagos", "Conocer los Elementos" ],
+            "Desbloquea": [ "Eficacia"],
+            "efectos": {
+                "Elementos Avanzados": ["Sangre", "Vacío", "Alma"]
+            }
+        },
+        {
+            "nombre": "Conocer la Sangre", 
+            "nivel": 12,
+            "descripcion": "Entiendes y conoces el elemento que más posee un cuerpo vivo, la sangre. El enemigo ha de realizar una tirada de salvación de Fortaleza CD 20 o sufrirá 15D6 + 40 de daño interno y en su siguiente turno deberá de realizar otra tirada de Fortaleza CD 17 o sufrirá 8D8 + 20.",
+            "activa": true,
+            "Requisitos": [ "El Aire que nos Rodea", "Cadena de Relámpagos" ],
+            "Desbloquea": [ "Saborear el Poder" ],
+            "efectos": {
+                "Daño": {
+                    "Primera Tirada": "15D6 + 40",
+                    "Segunda Tirada": "8D8 + 20"
+                },
+                "CD ": {
+                    "Primera": 20,
+                    "Segunda": 17
+                }
+            }
+        },
+        {
+            "nombre": "De Vuelta a lo Elemental", 
+            "nivel": 12,
+            "descripcion": "Todos tus talentos de relámpago ahora puedes añadirles un elemento que conozcas y controles. Añade 1D8/nivel y sus respectivas secuelas.",
+            "activa": true,
+            "Requisitos": [ "Cadena de Relámpagos" ],
+            "Desbloquea": ["Saborear el Poder", "Crueldad" ],
+            "efectos": {
+                "Daño Adicional": "1D8/nivel"
+            }
+        },
+        {
+            "nombre": "Eficacia",
+            "nivel": 12,
+            "descripcion": "Tus conjuros de asalto completo se convierten en acciones estandar. Puedes moverte mientras los lanzas y obtienes un +8 a Concentración para mantener conjuros.",
+            "activa": true,
+            "Requisitos": [ "Cadena de Relámpagos", "Mejora Elemental" ],
+            "Desbloquea": [ "Crueldad" ],
+            "efectos": {
+                "Conjuros": {
+                    "Asalto Completo": "Acción estándar"
+                },
+                "Concentración": "+8"
+            }
+        },
+        {
+            "nombre": "Saborear el Poder", 
+            "nivel": 15,
+            "descripcion": "Mientras tengas toda tu salud, tu poder desborda y tus compañeros habituales son capaces de lanzar conjuros tuyos de nivel 0 y 1. Los conjuros que ellos lances no se gastan de tus usos.",
+            "activa": true,
+            "Requisitos": [ "Conocer la Sangre", "De Vuelta a lo Elemental" ],
+            "Desbloquea": ["Sentir el Poder de Todo" ],
+            "efectos": {
+                "Conjuros Compartidos": ["Nivel 0", "Nivel 1"]
+            }
+        },
+        {
+            "nombre": "Crueldad",
+            "nivel": 15,
+            "descripcion": "Tus críticos duplican el número de dados.",
+            "activa": true,
+            "Requisitos": [ "De Vuelta a lo Elemental", "Eficacia" ],
+            "Desbloquea": ["Sentir el Poder de Todo" ],
+            "efectos": {
+                "Críticos": "Dados duplicados"
+            }
+        },
+        {
+            "nombre": "Sentir el Poder de Todo",
+            "nivel": 17,
+            "descripcion": "Reúnes energía circundante para lanzar conjuros con restricciones por nivel.",
+            "activa": true,
+            "Requisitos": ["Saborear el Poder", "Crueldad"],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Niveles Conjuro": {
+                    "Nivel 0 de conjuro": "No tienes límites de uso.",
+                    "Nivel 1 de conjuro": "Quedarse quieto una acción gratuita.",
+                    "Nivel 2 de conjuro": "Quedarse quieto una acción estandar.",
+                    "Nivel 3 de conjuro": "Quedarse quieto un turno.",
+                    "Nivel 4 de conjuro": "Quedarse quieto un turno y una acción gratuita.",
+                    "Nivel 5 de conjuro": "Quedarse quieto un turno y una acción estandar.",
+                    "Nivel 6 de conjuro": "Quedarse quieto dos turnos.",
+                    "Nivel 7 de conjuro": "Quedarse quieto dos turnos y una acción gratuita.",
+                    "Nivel 8 de conjuro": "Quedarse quieto dos turnos y una acción estandar.",
+                    "Nivel 9 de conjuro": "Quedarse quieto tres turnos."
+                },
+                "Poder Interno": "Puedes usar talentos de manera ilimitada siempre que esté su nivel de uso por debajo de tu modificador de Car."
+            }
+        }
+    ]
+}

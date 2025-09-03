@@ -1,0 +1,224 @@
+{
+    "idSubclase": "guardian",
+    "nombre": "Guardia",
+    "esBasica": false,
+    "descripcion": "Un defensor inquebrantable que utiliza su fuerza y resistencia para proteger a sus aliados y enfrentarse a sus enemigos con valentía.",
+    "imagen": "/images/subclases/guardian.jpg",
+    "diagrama": "/diagrama/diagrama_guardian.jpg",
+    "habilidades": [
+        {
+            "nombre": "Cuerpo Inquebrantable",
+            "nivel": 1,
+            "descripcion": "Sufres la mitad del daño físico que te causen.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Mano Dura", "Mirada Desafiante", "Último Aliento"  ],
+            "efectos": {
+                "Reducción": "Mitad del daño físico"
+            }
+        },
+        {
+            "nombre": "Mano Dura", 
+            "nivel": 3,
+            "descripcion": "Tus ataques básicos siempre realizan el máximo del daño de tu arma.",
+            "activa": false,
+            "Requisitos": [ "Cuerpo Inquebrantable" ],
+            "Desbloquea": [ "Alarido Desafiante", "Pisada Furiosa" ],
+            "efectos": {
+                "Daño": "Máximo del arma"
+            }
+        },
+        {
+            "nombre": "Mirada Desafiante", 
+            "nivel": 3,
+            "descripcion": "Si tienes contacto visual con un enemigo, le desafías y debe realizar una tirada de Sabiduría CD 18 o te atacará omitiendo su objetivo anterior.",
+            "activa": true,
+            "Requisitos": [ "Cuerpo Inquebrantable" ],
+            "Desbloquea": [ "Pisada Furiosa" ],
+            "efectos": {
+                "CD": "Sabiduría 18",
+                "Efecto": "El enemigo cambia su objetivo"
+            }
+        },
+        {
+            "nombre": "Último Aliento",
+            "nivel": 3,
+            "descripcion": "Obtienes 15 pg/nivel de guerrero durante 1 min y, al usar esta habilidad, te sana la mitad de esos puntos.",
+            "activa": true,
+            "Requisitos": [ "Cuerpo Inquebrantable" ],
+            "Desbloquea": [ "Pisada Furiosa", "Alarido Descorazonador" ],
+            "efectos": {
+                "Vida": "15pg/nivel de guerrero",
+                "Sanación": "Mitad de los puntos obtenidos"
+            }
+        },
+        {
+            "nombre": "Alarido Desafiante", 
+            "nivel": 5,
+            "descripcion": "Gritas y azuzas a tus enemigos para que te ataquen. Obtienen +5 para impactarte, pero su daño no puede superar la mitad del dado.",
+            "activa": true,
+            "Requisitos": [ "Mano Dura" ],
+            "Desbloquea": [ "Desgarrar" ],
+            "efectos": {
+                "Bonus Impacto": "+5",
+                "Daño Máximo": "Mitad del dado"
+            }
+        },
+        {
+            "nombre": "Pisada Furiosa", 
+            "nivel": 5,
+            "descripcion": "Pisas con increíble fuerza el suelo y lo agrietas en un cono hacia la dirección que miras, causando daño y derribando objetivos si fallan una tirada de Destreza CD 15.",
+            "activa": true,
+            "Requisitos": [ "Mano Dura", "Mirada Desafiante", "Último Aliento" ],
+            "Desbloquea": [ "Desgarrar", "Intervención", "Bloqueo" ],
+            "efectos": {
+                "Rango": "5 pies/nivel de guerrero",
+                "Daño": "2D8",
+                "CD": "Destreza 15"
+            }
+        },
+        {
+            "nombre": "Alarido Descorazonador",
+            "nivel": 5,
+            "descripcion": "Gritas y los enemigos a 30 pies hacen la mitad de daño en su siguiente turno.",
+            "activa": true,
+            "Requisitos": [ "Último Aliento" ],
+            "Desbloquea": [ "Bloqueo" ],
+            "efectos": {
+                "Rango": "30 pies",
+                "Efecto": "Mitad de daño en el siguiente turno"
+            }
+        },
+        {
+            "nombre": "Desgarrar", 
+            "nivel": 7,
+            "descripcion": "Tus heridas son más precisas y causan sangrado constante. Un enemigo con Desgarrar siempre te atacará.",
+            "activa": false,
+            "Requisitos": [ "Alarido Desafiante", "Pisada Furiosa" ],
+            "Desbloquea": [ "Entrenamiento Sufrido" ],
+            "efectos": {
+                "Probabilidad": "25%",
+                "Sangrado": "1pg por turno"
+            }
+        },
+        {
+            "nombre": "Intervención", 
+            "nivel": 7,
+            "descripcion": "Cargas contra un enemigo que esté hasta el doble de tu velocidad y obtienes un ataque extra en el siguiente turno.",
+            "activa": false,
+            "Requisitos": [ "Pisada Furiosa" ],
+            "Desbloquea": [ "Entrenamiento Sufrido" ],
+            "efectos": {
+                "Distancia": "Doble de tu velocidad",
+                "Ataque Extra": "1"
+            }
+        },
+        {
+            "nombre": "Bloqueo",
+            "nivel": 7,
+            "descripcion": "Obtienes 10 puntos de bloqueo que puedes gastar para bloquear ataques o críticos, tanto para ti como para tus aliados.",
+            "activa": true,
+            "Requisitos": [ "Pisada Furiosa", "Alarido Descorazonador" ],
+            "Desbloquea": [ "Entrenamiento Sufrido" ],
+            "efectos": {
+                "Puntos": 10,
+                "Bloqueo Ataque": 1,
+                "Bloqueo Crítico": 3,
+                "Bloqueo Aliado": 2,
+                "Bloqueo Crítico Aliado": 5
+            }
+        },
+        {
+            "nombre": "Entrenamiento Sufrido",
+            "nivel": 9,
+            "descripcion": "Obtienes bonificaciones a tu CA por cada enemigo que te rodea.",
+            "activa": false,
+            "Requisitos": [ "Desgarrar", "Intervención", "Bloqueo" ],
+            "Desbloquea": [ "Agarrar y Tirar", "Venganza", "Siempre Atento", "Llamamiento Punitivo" ],
+            "efectos": {
+                "Bonus CA": "+2 por enemigo"
+            }
+        },
+        {
+            "nombre": "Agarrar y Tirar", 
+            "nivel": 12,
+            "descripcion": "Agarras a un enemigo y lo lanzas, causando daño y forzándolo a usar su siguiente turno para levantarse.",
+            "activa": true,
+            "Requisitos": [ "Entrenamiento Sufrido" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Distancia": "5 pies por cada +1 de Fuerza",
+                "Daño Caída": "1D8 por cada 5 pies"
+            }
+        },
+        {
+            "nombre": "Venganza", 
+            "nivel": 12,
+            "descripcion": "Si un enemigo te impacta dos o más veces en un turno, puedes atacarlo al final de su turno.",
+            "activa": false,
+            "Requisitos": [ "Entrenamiento Sufrido" ],
+            "Desbloquea": [ "Atrabiliario" ],
+            "efectos": {
+                "Ataque Extra": "1"
+            }
+        },
+        {
+            "nombre": "Siempre Atento", 
+            "nivel": 12,
+            "descripcion": "Puedes recibir ataques dirigidos a aliados cercanos, si superan tu CA como un ataque normal.",
+            "activa": false,
+            "Requisitos": [ "Entrenamiento Sufrido" ],
+            "Desbloquea": [ "Indomable" ],
+            "efectos": {
+                "Protección Aliado": "Recibir ataques de aliados"
+            }
+        },
+        {
+            "nombre": "Llamamiento Punitivo",
+            "nivel": 12,
+            "descripcion": "Gritas y todos los enemigos a 50 pies quedan aturdidos durante 1D4 turnos. Los aliados que conozcan esta habilidad no se ven afectados.",
+            "activa": true,
+            "Requisitos": [ "Entrenamiento Sufrido" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Rango": "50 pies",
+                "Aturdimiento": "1D4 turnos"
+            }
+        },
+        {
+            "nombre": "Atrabiliario",
+            "nivel": 15,
+            "descripcion": "Después de recibir un crítico, puedes realizar tres ataques en respuesta.",
+            "activa": false,
+            "Requisitos": [ "Venganza" ],
+            "Desbloquea": [ "Carga con Escudo" ],
+            "efectos": {
+                "Ataques Respuesta": 3
+            }
+        },
+        {
+            "nombre": "Indomable",
+            "nivel": 15,
+            "descripcion": "Obtienes 150 pg adicionales.",
+            "activa": false,
+            "Requisitos": [ "Siempre Atento" ],
+            "Desbloquea": [ "Carga con Escudo" ],
+            "efectos": {
+                "Vida Adicional": 150
+            }
+        },
+        {
+            "nombre": "Carga con Escudo",
+            "nivel": 17,
+            "descripcion": "Saltas hasta 25 pies y haces daño con el escudo a un enemigo. Los objetivos cercanos sufren la mitad del daño.",
+            "activa": true,
+            "Requisitos": [ "Atrabiliario", "Indomable" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Distancia": "25 pies",
+                "Daño": "8D8 + 36",
+                "Daño Áreas Cercanas": "Mitad del daño"
+            }
+        }
+    ]
+}

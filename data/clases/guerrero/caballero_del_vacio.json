@@ -1,0 +1,207 @@
+{
+    "idSubclase": "caballero_del_vacio",
+    "nombre": "Caballero del Vacío",
+    "esBasica": false,
+    "descripcion": "Un guerrero consumido por el vacío, capaz de canalizar su poder para regenerar su cuerpo, desatar destrucción y manipular las fuerzas oscuras en la batalla.",
+    "imagen": "/images/subclases/caballero_del_vacio.jpg",
+    "diagrama": "/diagrama/diagrama_caballero_del_vacio.jpg",
+    "habilidades": [
+        {
+            "nombre": "Mitosis",
+            "nivel": 1,
+            "descripcion": "El vacío corroe las partes dañadas de tu cuerpo y las regenera. Te curas 10pg/nivel de guerrero, puedes regenerar miembros y eliminar maldiciones.",
+            "activa": true,
+            "Requisitos": [  ],
+            "Desbloquea": [ "Marca del Vacío", "Saber el Camino", "Dulce Comida" ],
+            "efectos": {
+                "Curación": "10pg/nivel de guerrero",
+                "Regeneración": "Miembros y maldiciones"
+            }
+        },
+        {
+            "nombre": "Marca del Vacío", 
+            "nivel": 3,
+            "descripcion": "Marcas a un enemigo durante 1D4 turnos y le infliges daño fijo por turno. Puedes marcar hasta el doble de tu nivel de personaje.",
+            "activa": true,
+            "Requisitos": [  "Mitosis" ],
+            "Desbloquea": [ "Arma Summarita" ],
+            "efectos": {
+                "Duración": "1D4 turnos",
+                "Daño": "1D8/nivel + nivel de personaje por turno",
+                "Objetivos": "Hasta el doble de tu nivel"
+            }
+        },
+        {
+            "nombre": "Saber el Camino", 
+            "nivel": 3,
+            "descripcion": "El vacío vive parcialmente en tu mirada. Obtienes mejoras a tu ataque y CA, y duplicas tu crítico.",
+            "activa": false,
+            "Requisitos": [  "Mitosis" ],
+            "Desbloquea": [ "Arma Summarita", "Devorar Heridas", "Paso Borroso" ],
+            "efectos": {
+                "Ataque": "+3/niveles",
+                "CA": "+2/5niveles",
+                "Crítico": "Duplicado"
+            }
+        },
+        {
+            "nombre": "Dulce Comida",
+            "nivel": 3,
+            "descripcion": "Invocas insectos del vacío que dañan y sanan a los objetivos. Cada 5 niveles puedes invocar un insecto extra, máx 4.",
+            "activa": true,
+            "Requisitos": [  "Mitosis" ],
+            "Desbloquea": [ "Devorar Heridas" ],
+            "efectos": {
+                "Daño": "1D4 por turno",
+                "Sanación": "1D4 por turno",
+                "Insectos": "Máx 4"
+            }
+        },
+        {
+            "nombre": "Arma Summarita",
+            "nivel": 5,
+            "descripcion": "Tu arma siempre inflige el daño máximo y sobrepasa cualquier defensa. En oscuridad, tus ataques son con ventaja.",
+            "activa": false,
+            "Requisitos": [  "Mitosis" ],
+            "Desbloquea": [ "Paso Borroso" ],
+            "efectos": {
+                "Daño": "Máximo",
+                "Ventaja": "En oscuridad"
+            }
+        },
+        {
+            "nombre": "Devorar Heridas",
+            "nivel": 5,
+            "descripcion": "Regeneras las heridas de un aliado al tocarlas con tentáculos de vacío.",
+            "activa": true,
+            "Requisitos": [  "Mitosis" ],
+            "Desbloquea": [ "Paso Borroso" ],
+            "efectos": {
+                "Sanación": "1D6/2 niveles"
+            }
+        },
+        {
+            "nombre": "Paso Borroso",
+            "nivel": 7,
+            "descripcion": "Los ataques enemigos críticos se convierten en ataques normales.",
+            "activa": false,
+            "Requisitos": [  "Mitosis" ],
+            "Desbloquea": [ "Ensañamiento", "Visión Incesante", "Control" ],
+            "efectos": {
+                "Críticos": "Convertidos en normales"
+            }
+        },
+        {
+            "nombre": "Ensañamiento", 
+            "nivel": 9,
+            "descripcion": "Si el enemigo tiene activo Marca del vacío, obtienes bonificaciones al ataque y al daño.",
+            "activa": false,
+            "Requisitos": [ "Paso Borroso" ],
+            "Desbloquea": [ "Aura corrosiva" ],
+            "efectos": {
+                "Ataque": "+5",
+                "Daño": "No menor de la mitad del dado"
+            }
+        },
+        {
+            "nombre": "Visión Incesante", 
+            "nivel": 9,
+            "descripcion": "Extiendes el vacío desde tu mirada, causando daño y sanando a los objetivos que elijas en un cono de 15 pies.",
+            "activa": true,
+            "Requisitos": [ "Paso Borroso" ],
+            "Desbloquea": [ "Aura corrosiva", "Encarcelar", "Salto Espacial" ],
+            "efectos": {
+                "Rango": "15 pies",
+                "Dados": "D8 igual a tu nivel"
+            }
+        },
+        {
+            "nombre": "Control",
+            "nivel": 9,
+            "descripcion": "Dulce comida ahora siempre realiza 4 puntos de daño y sanación, y puedes poner el insecto en un objetivo que no seas tú.",
+            "activa": false,
+            "Requisitos": [ "Paso Borroso" ],
+            "Desbloquea": [ "Salto Espacial" ],
+            "efectos": {
+              "Daño": "4 puntos de daño",
+              "Sanación": "4 puntos de sanación",
+              "Objetivo": "Puede aplicarse a un objetivo que no seas tú"
+            }
+        },
+        {
+            "nombre": "Aura corrosiva", 
+            "nivel": 12,
+            "descripcion": "Generas un aura de 20 pies que causa daño de vacío a todos los enemigos dentro del área.",
+            "activa": true,
+            "Requisitos": [ "Ensañamiento", "Visión Incesante" ],
+            "Desbloquea": [ "Bendición del Desconocido" ],
+            "efectos": {
+                "Rango": "20 pies",
+                "Daño": "10D8 de vacío"
+            }
+        },
+        {
+            "nombre": "Encarcelar", 
+            "nivel": 12,
+            "descripcion": "Generas unos barrotes de vacío indestructibles que encarcelan a un objetivo durante 1 minuto por nivel.",
+            "activa": true,
+            "Requisitos": [ "Visión Incesante"],
+            "Desbloquea": [ "Bendición del Desconocido" ],
+            "efectos": {
+              "Duración": "1 minuto por nivel",
+              "Tipo": "Encierro indestructible"
+            }
+        },
+        {
+            "nombre": "Salto Espacial",
+            "nivel": 12,
+            "descripcion": "Te teletransportas de un punto a otro hasta 50 pies y puedes inflingir 10D8 a un objetivo o puedes sanar 10D6 a un objetivo.",
+            "activa": true,
+            "Requisitos": [ "Visión Incesante", "Control"],
+            "Desbloquea": [ "Bendición del Desconocido" ],
+            "efectos": {
+                "Teletransporte": "En un radio de 52 pies.",
+                "Daño": "Infliges 10D8 de daño a un objetivo.",
+                "Sanación": "Sanar 10D6 a un objetivo."
+            }
+        },
+        {
+            "nombre": "Bendición del Desconocido",
+            "nivel": 15,
+            "descripcion": "Cuando te queden 10 PG o menos, te encierras en una cúpula indestructible que te sana un porcentaje de tu vida y mejora tu próximo ataque.",
+            "activa": false,
+            "Requisitos": [ "Aura corrosiva", "Encarcelar", "Salto Espacial" ],
+            "Desbloquea": [ "Emisario del vacío", "Caballero del vacío" ],
+            "efectos": {
+              "Condición": "Activado al tener 10 PG o menos",
+              "Curación": "Recuperas el 50% de tu vida total",
+              "Defensa": "Cúpula indestructible",
+              "Ataque": "El próximo ataque será crítico automáticamente"
+            }
+        },
+        {
+            "nombre": "Emisario del vacío",
+            "nivel": 17,
+            "imagen": "/images/subclases/emisario_del_vacio.jpg",
+            "descripcion": "Invocas a un emisario que obedece todas tus órdenes. Tiene el doble de tus puntos de vida y puedes usar tus talentos a través de él.",
+            "activa": true,
+            "Requisitos": [ "Bendición del Desconocido" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Vida": "2x tus puntos de vida",
+                "Talentos": "Puedes usar tus talentos a través de él"
+            }
+        },
+        {
+            "nombre": "Caballero del vacío",
+            "nivel": 17,
+            "descripcion": "Invocas una armadura de vacío que bloquea los siguientes ataques, conjuros o talentos que recibas.",
+            "activa": true,
+            "Requisitos": [ "Bendición del Desconocido" ],
+            "Desbloquea": [],
+            "efectos": {
+                "Bloqueo": "1D6 + 5 ataques, conjuros o talentos"
+            }
+        }
+    ]
+}

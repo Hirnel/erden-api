@@ -1,0 +1,204 @@
+{
+    "idSubclase": "escudo_de_la_fe",
+    "nombre": "Escudo de la Fe",
+    "esBasica": false,
+    "descripcion": "Un defensor absoluto que utiliza su fe y su escudo como herramientas divinas para proteger a sus aliados y castigar a los enemigos. Especializado en resistencia, bloqueo y auras que benefician a sus aliados.",
+    "imagen": "/images/subclases/escudo_de_la_fe.jpg",
+    "diagrama": "/diagrama/diagrama_escudo_de_la_fe.jpg",
+    "habilidades": [
+        {
+            "nombre": "Fortaleza Inexpugnable",
+            "nivel": 1,
+            "descripcion": "Cuando entras en posición defensiva que te da +1 de CA por cada nivel de paladin que tengas.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Escudo Íntegro", "Bloqueo", "Exposición Ofensiva" ],
+            "efectos": {
+                "Bono CA": "+1 por nivel"
+            }
+        },
+        {
+            "nombre": "Escudo Íntegro",
+            "nivel": 3,
+            "descripcion": "Obtienes un ataque extra con tu escudo que causa 1D8 + Fue",
+            "activa": true,
+            "Requisitos": [ "Fortaleza Inexpugnable" ],
+            "Desbloquea": [ "Aura Protectora" ],
+            "efectos": {
+                "Daño": "1D8 + Fuerza"
+            }
+        },
+        {
+            "nombre": "Bloqueo", 
+            "nivel": 3,
+            "descripcion": "Obtines 5 puntos de bloqueo, bloquear un ataque que ha impactado es posible si gastas 1 punto de bloqueo, puedes bloquear un critico gastando 3 puntos. Si quieres bloquear un ataque a un objetivo son 2 puntos y si quieres bloquear un critico para defender a un objetivo son 5 puntos.",
+            "activa": true,
+            "Requisitos": [ "Fortaleza Inexpugnable" ],
+            "Desbloquea": [ "Aura Protectora", "Gesto Sagrado", "Aura de Ordenanza" ],
+            "efectos": {
+                "Puntos Bloqueo": 5,
+                "Bloqueo Crítico": 3,
+                "Bloqueo Aliado": {
+                    "Normal": 2,
+                    "Crítico": 5
+                }
+            }
+        },
+        {
+            "nombre": "Exposición Ofensiva",
+            "nivel": 3,
+            "descripcion": "Puedes restar bonificación a tu CA y añadirla al Ataque y al Daño durante tu turno.",
+            "activa": true,
+            "Requisitos": [ "Fortaleza Inexpugnable" ],
+            "Desbloquea": [ "Aura de Ordenanza" ]
+        },
+        {
+            "nombre": "Aura Protectora", 
+            "nivel": 5,
+            "descripcion": "Irradias un aura de 40pies que proporciona por cada 4 niveles un +1 a la CA que a ti no te afecta.",
+            "activa": false,
+            "Requisitos": [ "Escudo Íntegro", "Bloqueo" ],
+            "Desbloquea": [ "Escudo de Plenitud" ],
+            "efectos": {
+                "Bono CA": "+1 cada 4 niveles",
+                "Radio": "40 pies"
+            }
+        },
+        {
+            "nombre": "Gesto Sagrado", 
+            "nivel": 5,
+            "descripcion": "Cuando bloqueas un ataque enemigo puedes responder con un ataque gratuito o realizar una acción aún sin ser tu turno.",
+            "activa": false,
+            "Requisitos": [ "Bloqueo" ],
+            "Desbloquea": [ "Guardian de Kondes" ]
+        },
+        {
+            "nombre": "Aura de Ordenanza",
+            "nivel": 5,
+            "descripcion": "Los aliados que tengan familiaridad con tu alineamiento reciben 15pg temporales por cada nivel de paladin que tengas hasta 40 pies.",
+            "activa": false,
+            "Requisitos": [ "Bloqueo", "Exposición Ofensiva"],
+            "Desbloquea": [ "Cólera" ],
+            "efectos": {
+                "PG Temporales": "15 por nivel",
+                "Radio": "40 pies"
+            }
+        },
+        {
+            "nombre": "Escudo de Plenitud",
+            "nivel": 7,
+            "descripcion": "El escudo que portes siempre tiene la habilidad de retornante y cuando lo lanzas haces 2D8 + Fue y aturdes al enemigo 1D4 turnos. El escudo rebota como máximo en 2 enemigos adyacentes.",
+            "activa": true,
+            "Requisitos": [ "Aura Protectora" ],
+            "Desbloquea": [ "Guardian de Kondes" ],
+            "efectos": {
+                "Daño": "2D8 + Fue",
+                "Aturdimiento": "1D4 turnos",
+                "Rebote": "2 enemigos adyacentes"
+            }
+        },
+        {
+            "nombre": "Cólera",
+            "nivel": 7,
+            "descripcion": "Añades 2 dados del mismo tipo a tu daño.",
+            "activa": false,
+            "Requisitos": [ "Aura de Ordenanza" ],
+            "Desbloquea": [ "Guardian de Kondes" ],
+            "efectos": {
+                "Dados Extra": 2
+            }
+        },
+        {
+            "nombre": "Guardian de Kondes",
+            "nivel": 9,
+            "descripcion": "El daño que recibes se reduce a la mitad redondeando hacia arriba durante el proximo turno y de manera pasiva tu movimiento nunca puede ser reducido.",
+            "activa": true,
+            "Requisitos": [ "Gesto Sagrado", "Escudo de Plenitud", "Cólera"],
+            "Desbloquea": [ "Marca Sagrada", "Veredicto", "Paso Sacro" ],
+            "efectos": {
+                "Reducción Daño": "Mitad",
+                "Movimiento Inmutable": true
+            }
+        },
+        {
+            "nombre": "Marca Sagrada", 
+            "nivel": 12,
+            "descripcion": "Cuando golpeas al enemigo que porta la marca te curas 1D6. El objetivo puede resistir la marca CD 18 de Sab. Has de tener contacto visual con el enemigo y dura 1min/nivel de paladin. Si el enemigo se hace invisible revela su ubicación para ti, pero sigue siendo invisible para los demás.",
+            "activa": true,
+            "Requisitos": [ "Guardian de Kondes" ],
+            "Desbloquea": [ "Señal Divina", "Cadenas Sacras" ],
+            "efectos": {
+                "Curación": "1D6",
+                "Duración": "1 min/nivel",
+                "CD Resistencia": 18,
+                "Rango": "Contacto visual"
+            }
+        },
+        {
+            "nombre": "Veredicto", 
+            "nivel": 12,
+            "descripcion": "Cae del cielo una proyección de poder sagrado de tu arma y golpea al enemigo inflingiendo 5D6 + 1D8/3niveles de paladin. El enemigo que sea impactado con este talento fijará sus ataques sobre tí. Puedes golpear a un objetivo que esté en tu rango de vision y a 60 pies como máximo.",
+            "activa": true,
+            "Requisitos": [ "Guardian de Kondes" ],
+            "Desbloquea": [ "Cadenas Sacras" ],
+            "efectos": {
+                "Daño": "5D6 + 1D8 cada 3 niveles",
+                "Rango": "60 pies"
+            }
+        },
+        {
+            "nombre": "Paso Sacro",
+            "nivel": 12,
+            "descripcion": "El suelo por donde caminas y 30' alrededor vibra y desprende una luz que esté en sintonia con tu deidad. Los enemigos que esten dentro de ella sufren 5d10 por asalto y cura a los aliados 3D6. Dura 1 minuto. Aunque vueles y no pises el suelo, el efecto sigue resultado efectivo. El área se queda donde la invocaste.",
+            "activa": true,
+            "Requisitos": [ "Guardian de Kondes" ],
+            "Desbloquea": [ "Cadenas Sacras", "Tierra de Dios" ],
+            "efectos": {
+                "Daño_enemigos": "5D10/asalto",
+                "Curación Aliados": "3D6/asalto",
+                "Radio": "30 pies",
+                "Duración": "1 minuto"
+            }
+        },
+        {
+            "nombre": "Señal Divina", 
+            "nivel": 15,
+            "descripcion": "Marca sagrada ahora no sólo te cura a ti, tambien cura a tus aliados.",
+            "activa": false,
+            "Requisitos": [ "Marca Sagrada" ],
+            "Desbloquea": [ "Llamada Divina" ]
+        },
+        {
+            "nombre": "Cadenas Sacras", 
+            "nivel": 15,
+            "descripcion": "De tu cuerpo lanzas tantas cadenas como tu bonificador de Car y atan a los enemigos CD 18 Sab para resistir. Si los enemigos no superan la tirada de salvación estaran atados y sólo podrán moverse hacia tu dirección.",
+            "activa": true,
+            "Requisitos": [ "Marca Sagrada", "Veredicto", "Paso Sacro" ],
+            "Desbloquea": [ "Llamada Divina" ],
+            "efectos": {
+                "Cadenas": "Bonf Car cadenas",
+                "CD Resistencia": 18
+            }
+        },
+        {
+            "nombre": "Tierra de Dios",
+            "nivel": 15,
+            "descripcion": "Mientras estés dentro de Paso sacro no puedes recibir ni criticos ni ataques de oportunidad y las tiradas de reflejos las haces con ventaja.",
+            "activa": false,
+            "Requisitos": [ "Paso Sacro" ],
+            "Desbloquea": [ "Llamada Divina" ]
+        },
+        {
+            "nombre": "Llamada Divina",
+            "nivel": 17,
+            "descripcion": "Tu nivel de paladin te proporciona los mismos turnos en los que tu vida no puede bajar de 1pg 1 vez al día.",
+            "activa": false,
+            "Requisitos": [ "Señal Divina", "Cadenas Sacras", "Tierra de Dios" ],
+            "Desbloquea": [  ],
+            "efectos": {
+                "Vida Mínima": "1 PG",
+                "Turnos": "Nivel de paladín"
+            }
+        }
+    ]
+}

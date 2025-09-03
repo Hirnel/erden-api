@@ -1,0 +1,206 @@
+{
+  "idSubclase": "crisis_del_valle",
+  "nombre": "Crisis del Valle",
+  "esBasica": false,
+  "descripcion": "Especialistas en combates largos y sangrientos, los Crisis del Valle simbolizan el caos y el desgaste en la batalla. Cada golpe recibido aumenta su fuerza, transformándolos en el corazón imparable de cualquier conflicto.",
+  "imagen": "/images/subclases/Crisis_del_valle.jpg",
+  "diagrama": "/diagrama/diagrama_crisis_del_valle.jpg",
+  "habilidades": [
+    {
+      "nombre": "Superación demencial",
+      "nivel": 1,
+      "descripcion": "Cuando el enemigo te supera en número, obtienes 25PG adicionales, +1 al ataque y al daño por nivel de Crisis del Valle. Cada vez que matas a un enemigo puedes moverte la mitad de tu movimiento y atacar a otro enemigo tantas veces como tu Bonf de Constitución por día.",
+      "activa": false,
+      "Requisitos": [],
+      "Desbloquea": [ "Ataque Descuidado", "Contundencia Corpórea", "Rugido Depredatorio" ],
+      "efectos": {
+        "Vida Adicional": "+25PG",
+        "Bonus Ataque": "+1 por nivel",
+        "Bonus Daño": "+1 por nivel",
+        "Movimiento Adicional": "Mitad del movimiento al matar un enemigo"
+      }
+    },
+    {
+      "nombre": "Ataque Descuidado",
+      "nivel": 3,
+      "descripcion": "Por cada punto de CA que te quites obtienes +5 al daño hasta tu proximo turno. No puedes quedarte con menos de 10 de CA.",
+      "activa": true,
+      "Requisitos": [ "Superación demencial" ],
+      "Desbloquea": [ "Sed de Sangre" ],
+      "efectos": {
+        "Bonus daño": "+5 por cada punto de CA reducido",
+        "Limite CA": "No menos de 10"
+      }
+    },
+    {
+      "nombre": "Contundencia Corpórea",
+      "nivel": 3,
+      "descripcion": "Obtienes +2 a Fuerza y Constitución. Los críticos recibidos solo infligen la mitad del daño.",
+      "activa": false,
+      "Requisitos": ["Superación demencial"  ],
+      "Desbloquea": [ "Sed de Sangre", "Arremetida Colosal" ],
+      "efectos": {
+        "Bonus Atributos": "+2 a Fuerza y Constitución",
+        "Reducción Daño Crítico": "Mitad del daño"
+      }
+    },
+    {
+      "nombre": "Rugido Depredatorio",
+      "nivel": 3,
+      "descripcion": "Gritas con tal brutalismo que aturdes a los enemigos a 20 pies (CD 18 Voluntad, 1D4 turnos). Si alguien muere mientras está aturdido, los enemigos entran en pánico como si les lanzaran el conjuro de Miedo.",
+      "activa": true,
+      "Requisitos": [ "Superación demencial" ],
+      "Desbloquea": ["Arremetida Colosal" ],
+      "efectos": {
+        "Área": "20 pies",
+        "Aturdimiento": "1D4 turnos"
+      }
+    },
+    {
+      "nombre": "Sed de Sangre",
+      "nivel": 5,
+      "descripcion": "Por cada ataque que aciertes, recuperas 5 puntos de vida.",
+      "activa": false,
+      "Requisitos": ["Ataque descuidado","Contundencia corpórea"],
+      "Desbloquea": [ "Furia Insaciable" ],
+      "efectos": {
+        "Vida Recuperada": "5 por ataque acertado"
+      }
+    },
+    {
+      "nombre": "Arremetida Colosal",
+      "nivel": 5,
+      "descripcion": "Puedes realizar dos ataques completos en el mismo turno.",
+      "activa": true,
+      "Requisitos": [ "Contundencia corpórea", "Rugido depredatorio" ],
+      "Desbloquea": [ "Furia Insaciable" ],
+      "efectos": {
+        "Ataques Adicionales": "1 por turno"
+      }
+    },
+    {
+      "nombre": "Furia Insaciable",
+      "nivel": 7,
+      "descripcion": "Después de morir, al pasar 1D4 turnos, te levantas sin ser consciente y atacas a todos los enemigos que veas. Sólo se te puede parar cortándote la cabeza.",
+      "activa": false,
+      "Requisitos": [ "Sed de sangre","Arremetida colosal" ],
+      "Desbloquea": [ "Carga Mortal", "Golpe Atronador" ],
+      "efectos": {
+        "Resurrección": "1D4 turnos después de morir",
+        "Condición": "Cortarte la cabeza"
+      }
+    },
+    {
+      "nombre": "Carga Mortal",
+      "nivel": 9,
+      "descripcion": "Cargas contra un enemigo embistiendo a través de otros enemigos, infligiendo 8D8 de daño. Esta acción cuenta como movimiento y no genera ataque de oportunidad.",
+      "activa": true,
+      "Requisitos": [ "Furia insaciable"],
+      "Desbloquea": [ "Abusar del Débil" ],
+      "efectos": {
+        "Daño": "8D8",
+        "Sin Ataque de Oportunidad": true
+      }
+    },
+    {
+      "nombre": "Golpe Atronador",
+      "nivel": 9,
+      "descripcion": "Golpeas el suelo, generando un cono de 20 pies que inflige 6D8 + 10 por nivel de Crisis del Valle.",
+      "activa": true,
+      "Requisitos": ["Furia insaciable"], 
+      "Desbloquea": [ "Oleada Demencial" ],
+      "efectos": {
+        "Área": "Cono de 20 pies",
+        "Daño": "6D8 + 10 por nivel"
+      }
+    },
+    {
+      "nombre": "Abusar del Débil",
+      "nivel": 12,
+      "descripcion": "Cuando un enemigo tiene menos de la mitad de su vida, obtienes +5 al ataque y tus daños no pueden ser menores a la mitad del dado.",
+      "activa": false,
+      "Requisitos": ["Carga mortal"],
+      "Desbloquea": [ "Mordisco" ],
+      "efectos": {
+        "Bonif Ataque": "+5",
+        "Daño Minimo": "Mitad del dado"
+      }
+    },
+    {
+      "nombre": "Oleada Demencial",
+      "nivel": 12,
+      "descripcion": "Puedes realizar tres ataques completos.",
+      "activa": false,
+      "Requisitos": ["Golpe atronador"],
+      "Desbloquea": [ "Empuñadora Colosal" ],
+      "efectos": {
+        "Ataques Adicionales": "+2 por turno"
+      }
+    },
+    {
+      "nombre": "Mordisco",
+      "nivel": 15,
+      "descripcion": "Realizas un mordisco que inflige 10D8 y causa sangrado (6D6 por turno durante 1D6 turnos). Si tu Fuerza supera por 10 la Constitución del enemigo, puedes matarlo instantáneamente arrancándole un trozo del cráneo.",
+      "activa": true,
+      "Requisitos": ["Abusar del débil"],
+      "Desbloquea": [ "Golpes Arrasadores", "Crisis del Valle" ],
+      "efectos": {
+        "Daño": "10D8",
+        "Sangrado": "6D6 por turno durante 1D6 turnos",
+        "Muerte Instantánea": "Si Fuerza supera por 10 la Constitución."
+      }
+    },
+    {
+      "nombre": "Empuñadora Colosal",
+      "nivel": 15,
+      "descripcion": "Puedes usar armas de dos manos con una mano sin penalizaciones.",
+      "activa": false,
+      "Requisitos": ["Oleada demencial"],
+      "Desbloquea": [ "Crisis del Valle", "Crítico Ridículo" ],
+      "efectos": {
+        "Uso Armas": "Armas de dos manos con una mano."
+      }
+    },
+    {
+      "nombre": "Golpes Arrasadores",
+      "nivel": 17,
+      "descripcion": "Tus ataques generan una ventisca que inflige la mitad del daño sufrido por el objetivo en un cono de 15 pies.",
+      "activa": false,
+      "Requisitos": ["Mordisco" ],
+      "Desbloquea": [ ],
+      "efectos": {
+        "Área": "Cono de 15 pies.",
+        "Daño Adicional": "Mitad del daño infligido."
+      }
+    },
+    {
+      "nombre": "Crisis del Valle",
+      "nivel": 17,
+      "descripcion": "Cuando tú o tu grupo estéis superados en número, doblas todas las tiradas de ataque y daño. Obtienes +10 a Fuerza y 500PG.",
+      "activa": false,
+      "Requisitos": [ "Mordisco", "Empuñadora colosal" ],
+      "Desbloquea": [ ],
+      "efectos": {
+        "Doblar Tiradas": [
+          "Ataque",
+          "Daño."
+        ],
+        "Bonif Atributos": "+10 a Fuerza.",
+        "Vida Adicional": "+500PG"
+      }
+    },
+    {
+      "nombre": "Crítico Ridículo",
+      "nivel": 17,
+      "descripcion": "Cuando realizas un crítico, triplicas los dados y no puedes sacar menos de la mitad del dado. Al realizar un crítico, puedes reiniciar tu turno (máximo una vez por turno).",
+      "activa": false,
+      "Requisitos": [ "Empuñadora colosal"],
+      "Desbloquea": [ ],
+      "efectos": {
+        "Dados Triplicados": "Todos los dados.",
+        "Minimo Daño": "Mitad del dado.",
+        "Reiniciar Turno": "Máximo 1 vez por turno."
+      }
+    }
+  ]
+}

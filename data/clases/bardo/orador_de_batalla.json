@@ -1,0 +1,256 @@
+{
+    "idSubclase": "orador_batalla",
+    "nombre": "Orador de Batalla",
+    "esBasica": false,
+    "descripcion": "Un maestro de la palabra y la inspiración en combate, capaz de motivar, engañar y confundir con su voz y presencia.",
+    "imagen": "/images/orador_batalla.jpg",
+    "diagrama": "/diagrama/orador_batalla.jpg",
+    "habilidades": [
+      {
+        "nombre": "Presencia",
+        "nivel": 1,
+        "descripcion": "Tu bonificador de Car se suma a las tiradas de Ataque, daño y habilidades de tus aliados en 30 pies.",
+        "activa": false,
+        "Requisitos": [],
+        "Desbloquea": ["Saber de los Caminos", "Motivación", "Poder Interior"],
+        "efectos": {
+          "Bonificador": "Carisma a ataques, daño y habilidades de aliados en 30 pies"
+        }
+      },
+      {
+        "nombre": "Saber de los Caminos",
+        "nivel": 3,
+        "descripcion": "Conoces la manera de usar cualquier cosa como arma. Tu daño mínimo, sea con el arma que sea, siempre es 1D6.",
+        "activa": false,
+        "Requisitos": ["Presencia"],
+        "Desbloquea": [ "Liante", "Aquí te Pillo Aquí te Mato" ],
+        "efectos": {
+          "Mínimo Daño": "1D6 con cualquier arma"
+        }
+      },
+      {
+        "nombre": "Motivación",
+        "nivel": 3,
+        "descripcion": "Cuentas hazañas o buenos momentos de un compañero para motivarle. Tu aliado es capaz de repetir el 1 que ha sacado en su tirada. En combate solo se puede hacer si no has gastado tu acción gratuita anterior.",
+        "activa": true,
+        "Requisitos": [ "Presencia" ],
+        "Desbloquea": [ "Quita, Que Yo Sé Y Tú No" ],
+        "efectos": {
+          "Repetir Tirada": "Permite repetir un 1 en una tirada de un aliado"
+        }
+      },
+      {
+        "nombre": "Liante",
+        "nivel": 5,
+        "descripcion": "Eres capaz de engañar a tus enemigos y hacerles creer sin decir nada que alguien les va a atacar por la espalda.",
+        "activa": true,
+        "Requisitos": [ "Saber de los Caminos" ],
+        "Desbloquea": [ "Enemistar" ],
+        "efectos": {
+          "Engaño": "Engañar CD 10 + nivel del enemigo"
+        }
+      },
+      {
+        "nombre": "Aquí te Pillo Aquí te Mato",
+        "nivel": 5,
+        "descripcion": "Si un enemigo está confuso, aturdido, dormido o en cualquier estado alterado, tus ataques siempre serán críticos.",
+        "activa": false,
+        "Requisitos": [ "Saber de los Caminos" ],
+        "Desbloquea": [ "Conmigo Todo Siempre son Risas" ],
+        "efectos": {
+          "Crítico": "Ataques siempre críticos contra enemigos con estado alterado"
+        }
+      },
+      {
+        "nombre": "Poder Interior",
+        "nivel": 5,
+        "descripcion": "Tus conjuros tienen la posibilidad de un 15% de no gastarse cuando se lancen.",
+        "activa": false,
+        "Requisitos": [ "Presencia" ],
+        "Desbloquea": [ "Dominio" ],
+        "efectos": {
+          "Probabilidad": "15% de no gastar conjuros al lanzarlos"
+        }
+      },
+      {
+        "nombre": "Quita, Que Yo Sé Y Tú No",
+        "nivel": 5,
+        "descripcion": "Aunque no tengas competencia con una habilidad, puedes quitar de un empujón a alguien que la esté realizando y usar su tirada +5.",
+        "activa": false,
+        "Requisitos": [ "Motivación" ],
+        "Desbloquea": [ "Paseo por las Sombras" ],
+        "efectos": {
+          "Sustitución Tirada": "Permite reemplazar una tirada de habilidad ajena sumando +5"
+        }
+      },
+      {
+        "nombre": "Enemistar",
+        "nivel": 7,
+        "descripcion": "Confundes a un enemigo y haces que ataque a sus aliados durante 1D6 turnos.",
+        "activa": true,
+        "Requisitos": [ "Liante" ],
+        "Desbloquea": [ "Gazapo Elocuente" ],
+        "efectos": {
+          "Control Mental": "El enemigo ataca a sus aliados durante 1D6 turnos"
+        }
+      },
+      {
+        "nombre": "Conmigo Todo Siempre son Risas",
+        "nivel": 7,
+        "descripcion": "Embrujas a un enemigo y le haces sufrir una enfermedad común como vómito, diarrea o ladillas.",
+        "activa": true,
+        "Requisitos": [ "Aquí te Pillo Aquí te Mato" ],
+        "Desbloquea": [ "Dónde Cabe uno Caben Tres" ],
+        "efectos": {
+          "Enfermedad": "Enfermedad leve que afecta el rendimiento del enemigo"
+        }
+      },
+      {
+        "nombre": "Paseo por las Sombras",
+        "nivel": 7,
+        "descripcion": "Cuando te mueves en sigilo tu velocidad no se reduce. Sabes correr sin hacer ruido. CD para escucharte 25 + Des.",
+        "activa": false,
+        "Requisitos": [ "Quita, Que Yo Sé Y Tú No" ],
+        "Desbloquea": [ "Himno de Libertad" ],
+        "efectos": {
+          "Sigilo": "No reduce la velocidad al moverse en sigilo. CD 25 + Destreza para escucharte"
+        }
+      },
+      {
+        "nombre": "Gazapo Elocuente",
+        "nivel": 9,
+        "descripcion": "Si dejas tu acción gratuita en reserva, siempre puedes interrumpir el conjuro de alguien más con un comentario elocuente o un insulto.",
+        "activa": true,
+        "Requisitos": [ "Enemistar" ],
+        "Desbloquea": [ "Niños, es Hora de Dormir" ],
+        "efectos": {
+          "Interrupción Conjuro": "Interrumpe un conjuro enemigo si no usas tu acción gratuita"
+        }
+      },
+      {
+        "nombre": "Dónde Cabe uno Caben Tres",
+        "nivel": 9,
+        "descripcion": "Cuando lanzas un arma arrojadiza, creas una imagen del arma y la triplicas. Si impacta, el resto también lo hace.",
+        "activa": false,
+        "Requisitos": [ "Conmigo Todo Siempre son Risas" ],
+        "Desbloquea": [ "Niños, es Hora de Dormir" ],
+        "efectos": {
+          "Triplicar Daño": "Duplica el daño si impacta el ataque inicial con armas arrojadizas"
+        }
+      },
+      {
+        "nombre": "Dominio",
+        "nivel": 9,
+        "descripcion": "Tus Hechizos y Talentos añaden 2 dados más.",
+        "activa": false,
+        "Requisitos": [ "Poder Interior" ],
+        "Desbloquea": [ "Acordes de Paz" ],
+        "efectos": {
+          "Dados Extra": "+2 dados adicionales en Hechizos y Talentos"
+        }
+      },
+      {
+        "nombre": "Himno de Libertad",
+        "nivel": 9,
+        "descripcion": "Elimina un estado alterado negativo en el objetivo. En caso de que el objetivo no tenga ningún estado alterado negativo, lo protegerá del siguiente estado alterado que reciba en los próximos 1D6 + 4 turnos.",
+        "activa": true,
+        "Requisitos": [ "Paseo por las Sombras" ],
+        "Desbloquea": [ "Música de Infante" ],
+        "efectos": {
+            "Eliminación Estado": "Elimina un estado alterado negativo",
+            "Protección Estado": {
+                "Condición": "Si no hay estados alterados negativos",
+                "Duración": "1D6 + 4 turnos",
+                "Efecto": "Protege del siguiente estado alterado negativo"
+            }
+        }
+    },    
+      {
+        "nombre": "Niños, es Hora de Dormir",
+        "nivel": 12,
+        "descripcion": "Aquellos que escuchen tu voz deberán hacer una tirada de Sabiduría 15 + Nivel de Bardo para resistir quedarse dormidos.",
+        "activa": true,
+        "Requisitos": [ "Gazapo Elocuente", "Dónde Cabe uno Caben Tres" ],
+        "Desbloquea": [ "Acordes de Paz" ],
+        "efectos": {
+          "Sueño": "Sab 15 + Nivel de Bardo o quedan dormidos"
+        }
+      },
+      {
+        "nombre": "Música de Infante",
+        "nivel": 12,
+        "descripcion": "Cantas una canción dulce y creas un escudo mágico que protege la mitad de la vida a cada uno de ellos, en un área de 50 pies a tu alrededor. No se acumula con otros escudos.",
+        "activa": true,
+        "Requisitos": [ "Himno de Libertad" ],
+        "Desbloquea": [ "Acordes de Paz" ],
+        "efectos": {
+          "Escudo Mágico": {
+            "Área": "50 pies",
+            "Protección": "Mitad de la vida",
+            "Acumulación": "No acumulable con otros escudos"
+          }
+        }
+      },  
+      {
+        "nombre": "Acordes de Paz",
+        "nivel": 15,
+        "descripcion": "Tocas de manera disimulada y hace que tus enemigos dejen progresivamente de atacar, como máximo en 1D4 turnos. Solo surte efecto si no los atacas e intentas dialogar con ellos.",
+        "activa": true,
+        "Requisitos": [ "Dominio", "Niños, es Hora de Dormir", "Música de Infante" ],
+        "Desbloquea": [ "Gente de Recursos", "A Mi No Me Llames Bastardo" ],
+        "efectos": {
+          "Calmante": {
+            "Duración": "1D4 turnos",
+            "Condición": "No atacar al enemigo e intentar dialogar",
+            "Salvación": {
+              "CD": "15 + Nivel de Bardo + Carisma"
+            }
+          }
+        }
+      },
+      {
+        "nombre": "Gente de Recursos",
+        "nivel": 17,
+        "descripcion": "Duplica el efecto de Presencia. Motivación ahora hace repetir cualquier tirada inferior a 10. Saber de los caminos ahora hace 2D8 extra.",
+        "activa": false,
+        "Requisitos": [ "Acordes de Paz" ],
+        "Desbloquea": [ "Lengua de Plata" ],
+        "efectos": {
+          "Presencia": "Duplicada",
+          "Motivación": {
+            "Efecto": "Repetir cualquier tirada inferior a 10"
+          },
+          "Saber De Los Caminos": {
+            "Bono Extra": "2D8"
+          }
+        }
+      },
+      {
+        "nombre": "A Mi No Me Llames Bastardo",
+        "nivel": 17,
+        "descripcion": "Cuadriplica el rango de crítico de tus aliados a 35 pies.",
+        "activa": false,
+        "Requisitos": [ "Acordes de Paz" ],
+        "Desbloquea": [ "Lengua de Plata" ],
+        "efectos": {
+          "Rango Crítico": {
+            "Multiplicador": "x4",
+            "Área": "35 pies",
+            "Afectados": "Aliados"
+          }
+        }
+      },                   
+      {
+        "nombre": "Lengua de Plata",
+        "nivel": 19,
+        "descripcion": "Cuando un objetivo muere, puedes ordenar que no lo haga. CD para resistir 15 + nivel de Bardo + Car.",
+        "activa": false,
+        "Requisitos": [ "Gente de Recursos", "A Mi No Me Llames Bastardo" ],
+        "Desbloquea": [],
+        "efectos": {
+          "Resurrección": "CD 15 + nivel de Bardo + Carisma para resistir ser resucitado"
+        }
+      }
+    ]
+  }
+  

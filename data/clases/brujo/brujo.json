@@ -1,0 +1,172 @@
+{
+  "id": "brujo",
+  "nombre": "Brujo",
+  "esBasica": true,
+  "descripcion": [
+    "Tocados por el Vacio y la Nerkia, los brujos nacen con la rotura del poder que surge con la diosa Fidmad, dueña del Fidhalla Aithighe o cómo la gente de la plebe está empezando a llamar; Infierno. Magos tocados por la distorsión del vacio en Érden ahora llenan sus calles como uno más, estos son preciosos recursos que los reinos y grandes familias buscan para aumentar sus fuerzas. Cazan a los que no tienen patrón o dueño, esclavos de un gran poder, cómo los Tsunyas.",
+    "Los brujos son buscadores de conocimiento como sus hermanos los magos, sólo que ellos no recorren un camino claro y llano, es oscuro, recorcido y al borde de la locura. Recurren al control de demonios en muchos casos, estos juran lealtad absoluta a cambio de devorar las memorias de las personas que matan."
+  ],
+  "imagen": "/images/brujo.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera"],
+      "Armas": ["Todas las armas sencillas"],
+      "Herramientas": [],
+      "Tiradas De Salvacion": ["Sabiduría", "Carisma"],
+      "Habilidades": [
+        "Arcano",
+        "Engañar",
+        "Historia",
+        "Intimidar",
+        "Investigación",
+        "Naturaleza",
+        "Religión"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Collar de esclavitud",
+        "descripcion": "Los brujos son sometidos con collares de esclavitud a nivel 1, obligándolos a servir a sus amos de manera absoluta."
+      },
+      {
+        "nombre": "Conocedor Nerkiano",
+        "descripcion": "Conoces los misterios de la energía del mundo. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones."
+      },
+      {
+        "nombre": "Trucos",
+        "descripcion": "Conoces dos trucos de tu elección de la lista de conjuros del brujo. Aprendes trucos de brujo adicionales en niveles superiores, como se ve en la columna Trucos Conocidos."
+      },
+      {
+        "nombre": "Devorar el vacío",
+        "descripcion": "A partir del nivel 3 puedes rasgar el espacio-tiempo y beber del vacío, recuperando 1D4 de Poder Interior + Carisma. Aumenta un dado adicional en niveles 9, 12, 15 y 18. Se puede usar una vez al día tras un descanso largo.",
+        "niveles": {
+          "nivel3": "1D4",
+          "nivel9": "2D4",
+          "nivel12": "3D4",
+          "nivel15": "4D4",
+          "nivel18": "5D4"
+        }
+      },
+      {
+        "nombre": "Bolsillo abisal",
+        "descripcion": "Creas un espacio en el vacío donde puedes depositar objetos. Capacidad inicial de 25 libras por nivel. A partir del nivel 10, aumenta a 80 libras por nivel.",
+        "niveles": {
+          "nivel1": "25 libras/nivel",
+          "nivel10": "80 libras/nivel"
+        }
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Collar de esclavitud","Conocedor Nerkiano","Trucos"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 4
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+1",
+      "Rasgos": [],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 5
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Devorar el vacío (1)"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 6
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 7
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+2",
+      "Rasgos": [],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 8
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Bolsillo abisal"],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 9
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["Devorar el vacío (2)"],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["Devorar el vacío (3)","+1 Característica"],
+      "Trucos Conocidos": 8,
+      "Conjuros Conocidos": 16
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["Devorar el vacío (4)","+1 Característica"],
+      "Trucos Conocidos": 10,
+      "Conjuros Conocidos": 21
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+9",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 15,
+      "Conjuros Conocidos": 26
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/2nivel",
+      "Rasgos": ["+1 Característica/4 niveles"],
+      "Trucos Conocidos": "+1/2nivel",
+      "Conjuros Conocidos": "+2/3nivel"
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "conjurador_de_la_oscuridad",
+      "nombre": "Conjurador de la oscuridad",
+      "descripcion": "Especialistas en manipular las sombras y crear terror en el campo de batalla.",
+      "imagen": "/images/subclases/conjurador_de_la_oscuridad.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "demonologo",
+      "nombre": "Demonólogo",
+      "descripcion": "Dominan pactos con entidades infernales, utilizando su poder para atacar y defenderse.",
+      "imagen": "/images/subclases/demonologo.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "invocador_de_los_antiguos",
+      "nombre": "Invocador de los antiguos",
+      "descripcion": "Utilizan los secretos de entidades ancestrales para invocar aliados y desatar el caos.",
+      "imagen": "/images/subclases/invocador_de_los_antiguos.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

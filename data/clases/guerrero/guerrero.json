@@ -1,0 +1,226 @@
+{
+  "id": "guerrero",
+  "nombre": "Guerrero",
+  "esBasica": true,
+  "descripcion": [
+    "Una humana equipada con una ruidosa armadura de placas sujeta su escudo frente a ella mientras corre tras un grupo de bandidos. Tras ella, un tsunya vestido con una armadura de cuero tachonado acribilla a los témere con flechas lanzadas desde su exquisito arco.",
+    "Un orco cercano grita órdenes, ayudando a los dos combatientes a que coordinen su asalto para conseguir el mejor resultado.",
+    "Un enano con una cota de malla interpone su escudo entre el garrote de la criatura desconocida y su compañera, evitando el mortífero golpe. Su compañera, una arquetipo con una armadura de escamas, zarandea sus dos cimitarras en un torbellino cegador a la par que rodea a la criatura, buscando un punto débil en sus defensas.",
+    "Un gladiador pelea por deporte en la arena, es un maestro del tridente y la red, experto en derribar a sus enemigos y arrastrarlos por la arena para deleite de las masas (y para su propia ventaja táctica). La espada de su oponente brilla con una luz azul tan solo unos instantes antes de que le lance un fulgurante rayo para golpearlo.",
+    "Todos estos héroes son guerreros, quizás la clase de personaje más diversa en el vasto universo de Érden. Caballeros en misiones sagradas, conquistadores señores de la guerra, campeones reales, soldados de élite, duros mercenarios, y reyes bandidos.",
+    "Como guerreros, todos ellos comparten un dominio magistral de las armas y armaduras, y un exhaustivo conocimiento de las habilidades del combate. Además, están muy relacionados con la muerte, tanto repartiéndola como mirándola fijamente, desafiantes."
+  ],
+  "imagen": "/images/guerrero.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera", "Armadura media", "Armadura pesada", "Escudos"],
+      "Armas": ["Todas las armas simples", "Todas las armas marciales"],
+      "Herramientas": [],
+      "Tiradas De Salvacion": ["Fuerza", "Constitución"],
+      "Habilidades": [
+        "Atletismo",
+        "Historia",
+        "Intimidación",
+        "Percepción",
+        "Perspicacia",
+        "Supervivencia"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Entrenamiento Marcial",
+        "descripcion": "Dominio básico de todos los estilos de combate. Puedes usar cualquier arma o armadura con gran eficacia."
+      },
+      {
+        "nombre": "Estilo de Combate",
+        "descripcion": "Elige un estilo de combate que se adapte a tus habilidades: lucha con dos armas, lucha a distancia, protección con escudos, entre otros."
+      },
+      {
+        "nombre": "Acción Extra",
+        "descripcion": "A partir del nivel 2, puedes realizar una acción adicional en tu turno. Ganas más acciones adicionales a medida que subes de nivel."
+      },
+      {
+        "nombre": "Movimiento Táctico",
+        "descripcion": "A nivel 10, puedes mover hasta la mitad de tu velocidad sin provocar ataques de oportunidad."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Entrenamiento Marcial", "Estilo de Combate"],
+      "Acciones Extra": 0
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Acción Extra"],
+      "Acciones Extra": 1
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 1
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["1 acción extra", "+1 Característica"],
+      "Acciones Extra": 1
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["Acción Extra"],
+      "Acciones Extra": 2
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 2
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 2
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["1 acción extra", "+1 Característica"],
+      "Acciones Extra": 2
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["Acción Extra"],
+      "Acciones Extra": 3
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["Movimiento Táctico"],
+      "Acciones Extra": 3
+    },
+    {
+      "Nivel": 11,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 3
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["1 acción extra", "+1 Característica"],
+      "Acciones Extra": 4
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 4
+    },
+    {
+      "Nivel": 14,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 4
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+10",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 5
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+10",
+      "Rasgos": ["1 acción extra", "+1 Característica"],
+      "Acciones Extra": 5
+    },
+    {
+      "Nivel": 17,
+      "Bono De Competencia": "+13",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 6
+    },
+    {
+      "Nivel": 18,
+      "Bono De Competencia": "+13",
+      "Rasgos": ["Acción Extra"],
+      "Acciones Extra": 6
+    },
+    {
+      "Nivel": 19,
+      "Bono De Competencia": "+15",
+      "Rasgos": ["+1 Característica"],
+      "Acciones Extra": 7
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+18",
+      "Rasgos": ["1 acción extra", "+1 Característica"],
+      "Acciones Extra": 7
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/nivel",
+      "Rasgos": ["1 acción extra/3 niveles", "+1 Caracteristica/4nivel"],
+      "Acciones Extra": 7
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "acechador_insufrible",
+      "nombre": "Acechador Insufrible",
+      "descripcion": "Un experto en el combate táctico y acecho, letal desde las sombras.",
+      "imagen": "/images/subclases/acechador_insufrible.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "caballero_del_vacio",
+      "nombre": "Caballero del Vacío",
+      "descripcion": "Canaliza la energía del vacío para proteger a sus aliados y desatar caos en sus enemigos.",
+      "imagen": "/images/subclases/caballero_del_vacio.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "guardian",
+      "nombre": "Guardián",
+      "descripcion": "Un protector incansable que defiende a sus aliados con un escudo impenetrable.",
+      "imagen": "/images/subclases/guardian.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "guerrero_de_leyenda",
+      "nombre": "Guerrero de Leyenda",
+      "descripcion": "Un maestro en el combate cuya destreza es cantada en historias y canciones épicas.",
+      "imagen": "/images/subclases/guerrero_de_leyenda.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "maestro_de_armas",
+      "nombre": "Maestro de Armas",
+      "descripcion": "Domina todas las armas con precisión letal, adaptándose a cualquier situación.",
+      "imagen": "/images/subclases/maestro_de_armas.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "superviviente_de_mil_batallas",
+      "nombre": "Superviviente de Mil Batallas",
+      "descripcion": "Curtido en innumerables combates, capaz de soportar cualquier adversidad.",
+      "imagen": "/images/subclases/superviviente_de_mil_batallas.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

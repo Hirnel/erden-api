@@ -1,0 +1,145 @@
+{
+  "id": "chaman",
+  "nombre": "Chamán",
+  "esBasica": true,
+  "descripcion": [
+    "El chamán es la clase natural más antigua. Padres de los druidas y abuelos de los exploradores, los chamanes simbolizan la union entre lo natural y lo espiritual. Conectados con Shugras’vel en lo natural y con Nerk’ve en lo espiritual y magico, esta clase simboliza el equilibrio perfecto, pudiendo ser verdaderas picadoras de carne cuerpo a cuerpo, sanadores excepcionales o poderosos controladores de nerkia.",
+    "Los chamanes suelen ser siempre bienvenidos por su vinculo especial con los espiritus, permitiendole hacer llamados a estos y poder hablar con ellos."
+  ],
+  "imagen": "/images/chaman.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Armadura ligera", "Armadura media", "Escudos"],
+      "Armas": ["Armas simples", "Cerbatanas", "Redes"],
+      "Herramientas": ["Kit de herbolario"],
+      "Tiradas De Salvacion": ["Fuerza", "Sabiduría"],
+      "Habilidades": [
+        "Avistar",
+        "Buscar",
+        "Escuchar",
+        "Manejo de animales",
+        "Medicina",
+        "Naturaleza",
+        "Percepción",
+        "Religión",
+        "Supervivencia"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Conocedor Nerkiano",
+        "descripcion": "Conoces los misterios de la energía del mundo. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones."
+      },
+      {
+        "nombre": "Ojos Esmeralda",
+        "descripcion": "Tus ojos pueden ver más allá del mundo mortal y te permiten entablar conversaciones con espíritus. Los espíritus pueden comunicarse contigo de diversas formas, como susurros o señales visuales."
+      },
+      {
+        "nombre": "Trucos",
+        "descripcion": "Conoces dos trucos de tu elección de la lista de conjuros del chamán. Aprendes trucos adicionales en niveles superiores, como se indica en la progresión."
+      },
+      {
+        "nombre": "Tocar el más allá",
+        "descripcion": "Si te concentras durante 3 asaltos, puedes invocar tu alma etérea y moverte personalmente dentro de la Visión Esmeralda."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Conocedor Nerkiano","Ojos Esmeralda"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 3
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+1",
+      "Rasgos": [],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 4
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 5
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 6
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 7
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 8
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+9",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 15
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/2nivel",
+      "Rasgos": ["+1 Característic/4 niveles"],
+      "Trucos Conocidos":"+1/2nivel",
+      "Conjuros Conocidos":"+2/3nivel"
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "chaman_elemental",
+      "nombre": "Chamán Elemental",
+      "descripcion": "Maestro en canalizar los elementos naturales, controla el fuego, el agua, el viento y la tierra para devastar o sanar.",
+      "imagen": "/images/subclases/elementarista.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase":"chaman_guerrero",
+      "nombre": "Chamán Guerrero",
+      "descripcion": "Un guerrero espiritual que combina su fuerza física con habilidades sobrenaturales para proteger y liderar.",
+      "imagen": "/images/chaman_guerrero.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "chaman_revitalizador",
+      "nombre": "Chamán Revitalizador",
+      "descripcion": "Especializado en sanar y revivir aliados, se convierte en un pilar de soporte espiritual y físico en el campo de batalla.",
+      "imagen": "/images/chaman_revitalizador.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

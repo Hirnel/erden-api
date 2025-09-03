@@ -1,0 +1,235 @@
+{
+    "idSubclase": "elevado_de_la_justicia",
+    "nombre": "Elevado de la Justicia",
+    "esBasica": false,
+    "descripcion": "Un defensor divino que lucha por proteger a los débiles, impartir justicia y castigar a los enemigos de Dios. Equipado con habilidades extraordinarias, auras divinas y un fuerte sentido de la justicia, el Elevado de la Justicia inspira y protege a sus aliados mientras castiga a sus enemigos con poder celestial.",
+    "imagen": "/images/subclases/elevado_de_la_justicia.jpg",
+    "diagrama": "/diagrama/diagrama_elevado_de_la_justicia.jpg",
+    "habilidades": [
+        {
+            "nombre": "Defensa del Débil",
+            "nivel": 1,
+            "descripcion": "Tu arma y escudo obtienen la habilidad magica de retornante. Puedes lanzar tu escudo y tu arma cuerpo a cuerpo a un objetivo que veas para llamar su atención.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Aura Colérica", "Defensor", "Aura Protectora" ]
+        },
+        {
+            "nombre": "Aura Colérica", 
+            "nivel": 3,
+            "descripcion": "Irradias un aura de 40pies que proporciona por cada 4 niveles un +1 al Ataque y al Daño.",
+            "activa": true,
+            "Requisitos": [ "Defensa del Débil" ],
+            "Desbloquea": [ "Momento Heróico" ],
+            "efectos": {
+                "Bono Ataque": "+1 cada 4 niveles",
+                "Bono Daño": "+1 cada 4 niveles",
+                "Radio": "40 pies"
+            }
+        },
+        {
+            "nombre": "Defensor", 
+            "nivel": 3,
+            "descripcion": "Obtienes RD 2 y +2 de Constitución.",
+            "activa": true,
+            "Requisitos": [ "Defensa del Débil" ],
+            "Desbloquea": [ "Elevado de la Justicia" ],
+            "efectos": {
+                "Resistencia Daño": 2,
+                "Bono Constitución": "+2"
+            }
+        },
+        {
+            "nombre": "Aura Protectora",
+            "nivel": 3,
+            "descripcion": "Irradias un aura de 40pies que proporciona por cada 4 niveles un +1 a la CA.",
+            "activa": true,
+            "Requisitos": [ "Defensa del Débil" ],
+            "Desbloquea": [ "Cuerpo Protector" ],
+            "efectos": {
+                "Bono CA": "+1 cada 4 niveles",
+                "Radio": "40 pies"
+            }
+        },
+        {
+            "nombre": "Momento Heróico",
+            "nivel": 5,
+            "descripcion": "Cuando realizas un crítico curas a tus aliados a menos de 20pies la mitad del daño realizado.",
+            "activa": true,
+            "Requisitos": [ "Aura Colérica" ],
+            "Desbloquea": [ "Refuerzo Armado", "Elevado de la Justicia" ],
+            "efectos": {
+                "Curación Aliados": "Mitad del daño crítico",
+                "Radio": "20 pies"
+            }
+        },
+        {
+            "nombre": "Cuerpo Protector",
+            "nivel": 5,
+            "descripcion": "Cuando un aliado a menos de 15 pies sufre un critico, puedes correr para recibir tú ese ataque por tu aliado.",
+            "activa": true,
+            "Requisitos": [ "Aura Protectora" ],
+            "Desbloquea": [ "Elevado de la Justicia", "Refuerzo Corazado" ],
+            "efectos": {
+                "Radio": "15 pies"
+            }
+        },
+        {
+            "nombre": "Refuerzo Armado",
+            "nivel": 7,
+            "descripcion": "Obtienes +1 a Fuerza por cada 2/niveles de Paladín Elevado de la Justicia.",
+            "activa": true,
+            "Requisitos": [ "Momento Heróico" ],
+            "Desbloquea": [ "Ataque Despiadado", "Ataque Abrumador" ],
+            "efectos": {
+                "Bono Fuerza": "+1 por cada 2/niveles"
+            }
+        },
+        {
+            "nombre": "Elevado de la Justicia",
+            "nivel": 7,
+            "descripcion": "Invocas 2 alas que te permiten volar de manera regular y añades 1 dado a tu daño. A nivel 12 invocas 4 alas que te permiten volar de manera buena y añades 2 dados a tu daño. A nivel 17 invocas 6 alas que te permiten volar de manera perfecta y añades 4 dados a tu daño. El dado es el mismo tipo del de tu arma, si tu arma hace 1D8 a nivel 7 seria 2D8. Dura 1H/nivel de Paladin.",
+            "activa": true,
+            "Requisitos": [ "Momento Heróico", "Defensor", "Cuerpo Protector" ],
+            "Desbloquea": [ "Plumas Divinas" ],
+            "efectos": {
+                "Nivel 7": {
+                    "Alas": "Volar regular",
+                    "Dados Extra": 1
+                },
+                "Nivel 12": {
+                    "Alas": "Volar bueno",
+                    "Dados Extra": 2
+                },
+                "Nivel 17": {
+                    "Alas": "Volar perfecto",
+                    "Dados Extra": 4
+                },
+                "Duración": "1 hora/nivel"
+            }
+        },
+        {
+            "nombre": "Refuerzo Corazado",
+            "nivel": 7,
+            "descripcion": "Obtienes +1 a Constitución por cada 2/niveles de Paladín Elevado de la Justicia.",
+            "activa": true,
+            "Requisitos": [ "Cuerpo Protector" ],
+            "Desbloquea": [ "Defensa Abrumadora", "Defensa Despiadada" ],
+            "efectos": {
+                "Bono Constitución": "+1 por cada 2/niveles"
+            }
+        },
+        {
+            "nombre": "Ataque Despiadado", 
+            "nivel": 9,
+            "descripcion": "Si portas un arma cortante, puedes cercenar a un enemigo una extremidad si superas en 15 su CA.",
+            "activa": true,
+            "Requisitos": [ "Refuerzo Armado" ],
+            "Desbloquea": [ "Daño Dividido" ],
+            "efectos": {
+                "Condición": "Superar CA en 15"
+            }
+        },
+        {
+            "nombre": "Ataque Abrumador",
+            "nivel": 9,
+            "descripcion": "Si portas un arma contundente, puedes derribar a un enemigo del impacto si superas en 10 su CA.",
+            "activa": true,
+            "Requisitos": [ "Refuerzo Armado" ],
+            "Desbloquea": [ "Daño Dividido", "Grito Imperioso" ],
+            "efectos": {
+                "Condición": "Superar CA en 10"
+            }
+        },
+        {
+            "nombre": "Plumas Divinas",
+            "nivel": 9,
+            "descripcion": "Morder una pluma te recupera 4D8+5 puntos de salud y elimina estados alterados. Sólo puedes usar esto una vez al día en una persona. Al día tienes tantas plumas como tu nivel de Paladin + Con + Car.",
+            "activa": true,
+            "Requisitos": [ "Elevado de la Justicia" ],
+            "Desbloquea": [ "Grito Imperioso" ],
+            "efectos": {
+                "Curación": "4D8 + 5",
+                "Uso Máximo": "Nivel + Con + Car por día"
+            }
+        },
+        {
+            "nombre": "Defensa Abrumadora", 
+            "nivel": 9,
+            "descripcion": "Si tu enemigo saca pifia puedes atacar a su arma con la tuya haciendo que la suelte o la rompas. La CA del arma es la misma que la de tu enemigo.",
+            "activa": true,
+            "Requisitos": [ "Refuerzo Corazado" ],
+            "Desbloquea": [ "Grito Imperioso", "Vínculo Sagrado" ],
+            "efectos": {
+                "Condición": "Pifia del enemigo"
+            }
+        },
+        {
+            "nombre": "Defensa Despiadada",
+            "nivel": 9,
+            "descripcion": "Si tu enemigo saca pifia haces que debido al mal impacto se rompa la mano/muñeca/codo.",
+            "activa": true,
+            "Requisitos": [ "Refuerzo Corazado" ],
+            "Desbloquea": [ "Vínculo Sagrado" ],
+            "efectos": {
+                "Condición": "Pifia del enemigo"
+            }
+        },
+        {
+            "nombre": "Daño Dividido", 
+            "nivel": 12,
+            "descripcion": "Tus ataques generan un aura y golpean a los enemigos que esten a 5 pies del enemigo al que estas golpeando, pero a los enemigos adyacentes les causas la mitad del daño.",
+            "activa": true,
+            "Requisitos": [ "Ataque Despiadado", "Ataque Abrumador" ],
+            "Desbloquea": [ "Mejora de Auras"],
+            "efectos": {
+                "Radio": "5 pies"
+            }
+        },
+        {
+            "nombre": "Grito Imperioso", 
+            "nivel": 12,
+            "descripcion": "Ordenas a un objetivo que se quede quieto, si no supera una tirada de Car CD 15 + Car del paladin se queda inmovil hasta que se le diga lo contrario o sufra daño.",
+            "activa": true,
+            "Requisitos": [ "Ataque Abrumador", "Plumas Divinas", "Defensa Abrumadora"],
+            "Desbloquea": [ "Mejora de Auras" ],
+            "efectos": {
+                "CD Car": "15 + Car del Paladín"
+            }
+        },
+        {
+            "nombre": "Vínculo Sagrado",
+            "nivel": 12,
+            "descripcion": "Juras proteger a una persona objetivo y el daño que reciba esa persona siempre será la mitad, pues la otra mitad la sufrirás tú.",
+            "activa": true,
+            "Requisitos": [ "Defensa Abrumadora", "Defensa Despiadada" ],
+            "Desbloquea": [ "Mejora de Auras" ],
+            "efectos": {
+                "Mitigación": "50% del daño recibido"
+            }
+        },
+        {
+            "nombre": "Mejora de Auras",
+            "nivel": 15,
+            "descripcion": "Aura colérica ahora proporciona +3 en vez de +1. Aura protectora ahora proporciona +3 en vez de +1.",
+            "activa": true,
+            "Requisitos": [ "Daño Dividido", "Grito Imperioso", "Vínculo Sagrado" ],
+            "Desbloquea": [ "Enemigo de Dios" ],
+            "efectos": {
+                "Aura Colérica": "+3 al Ataque y Daño",
+                "Aura Protectora": "+3 a CA"
+            }
+        },
+        {
+            "nombre": "Enemigo de Dios",
+            "nivel": 17,
+            "descripcion": "Los que presencian este aura son considerados enemigos de Dios y tu crítico para con ellos es el cuadruple.",
+            "activa": true,
+            "Requisitos": [ "Mejora de Auras" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Crítico": "Cuádruple daño"
+            }
+        }
+    ]
+}

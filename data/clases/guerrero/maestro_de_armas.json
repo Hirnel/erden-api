@@ -1,0 +1,217 @@
+{
+    "idSubclase": "maestro_de_armas",
+    "nombre": "Maestro de Armas",
+    "esBasica": false,
+    "descripcion": "Un guerrero sin igual que domina las armas con precisión letal, utilizando su conocimiento del combate para controlar el campo de batalla.",
+    "imagen": "/images/subclases/maestro_de_armas.jpg",
+    "diagrama": "/diagrama/diagrama_maestro_de_armas.jpg",
+    "habilidades": [
+        {
+            "nombre": "Golpe en Caída",
+            "nivel": 1,
+            "descripcion": "Saltas hasta 15 pies hacia una dirección e inflinges 2D8 + Fuerza por cada 5 pies de salto. 15 pies serían 6D8.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Golpe Horizontal", "Saber Herir", "Estocada Profunda" ],
+            "efectos": {
+                "Distancia Max": "15 pies",
+                "Daño": "2D8 + Fuerza por cada 5 pies"
+            }
+        },
+        {
+            "nombre": "Golpe Horizontal", 
+            "nivel": 3,
+            "descripcion": "Golpeas hasta 3 enemigos que tengas delante sin realizar prueba de ataque, inflingiendo 5 puntos de daño fijos por cada nivel de guerrero.",
+            "activa": true,
+            "Requisitos": [ "Golpe en Caída" ],
+            "Desbloquea": [ "Tormenta Armada" ],
+            "efectos": {
+                "Objetivos": 3,
+                "Daño": "5 puntos por nivel de guerrero"
+            }
+        },
+        {
+            "nombre": "Saber Herir", 
+            "nivel": 3,
+            "descripcion": "Conoces la anatomía y duplicas tu rango de crítico.",
+            "activa": false,
+            "Requisitos": [ "Golpe en Caída" ],
+            "Desbloquea": [ "Tormenta Armada", "Pulso Revitalizante", "Abrumar" ],
+            "efectos": {
+                "Rango Crítico": "Duplicado"
+            }
+        },
+        {
+            "nombre": "Estocada Profunda",
+            "nivel": 3,
+            "descripcion": "Perforas el cuerpo del enemigo, causándole sangrado hasta que trate la herida. Causa daño igual a la mitad de tu nivel de guerrero.",
+            "activa": true,
+            "Requisitos": [ "Golpe en Caída" ],
+            "Desbloquea": [ "Abrumar" ],
+            "efectos": {
+                "Daño": "Mitad de nivel de guerrero"
+            }
+        },
+        {
+            "nombre": "Tormenta Armada", 
+            "nivel": 5,
+            "descripcion": "Después de dar el golpe de gracia a un objetivo, puedes moverte 20 pies + 5 pies por bonificador de Constitución y atacar a un enemigo con ventaja.",
+            "activa": true,
+            "Requisitos": [ "Golpe Horizontal", "Saber Herir" ],
+            "Desbloquea": [ "Pulso de Serenidad" ],
+            "efectos": {
+                "Movimiento": "20 pies + 5 pies por bonificador de Constitución",
+                "Ataque Ventaja": true
+            }
+        },
+        {
+            "nombre": "Pulso Revitalizante", 
+            "nivel": 5,
+            "descripcion": "Te sanas 10 puntos de vida por cada 2 niveles de guerrero, dando un grito energizante.",
+            "activa": true,
+            "Requisitos": [ "Saber Herir" ],
+            "Desbloquea": [ "Pulso de Serenidad", "Pulso de Furia" ],
+            "efectos": {
+                "Sanación": "10pg por cada 2 niveles de guerrero"
+            }
+        },
+        {
+            "nombre": "Abrumar",
+            "nivel": 5,
+            "descripcion": "Atacas a un enemigo y este no puede parar, esquivar o bloquear el ataque. Inflinge 3D6 + Fuerza.",
+            "activa": true,
+            "Requisitos": [ "Saber Herir", "Estocada Profunda"],
+            "Desbloquea": [ "Pulso de Furia" ],
+            "efectos": {
+                "Daño": "3D6 + Fuerza"
+            }
+        },
+        {
+            "nombre": "Pulso de Serenidad", 
+            "nivel": 7,
+            "descripcion": "Obtienes +2 CA por cada 5 niveles de guerrero. Además, a los niveles 7, 10, 13, 16 y 19 puedes elegir +2 a Fuerza, Destreza o Constitución.",
+            "activa": true,
+            "Requisitos": [ "Tormenta Armada", "Pulso Revitalizante" ],
+            "Desbloquea": [ "Atormentar", "Renunciar al Impulso" ],
+            "efectos": {
+                "Bonus CA": "+2 por cada 5 niveles",
+                "Atributos": "+2 a Fuerza, Destreza o Constitución"
+            }
+        },
+        {
+            "nombre": "Pulso de Furia",
+            "nivel": 7,
+            "descripcion": "Obtienes un ataque extra por cada 5 niveles de guerrero. Además, a los niveles 7, 10, 13, 16 y 19 puedes elegir +2 a Fuerza, Destreza o Constitución.",
+            "activa": true,
+            "Requisitos": [ "Pulso Revitalizante", "Abrumar" ],
+            "Desbloquea": [ "Renunciar al Impulso", "Sentenciar la Muerte" ],
+            "efectos": {
+                "Ataques Extra": "1 por cada 5 niveles",
+                "Atributos": "+2 a Fuerza, Destreza o Constitución"
+            }
+        },
+        {
+            "nombre": "Atormentar", 
+            "nivel": 9,
+            "descripcion": "Lanzas un grito que aturde a los enemigos a 25 pies durante 1D4 turnos y recupera 50 puntos de vida a ti y a tus aliados.",
+            "activa": true,
+            "Requisitos": [ "Pulso de Serenidad" ],
+            "Desbloquea": [ "Saber lo que se Hace" ],
+            "efectos": {
+                "Rango": "25 pies",
+                "Aturdimiento": "1D4 turnos",
+                "Sanación Aliados": 50
+            }
+        },
+        {
+            "nombre": "Renunciar al Impulso", 
+            "nivel": 9,
+            "descripcion": "Gastando el último de tus ataques, analizas a tu enemigo. Tu siguiente ataque es crítico y hace el daño máximo de los dados.",
+            "activa": true,
+            "Requisitos": [ "Pulso de Serenidad", "Pulso de Furia" ],
+            "Desbloquea": [ "Saber lo que se Hace" ],
+            "efectos": {
+                "Crítico Asegurado": true,
+                "Daño Máximo": true
+            }
+        },
+        {
+            "nombre": "Sentenciar la Muerte",
+            "nivel": 9,
+            "descripcion": "Si matas a un enemigo y estás a 15 pies o menos de otro, puedes usar Golpe en Caída de forma gratuita.",
+            "activa": false,
+            "Requisitos": [ "Pulso de Furia" ],
+            "Desbloquea": [ "Saber lo que se Hace" ],
+            "efectos": {
+                "Distancia": "15 pies",
+                "Habilidad Gratuita": "Golpe en Caída"
+            }
+        },
+        {
+            "nombre": "Saber lo que se Hace",
+            "nivel": 12,
+            "descripcion": "Añades 2D8 a todo el daño que realizas.",
+            "activa": false,
+            "Requisitos": [ "Atormentar", "Renunciar al Impulso", "Sentenciar la Muerte" ],
+            "Desbloquea": [ "Ida y Vuelta", "Mente Desquiciada", "Brazo Incansable" ],
+            "efectos": {
+                "Daño Extra": "2D8"
+            }
+        },
+        {
+            "nombre": "Ida y Vuelta", 
+            "nivel": 15,
+            "descripcion": "Golpe Horizontal ahora realiza el doble de impactos.",
+            "activa": false,
+            "Requisitos": [ "Saber lo que se Hace" ],
+            "Desbloquea": [ "Dentro de mi Rango se Llama Muerte" ],
+            "efectos": {
+                "Doble Impactos": true
+            }
+        },
+        {
+            "nombre": "Mente Desquiciada", 
+            "nivel": 15,
+            "descripcion": "Puedes otorgar hasta 3 encantamientos a tu arma.",
+            "activa": false,
+            "Requisitos": [ "Saber lo que se Hace" ],
+            "Desbloquea": [ "Dentro de mi Rango se Llama Muerte", "Sádico Indomable" ],
+            "efectos": {
+                "Encantamientos Máximos": 3
+            }
+        },
+        {
+            "nombre": "Brazo Incansable",
+            "nivel": 15,
+            "descripcion": "Obtienes ataques extras igual a tu bonificador más elevado.",
+            "activa": false,
+            "Requisitos": [ "Saber lo que se Hace" ],
+            "Desbloquea": [ "Sádico Indomable" ],
+            "efectos": {
+                "Ataques Extras": "Bonificador más alto"
+            }
+        },
+        {
+            "nombre": "Dentro de mi Rango se Llama Muerte",
+            "nivel": 17,
+            "descripcion": "Todos tus ataques de área impactan siempre a todos los enemigos en rango.",
+            "activa": false,
+            "Requisitos": [ "Ida y Vuelta", "Mente Desquiciada" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Ataque Área": "Impacta siempre"
+            }
+        },
+        {
+            "nombre": "Sádico Indomable",
+            "nivel": 17,
+            "descripcion": "Aumentas en uno el tamaño de tus dados de daño. (Ejemplo: de D8 a D10).",
+            "activa": false,
+            "Requisitos": [ "Mente Desquiciada", "Brazo Incansable" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Aumento Dado": "+1 tamaño"
+            }
+        }
+    ]
+}

@@ -1,0 +1,240 @@
+{
+    "idSubclase": "picaro_de_umbrif",
+    "nombre": "Pícaro de Umbrif",
+    "esBasica": false,
+    "descripcion": "Un asesino maestro que manipula sombras y venenos, especializado en movimientos rápidos y letales, ocultándose entre las tinieblas para infligir un daño devastador.",
+    "imagen": "/images/subclases/picaro_de_umbrif.jpg",
+    "diagrama": "/diagrama/diagrama_picaro_de_umbrif.jpg",
+    "habilidades": [
+        {
+            "nombre": "Veneno Mortal",
+            "nivel": 1,
+            "descripcion": "Tus armas están impregnadas con un veneno que causa 2D6 de daño por cada golpe que recibe el enemigo, el daño se acumula hasta tu nivel de Pícaro de Umbrif. Este daño se acumula con Ataque furtivo u otros Talentos o Conjuros.",
+            "activa": false,
+            "Requisitos": [  ],
+            "Desbloquea": [ "Impulso Homicida", "Salto Sombrío",  "Capa del Asesino" ]
+        },
+        {
+            "nombre": "Impulso Homicida", 
+            "nivel": 3,
+            "descripcion": "Cuando has luchado durante 7 turnos contra un enemigo le conoces ya lo suficiente para saber donde y cómo hacerle daño de verdad. Tus D6 siempre sacan el máximo.",
+            "activa": false,
+            "Requisitos": [ "Veneno Mortal" ],
+            "Desbloquea": [ "Rodar a la Defensiva", "Golpe Incapacitante" ]
+        },
+        {
+            "nombre": "Salto Sombrío", 
+            "nivel": 3,
+            "descripcion": "Saltas de sombra en sombra hasta llegar a la espalda de tu objetivo máximo 40 pies y obtienes un ataque extra. Puedes realizar esto tantas veces cómo tu bonificador de Destreza en un combate. Se considera una accion gratuita.",
+            "activa": true,
+            "Requisitos": [ "Veneno Mortal" ],
+            "Desbloquea": [ "Rodar a la Defensiva", "Golpe Incapacitante", "Lisiar" ],
+            "efectos": {
+                "Usos": "Bonf de Destreza por combate"
+            }
+        },
+        {
+            "nombre": "Capa del Asesino",
+            "nivel": 3,
+            "descripcion": "Generas una capa mágica que te proporciona ventaja a las pruebas de esconderse, moverse sigilosamente. Una vez al día obtienes Velo de Umbrif te vuelve inmune al daño de un ataque enemigo, el Ataque impacta pero es la capa la que recibe el daño íntegro del ataque.",
+            "activa": true,
+            "Requisitos": [ "Veneno Mortal" ],
+            "Desbloquea": [ "Golpe Incapacitante", "Lisiar" ]
+        },
+        {
+            "nombre": "Rodar a la Defensiva", 
+            "nivel": 5,
+            "descripcion": "Si tu enemigo a igualado tu CA eres capaz de rodar hacia atrás para esquivar ese ataque y tienes la habilidad de en esa accion, cortarle con tu arma en la pierna inflingiendo 4D6",
+            "activa": true,
+            "Requisitos": [ "Impulso Homicida", "Salto Sombrío" ],
+            "Desbloquea": [ "Maestro del Hilo", "Movilidad del Asesino" ]
+        },
+        {
+            "nombre": "Golpe Incapacitante", 
+            "nivel": 5,
+            "descripcion": "Golpea a un enemigo que no está en combate y lo deja inconsciente 1D4 Mins. Si sufre algun tipo de daño se despertará. La CA del objetivo cae a 10.",
+            "activa": true,
+            "Requisitos": [ "Impulso Homicida", "Salto Sombrío",  "Capa del Asesino" ],
+            "Desbloquea": [ "Maestro del Hilo", "Movilidad del Asesino", "Saber Dónde Duele" ]
+        },
+        {
+            "nombre": "Lisiar",
+            "nivel": 5,
+            "descripcion": "Si superas en 10 la CA del enemigo, fracturas una parte de su cuerpo según un D4.",
+            "activa": false,
+            "Requisitos": [ "Salto Sombrío",  "Capa del Asesino" ],
+            "Desbloquea": [  "Movilidad del Asesino", "Saber Dónde Duele" ],
+            "efectos": {
+                "1": "Muñeca",
+                "2": "Codo",
+                "3": "Clavícula",
+                "4": "Elige entre las opciones anteriores o partes inferiores (tobillo, rodilla, cadera)."
+            }
+        },
+        {
+            "nombre": "Maestro del Hilo", 
+            "nivel": 7,
+            "descripcion": "Controlas el hilo de acero de tal manera que eres capaz de herir a tus enemigos con él. Siempre se te considera armado. Tu hilo hace 2D8 por cada +1 de Bonf de Des. Siempre tienes un alcance de 20pies. El Hilo se considera un arma mágica y lo generas con tu poder de asesino. Obtienes +10 en las tiradas de Uso de cuerdas, sanar y sastreria.",
+            "activa": false,
+            "Requisitos": [ "Rodar a la Defensiva", "Golpe Incapacitante" ],
+            "Desbloquea": [ "Ataduras de Inmovilización", "Oportunista" ]
+        },
+        {
+            "nombre": "Movilidad del Asesino",
+            "nivel": 7,
+            "descripcion": "Puedes moverte antes, durante o después de tu ataque sin generar ataques de oportunidad. Por Cada Bonf de Des añades 10pies a tu movimiento. Cuando un enemigo u aliado sufra un crítico puedes usar Sin rastro que te permite hacerte invisible durante 1 turno y te proporciona 15 pies gratuitos de movimiento.",
+            "activa": false,
+            "Requisitos": [ "Rodar a la Defensiva", "Golpe Incapacitante", "Lisiar" ],
+            "Desbloquea": [ "Ataduras de Inmovilización", "Oportunista", "Manos Diestras" ]
+        },
+        {
+            "nombre": "Saber Dónde Duele",
+            "nivel": 7,
+            "descripcion": "Duplicas tu rango de crítico. Tus críticos son súper efectivos, no puedes sacar menos de la mitad del dado.",
+            "activa": false,
+            "Requisitos": [ "Golpe Incapacitante", "Lisiar" ],
+            "Desbloquea": [ "Oportunista", "Manos Diestras" ]
+        },
+        {
+            "nombre": "Ataduras de Inmovilización", 
+            "nivel": 9,
+            "descripcion": "Usando Salto sombrío y Maestro del hilo eres capaz de hacer nudos en partes débiles de enemigos de tu mismo tamaño. Si tienes un punto de apoyo en el techo puedes ahocarles. CD Con 18 para que no mueran de asfixia. Si no mueren de asfixia reciben 12D6 + el daño de Maestro del hilo.",
+            "activa": false,
+            "Requisitos": [ "Maestro del Hilo", "Movilidad del Asesino" ],
+            "Desbloquea": [ "Dueño de las Sombras" ]
+        },
+        {
+            "nombre": "Oportunista", 
+            "nivel": 9,
+            "descripcion": "Si un aliado ha golpeado a un enemigo y está a 10 pies o menos tienes un ataque de oportunidad si dispones de movilidad para llegar. Tambien puedes lanzar un arma arrojadiza o usar Maestro del hilo si lo conoces. Sólo se puede realizar una vez por turno. En ese ataque extra no puedes realizar Conjuros o Talentos pero si Ataques furtivos si se cumplen las condicones para ello.",
+            "activa": false,
+            "Requisitos": [ "Maestro del Hilo", "Movilidad del Asesino", "Saber Dónde Duele" ],
+            "Desbloquea": [ "Dueño de las Sombras", "Capa de Almas" ]
+        },
+        {
+            "nombre": "Manos Diestras",
+            "nivel": 9,
+            "descripcion": "Obtienes tantos ataques como tu Bonf de Des.",
+            "activa": false,
+            "Requisitos": [ "Movilidad del Asesino", "Saber Dónde Duele" ],
+            "Desbloquea": [ "Capa de Almas" ]
+        },
+        {
+            "nombre": "Dueño de las Sombras", 
+            "nivel": 12,
+            "descripcion": "Ahora Salto sombrío no tiene límite de distancia para desplazarse, sólo requiere que veas a tu objetivo, puedes realizar hasta dos ataques extras y puedes usar Salto sombrío tantas veces cómo tu bonificador de Destreza por turno.",
+            "activa": false,
+            "Requisitos": [ "Ataduras de Inmovilización", "Oportunista" ],
+            "Desbloquea": [ "Hilo y Sangre", "Nadar en las Sombras" ]
+        },
+        {
+            "nombre": "Capa de Almas",
+            "nivel": 12,
+            "descripcion": "Parte de las almas de aquellos a los que asesinaste a sangre fría se han quedado contigo. Tu capa ahora te proporciona +5 CA y Velo de Umbrif ahora lo puedes usar tantas veces cómo la mitad de tu nivel de Pícaro de Umbrif. Puedes responder a un ataque con tu capa atacando con ella. Lanzar plumas: Lanzas una pluma por cada asesinato. Una pluma causa 1D8 + 3, 1vez/3días. La muerte ha de ser causada por tu mano de manera directa, no cuenta que hayas participado en esa muerte.",
+            "activa": false,
+            "Requisitos": [ "Oportunista", "Manos Diestras" ],
+            "Desbloquea": [ "Nadar en las Sombras", "Cuerpo Triturado" ]
+        },
+        {
+            "nombre": "Hilo y Sangre", 
+            "nivel": 15,
+            "descripcion": "Tu hilo de acero se ha bañado en tanta sangre que tiene un color rojo oscuro. Ahora no necesitas las manos para controlar el hilo y puedes usarlo con la mente. Usar el hilo sangriento es una accion gratuita. Por cada dado que tires para realizar daño con el hilo te curas 2Pg.",
+            "activa": false,
+            "Requisitos": [ "Dueño de las Sombras" ],
+            "Desbloquea": [ "Entrenado para la Perfección" ]
+        },
+        {
+            "nombre": "Nadar en las Sombras", 
+            "nivel": 15,
+            "descripcion": "Ahora puedes moverte de manera indefinida entre las sombras a voluntad. Cuando caminas de esta forma tu velocidad se duplica y para verte requiere una tirada de avistar CD tu nivel + Mov Sigilosamente. Conjuros o Talentos pueden descubrir tu ubicación.",
+            "activa": false,
+            "Requisitos": [ "Dueño de las Sombras", "Capa de Almas" ],
+            "Desbloquea": [ "Entrenado para la Perfección", "Igual a un Cráneo" ]
+        },
+        {
+            "nombre": "Cuerpo Triturado",
+            "nivel": 15,
+            "descripcion": "Has pasado por tanto sufrimiento y has estado en contacto con tantas drogas y venenos que eres inmune a todo tipo de drogas, venenos y encantamientos que nublen y manipulen tu mente. Obtienes ventaja a todas las tiradas de Con o Fort. Adquieres la habilidad de ver en la oscuridad hasta 120pies.",
+            "activa": false,
+            "Requisitos": [ "Capa de Almas" ],
+            "Desbloquea": [ "Igual a un Cráneo" ]
+        },
+        {
+            "nombre": "Entrenado para la Perfección",
+            "nivel": 17,
+            "descripcion": "Elige entre diferentes caminos de mejora con efectos únicos en habilidades existentes.",
+            "activa": false,
+            "Requisitos": [ "Hilo y Sangre", "Nadar en las Sombras" ],
+            "Desbloquea": [],
+            "efectos": {
+              "opciones": [
+                {
+                  "Nombre": "Opción 1",
+                  "Descripción": "Mejoras centradas en la ofensiva y el daño crítico.",
+                  "Mejoras": [
+                    {
+                      "Nombre": "Veneno mortal",
+                      "Mejora": "No tiene límite de acumulaciones. Puedes tirar un D20 para determinar si el daño es crítico."
+                    },
+                    {
+                      "Nombre": "Impulso homicida",
+                      "Mejora": "Ahora necesita 1 turno para activarse."
+                    },
+                    {
+                      "Nombre": "Rodar a la defensiva",
+                      "Mejora": "Si tu enemigo supera tu CA en 5 o menos, lanza un D100 para saber si activas el Talento básico. Debes sacar menos de tu Bonificador de Destreza (Ej: 7x7=49)."
+                    }
+                  ]
+                },
+                {
+                  "Nombre": "Opción 2",
+                  "Descripción": "Mejoras equilibradas con habilidades de movilidad y control.",
+                  "Mejoras": [
+                    {
+                      "Nombre": "Veneno mortal",
+                      "Mejora": "No tiene límite de acumulaciones. Puedes tirar un D20 para determinar si el daño es crítico."
+                    },
+                    {
+                      "Nombre": "Salto sombrío",
+                      "Mejora": "Ahora también puedes moverte a un lugar donde hayas dejado una impronta tuya. Puedes colocar tantas improntas como tu Bonificador de Carisma."
+                    },
+                    {
+                      "Nombre": "Golpe incapacitante",
+                      "Mejora": "Si el objetivo es de menor nivel que tú, puedes dejarlo inconsciente sin realizar tirada de ataque. Golpe incapacitante se puede usar en mitad de un combate."
+                    }
+                  ]
+                },
+                {
+                  "Nombre": "Opción 3",
+                  "Descripción": "Enfoque en sigilo y habilidades de daño controlado.",
+                  "Mejoras": [
+                    {
+                      "Nombre": "Veneno mortal",
+                      "Mejora": "No tiene límite de acumulaciones. Puedes tirar un D20 para determinar si el daño es crítico."
+                    },
+                    {
+                      "Nombre": "Capa del asesino",
+                      "Mejora": "Proporciona invisibilidad 3 usos por día."
+                    },
+                    {
+                      "Nombre": "Lisiar",
+                      "Mejora": "Cuando usas Lisiar y tu golpe supera en 5 la CA del enemigo, después del daño puedes realizar un Ataque furtivo gratuito. Lanza 1D4 para determinar la parte fracturada."
+                    }
+                  ]
+                }
+              ]
+            }
+          },        
+        {
+            "nombre": "Igual a un Cráneo",
+            "nivel": 17,
+            "descripcion": "Tus ataques contra aquellos que sufran Derecho a la daga hacen el doble de su daño normal. Doblas el bonf de Des para sumarlo a tu CA, al ataque y al daño. A parte recibes +5 CA contra aquellos que sufren la marca y siempre conoces la dirección cardinal de su ubicación.",
+            "activa": false,
+            "Requisitos": [ "Nadar en las Sombras", "Cuerpo Triturado" ],
+            "Desbloquea": [  ],
+            "efectos": {
+                "Extra": "Ataque Furtivo 2D6/nivel de Pícaro de Umbrif"
+            }
+        }
+    ]
+}

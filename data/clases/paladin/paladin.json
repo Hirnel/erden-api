@@ -1,0 +1,264 @@
+{
+  "id": "paladin",
+  "nombre": "Paladín",
+  "esBasica": true,
+  "descripcion": [
+    "Revestido con una armadura de placas que resplandece a la luz del sol, a pesar del polvo y la suciedad de una larga batalla, un humano envaina su espada y aparta su escudo, apoyando sus manos en un hombre mortalmente herido. Un resplandor divino surge de sus manos, las heridas del hombre cicatrizan hasta cerrarse y sus ojos se abren de par en par de puro asombro.",
+    "Un enano se agazapa tras una gran roca, mientras su negra capa lo vuelve prácticamente invisible en la noche, y vigila a una banda mercenaria que celebra una reciente victoria. Silenciosamente, se infiltra entre ellos y susurra ‘dónde cojones me estoy metiendo...’, y dos bandidos pierden la vida incluso antes de que se den cuenta de que el enano está ahí.",
+    "Con cabellos plateados que brillan en un haz de luz que parece iluminarlo solo a él, un yaira ríe a carcajadas. Sus lanzas brillan con el mismo resplandor que sus ojos al tiempo que golpea una y otra vez a un retorcido arquetipo mutado, hasta que finalmente la luz derrota a la repugnante criatura que ellos mismos han creado.",
+    "Sean cuales sean sus orígenes y sus misiones, los paladines están unidos por sus juramentos para luchar en contra de las fuerzas que se oponen a su Dios. Ya sea a los pies del altar de un dios con un sacerdote como testigo, en un claro sagrado ante los espíritus de la naturaleza y los seres feéricos, o en un momento de desesperación y dolor con la muerte como única acompañante, el juramento de un paladín es un lazo muy poderoso. Es una fuente de poder que convierte a un devoto guerrero en un campeón bendecido.",
+    "Los clérigos extienden la palabra de su dios, mientras un paladín es la propia palabra, ha sido tocado directamente por su Dios y le ha otorgado una o varias misiones para que cumpla aún a riesgo de su vida. Muchos paladines reciben una misión de buscar a alguien del clero que sea de buen corazón y actuar para la religión o un reino. Guardianes, consejeros y en muchos casos, verdugos, los paladines son los que purgan los cultos desde dentro para que sacerdotes corruptos no asciendan dentro del poder político. Estos, si han terminado su misión, son libres de buscar lo que más les plazca hacer. Habitualmente disfrutan de desafiar sus habilidades marciales en antiguas ruinas y recolectar tesoros para su gente.",
+    "Los paladines entrenan durante años para aprender sus habilidades de combate, especializándose en una gran variedad de armas y armaduras. Aun así, las habilidades marciales son secundarias en comparación con el poder mágico que realmente tienen: el poder para curar al enfermo y al herido, para castigar al hereje y para proteger a los inocentes y a aquellos que se unan a él en su lucha por su Dios."
+  ],
+  "imagen": "/images/paladin.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": ["Todas las armaduras", "Escudos"],
+      "Armas": ["Armas simples", "Armas marciales"],
+      "Herramientas": [],
+      "Tiradas De Salvacion": ["Sabiduría", "Carisma"],
+      "Habilidades": [
+        "Atletismo",
+        "Intimidar",
+        "Medicina",
+        "Perspicacia",
+        "Persuasión",
+        "Religión"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Sentido Divino",
+        "descripcion": [
+          "Tocando a un objetivo, eres capaz de saber a que deidad profesa su fé, el objetivo sentira un consquilleo calido donde sea tocado. Como acción, puedes expandir tus sentidos para detectar esas fuerzas.",
+         "Estos sentiran un zumbido en su oído derecho si estais en sintonia. Si no, sentirá el zumbido en su oído izquierdo, el objetivo no puede saber quién esta usando su sentido divino.",
+         "Hasta el final de tu siguiente turno, conoces la localización cualquier objeto o lugar que haya sido consagrado o profanado, como con el conjuro santificar. Puedes usar esta característica un número de veces igual a 1 + tu modificador de Carisma. Cuando finalices un descanso prolongado recuperas todos los usos gastados."
+      ]
+         },
+      {
+        "nombre": "Ojos de la Verdad",
+        "descripcion": "Sabes cuando algo es verdad y cuando no, detectas mentiras para con los de tu misma religión."
+      },
+      {
+        "nombre": "Verdugo Sagrado",
+        "descripcion": "Obtienes la mitad de tu nivel de paladin como bonificador de ataque y doblas tu fuerza contra sacerdotes o clérigos de tu religión que debas pugar."
+      },
+      {
+        "nombre": "Imposición de Manos",
+        "descripcion": [
+          "Tu toque bendito puede curar heridas. Tienes una reserva de poder curativo que se regenera cuando haces un descanso prolongado. Con esa reserva puedes restaurar un número total de puntos de golpe igual a tu nivel de paladín x 5.",
+          "Como una acción, puedes tocar a una criatura y utilizar poder de tu reserva de curación para restaurar un número de puntos de golpe a esa criatura igual hasta, como máximo, el máximo que tengas en tu reserva.",
+          "De forma alternativa, puedes gastar 5 puntos de tu reserva de curación para sanar al objetivo de una enfermedad o neutralizar un veneno que le esté afectando. Puedes curar varias enfermedades y neutralizar diferentes venenos con un solo uso de Imposición de manos, gastando puntos de tu reserva de curación por separado para cada uno de ellos.",
+          "Esta característica tiene efecto en los muertos vivientes y los constructos."
+      ]
+      },
+      {
+        "nombre": "Conocedor Nerkiano",
+        "descripcion": [
+          "Conoces los misterios de la energia del mundo. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones.",
+          "La magia de un paladín es compleja, puesto que no es una capacidad intrinsica suya, es un don otorgado por su dios y puede ser retirado cuando se quiera.",
+          "Un paladín puede usar conjuros de la mitad de su nivel de paladín."
+      ]
+      },
+      {
+        "nombre": "Salud Divina",
+        "descripcion": "Dejas de envejecer en apariencia y dolencia para ser el arma inquebrantable de tu dios. No eres inmortal, sólo no envejeces fisicamente."
+      },
+      {
+        "nombre": "Ataque Extra",
+        "descripcion": "Comenzando en el nivel 5 puedes atacar dos veces en lugar de una siempre que realices la acción de Atacar en tu turno."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Sentido Divino",  "Imposición de Manos"],
+      "Trucos Conocidos": 0,
+      "Conjuros Conocidos": 0
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Conocedor Nerkiano"],
+      "Trucos Conocidos": 1,
+      "Conjuros Conocidos": 2
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Ojos de la Verdad",  "Verdugo Sagrado"],
+      "Trucos Conocidos": 1,
+      "Conjuros Conocidos": 2
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 3
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Ataque Extra"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 4
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": ["Crítico Brutal (1)"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 5
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["Instinto Salvaje"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 6
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 7
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["Crítico Brutal (2)",  "+1 Característica"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 8
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["Salud Divina"],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 9
+    },
+    {
+      "Nivel": 11,
+      "Bono De Competencia": "+5",
+      "Rasgos": ["Ataque Extra"],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["Crítico Brutal (3)",  "+1 Característica"],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 14,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 8,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+7",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 9,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["Crítico Brutal (4)",  "+1 Característica"],
+      "Trucos Conocidos": 10,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 17,
+      "Bono De Competencia": "+9",
+      "Rasgos": ["Ataque Adicional"],
+      "Trucos Conocidos": 11,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 18,
+      "Bono De Competencia": "+10",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 12,
+      "Conjuros Conocidos": 14
+    },
+    {
+      "Nivel": 19,
+      "Bono De Competencia": "+12",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 12,
+      "Conjuros Conocidos": 14
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+15",
+      "Rasgos": ["Ataque Extra",  "+1 Característica"],
+      "Trucos Conocidos": 15,
+      "Conjuros Conocidos": 15
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/nivel",
+      "Rasgos": ["Ataque adicional/5 niveles",  "+1 Caracteristica/4nivel"],
+      "Trucos Conocidos": "+1/2niveles",
+      "Conjuros Conocidos": "+1/2niveles"
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "elevado_de_la_justicia",
+      "nombre": "Elevado de la Justicia",
+      "descripcion": "Paladines de rectitud y equidad, defensores de los inocentes y castigadores de los malvados.",
+      "imagen": "/images/subclases/elevado_de_la_justicia.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "escudo_de_la_fe",
+      "nombre": "Escudo de la Fe",
+      "descripcion": "Guardianes sagrados, estos paladines protegen a sus aliados con un poder divino implacable.",
+      "imagen": "/images/subclases/escudo_de_la_fe.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "justicar_del_vacio",
+      "nombre": "Justicar del Vacío",
+      "descripcion": "Paladines oscuros que caminan entre la fe y el abismo, ejecutando juicios en nombre de deidades sombrías.",
+      "imagen": "/images/subclases/justicar_del_vacio.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "guerrero_divino",
+      "nombre": "Guerrero Divino",
+      "descripcion": "Maestros del combate cuerpo a cuerpo, combinan sus habilidades marciales con poderes divinos.",
+      "imagen": "/images/subclases/paladin_guerrero.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "uno_con_lo_sagrado",
+      "nombre": "Uno con lo Sagrado",
+      "descripcion": "Elegidos por los dioses, poseen una conexión más pura y directa con lo divino.",
+      "imagen": "/images/subclases/uno_con_lo_sagrado.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "mago",
+  "nombre": "Mago",
+  "esBasica": true,
+  "descripcion": [
+    "Vestido con telas ragadas que denota su posición, una tsunya cierra los ojos para evitar las distracciones del campo de batalla y comienza su silencioso canto. Sus dedos dibujan formas frente a ella, completa el conjuro y lanza una diminuta gota de fuego hacia las filas enemigas, donde estalla en una deflagración que engulle a los soldados.",
+    "Comprobando una y otra vez su trabajo, un humano escribe con tiza un intrincado círculo mágico en el suelo desnudo, después espolvorea polvo de hierro a lo largo de cada línea y cada grácil curva. Cuando el círculo está completo, canturrea una larga invocación. Un agujero se abre en el espacio dentro del círculo, trayendo un olor a azufre desde el plano extraterreno del más allá.",
+    "Agachado en el suelo en un cruce de caminos de una mazmorra, un arquetipo lanza unos pequeños huesos inscritos con símbolos místicos, susurrando unas pocas palabras de poder sobre ellos. Cerrando sus ojos para ver las visiones con más claridad, asiente lentamente, después abre los ojos y señala hacia el pasillo de su izquierda.",
+    "Los magos son los practicantes supremos de la magia, definidos y unidos como una clase por los hechizos que conjuran. Moldeando la nerkia que los rodea, los magos lanzan explosivos hechizos de fuego, arcos voltaicos, sutiles engaños y brutales formas de control mental.",
+    "Su magia invoca monstruos de otros planos de existencia, vislumbra el futuro, o convierte a enemigos caídos en no-muertos. Sus hechizos más poderosos transforman una sustancia en otra, invocan meteoros de los cielos o abren portales a otros planos."
+  ],
+  "imagen": "/images/mago.jpg",
+  "rasgosDeClase": {
+    "competencias": {
+      "Armadura": [],
+      "Armas": ["Bastones", "Ballestas ligeras", "Dagas", "Dardos", "Hondas"],
+      "Herramientas": [],
+      "Tiradas De Salvacion": ["Inteligencia", "Sabiduría"],
+      "Habilidades": [
+        "Arcano",
+        "Historia",
+        "Investigación",
+        "Medicina",
+        "Perspicacia",
+        "Religión"
+      ]
+    },
+    "habilidadesBasicas": [
+      {
+        "nombre": "Conocedor Nerkiano",
+        "descripcion": "Conoces los misterios de la energía del mundo. Tus conjuros son parte de tu vasto repertorio, magia que puedes aplicar a variadas situaciones."
+      },
+      {
+        "nombre": "Trucos",
+        "descripcion": "Conoces dos trucos de tu elección de la lista de conjuros del Mago. Aprendes trucos adicionales en niveles superiores."
+      },
+      {
+        "nombre": "Conocedor de la Puerta",
+        "descripcion": "Tu magia está conectada con Nerk’hve, permitiéndote un control único sobre la energía mágica. Obtienes 5 puntos de Poder Interior por nivel, incluyendo niveles anteriores."
+      },
+      {
+        "nombre": "Libro Personal",
+        "descripcion": "Tu libro de conjuros no tiene límite de cuántos conjuros puedes aprender, siempre que los anotes. Los conjuros se aprenden pasando una prueba de conocimiento de conjuros CD igual al nivel del conjuro + 10. Si fallas, la CD aumenta en 5 para futuros intentos."
+      },
+      {
+        "nombre": "Familiar",
+        "descripcion": "Puedes realizar un contrato con una bestia mágica que te sirva como asistente. Su inteligencia será igual a 3/4 de tu Inteligencia y te otorga ventaja en tiradas mágicas o de conocimiento."
+      }
+    ]
+  },
+  "progresion": [
+    {
+      "Nivel": 1,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Conocedor Nerkiano", "Trucos"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 5
+    },
+    {
+      "Nivel": 2,
+      "Bono De Competencia": "+1",
+      "Rasgos":  ["Conocedor de la Puerta"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 6
+    },
+    {
+      "Nivel": 3,
+      "Bono De Competencia": "+1",
+      "Rasgos": ["Libro Personal"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 7
+    },
+    {
+      "Nivel": 4,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 2,
+      "Conjuros Conocidos": 8
+    },
+    {
+      "Nivel": 5,
+      "Bono De Competencia": "+2",
+      "Rasgos": ["Familiar"],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 9
+    },
+    {
+      "Nivel": 6,
+      "Bono De Competencia": "+3",
+      "Rasgos": [],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 10
+    },
+    {
+      "Nivel": 7,
+      "Bono De Competencia": "+3",
+      "Rasgos": [],
+      "Trucos Conocidos": 3,
+      "Conjuros Conocidos": 11
+    },
+    {
+      "Nivel": 8,
+      "Bono De Competencia": "+4",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 12
+    },
+    {
+      "Nivel": 9,
+      "Bono De Competencia": "+4",
+      "Rasgos": [],
+      "Trucos Conocidos": 4,
+      "Conjuros Conocidos": 13
+    },
+    {
+      "Nivel": 10,
+      "Bono De Competencia": "+5",
+      "Rasgos": [],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 14
+    },
+    {
+      "Nivel": 11,
+      "Bono De Competencia": "+5",
+      "Rasgos": [],
+      "Trucos Conocidos": 5,
+      "Conjuros Conocidos": 15
+    },
+    {
+      "Nivel": 12,
+      "Bono De Competencia": "+6",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 16
+    },
+    {
+      "Nivel": 13,
+      "Bono De Competencia": "+6",
+      "Rasgos": [],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 17
+    },
+    {
+      "Nivel": 14,
+      "Bono De Competencia": "+7",
+      "Rasgos": [],
+      "Trucos Conocidos": 6,
+      "Conjuros Conocidos": 18
+    },
+    {
+      "Nivel": 15,
+      "Bono De Competencia": "+7",
+      "Rasgos": [],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 19
+    },
+    {
+      "Nivel": 16,
+      "Bono De Competencia": "+8",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 20
+    },
+    {
+      "Nivel": 17,
+      "Bono De Competencia": "+9",
+      "Rasgos": [],
+      "Trucos Conocidos": 7,
+      "Conjuros Conocidos": 21
+    },
+    {
+      "Nivel": 18,
+      "Bono De Competencia": "+9",
+      "Rasgos": [],
+      "Trucos Conocidos": 8,
+      "Conjuros Conocidos": 22
+    },
+    {
+      "Nivel": 19,
+      "Bono De Competencia": "+10",
+      "Rasgos": [],
+      "Trucos Conocidos": 8,
+      "Conjuros Conocidos": 23
+    },
+    {
+      "Nivel": 20,
+      "Bono De Competencia": "+11",
+      "Rasgos": ["+1 Característica"],
+      "Trucos Conocidos": 9,
+      "Conjuros Conocidos": 24
+    },
+    {
+      "Nivel": [ ],
+      "Bono De Competencia": "+2/2nivel",
+      "Rasgos": ["+1Caracteristica/4nivel"],
+      "Trucos Conocidos": "+1/2nivel",
+      "Conjuros Conocidos": "+2/2nivel"
+    }
+  ],
+  "subclases": [
+    {
+      "idSubclase": "devorado_por_el_vacio",
+      "nombre": "Devorado por el Vacío",
+      "descripcion": "Un mago que se especializa en el vacío, aprovechando su poder destructivo para controlar y devastar.",
+      "imagen": "/images/subclases/devorado_por_el_vacio.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "elementarista",
+      "nombre": "Elementarista",
+      "descripcion": "Un maestro de los elementos, capaz de manipular el fuego, el agua, la tierra y el aire con destreza.",
+      "imagen": "/images/subclases/elementarista.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "mago_guerrero",
+      "nombre": "Mago Guerrero",
+      "descripcion": "Un luchador que combina el uso de armas con magia, destacándose tanto en la batalla física como arcana.",
+      "imagen": "/images/subclases/mago_guerrero.jpg",
+      "esBasica": false,
+      "habilidades": []
+    },
+    {
+      "idSubclase": "mago_hechicero",
+      "nombre": "Mago Hechicero",
+      "descripcion": "Un mago con una afinidad natural para la magia, dominando la energía mágica con una gracia innata.",
+      "imagen": "/images/subclases/mago_hechicero.jpg",
+      "esBasica": false,
+      "habilidades": []
+    }
+  ]
+}

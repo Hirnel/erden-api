@@ -1,0 +1,341 @@
+{
+    "idSubclase": "domador_nocturno",
+    "nombre": "Domador Nocturno",
+    "esBasica": false,
+    "descripcion": "Un maestro en el vínculo con los Nocturnos, criaturas letales de la noche, y experto cazador con habilidades devastadoras.",
+    "imagen": "/images/subclases/domador_nocturno.jpg",
+    "diagrama": "/diagrama/diagrama_domador_nocturno.jpg",
+    "habilidades": [
+        {
+            "nombre": "Ataque de Cobra/Disparo de Cobra",
+            "nivel": 1,
+            "descripcion": "Atacas infligiendo una herida que causa 4D6 + 3D6 por turno durante 4 turnos. Este talento puede acumularse.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Espada Serrada/Flechas Serradas", "Acechar", "Cazador Experimentado" ],
+            "efectos": {
+                "Daño Inicial": "4D6",
+                "Daño PorTurno": "3D6",
+                "Duración": "4 turnos",
+                "Acumulativo": true
+            }
+        },
+        {
+            "nombre": "Espada Serrada/Flechas Serradas",
+            "nivel": 3,
+            "descripcion": "Tus cortes con espada o disparos con el arco infligen daño adicional de 5 por cada 2 niveles.",
+            "activa": false,
+            "Requisitos": [ "Ataque de Cobra/Disparo de Cobra"],
+            "Desbloquea": [ "Linaje Nocturno" ],
+            "efectos": {
+                "Daño Adicional": "5 por cada 2 niveles",
+                "Aplicación": "Espada o flechas"
+            }
+        },
+        {
+            "nombre": "Acechar",
+            "nivel": 3,
+            "descripcion": "Engañas a tu enemigo y si no supera la CD, obtienes un ataque de oportunidad que inflige 1D8/nivel de Domador (máximo 10D8).",
+            "activa": true,
+            "Requisitos": [ "Ataque de Cobra/Disparo de Cobra" ],
+            "Desbloquea": [ "Linaje Nocturno" ],
+            "efectos": {
+                "Daño": "1D8/nivel (máximo 10D8)",
+                "Condición": "Fallar CD del engaño"
+            }
+        },
+        {
+            "nombre": "Cazador Experimentado",
+            "nivel": 3,
+            "descripcion": "Duplicas tu rango de crítico.",
+            "activa": false,
+            "Requisitos": [ "Ataque de Cobra/Disparo de Cobra" ],
+            "Desbloquea": [ "Linaje Nocturno" ],
+            "efectos": {
+                "Rango Critico": "Doble"
+            }
+        },
+        {
+            "nombre": "Linaje Nocturno",
+            "nivel": 5,
+            "descripcion": "Desarrollas un vínculo con los Nocturnos, criaturas grandes y letales. Obtienes sus habilidades y pueden evolucionar con los niveles.",
+            "activa": false,
+            "Requisitos": [ "Espada Serrada/Flechas Serradas","Acechar","Cazador Experimentado" ],
+            "Desbloquea": [ "Camuflaje", "Presa Fácil","Devorador","Adulted" ],
+            "efectos": {
+                "Ataque": "+1 al ataque y daño por nivel de Domador",
+                "Mordisco": "3D8 + Fue",
+                "Zarpazo": "2D8 + Fue",
+                "CA": "10 + 1 por nivel de Domador",
+                "PG": "6D6 + Con/nivel",
+                "Atributos": {
+                    "Fue": 22,
+                    "Des": 18,
+                    "Con": 22,
+                    "Int": 10,
+                    "Sab": 12,
+                    "Car": 6
+                },
+                "Evolución Piel": {
+                    "Nivel 3": "+1",
+                    "Nivel 6": "+2",
+                    "Nivel 9": "+3",
+                    "Nivel 12": "+4",
+                    "Nivel 15": "+5",
+                    "Nivel 18": "+6"
+                }
+            }
+        },
+        {
+            "nombre": "Camuflaje", 
+            "nivel": 7,
+            "descripcion": "Tú y tu Nocturno se fusionan con el entorno, volviéndose prácticamente invisibles. CD Buscar 25, Avistar 30.",
+            "activa": true,
+            "Requisitos": [ "Linaje Nocturno" ],
+            "Desbloquea": [ "Golpe Acechante", "Zancada Sombría" ],
+            "efectos": {
+                "Camuflaje": true,
+                "CD Buscar": 25,
+                "CD Avistar": 30
+            }
+        },
+        {
+            "nombre": "Presa Fácil",
+            "nivel": 7,
+            "descripcion": "Los golpes críticos permiten realizar otro ataque adicional, ya sea cuerpo a cuerpo o a distancia.",
+            "activa": false,
+            "Requisitos": [ "Linaje Nocturno" ],
+            "Desbloquea": [ "Golpe Acechante","Zancada Sombría" ],
+            "efectos": {
+                "Ataque Extra": "Con crítico"
+            }
+        },
+        {
+            "nombre": "Devorador", 
+            "nivel": 7,
+            "descripcion": "El Nocturno puede devorar cadáveres para regenerar 1D8 + nivel de Domador, o con un triple crítico engullir a alguien completamente.",
+            "activa": true,
+            "Requisitos": [ "Linaje Nocturno" ],
+            "Desbloquea": [ "Coletazo", "Bramido" ],
+            "efectos": {
+                "Curación": "1D8 + nivel",
+                "Triple CrÍtico": "Engullir objetivo"
+            }
+        },
+        {
+            "nombre": "Adulted",
+            "nivel": 7,
+            "descripcion": "El Nocturno se considera adulto, ganando 10 PG por nivel, mejorando su daño y características.",
+            "activa": false,
+            "Requisitos": [ "Linaje Nocturno" ],
+            "Desbloquea": [ "Coletazo", "Bramido" ],
+            "efectos": {
+                "PG Extra": "+10 por nivel",
+                "Aumento Daño": "+1 tamaño del dado",
+                "Caracteristicas": "+6 a tres atributos, +2 a otros tres"
+            }
+        },
+        {
+            "nombre": "Golpe Acechante",
+            "nivel": 9,
+            "descripcion": "Golpeas desde un lateral, causando 4D8 + nivel de Domador + Fue.",
+            "activa": true,
+            "Requisitos": [ "Camuflaje", "Presa Fácil" ],
+            "Desbloquea": [ "Sangre Purificadora", "Derrumbar al Débil" ],
+            "efectos": {
+                "Daño": "4D8 + nivel + Fue"
+            }
+        },
+        {
+            "nombre": "Zancada Sombría",
+            "nivel": 9,
+            "descripcion": "Puedes teletransportarte hasta 50 pies al lado de tu Nocturno.",
+            "activa": true,
+            "Requisitos": [ "Camuflaje", "Presa Fácil" ],
+            "Desbloquea": [ "Derrumbar al Débil" , "Buenos Brazos" ],
+            "efectos": {
+                "Teletransporte": "50 pies al lado del Nocturno"
+            }
+        },
+        {
+            "nombre": "Coletazo", 
+            "nivel": 9,
+            "descripcion": "El Nocturno golpea con su cola, infligiendo 3D8 + nivel de Domador. Puede usarse cuando alguien saque pifia y esté a 15 pies.",
+            "activa": true,
+            "Requisitos": [ "Devorador", "Adulted" ],
+            "Desbloquea": [ "Sangre Depredatoria", "Dientes de Leche" ],
+            "efectos": {
+                "Daño": "3D8 + nivel",
+                "Condición": "Pifia del enemigo a 15 pies"
+            }
+        },
+        {
+            "nombre": "Bramido",
+            "nivel": 9,
+            "descripcion": "El Nocturno lanza un grito que aturde 2D4 turnos a todos los enemigos en un radio de 30 pies.",
+            "activa": true,
+            "Requisitos": [ "Devorador", "Adulted" ],
+            "Desbloquea": [ "Dientes de leche", "Criador" ],
+            "efectos": {
+                "Aturdimiento": "2D4 turnos",
+                "Radio": "30 pies"
+            }
+        },
+        {
+            "nombre": "Sangre Purificadora", 
+            "nivel": 12,
+            "descripcion": "Beber de las heridas del Nocturno cura como una poción de sanación. Cada 3 niveles aumenta el rango de la poción.",
+            "activa": false,
+            "Requisitos": [ "Golpe Acechante" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Curación": "Rango de poción según nivel",
+                "Envenenamiento": "CD 22 Con, 10D6 por 2 turnos si falla"
+            }
+        },
+        {
+            "nombre": "Derrumbar al Débil", 
+            "nivel": 12,
+            "descripcion": "Tus ataques normales que superen la CA del objetivo en 10 tienen la posibilidad, 20% de proporcionarte un ataque extra.",
+            "activa": true,
+            "Requisitos": [ "Golpe Acechante", "Zancada Sombría"],
+            "Desbloquea": [ "Gran Cabronazo", "Golpe Inmaculado" ],
+            "efectos": {
+              "probabilidad": "20% de ataque extra al superar CA por 10"
+            }
+        },
+        {
+            "nombre": "Buenos Brazos",
+            "nivel": 12,
+            "descripcion": "Obtienes 2 ataques más.",
+            "activa": true,
+            "Requisitos": [  "Gran Cabronazo", "Zancada Sombría" ],
+            "Desbloquea": [ "Golpe Inmaculado" ],
+            "efectos": {
+              "ataquesExtra": 2
+            }
+        },
+        {
+            "nombre": "Sangre Depredatoria", 
+            "nivel": 12,
+            "descripcion": "Puede oler a presas heridas a 1km/Bof Sab. Cuando alguien huye del Nocturno, el siempre tira con ventaja.",
+            "activa": false,
+            "Requisitos": [ "Coletazo" ],
+            "Desbloquea": [  "Risa y Eco", "Cazador Despiadado" ],
+            "efectos": {
+              "detectarPresas": "Olfato a 1km/Bof Sabiduría",
+              "ventajaHuidas": "Siempre tira con ventaja si alguien huye"
+            }
+        },
+        {
+            "nombre": "Dientes de Leche",
+            "nivel": 12,
+            "descripcion": "Sus dientes se han vuelto extremadamente duros y es capaz de saltar cualquier tipo de resistencia o reducción al daño con su mordisco.",
+            "activa": false,
+            "Requisitos": [ "Coletazo", "Bramido" ],
+            "Desbloquea": [  "Risa y Eco", "Cazador Despiadado" ],
+            "efectos": {
+              "ignorarReduccionDanio": "Ignora resistencias y reducciones de daño con mordisco"
+            }
+        },
+        {
+            "nombre": "Criador",
+            "nivel": 12,
+            "descripcion": "El linaje de los Domadores Nocturnos es más extenso de lo que se cree. Puedes ver el potencial de la gente con verles a los ojos. Los Nocturnos siempre sobreviven y en momentos de crisis no necesitan un compañero para reproducirse. Siempre portan un huevo en letargo y cuando fallecen el huevo empieza a crecer, el pequeño Nocturno sale de su progenitor devorándolo. Eres capaz de criar a más de un Nocturno, como máximo puedes llevar a un adulto y a uno joven.",
+            "activa": false,
+            "Requisitos": [ "Bramido" ],
+            "Desbloquea": [ ],
+            "efectos": {
+              "crianzaNocturnos": "Puedes llevar un Nocturno adulto y uno joven simultáneamente",
+              "reproduccionNocturnos": "Los Nocturnos pueden reproducirse sin pareja en momentos de crisis"
+            }
+        },                              
+        {
+            "nombre": "Gran Cabronazo", 
+            "nivel": 15,
+            "descripcion": "El Nocturno puede mudar su piel una vez al mes para crear abrojos que infligen 2D8/nivel y reducen el movimiento a la mitad.",
+            "activa": false,
+            "Requisitos": [ "Derrumbar al Débil", "Buenos Brazos" ],
+            "Desbloquea": [ "Domador" ],
+            "efectos": {
+                "Abrojos": {
+                    "Daño": "2D8/nivel",
+                    "Reducir Movimiento": "Mitad",
+                    "Veneno": "7D8 + 30 por 1D4 turnos, CD 25 Con"
+                }
+            }
+        },
+        {
+            "nombre": "Golpe Inmaculado",
+            "nivel": 15,
+            "descripcion": "El bonificador que saques en el dado para impactar se suma la mitad a tu CA en tu siguiente turno.",
+            "activa": true,
+            "Requisitos": [ "Derrumbar al Débil", "Buenos Brazos" ],
+            "Desbloquea": [ "Domador" ],
+            "efectos": {
+              "Bonificador CA": "El bonificador del dado de ataque se suma la mitad a la CA en el siguiente turno."
+            }
+        },
+        {
+            "nombre": "Risa y Eco",  
+            "nivel": 15,
+            "descripcion": "Tu Nocturno es capaz de reproducir tu voz a la perfección, y la de aquellos con las que haya pasado más de 1 mes. CD Sab 18 o quedarás aturdido 1D8. El siguiente ataque es crítico a no ser que saques pifia. Puedes lanzar Conjuros y Talentos a través de él.",
+            "activa": true,
+            "Requisitos": [ "Sangre Depredatoria", "Dientes de Leche" ],
+            "Desbloquea": [ "Gran Anciano" ],
+            "efectos": {
+              "Imitacion Voz": "Puede imitar tu voz y la de otros con los que haya pasado más de 1 mes.",
+              "Aturdimiento": {
+                "CD": 18,
+                "Duración": "1D8 asaltos"
+              },
+              "Ataque Crítico": "El siguiente ataque es crítico a no ser que saques pifia.",
+              "Canalizar Magia": "Puede lanzar Conjuros y Talentos a través del Nocturno."
+            }
+        },
+        {
+            "nombre": "Cazador Despiadado",
+            "nivel": 15,
+            "descripcion": "Cuando un enemigo tenga menos del 10% de su vida total, el Nocturno hace una tirada de Fuerza o Destreza enfrentada. Si el enemigo la falla, es directamente devorado y muere instantáneamente en la espiral de dientes que tiene en el cuello.",
+            "activa": false,
+            "Requisitos": [ "Sangre Depredatoria", "Dientes de Leche" ],
+            "Desbloquea": [ "Gran Anciano" ],
+            "efectos": {
+              "Condición Vida": "Enemigo con menos del 10% de vida total.",
+              "Tirada Enfrentada": {
+                "Atributos": ["Fuerza", "Destreza"],
+                "Resultado": "Si el enemigo falla, muere instantáneamente."
+              },
+              "Desenlace": "El enemigo es devorado en la espiral de dientes del cuello del Nocturno."
+            }
+        },                    
+        {
+            "nombre": "Domador",
+            "nivel": 17,
+            "descripcion": "Vinculas tu alma con el Nocturno, dividiendo el daño recibido y compartiendo bonificadores de habilidades.",
+            "activa": false,
+            "Requisitos": [ "Gran Cabronazo", "Golpe Inmaculado" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Vínculo": "Divide daño y comparte habilidades"
+            }
+        },
+        {
+            "nombre": "Gran Anciano",
+            "nivel": 17,
+            "descripcion": "El Nocturno se convierte en un Gran Anciano, ganando habilidades mejoradas y causando pavor CD Sab 22 a quienes lo vean.",
+            "activa": true,
+            "Requisitos": [ "Risa y Eco", "Cazador Despiadado" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "pavor": "CD Sab 22",
+                "mejoras": {
+                    "Ataque Daño": "+2/nivel",
+                    "Mordisco": "6D8 + Fue",
+                    "Garrazo": "4D8 + Fue",
+                    "Coletazo": "4D8 + Fue (15 pies de alcance)"
+                }
+            }
+        }
+    ]
+}

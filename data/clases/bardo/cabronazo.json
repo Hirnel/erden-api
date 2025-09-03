@@ -1,0 +1,272 @@
+{
+    "idSubclase": "cabronazo",
+    "nombre": "Bardo Cabronazo",
+    "esBasica": false,
+    "descripcion": "Un bardo astuto y travieso, especializado en engaños, burlas y manipulaciones a través de su música y carisma. Maestro en desviar la atención y manipular la realidad a su favor.",
+    "imagen": "/images/bardo_cabronazo.jpg",
+    "diagrama": "/diagrama/diagrama_bardo_cabronazo.jpg",
+    "habilidades": [
+      {
+        "nombre": "Saber es Poder",
+        "nivel": 1,
+        "descripcion": "Sabes dónde duele de verdad, tu primer ataque siempre hace el máximo daño. (Siempre suele ir a la ingle el cerdo).",
+        "activa": true,
+        "Requisitos": [],
+        "Desbloquea": ["Y... Si Te Digo Que No...", "Exaltación de la Amistad", "Espera Espera, Así No Me Gusta"],
+        "efectos": {
+          "Bonus Daño": "Primer ataque hace daño máximo"
+        }
+      },
+      {
+        "nombre": "Y... Si Te Digo Que No...",
+        "nivel": 3,
+        "descripcion": "Cuando un enemigo acierta un ataque cuerpo a cuerpo o a distancia eres capaz de sumarte +5 a tu CA base para esquivar un ataque a tu elección.",
+        "activa": true,
+        "Requisitos": ["Saber es Poder"],
+        "Desbloquea": [ "Tergiversar", "La Vida de las Calles es Dura" ],
+        "efectos": {
+          "Bonus CA": "+5 a CA temporalmente"
+        }
+      },
+      {
+        "nombre": "Exaltación de la Amistad",
+        "nivel": 3,
+        "descripcion": "Refuerzas tu amistad ensalzando los atributos de un compañero objetivo y eso le suma +2 a una característica durante 1H/nivel de bardo.",
+        "activa": true,
+        "Requisitos": ["Saber es Poder"],
+        "Desbloquea": [ "Falsa Adulación" ],
+        "efectos": {
+          "Mejora": "+2 a una característica durante 1H/nivel"
+        }
+      },
+      {
+        "nombre": "Espera Espera, Así No Me Gusta",
+        "nivel": 3,
+        "descripcion": "Los aliados en 50 pies a tu alrededor que hayan sacado menos iniciativa que su nivel base pueden repetir la tirada, sin sacar menos puntuación que la tirada anterior.",
+        "activa": true,
+        "Requisitos": [ "Saber es Poder" ],
+        "Desbloquea": [ "Manos de Mantequilla" ],
+        "efectos": {
+          "Mejora Iniciativa": "Permite repetir tirada de iniciativa con protección contra peor resultado"
+        }
+      },
+      {
+        "nombre": "Tergiversar", 
+        "nivel": 5,
+        "descripcion": "Si guardas una acción de tu turno, puedes hacer que un hechizo que lance un objetivo se vuelva contra él.",
+        "activa": true,
+        "Requisitos": [ "Y... Si Te Digo Que No..." ],
+        "Desbloquea": [ "Dónde Cabe Uno Caben Tres" ],
+        "efectos": {
+          "Contramagia": "Refleja hechizo al objetivo lanzador"
+        }
+      },
+      {
+        "nombre": "La Vida de las Calles es Dura",
+        "nivel": 5,
+        "descripcion": "Requiere contacto físico, infestas al objetivo con una enfermedad de transmisión sexual.",
+        "activa": true,
+        "Requisitos": [ "Y... Si Te Digo Que No..." ],
+        "Desbloquea": [ "Dónde Cabe Uno Caben Tres" ],
+        "efectos": {
+          "Estatus": "Infecta con enfermedad que causa desventajas"
+        }
+      },
+      {
+        "nombre": "Manos de Mantequilla",
+        "nivel": 5,
+        "descripcion": "El objetivo se le escurre lo que sujeta con las manos. CD Fuerza base 10 + nivel de bardo para evitarlo.",
+        "activa": true,
+        "Requisitos": [ "Espera Espera, Así No Me Gusta" ],
+        "Desbloquea": [ "Sonido Estridente", "Uy, Casi!" ],
+        "efectos": {
+          "Desarme": "CD 10 + nivel de bardo para mantener objeto"
+        }
+      },
+      {
+        "nombre": "Dónde Cabe Uno Caben Tres",
+        "nivel": 7,
+        "descripcion": "Al lanzar un arma arrojadiza, creas una imagen del arma y la triplicas, haciendo daño triple si impacta el primer ataque.",
+        "activa": true,
+        "Requisitos": [ "Tergiversar", "La Vida de las Calles es Dura" ],
+        "Desbloquea": [ "Sonata del Borracho" ],
+        "efectos": {
+          "Daño Múltiple": "Crea 3 copias del arma, daño triple"
+        }
+      },
+      {
+        "nombre": "Falsa Adulación",
+        "nivel": 7,
+        "descripcion": "Resaltas las habilidades del objetivo haciéndolo más torpe por los nervios. Penalización progresiva al ataque y daño hasta nivel 20.",
+        "activa": true,
+        "Requisitos": [ "Exaltación de la Amistad" ],
+        "Desbloquea": [],
+        "efectos": {
+          "Penalización": "-2 a ataque y daño desde nivel 7, -4 desde 14, -6 desde nivel 20"
+        }
+      },
+      {
+        "nombre": "Sonido Estridente", 
+        "nivel": 7,
+        "descripcion": "Generas un sonido con tu instrumento que aturde a los enemigos durante 1D4 turnos. CD 18 de Constitución para resistir.",
+        "activa": true,
+        "Requisitos": [ "Manos de Mantequilla" ],
+        "Desbloquea": [ "Voz Imperiosa" ],
+        "efectos": {
+          "Aturdimiento": "1D4 turnos, CD 18 CON para resistir"
+        }
+      },
+      {
+        "nombre": "Uy, Casi!",
+        "nivel": 7,
+        "descripcion": "Haces un comentario obvio sobre un ataque crítico, generando un 50% de probabilidad de que el ataque crítico sea anulado (aunque sigue impactando).",
+        "activa": true,
+        "Requisitos": [ "Manos de Mantequilla" ],
+        "Desbloquea": [ "Llamada Músical" ],
+        "efectos": {
+          "Anular Crítico": "50% de probabilidad de evitar crítico"
+        }
+      },
+      {
+        "nombre": "Sonata del Borracho", 
+        "nivel": 9,
+        "descripcion": "Tocas una melodía que embriaga a aquellos que la escuchan.",
+        "activa": true,
+        "Requisitos": [],
+        "Desbloquea": [ "Dominio" ],
+        "efectos": {
+          "Estado": "Embriaguez"
+        }
+      },
+      {
+        "nombre": "Voz Imperiosa", 
+        "nivel": 9,
+        "descripcion": "Ordenas a un objetivo que haga una acción que no resulte dañina de manera directa contra su persona.",
+        "activa": true,
+        "Requisitos": [ "Sonido Estridente" ],
+        "Desbloquea": [ "Dominio" ],
+        "efectos": {
+          "Control": "El objetivo sigue órdenes no dañinas"
+        }
+      },
+      {
+        "nombre": "Llamada Músical",
+        "nivel": 9,
+        "descripcion": "Si algún animal de VD igual o menor que tu nivel de bardo escucha tu música, te defenderá dando su vida incluso.",
+        "activa": true,
+        "Requisitos": [ "Uy, Casi!" ],
+        "Desbloquea": [ "Dominio"],
+        "efectos": {
+          "Control Animal": {
+            "Condición": "VD igual o menor al nivel de bardo",
+            "Efecto": "Defiende al bardo sacrificándose si es necesario"
+          }
+        }
+      },
+      {
+        "nombre": "Dominio",
+        "nivel": 12,
+        "descripcion": "Tus hechizos y talentos aumentan en 2 dados adicionales. Por ejemplo, Curar heridas leves ahora será 3D8 en vez de 1D8.",
+        "activa": true,
+        "Requisitos": [ "Sonata del Borracho", "Voz Imperiosa", "Llamada Músical" ],
+        "Desbloquea": [ "Sabueso de la Verdad", "Redirección", "Pequeño Liante Maldito" ],
+        "efectos": {
+          "Dados Extra": "+2 dados adicionales a talentos y hechizos"
+        }
+      },
+      {
+        "nombre": "Sabueso de la Verdad", 
+        "nivel": 15,
+        "descripcion": "Obtienes +10 a supervivencia al rastrear y puedes discernir mentiras con facilidad.",
+        "activa": true,
+        "Requisitos": [ "Dominio" ],
+        "Desbloquea": [ "Guapo y con Suerte", "De Chulos Está Lleno el Cementerio" ],
+        "efectos": {
+          "Rastreo": "+10 a supervivencia al rastrear",
+          "Mentiras": "Discierne verdades y mentiras"
+        }
+      },
+      {
+        "nombre": "Redirección", 
+        "nivel": 15,
+        "descripcion": "Cuando un enemigo te ataque, puedes moverte 15 pies gratuitamente y redirigir el ataque a un aliado cercano.",
+        "activa": true,
+        "Requisitos": [ "Dominio" ],
+        "Desbloquea": [],
+        "efectos": {
+          "Desviación": "Correr 15 pies y redirigir ataque"
+        }
+      },
+      {
+        "nombre": "Pequeño Liante Maldito",
+        "nivel": 15,
+        "descripcion": "Marcas a un objetivo y le colocas una voz que induce a que haga cosas que tú quieres que haga.",
+        "activa": true,
+        "Requisitos": [ "Dominio" ],
+        "Desbloquea": [ "Tú Mejor que Yo", "A Mi No me Llames Bastardo" ],
+        "efectos": {
+          "Control": {
+            "CD": 18,
+            "Tipo": "Sabiduría",
+            "Efecto": "El objetivo es influenciado para hacer lo que el bardo desea"
+          }
+        }
+      }, 
+      {
+        "nombre": "Guapo y con Suerte", 
+        "nivel": 17,
+        "descripcion": "Todos los ataques que sufras no pueden sacar el número máximo del dado. Si sale, repite la tirada de ese dado hasta que no salga el número máximo.",
+        "activa": true,
+        "Requisitos": [ "Sabueso de la Verdad" ],
+        "Desbloquea": [],
+        "efectos": {
+          "Reducción Críticos": {
+            "Condición": "El atacante no puede sacar el número máximo del dado",
+            "Efecto": "El dado se repite hasta no ser el máximo"
+          }
+        }
+      },
+      {
+        "nombre": "De Chulos Está Lleno el Cementerio",
+        "nivel": 17,
+        "descripcion": "Tu arrogancia y confianza desmedida te convierten en un espectáculo mortal. Alardeas con tal seguridad que tus enemigos se confían y bajan la guardia, o quedan tan humillados que pierden efectividad en combate.",
+        "activa": true,
+        "Requisitos": ["Sabueso de la Verdad"],
+        "Desbloquea": ["Conocedor de la verdad"],
+        "efectos": {
+            "Opciones": [
+                {
+                    "Nombre": "Desmoralización Pública",
+                    "descripcion": "Los enemigos en un radio de 20 pies deben superar una tirada de Sabiduría (CD 15 + Carisma) o sufrir desventaja en todas las tiradas de ataque durante 2 turnos."
+                }
+            ]
+        }
+    }, 
+    {
+        "nombre": "A Mi No me Llames Bastardo",
+        "nivel": 17,
+        "descripcion": "Cuadriplica el rango de crítico de tus aliados a 35 pies.",
+        "activa": true,
+        "Requisitos": [ "Pequeño Liante Maldito" ],
+        "Desbloquea": [ "Conocedor de la verdad" ],
+        "efectos": {
+          "aumentoCritico": {
+            "Rango": "4 veces el normal",
+            "Área": "35 pies"
+          }
+        }
+      },           
+      {
+        "nombre": "Conocedor de la verdad",
+        "nivel": 19,
+        "descripcion": "Tus largos viajes te permiten acceder al conocimiento del Rivrim, usando habilidades de otras vidas pasadas.",
+        "activa": true,
+        "Requisitos": [],
+        "Desbloquea": [],
+        "efectos": {
+          "Rivrim": "Acceso a habilidades y conocimientos de vidas pasadas"
+        }
+      }
+    ]
+  }
+  

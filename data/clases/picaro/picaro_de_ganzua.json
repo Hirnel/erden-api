@@ -1,0 +1,184 @@
+{
+    "idSubclase": "picaro_de_ganzua",
+    "nombre": "Pícaro de Ganzúa",
+    "esBasica": false,
+    "descripcion": "Un maestro del sigilo y las sombras que usa su habilidad para confundir, manipular y controlar a sus enemigos mientras desata ataques letales desde la oscuridad.",
+    "imagen": "/images/subclases/picaro_de_ganzua.jpg",
+    "diagrama": "/diagrama/diagrama_picaro_de_ganzua.jpg",
+    "habilidades": [
+        {
+            "nombre": "Armas Sombrías",
+            "nivel": 1,
+            "descripcion": "Generas armas con las sombras. Una vez sueltas el arma, esta se deshace.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [  "Sutileza con las Sombras", "Salto Sombrío", "Utillaje" ]
+        },
+        {
+            "nombre": "Sutileza con las Sombras",
+            "nivel": 3,
+            "descripcion": "Manipulas las sombras para darles formas humanoides y confundir a la gente.",
+            "activa": true,
+            "Requisitos": [ "Armas Sombrías" ],
+            "Desbloquea": [ "Manos Nocturnas" ]
+        },
+        {
+            "nombre": "Salto Sombrío", 
+            "nivel": 3,
+            "descripcion": "Saltas entre sombras hasta 40 pies y obtienes un ataque extra. Se considera una acción gratuita.",
+            "activa": true,
+            "Requisitos": [ "Armas Sombrías" ],
+            "Desbloquea": [ "Danzarín Nocturno" ],
+            "efectos": {
+                "Usos": "Bonf de Destreza en un combate"
+            }
+        },
+        {
+            "nombre": "Utillaje",
+            "nivel": 3,
+            "descripcion": "Generas herramientas de ladrón y objetos mundanos con tus sombras.",
+            "activa": false,
+            "Requisitos": [ "Armas Sombrías" ],
+            "Desbloquea": [ "Arrojar Sombras" ]
+        },
+        {
+            "nombre": "Manos Nocturnas",
+            "nivel": 5,
+            "descripcion": "De la sombra del objetivo salen manos que lo inmovilizan. Hacen 2D6 de daño/nivel de pícaro.",
+            "activa": true,
+            "Requisitos": [  "Sutileza con las Sombras" ],
+            "Desbloquea": [ "Movilidad del Ladrón" ],
+            "efectos": {
+                "Objetivos": "Bonf de Car"
+            }
+        },
+        {
+            "nombre": "Danzarín Nocturno",
+            "nivel": 5,
+            "descripcion": "Obtienes bonificaciones cuando es de noche: +10 a sigilo, +10 a esconderse y +5 a tus ataques.",
+            "activa": false,
+            "Requisitos": [ "Salto Sombrío" ],
+            "Desbloquea": [ "Movilidad del Ladrón",  "Conocer el Mercado" ]
+        },
+        {
+            "nombre": "Arrojar Sombras",
+            "nivel": 5,
+            "descripcion": "Controlas tus sombras para usarlas como armas arrojadizas.",
+            "activa": true,
+            "Requisitos": [ "Utillaje" ],
+            "Desbloquea": [ "Conocer el Mercado" ]
+        },
+        {
+            "nombre": "Movilidad del Ladrón",
+            "nivel": 7,
+            "descripcion": "Puedes moverte antes, durante o después del ataque sin generar ataques de oportunidad. Puedes moverte 30 pies gratuitos fuera de turno para ayudar a un aliado.",
+            "activa": false,
+            "Requisitos": [ "Manos Nocturnas", "Danzarín Nocturno" ],
+            "Desbloquea": [ "Control de las Sombras", "Golpe Incapacitante" ],
+            "efectos": {
+                "Movimiento": "+10 pies/Bonf de Des"
+            }
+        },
+        {
+            "nombre": "Conocer el Mercado",
+            "nivel": 7,
+            "descripcion": "Siempre pagas menos que el costo real de los productos.",
+            "activa": false,
+            "Requisitos": [ "Danzarín Nocturno", "Arrojar Sombras" ],
+            "Desbloquea": [ "Golpe Incapacitante", "Fingir tu Muerte" ]
+        },
+        {
+            "nombre": "Control de las Sombras", 
+            "nivel": 9,
+            "descripcion": "Usas sombras para abrir cerraduras no mágicas.",
+            "activa": true,
+            "Requisitos": [ "Movilidad del Ladrón" ],
+            "Desbloquea": [ "Nublar la Verdad" ]
+        },
+        {
+            "nombre": "Golpe Incapacitante",
+            "nivel": 9,
+            "descripcion": "Dejas a un enemigo inconsciente por el resto del día si no está en combate. Su CA se reduce a 10.",
+            "activa": true,
+            "Requisitos": [ "Movilidad del Ladrón",  "Conocer el Mercado" ],
+            "Desbloquea": [ "Nublar la Verdad", "Adornar la Mentira" ]
+        },
+        {
+            "nombre": "Fingir tu Muerte",
+            "nivel": 9,
+            "descripcion": "Ingerir una droga te permite fingir tu muerte durante 1D4 turnos. Esto elimina todos los efectos mágicos y estados alterados.",
+            "activa": true,
+            "Requisitos": [  "Conocer el Mercado" ],
+            "Desbloquea": [ "Adornar la Mentira" ]
+        },
+        {
+            "nombre": "Nublar la Verdad",
+            "nivel": 12,
+            "descripcion": "Un objetivo que sufra tus ataques de sombras tiene un 15% de fallar talentos o conjuros hasta el final del día. 3 usos/día.",
+            "activa": true,
+            "Requisitos": [ "Control de las Sombras", "Golpe Incapacitante" ],
+            "Desbloquea": [ "Copia de Sombras" ]
+        },
+        {
+            "nombre": "Adornar la Mentira",
+            "nivel": 12,
+            "descripcion": "Puedes enmascarar una pifia con una tirada de Destreza CD 20. Si superas, vuelves a tirar el D20 y sumas la mitad. 3 usos/día.",
+            "activa": true,
+            "Requisitos": [ "Golpe Incapacitante", "Fingir tu Muerte" ],
+            "Desbloquea": [ "Robar la Intención" ]
+        },
+        {
+            "nombre": "Copia de Sombras",
+            "nivel": 15,
+            "descripcion": "Generas una copia tuya hecha de sombras con tus mismas características. Su vida es Bonf de Car × nivel de pícaro × 5.",
+            "activa": true,
+            "Requisitos": [  "Nublar la Verdad" ],
+            "Desbloquea": [ "Ladrón Despiadado" ]
+        },
+        {
+            "nombre": "Robar la Intención",
+            "nivel": 15,
+            "descripcion": "Si tu turno está antes que el de un objetivo, puedes robar su intención y confundirlo por 1D4 turnos. CD Vol 18 para resistir.",
+            "activa": true,
+            "Requisitos": [ "Adornar la Mentira" ],
+            "Desbloquea": [ "Ladrón Despiadado" ]
+        },
+        {
+            "nombre": "Ladrón Despiadado",
+            "nivel": 17,
+            "descripcion": "Puedes robar una de las siguientes cosas. Máximo: Bonf de Car objetos robados. Si excedes, sustituye uno aleatorio.",
+            "activa": true,
+            "Requisitos": [ "Copia de Sombras", "Robar la Intención" ],
+            "Desbloquea": [ ],
+            "opciones": [
+                {
+                    "Nombre": "Robar el Nombre",
+                    "Efecto": "La gente olvida el nombre y pasado del objetivo."
+                },
+                {
+                    "Nombre": "Robar la Mente",
+                    "Efecto": "El enemigo obedece durante Bonf de Car minutos. CD Vol 18."
+                },
+                {
+                    "Nombre": "Robar el Corazón",
+                    "Efecto": "Extraes el corazón del objetivo. Si lo aplastas, muere. CD Vol 22 para resistir."
+                },
+                {
+                    "Nombre": "Robar Habilidad",
+                    "Efecto": "Robas una habilidad del objetivo."
+                },
+                {
+                    "Nombre": "Robar Talento",
+                    "Efecto": "Robas un talento del objetivo."
+                },
+                {
+                    "Nombre": "Robar Magia",
+                    "Efecto": "Robas un conjuro activado que ves."
+                }
+            ]
+        }
+    ],
+    "extra": {
+        "Ataque Furtivo": "1D6/nivel"
+    }
+}

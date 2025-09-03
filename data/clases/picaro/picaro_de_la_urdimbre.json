@@ -1,0 +1,166 @@
+{
+    "idSubclase": "picaro_de_la_urdimbre",
+    "nombre": "Pícaro de la Urdimbre",
+    "esBasica": false,
+    "descripcion": "Un maestro del sigilo, el engaño y la movilidad, utilizando sus habilidades para dominar las calles y tejer alianzas y conflictos en la sociedad.",
+    "imagen": "/images/subclases/picaro_de_la_urdimbre.jpg",
+    "diagrama": "/diagrama/diagrama_picaro_de_la_urdimbre.jpg",
+    "habilidades": [
+        {
+            "nombre": "Combatiente de las Calles",
+            "nivel": 1,
+            "descripcion": "Puedes usar cualquier cosa como arma. Atacas con ventaja cuando estás acorralado o flanqueado. Si te atacan tres enemigos, obtienes 30 pies de movimiento extra para zafarte fuera de turno.",
+            "activa": false,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Veneno Mortal", "Salto Sombrío", "Cual Gato por los Tejados" ]
+        },
+        {
+            "nombre": "Veneno Mortal", 
+            "nivel": 3,
+            "descripcion": "Tus armas están impregnadas con un veneno que causa 1D6 de daño acumulativo por nivel de Pícaro de la Urdimbre.",
+            "activa": false,
+            "Requisitos": [ "Combatiente de las Calles" ],
+            "Desbloquea": [ "Punzones" ]
+        },
+        {
+            "nombre": "Salto Sombrío", 
+            "nivel": 3,
+            "descripcion": "Saltas entre sombras hasta 40 pies y obtienes un ataque extra. Se considera una acción gratuita.",
+            "activa": true,
+            "Requisitos": [ "Combatiente de las Calles" ],
+            "Desbloquea": [ "Punzones", "Rodar a la Defensiva", "Control del Filo" ],
+            "efectos": {
+                "Usos": "Bonf de Destreza en un combate"
+            }
+        },
+        {
+            "nombre": "Cual Gato por los Tejados",
+            "nivel": 3,
+            "descripcion": "Puedes correr y saltar con extrema habilidad, duplicando tu velocidad y quintuplicando tu salto. Siempre tiras con ventaja en ciudades.",
+            "activa": false,
+            "Requisitos": [ "Combatiente de las Calles" ],
+            "Desbloquea": [ "Control del Filo" ]
+        },
+        {
+            "nombre": "Punzones", 
+            "nivel": 5,
+            "descripcion": "Clavas punzones cuando un enemigo falla una tirada de ataque por 1 punto. Infliges efectos negativos según un D6.",
+            "activa": true,
+            "Requisitos": [ "Veneno Mortal", "Salto Sombrío" ],
+            "Desbloquea": [ "Movilidad de un Tejedor" ],
+            "Efectos": {
+                "1": "Reduce 5 pies el movimiento, máximo la mitad.",
+                "2": "Reduce en 1 sus tiradas de avistar y buscar.",
+                "3": "Reduce en 1 el daño de sus dados.",
+                "4": "Reduce en 1 su Ataque.",
+                "5": "Reduce en 1 su CA.",
+                "6": "Reduce en 1 su capacidad de curación."
+            }
+        },
+        {
+            "nombre": "Rodar a la Defensiva",
+            "nivel": 5,
+            "descripcion": "Si un enemigo iguala tu CA, puedes rodar para esquivar y cortarle en la pierna, infligiendo 3D6.",
+            "activa": true,
+            "Requisitos": [ "Salto Sombrío" ],
+            "Desbloquea": [ "Movilidad de un Tejedor", "Afiliación" ]
+        },
+        {
+            "nombre": "Control del Filo",
+            "nivel": 5,
+            "descripcion": "Todas las armas con filo que uses infligen al menos la mitad del daño de su dado.",
+            "activa": false,
+            "Requisitos": [ "Salto Sombrío", "Cual Gato por los Tejados" ],
+            "Desbloquea": [ "Afiliación" ]
+        },
+        {
+            "nombre": "Movilidad de un Tejedor", 
+            "nivel": 7,
+            "descripcion": "Puedes moverte antes, durante o después de un ataque sin generar ataques de oportunidad. Aumentas tu movimiento por Bonf de Des.",
+            "activa": false,
+            "Requisitos": [ "Punzones", "Rodar a la Defensiva" ],
+            "Desbloquea": [ "Codazo", "Aterrar"],
+            "efectos": {
+                "Movimiento": "+5 pies/Bonf de Des"
+            }
+        },
+        {
+            "nombre": "Afiliación",
+            "nivel": 7,
+            "descripcion": "Elige una rama de la Urdimbre. Obtienes ventaja en todo lo relacionado con esa rama y todo te cuesta la mitad del dinero.",
+            "activa": false,
+            "Requisitos": [ "Rodar a la Defensiva", "Control del Filo" ],
+            "Desbloquea": [ "Aterrar", "Sufridor de las Calles" ]
+        },
+        {
+            "nombre": "Codazo", 
+            "nivel": 9,
+            "descripcion": "Golpeas al enemigo con un codazo, infligiendo 4D6 + Fue/Des y aturdiéndolo 1D2 turnos. Mientras está aturdido, tus ataques hacen 4D8 + Fue/Des.",
+            "activa": true,
+            "Requisitos": [ "Movilidad de un Tejedor" ],
+            "Desbloquea": [ "Golpe a Traición" ]
+        },
+        {
+            "nombre": "Aterrar", 
+            "nivel": 9,
+            "descripcion": "Cuando causas un Ataque furtivo o un crítico, los enemigos a menos de 15 pies deben superar CD 18 Vol o sufrirán el efecto del conjuro Miedo.",
+            "activa": false,
+            "Requisitos": [ "Movilidad de un Tejedor", "Afiliación" ],
+            "Desbloquea": [ "Golpe a Traición", "Golpes Ágiles" ]
+        },
+        {
+            "nombre": "Sufridor de las Calles",
+            "nivel": 9,
+            "descripcion": "Atacas a un enemigo y este no puede parar, esquivar ni bloquear el ataque. Infliges 3D6 + Fue/Des.",
+            "activa": true,
+            "Requisitos": [ "Afiliación" ],
+            "Desbloquea": [ "Golpes Ágiles" ]
+        },
+        {
+            "nombre": "Golpe a Traición",
+            "nivel": 12,
+            "descripcion": "Si tu último ataque ha impactado, puedes moverte 15 pies y atacar gratuitamente sin generar ataques de oportunidad. Infliges 5D8 de daño.",
+            "activa": false,
+            "Requisitos": [ "Codazo", "Aterrar" ],
+            "Desbloquea": [ "Golpes Viciosos" ]
+        },
+        {
+            "nombre": "Golpes Ágiles",
+            "nivel": 12,
+            "descripcion": "Obtienes ataques extra igual a tu bonificación de Des.",
+            "activa": false,
+            "Requisitos": [ "Aterrar", "Sufridor de las Calles" ],
+            "Desbloquea": [ "Manos Expertas" ]
+        },
+        {
+            "nombre": "Golpes Viciosos",
+            "nivel": 15,
+            "descripcion": "Todo daño que realices aumenta en un tamaño de dado.",
+            "activa": false,
+            "Requisitos": [ "Golpe a Traición" ],
+            "Desbloquea": [  "De sastre a Desastre" ]
+        },
+        {
+            "nombre": "Manos Expertas",
+            "nivel": 15,
+            "descripcion": "Anulas resistencias, reducciones de daño y defensas mágicas de tus objetivos.",
+            "activa": false,
+            "Requisitos": [ "Golpes Ágiles" ],
+            "Desbloquea": [ "De sastre a Desastre" ]
+        },
+        {
+            "nombre": "De sastre a Desastre",
+            "nivel": 17,
+            "descripcion": "Eres un tejedor experto y miembro de alto rango de la Urdimbre. Tienes contactos variados y obtienes aliados según tu Carisma, pero también enemigos en proporción.",
+            "activa": false,
+            "Requisitos": [ "Golpes Viciosos", "Manos Expertas" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Aliados": "1 por cada 2 puntos de Car",
+                "Enemigos": "1 por cada 2 aliados",
+                "Extra": "Ataque Furtivo 1D6/nivel"
+            }
+        }
+    ]
+    
+}

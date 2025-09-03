@@ -1,0 +1,229 @@
+{
+    "idSubclase": "superviviente_de_mil_batallas",
+    "nombre": "Superviviente de Mil Batallas",
+    "esBasica": false,
+    "descripcion": "Un guerrero curtido en el campo de batalla, cuyo instinto de supervivencia y experiencia lo convierten en un combatiente imparable.",
+    "imagen": "/images/subclases/superviviente_de_mil_batallas.jpg",
+    "diagrama": "/diagrama/diagrama_superviviente_de_mil_batallas.jpg",
+    "habilidades": [
+        {
+            "nombre": "Ganas de Camorra",
+            "nivel": 1,
+            "descripcion": "Atacas a un objetivo causando 1D8/nivel de guerrero y te curas 1D6/2 niveles de guerrero. Puedes usar dos armas a una mano sin penalizador.",
+            "activa": true,
+            "Requisitos": [ ],
+            "Desbloquea": [ "Dos Golpes son Uno", "Vicio", "Brazo Entrenado" ],
+            "efectos": {
+                "Daño": "1D8/nivel",
+                "Sanación": "1D6/2 niveles",
+                "Dos Armas": true
+            }
+        },
+        {
+            "nombre": "Dos Golpes son Uno", 
+            "nivel": 3,
+            "descripcion": "Siempre que realices un ataque normal golpeas con ambas armas.",
+            "activa": false,
+            "Requisitos": [ "Ganas de Camorra" ],
+            "Desbloquea": [ "Camorrista" ],
+            "efectos": {
+                "Ataque Dual": true
+            }
+        },
+        {
+            "nombre": "Vicio", 
+            "nivel": 3,
+            "descripcion": "De cada daño que recibes tiras un 1D4 que restas a ese daño.",
+            "activa": false,
+            "Requisitos": [ "Ganas de Camorra" ],
+            "Desbloquea": [ "Noches Afilando" ],
+            "efectos": {
+                "Reduccion Daño": "1D4"
+            }
+        },
+        {
+            "nombre": "Brazo Entrenado",
+            "nivel": 3,
+            "descripcion": "Obtienes +1 de Fuerza/Destreza y Constitución permanente por cada 100 muertes en tu historial.",
+            "activa": false,
+            "Requisitos": [ "Ganas de Camorra"  ],
+            "Desbloquea": [ "Loco de las Heridas" ],
+            "efectos": {
+                "Bonificación": "+1 Fue/Des y Con por cada 100 muertes"
+            }
+        },
+        {
+            "nombre": "Camorrista",
+            "nivel": 5,
+            "descripcion": "No puedes sacar menos de la mitad del dado.",
+            "activa": false,
+            "Requisitos": [ "Dos Golpes son Uno" ],
+            "Desbloquea": [ "Cabronazo de Taberna" ],
+            "efectos": {
+                "Daño Mínimo": "Mitad del dado"
+            }
+        },
+        {
+            "nombre": "Loco de las Heridas",
+            "nivel": 5,
+            "descripcion": "Cuando te queda un 25% de tu vida total recibes 5 puntos de CA de desvío.",
+            "activa": false,
+            "Requisitos": [ "Brazo Entrenado" ],
+            "Desbloquea": [ "Ira Acumulada" ],
+            "efectos": {
+                "CA Desvio": 5
+            }
+        },
+        {
+            "nombre": "Cabronazo de Taberna", 
+            "nivel": 7,
+            "descripcion": "Si superas en 5 la CA de tu enemigo puedes desarmarlo. En 10, derribarlo y desarmar. En 15, dejarlo inconsciente. En 20, matarlo instantáneamente aún sin ser crítico.",
+            "activa": false,
+            "Requisitos": [ "Camorrista" ],
+            "Desbloquea": [ "Miedo en la Presa" ],
+            "efectos": {
+                "Desarmar": "+5 CA",
+                "Derribar Desarmar": "+10 CA",
+                "Inconsciente": "+15 CA",
+                "Matar": "+20 CA"
+            }
+        },
+        {
+            "nombre": "Noches Afilando", 
+            "nivel": 7,
+            "descripcion": "Doblas el rango de crítico.",
+            "activa": false,
+            "Requisitos": [ "Vicio" ],
+            "Desbloquea": [ "Miedo en la Presa", "Carga Impetuosa" ],
+            "efectos": {
+                "Crítico Doble": true
+            }
+        },
+        {
+            "nombre": "Ira Acumulada",
+            "nivel": 7,
+            "descripcion": "Cada vez que te impacta un enemigo cuerpo a cuerpo se le pone un punto. Si acumula 5 puntos tienes un ataque instantáneo contra él aún sin ser tú turno.",
+            "activa": false,
+            "Requisitos": [ "Loco de las Heridas" ],
+            "Desbloquea": [ "Carga Impetuosa" ],
+            "efectos": {
+                "Ataque Instantáneo": "5 puntos"
+            }
+        },
+        {
+            "nombre": "Miedo en la Presa", 
+            "nivel": 9,
+            "descripcion": "Tus golpes críticos tienen un 15% de probabilidad de asustar a tus enemigos, generando ataque de oportunidad.",
+            "activa": false,
+            "Requisitos": [ "Cabronazo de Taberna",  "Noches Afilando" ],
+            "Desbloquea": [ "Heridas Jodidas", "Golpe Susurrante", "Locura Incesante" ],
+            "efectos": {
+                "Probabilidad Miedo": "15%"
+            }
+        },
+        {
+            "nombre": "Carga Impetuosa",
+            "nivel": 9,
+            "descripcion": "Placa a un objetivo que esté a máximo 20 pies, CD Fuerza enfrentada. Si no lo supera lo tiras al suelo y puedes realizar un ataque completo aunque no te queden acciones.",
+            "activa": true,
+            "Requisitos": [ "Noches Afilando", "Ira Acumulada" ],
+            "Desbloquea": [ "Locura Incesante", "Cómo lo Haces", "Golpes Ágiles"],
+            "efectos": {
+                "distancia": "20 pies",
+                "Ataque Completo": true
+            }
+        },
+        {
+            "nombre": "Heridas Jodidas", 
+            "nivel": 12,
+            "descripcion": "Tus daños se cuentan aparte, y si el objetivo es curado, sólo se efectuará la mitad de esa sanación.",
+            "activa": false,
+            "Requisitos": [ "Miedo en la Presa" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Mitad Sanación": true
+            }
+        },
+        {
+            "nombre": "Golpe Susurrante", 
+            "nivel": 12,
+            "descripcion": "Haces una finta CD Averiguar intenciones del enemigo. Si la superas realizas el daño que es 1D6/2 niveles de guerrero + Fuerza.",
+            "activa": true,
+            "Requisitos": [ "Miedo en la Presa" ],
+            "Desbloquea": [ "Golpe a Traición" ],
+            "efectos": {
+                "Daño": "1D6/2 niveles + Fue"
+            }
+        },
+        {
+            "nombre": "Locura Incesante",
+            "nivel": 12,
+            "descripcion": "Vuelves a duplicar tu rango de crítico.",
+            "activa": false,
+            "Requisitos": [ "Miedo en la Presa", "Noches Afilando", "Carga Impetuosa"],
+            "Desbloquea": [ "Golpe a Traición", "¿Caer? Sí claro, porque tú lo digas" ],
+            "efectos": {
+                "Crítico Cuadruple": true
+            }
+        },
+        {
+            "nombre": "Cómo lo Haces", 
+            "nivel": 12,
+            "descripcion": "Puedes realizar una tirada de ataque enfrentada a la tirada del enemigo para bloquear el ataque. Si la igualas, el ataque impacta con normalidad.",
+            "activa": true,
+            "Requisitos": [ "Carga Impetuosa" ],
+            "Desbloquea": [ "¿Caer? Sí claro, porque tú lo digas" ],
+            "efectos": {
+                "Bloqueo": "Tirada enfrentada"
+            }
+        },
+        {
+            "nombre": "Golpes Ágiles",
+            "nivel": 12,
+            "descripcion": "Obtienes ataques extras igual a tu bonificación de Destreza.",
+            "activa": false,
+            "Requisitos": [ "Carga Impetuosa" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Ataques Extras": "Bonificación de Des"
+            }
+        },
+        {
+            "nombre": "Golpe a Traición", 
+            "nivel": 15,
+            "descripcion": "Si tu último ataque impactó y tienes un enemigo a 10 pies o menos, puedes correr y atacarlo sin generar ataque de oportunidad, infligiendo 5D8 de daño.",
+            "activa": true,
+            "Requisitos": [ "Golpe Susurrante", "Locura Incesante" ],
+            "Desbloquea": [ "Superviviente de Mil Batallas" ],
+            "efectos": {
+                "Distancia": "10 pies",
+                "Daño": "5D8"
+            }
+        },
+        {
+            "nombre": "¿Caer? Sí claro, porque tú lo digas",
+            "nivel": 15,
+            "descripcion": "Recuperas de manera brabucona 10 puntos de vida por nivel de guerrero.",
+            "activa": true,
+            "Requisitos": [ "Locura Incesante", "Cómo lo Haces" ],
+            "Desbloquea": [ "Superviviente de Mil Batallas" ],
+            "efectos": {
+                "Sanación": "10pg/nivel"
+            }
+        },
+        {
+            "nombre": "Superviviente de Mil Batallas",
+            "nivel": 19,
+            "descripcion": "Aumenta en un dado todo tu daño y sanación. Haces 10 puntos fijos de daño adicional. Vuelve a duplicar tu rango de crítico. Si tu vida baja a 0 puntos te sanas automáticamente 350pg.",
+            "activa": false,
+            "Requisitos": [ "Golpe a Traición", "¿Caer? Sí claro, porque tú lo digas" ],
+            "Desbloquea": [ ],
+            "efectos": {
+                "Aumento Dado": true,
+                "Daño Fijo": 10,
+                "Crítico Cuadruple": true,
+                "Sanación Emergencia": "350pg"
+            }
+        }
+    ]
+}
