@@ -1,7 +1,7 @@
 // CommonJS
 const { MongoClient } = require("mongodb");
 
-const MONGO_URL = process.env.MONGO_URL || "mongodb://erden-db:27017/erden";
+const MONGO_URL = process.env.MONGO_URL || "mongodb://erden-db:27017/";
 
 let client;
 let db;
@@ -10,7 +10,7 @@ function connectMongo() {
   if (db) return { client, db };
   client = new MongoClient(MONGO_URL);
   client.connect();
-  db = client.db();              // usa el dbName del URI: "clases"
+  db = client.db("erden");              // usa el dbName del URI: "clases"
   return { client, db };
 }
 
